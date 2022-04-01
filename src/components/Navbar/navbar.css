@@ -1,0 +1,69 @@
+#navbar{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.top .eventTime{
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+}
+.top .nav{
+    display: flex;
+    justify-content: space-around;
+}
+.top .nav .logo{
+    display: flex;
+}
+.top .nav .logo .logoText{
+    margin-left: 10px;
+    align-self: center;
+    color: #fff;
+}
+.navLinks{
+    align-self: center;
+}
+.navLinks .navList{
+    list-style: none;
+    margin: 0;
+    padding: 0 40px;
+    display: flex;
+}
+.navLinks .navList #topLinks:not(:last-child){
+    margin-right: 20px;
+}
+#topLinks{
+    color: #fff;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 0;
+}
+.navButtons{
+    display: flex;
+    align-self: center;
+}
+.navButtons #rightBtn, #leftBtn{
+    border: 2px solid;
+    border-radius: 30px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-weight: 900;
+    min-width: 125px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.navButtons #leftBtn{
+    background-color: green!important;
+    border-color: green!important;
+    margin-right: 20px;
+}
+.navButtons .rightBtn{
+    background-color: transparent;
+}

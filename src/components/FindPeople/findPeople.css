@@ -1,0 +1,63 @@
+.header{
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 25rem;
+}
+.header .topHeader{
+    font-style: italic;
+    color: green;
+}
+.header .centerHeader{
+    padding: 0 0 24px;
+    text-transform: uppercase;
+}
+.header .bottomHeader{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.header .topHeader, .centerHeader, .bottomHeader{
+    text-align: center;
+}
+.content{
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    transition: transform .2s ease-in-out;
+    transform: scale(1);
+    background-color: #f1f1eb;
+}
+.card1:hover{
+    transform: scale(1.05);
+}
+.card1 img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contentTextWrapper .contentText{
+    background-color: #f1f1eb;
+    padding: 20px 35px 30px;
+    position: relative;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.contentTextWrapper .contentPara{
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 20px 35px 30px;
+}
+.circledArrow{
+    font-size: 1.5rem !important;
+    align-self: flex-end;
+    color: green;
+    margin-right: 20px;
+}
