@@ -1,0 +1,39 @@
+.page5{
+    margin-top: 42rem;
+}
+.page5Bx{
+    display: flex;
+    padding: 2rem 4rem;
+}
+.page5Bx .page5BxImg{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page5Bx .page5BxImg img{
+    width: 70%;
+}
+.page5Bx .page5BxContent{
+    flex: 2;
+}
+.page5Title{
+    padding: 1rem 0;
+}
+.page5Date, .page5Time, .page5Location{
+    display: flex;
+}
+.page5Location{
+    padding: 10px 0;
+}
+.page5Para, .page5Btn{
+    padding: 1rem 0;
+}
+.Hr:not(:last-child){
+    width: 82%;
+    margin: auto;
+    border: 1px solid #ddd;
+}
+.Hr:last-child{
+    display: none;
+}

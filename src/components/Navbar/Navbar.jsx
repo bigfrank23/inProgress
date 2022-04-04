@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Announcement from '../announcement/Announcement'
 import { Link } from 'react-router-dom'
@@ -9,6 +9,7 @@ const Container = styled.div`
     
 `
 const Navbar = () => {
+    const [showNav, setShowNav] = useState(false)
   return (
     <Container id='navbar'>
         {/* <Announcement /> */}
@@ -27,21 +28,71 @@ const Navbar = () => {
                 </div>
                 <div className="navLinks">
                     <ul className="navList">
-                        <Link to='#' className='links' id='topLinks'>
-                        <li className="navListItems">About</li>
-                        </Link>
-                        <Link to='#' className='links' id='topLinks'>
-                        <li className="navListItems">Events</li>
-                        </Link>
-                        <Link to='#' className='links' id='topLinks'>
-                        <li className="navListItems">Connect</li>
-                        </Link>
-                        <Link to='#' className='links' id='topLinks'>
-                        <li className="navListItems">Get Involed</li>
-                        </Link>
-                        <Link to='#' className='links' id='topLinks'>
-                        <li className="navListItems">Find Help</li>
-                        </Link>
+                        <li className="navListItems">About
+                        <ul className="hover">
+                            <Link to='/page1' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='/page2' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='/page3' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                        </ul>
+                        </li>
+                        <li className="navListItems">Events
+                        <ul className="hover">
+                            <Link to='/page4' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='/page5' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                        </ul>
+                        </li>
+                        <li className="navListItems">Connect
+                        <ul className="hover">
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                        </ul>
+                        </li>
+                        <li className="navListItems">Get involved
+                        <ul className="hover">
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                        </ul>
+                        </li>
+                        <li className="navListItems">Find help
+                        <ul className="hover">
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                            </Link>
+                        </ul>
+                        </li>
                     </ul>
                 </div>
                 <div className="navButtons">

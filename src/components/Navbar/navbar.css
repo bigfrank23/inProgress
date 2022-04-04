@@ -1,5 +1,10 @@
 #navbar{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 }
 .top{
     display: flex;
@@ -32,7 +37,15 @@
     padding: 0 40px;
     display: flex;
 }
-.navLinks .navList #topLinks:not(:last-child){
+.navListItems{
+    color: #fff;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 0;
+    cursor: pointer;
+}
+.navLinks .navList .navListItems:not(:last-child){
     margin-right: 20px;
 }
 #topLinks{
@@ -66,4 +79,39 @@
 }
 .navButtons .rightBtn{
     background-color: transparent;
+}
+
+/* Hover */
+.hover{
+    color: white;
+    position: absolute;
+    margin-top: 1rem;
+    list-style: none;
+    background: #232e32;
+    padding: 1rem 10px;
+    line-height: 4vh;
+    border-radius: 5px;
+    display: none;
+    transition: all .5s ease;
+}
+.hover a{
+    color: white;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 1rem;
+    transition: all .5s ease;
+}
+.navListItems:hover .hover{
+    display: block;
+    transition: all .5s ease;
+    animation: show 1s ease;
+}
+@keyframes show{
+    0%{
+        padding: 1rem 3px;
+    }
+    100%{
+        padding: 1rem 10px;
+        line-height: 4vh;
+    }
 }

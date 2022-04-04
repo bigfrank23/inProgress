@@ -7,7 +7,7 @@ import BorderImg from '../../images/bannerH.png'
 const Container = styled.div`
     width: 100%;
     height: 100%;
-    padding:  0 4rem;
+    /* padding:  0 4rem; */
     /* margin-top: 15rem;
     border: 10px solid transparent;
   padding: 15px; */

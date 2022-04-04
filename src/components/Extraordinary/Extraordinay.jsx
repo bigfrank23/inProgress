@@ -35,13 +35,14 @@ const ExtraContent = styled.div`
     gap: 20px;
 `
 const ExtraImg = styled.div`
-    flex: 1;
+    /* flex: 1; */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${PlayImg});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 300px;
-    border-radius: 15%;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,7 +167,7 @@ const Extraordinay = () => {
                         <ExtraTextContainer2>
                             <ExtraText2>Lorem ipsum dolor sit amet.</ExtraText2>
                         </ExtraTextContainer2>
-                    <div style={{display: 'flex', flexWrap: 'wrap', gap: '2%', rowGap: 25, marginBottom: '2rem', padding: '0 4rem'}}>
+                    <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', columnGap: '1.5rem', rowGap: '1.5rem'}}>
                         {items.map(()=>(
                             <ExtraCard>
                                 <ExtraCardImgContainer>

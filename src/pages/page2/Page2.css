@@ -1,0 +1,34 @@
+.pageContent2{
+    margin-top: 42rem;
+}
+.pageContentTitle h1{
+    text-align: center;
+    color: green;
+}
+.imgBx{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+.imgBx img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.centerTitle{
+    text-align: center;
+    margin: 2rem 0;
+}
+.centerContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.centerContentText{
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 4vh;
+}
+.hr{
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+}

@@ -9,7 +9,7 @@ const Btn = styled.button`
     border: 2px solid;
     border-radius: 30px;
     box-sizing: border-box;
-    color: #fff;
+    color: ${props => props.outline ? '#232e32' : '#fff'};
     display: inline-block;
     font-weight: 900;
     min-width: 125px;
@@ -18,6 +18,7 @@ const Btn = styled.button`
     text-decoration: none;
     text-transform: uppercase;
     background: ${props => props.outline ? 'transparent' : 'green'};
+    border: ${props => props.outline ? '1px solid #232e32' : 'none'};
     cursor: pointer;
 `
 
