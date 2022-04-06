@@ -45,7 +45,7 @@ const Container = styled.div`
       background-position: center;
       background-repeat: no-repeat;
     position: relative;
-    margin-top: 42rem;
+    margin-top: 50rem;
     padding: 4rem;
     color: #fff;
     text-align: center;

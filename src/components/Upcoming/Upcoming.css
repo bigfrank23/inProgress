@@ -1,0 +1,40 @@
+
+.page4Bottom .page4BottomTitle{
+    text-align: center;
+    padding: 2rem 0;
+}
+.page4ButtomCardBx{
+    display: flex;
+    gap: 1rem;
+}
+.page4ButtomCardBx .page4buttomCard1, .page4ButtomCardBx .page4buttomCard2, .page4ButtomCardBx .page4buttomCard3{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    transform: scale(1);
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out 0s;
+}
+.page4ButtomCardBx .page4buttomCard1:hover, .page4ButtomCardBx .page4buttomCard2:hover, .page4ButtomCardBx .page4buttomCard3:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 1px gray;
+}
+.page4ButtomCardOverlay{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../images/splash3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.page4ButtomCardTextContent{
+    background: green;
+    padding: 2rem;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

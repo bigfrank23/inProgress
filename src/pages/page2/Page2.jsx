@@ -9,6 +9,9 @@ import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 
 import './Page2.css'
+import Header from '../../components/Text/Header';
+import H2 from '../../components/Text/H2';
+import {cwc, team} from '../../teamMembers/team'
 
 const Container = styled.div`
   width: 100%;
@@ -62,52 +65,38 @@ const Page2 = () => {
         <div className="page1Wrapper">
             {/* <Navbar /> */}
             <div className="page1Header">
-                <h1>Lorem, ipsum dolor.</h1>
+                <h1>Our Team</h1>
             </div>
         </div>
         <div className="pageContent2">
             <div className="pageContentTitle">
-                <h1>Lorem ipsum dolor sit amet.</h1>
+                <Header children='Meet Our team' color={true} transform='uppercase' />
             </div>
             <div className="pageContentTop center">
                 <div className="centerTitle">
-                    <h3>Lorem, ipsum dolor.</h3>
+                    <H2 children='The  Central Working Committee (CWC)' />
                 </div>
 
                 <div className="centerContent">
-                    <div className="centerContentB">
-                        <div className="imgBx">
+                    {cwc.map((data)=> (
+                        <div className="centerContentB">
+                            <div className="imgBx">
 
-                        <img src={Img} width={50} alt="" />
+                            <img src={data.img} width={50} alt="" />
+                            </div>
+                            <div className="centerContentText">
+                                <h3>{data.name}</h3>
+                                <p>{data.church}</p>
+                                <p>{data.address}</p>
+                                <p>{data.tel}</p>
+                                <p>{data.dOb}</p>
+                                <p>{data.email}</p>
+                                <p>{data.chapter}</p>
+                                <p>{data.province}</p>
+                                {/* <span>{data.address}</span> */}
+                            </div>
                         </div>
-                        <div className="centerContentText">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem, ipsum.</p>
-                            <span>Lorem, ipsum.</span>
-                        </div>
-                    </div>
-                    <div className="centerContentB">
-                        <div className="imgBx">
-
-                        <img src={Img} alt="" />
-                        </div>
-                        <div className="centerContentText">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem, ipsum.</p>
-                            <span>Lorem, ipsum.</span>
-                        </div>
-                    </div>
-                    <div className="centerContentB">
-                        <div className="imgBx">
-
-                        <img src={Img} alt="" />
-                        </div>
-                        <div className="centerContentText">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem, ipsum.</p>
-                            <span>Lorem, ipsum.</span>
-                        </div>
-                    </div>
+                    ))}
                 </div>
                 <hr className='hr' />
                 <div className="centerContent">

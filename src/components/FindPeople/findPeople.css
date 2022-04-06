@@ -61,3 +61,10 @@
     color: green;
     margin-right: 20px;
 }
+
+@media only screen and (max-width: 600px){
+   .content{
+       grid-template-columns: 1fr;
+       padding: 0;
+   }
+}

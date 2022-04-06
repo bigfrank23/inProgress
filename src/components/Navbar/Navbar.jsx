@@ -4,9 +4,10 @@ import Announcement from '../announcement/Announcement'
 import { Link } from 'react-router-dom'
 import './navbar.css'
 import LogoImg from '../../images/PFN4.png'
+import { mobile } from '../../responsive'
 
 const Container = styled.div`
-    
+    ${mobile({display: 'none'})}
 `
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
@@ -31,13 +32,13 @@ const Navbar = () => {
                         <li className="navListItems">About
                         <ul className="hover">
                             <Link to='/page1' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                                <li className="hoverItems">History</li>
                             </Link>
                             <Link to='/page2' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                                <li className="hoverItems">Our Team</li>
                             </Link>
                             <Link to='/page3' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                                <li className="hoverItems">Profile of Past Executives</li>
                             </Link>
                         </ul>
                         </li>

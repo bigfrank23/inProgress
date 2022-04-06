@@ -6,7 +6,6 @@ import './tornContainer.css'
 
 const Container = styled.div`
     margin-top: 10rem;
-    height: 70vh;
     width: 100%;
     display: flex;
     justify-content: center;

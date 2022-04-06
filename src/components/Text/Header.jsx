@@ -9,14 +9,15 @@ const HeaderStyle = styled.div`
   /* padding: 1rem 0; */
   /* line-height: 1.3em; */
   color: ${props => props.color ? 'green' : '#111'};
+  text-transform: ${props => props.transform ? 'uppercase' : 'lowercase'};
   @media only screen and (max-width: 768px) {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     padding: 0;
   }
 `;
-const Header = ({children, color= false}) => {
+const Header = ({children, color= false, transform=false}) => {
   return (
-    <HeaderStyle className='mainHeader' color={color}>
+    <HeaderStyle className='mainHeader' color={color} transform={transform}>
       <h1 style={{ fontFamily: "Poppins, sans-serif" }}>{children}</h1>
     </HeaderStyle>
   );

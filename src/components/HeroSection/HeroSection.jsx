@@ -2,9 +2,10 @@ import React from 'react'
 import BackgroundSlider from 'react-background-slider'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Img1 from '../../images/splash1.jpg'
-import Img2 from '../../images/splash2.jpg'
-import Img3 from '../../images/splash3.jpg'
+import Img1 from '../../images/pro4.webp'
+import Img2 from '../../images/pro5.jpg'
+import Img3 from '../../images/pro3.jpg'
+import Button from '../Button/Button'
 import './heroSection.css'
 
 const image1 = Img1
@@ -76,11 +77,7 @@ const HeroSection = () => {
             </CenterTextContainer>
             <HeroButtonContainer>
                 <Link to="#">
-                <HeroButton>
-                    <h3>
-                    Connect with us
-                    </h3>
-                </HeroButton>
+               <Button BtnText='Connect with us' />
                 </Link>
             </HeroButtonContainer>
         </Content>

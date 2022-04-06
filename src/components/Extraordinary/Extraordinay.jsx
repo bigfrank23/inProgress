@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import BgImg from '../../images/bg2.jpg'
 import PlayImg from '../../images/splash1.jpg'
 import Button from '../Button/Button'
+import './Extraordinary.css'
+import { mobile } from '../../responsive'
 
 
 const Container = styled.div`
@@ -29,10 +31,12 @@ const ExtraText = styled.h1`
     color: green;
     margin: 0 auto 20px auto;
     text-align: center;
+    ${mobile({padding: '1rem 0', fontSize: '1.7rem'})}
 `
 const ExtraContent = styled.div`
     display: flex;
     gap: 20px;
+    ${mobile({display: 'block'})}
 `
 const ExtraImg = styled.div`
     /* flex: 1; */
@@ -46,6 +50,7 @@ const ExtraImg = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    ${mobile({height: '300px', width: '300px'})}
 `
 const ExtraIconContainer = styled.div`
     background: linear-gradient(#7bff7b, #7bff7b);
@@ -55,9 +60,11 @@ const ExtraIconContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    ${mobile({height: '50px', width: '50px'})}
     .playIcon{
         color: #000;
         font-size: 2rem;
+        ${mobile({fontSize: '1rem'})}
     }
 `
 const ExtraContentText = styled.div`
@@ -69,10 +76,12 @@ const ExtraDesc = styled.p`
     font-weight: 900;
     line-height: 25px;
     margin: 18px 0;
+    ${mobile({fontSize: '1rem', fontWeight: 700, textAlign: 'center'})}
 `
 const ExtraName = styled.p`
     color: #232e32;
     margin: 18px 0 40px;
+    ${mobile({textAlign: 'center'})}
 `
 //Second section
 const ExtraContentContainer2 = styled.div`
@@ -167,7 +176,7 @@ const Extraordinay = () => {
                         <ExtraTextContainer2>
                             <ExtraText2>Lorem ipsum dolor sit amet.</ExtraText2>
                         </ExtraTextContainer2>
-                    <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', columnGap: '1.5rem', rowGap: '1.5rem'}}>
+                    <div className='extraGrid'>
                         {items.map(()=>(
                             <ExtraCard>
                                 <ExtraCardImgContainer>

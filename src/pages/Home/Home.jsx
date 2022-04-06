@@ -18,7 +18,7 @@ const Home = () => {
         <TornContainer />
         <Extraordinay />
         <WhatsNext />
-        <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }

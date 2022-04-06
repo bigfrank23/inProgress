@@ -1,7 +1,7 @@
 .page4Top{
     display: flex;
     gap: 1rem;
-    margin-top: 42rem;
+    margin-top: 50rem;
     padding: 4rem;
 }
 .page4CenterBx{
@@ -76,7 +76,7 @@
     margin-top: 1rem;
 }
 .page4Bottom{
-    padding: 6rem 4rem 4rem 4rem;
+    /* padding: 6rem 4rem 4rem 4rem; */
 }
 .page4Bottom .page4BottomTitle{
     text-align: center;

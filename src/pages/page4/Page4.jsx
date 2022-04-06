@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import './Page4.css'
 import H2 from '../../components/Text/H2';
 import Footer from '../../components/Footer/Footer';
+import Upcomin from '../../components/Upcoming/Upcomin';
 
 const Container = styled.div`
   width: 100%;
@@ -38,6 +39,7 @@ const Container = styled.div`
     }
   }
 `
+
 const Page4 = () => {
   return (
     <Container>
@@ -164,43 +166,9 @@ const Page4 = () => {
       <div className="viewBtn" style={{textAlign: 'center'}}>
         <Button />
       </div>
-      <div className="page4Bottom">
-        <div className="page4BottomTitle">
-          <H2 children='Lorem Ipsium.' />
-        </div>
-        <div className="page4ButtomCardBx">
-          <div className="page4buttomCard1">
-            <div className="page4ButtomCardOverlay">
-              <h3 style={{color: 'green'}}>Lorem, ipsum dolor. <h3 style={{color: '#fff'}}>Lorem, ipsum.</h3></h3>
-            </div>
-            <div className="page4ButtomCardTextContent">
-              <div style={{textAlign: 'center', color: '#fff'}}><H3 children='Lorem Ipsium' color={true}/></div>
-              <div style={{textAlign: 'center', color: '#fff' , display: 'flex', gap: '5px', justifyContent: 'center', margin: '1rem 0'}}><H3 children='Lorem' color={true}/>: 99/00 </div>
-              <div style={{textAlign: 'center', color: '#fff' , display: 'flex', gap: '5px', justifyContent: 'center'}}><H3 children='Lorem' color={true}/>: Lorem, ipsum.</div>
-            </div>
-          </div>
-          <div className="page4buttomCard2">
-            <div className="page4ButtomCardOverlay">
-              <h3 style={{color: 'green'}}>Lorem, ipsum dolor. <h3 style={{color: '#fff'}}>Lorem, ipsum.</h3></h3>
-            </div>
-            <div className="page4ButtomCardTextContent">
-              <div style={{textAlign: 'center', color: '#fff'}}><H3 children='Lorem Ipsium' color={true} /></div>
-              <div style={{textAlign: 'center', color: '#fff' , display: 'flex', gap: '5px', justifyContent: 'center', margin: '1rem 0'}}><H3 children='Lorem' color={true} />: 99/00 </div>
-              <div style={{textAlign: 'center', color: '#fff' , display: 'flex', gap: '5px', justifyContent: 'center'}}><H3 children='Lorem' color={true} />: Lorem, ipsum.</div>
-            </div>
-          </div>
-          <div className="page4buttomCard3">
-            <div className="page4ButtomCardOverlay">
-              <h3 style={{color: 'green'}}>Lorem, ipsum dolor. <h3 style={{color: '#fff'}}>Lorem, ipsum.</h3></h3>
-            </div>
-            <div className="page4ButtomCardTextContent">
-              <div style={{textAlign: 'center', color: '#fff'}}><H3 children='Lorem Ipsium' color={true} /></div>
-              <div style={{textAlign: 'center', color: '#fff', display: 'flex', gap: '5px', justifyContent: 'center', margin: '1rem 0'}}><H3 children='Lorem' color={true} /> : 99/00 </div>
-              <div style={{textAlign: 'center', color: '#fff', display: 'flex', gap: '5px', justifyContent: 'center'}}><H3 children='Lorem' color={true} /> : Lorem, ipsum.</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div style={{padding: '6rem 4rem 4rem 4rem'}}>
+      <Upcomin />
+      </div >
       <Footer />
       </Container>
   )

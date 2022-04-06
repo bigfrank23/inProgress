@@ -1,9 +1,11 @@
 .pageContent2{
-    margin-top: 42rem;
+    margin-top: 50rem;
+    padding: 4rem;
 }
-.pageContentTitle h1{
+.pageContentTitle{
     text-align: center;
-    color: green;
+    margin: 2rem 0;
+    text-transform: uppercase;
 }
 .imgBx{
     width: 200px;
@@ -17,11 +19,20 @@
 }
 .centerTitle{
     text-align: center;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 .centerContent{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 8rem;
+    justify-content: center;
+    align-items: center;
+    /* gap: 4rem; */
+    flex-wrap: wrap;
+}
+.centerContentB{
+    /* width: 50%; */
+    /* flex: 0 0 33.33%; */
 }
 .centerContentText{
     text-align: center;
