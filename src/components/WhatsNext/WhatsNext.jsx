@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import gridImg from '../../images/splash2.jpg'
+import H2 from '../Text/H2'
+import PText from '../Text/PText'
 import './whatNext.css'
 
 const Container = styled.div`
@@ -18,9 +20,7 @@ const WhatsNext = () => {
                 <h1>Lorem ipsum dolor sit amet consectetur</h1>
             </div>
             <div className="nextPara">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam sit repellat rerum ea.
-                     Recusandae corrupti odio voluptatem ducimus aliquam iusto.
-                </p>
+                <PText children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloremque officia unde rerum beatae optio molestias dolorem quis corrupti sequi!" />
             </div>
         </div>
         <div className="nextContent">
@@ -28,7 +28,7 @@ const WhatsNext = () => {
                 <div className="contentBox">
                     <img src={gridImg} alt="" />
                     <div className="contentText">
-                        <h1>Lorem, ipsum.</h1>
+                        <H2 children="Lorem, ipsum." />
                     </div>
                 </div>
             ))}

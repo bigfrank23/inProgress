@@ -9,8 +9,8 @@ const H3Styles = styled.div`
   /* text-align: center; */
   color: ${(props) => (props.color ? "#fff" : "#111")};
   /* color: #fff; */
-  @media only screen and (max-width: 768px) {
-    font-size: 1rem;
+  @media only screen and (max-width: 600px) {
+    font-size: .7rem;
     font-weight: 700;
     padding: 0;
   }

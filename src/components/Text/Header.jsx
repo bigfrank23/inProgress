@@ -5,13 +5,14 @@ const HeaderStyle = styled.div`
   /* max-width: 500px; */
   /* margin: 0 0 10px 0; */
   font-size: 1.5rem;
+  font-style: italic;
   /* text-align: center; */
   /* padding: 1rem 0; */
   /* line-height: 1.3em; */
   color: ${props => props.color ? 'green' : '#111'};
   text-transform: ${props => props.transform ? 'uppercase' : 'lowercase'};
-  @media only screen and (max-width: 768px) {
-    font-size: 1.7rem;
+  @media only screen and (max-width: 600px) {
+    font-size: 1rem;
     padding: 0;
   }
 `;

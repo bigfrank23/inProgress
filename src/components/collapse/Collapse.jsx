@@ -1,5 +1,6 @@
 import React from "react";
 import useCollapse from "react-collapsed";
+import Button from "../Button/Button";
 import H3 from "../Text/H3";
 import PText from "../Text/PText";
 import './Collapse.css'

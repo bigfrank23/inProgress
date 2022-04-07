@@ -6,6 +6,8 @@ import PlayImg from '../../images/splash1.jpg'
 import Button from '../Button/Button'
 import './Extraordinary.css'
 import { mobile } from '../../responsive'
+import H3 from '../Text/H3'
+import PText from '../Text/PText'
 
 
 const Container = styled.div`
@@ -88,6 +90,7 @@ const ExtraContentContainer2 = styled.div`
     align-self: flex-start;
     width: 100%;
     padding: 0 4rem 4rem 4rem;
+    ${mobile({padding: "0 4rem", width: "unset", alignSelf: "unset"})}
     .extraLink{
     display: flex;
     justify-content: center;
@@ -183,12 +186,12 @@ const Extraordinay = () => {
                                     <ExtraCardImg src={PlayImg}/>
                                 </ExtraCardImgContainer>
                                 <ExtraContentText2>
-                                    <ExtraTitle>Lorem ipsum imus eius minima</ExtraTitle>
+                                    <ExtraTitle> <H3 children="Lorem ipsum imus eius minima" color={true} /> </ExtraTitle>
                                     {/* <div style={{display: 'flex', color: "white"}}> */}
-                                    <ExtraDate>Lorem, ipsum.</ExtraDate> 
+                                    <ExtraDate> <PText children="Lorem, ipsum." color={true} /> </ExtraDate> 
                                     {/* </div> */}
                                     {/* <div style={{display: 'flex', color: "white"}}> */}
-                                    <ExtraLocation>Lorem, ipsum. </ExtraLocation> 
+                                    <ExtraLocation><PText children="Lorem, ipsum." color={true} /> </ExtraLocation> 
                                     {/* </div> */}
                                 </ExtraContentText2>
                             </ExtraCard>

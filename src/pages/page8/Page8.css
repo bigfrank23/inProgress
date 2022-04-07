@@ -72,3 +72,39 @@
     text-align: center;
     margin-bottom: 2rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .page8Top {
+        padding: 2rem;
+        margin-top: 45rem;
+    }
+    .page8Center {
+        background: #fff;
+        padding: 2rem;
+    }
+    .page8SubCenter {
+        padding: 2rem;
+    }
+    .page8CardBx {
+        display: block;
+        /* gap: 3rem; */
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+    .page8Card {
+        width: unset !important;
+        margin: 1rem 0;
+    }
+    .page8Bottom {
+        padding: 2rem;
+    }
+    .arrowCirce {
+        font-size: 1.5rem !important;
+        color: #eee;
+        float: unset;
+        padding: 0;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

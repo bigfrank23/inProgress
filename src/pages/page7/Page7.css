@@ -78,3 +78,39 @@
 .lastPara7{
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .page7Top {
+        padding: 2rem;
+        margin-top: 45rem;
+    }
+    .page7Center {
+        padding: 2rem;
+    }
+    .page7Content {
+        text-align: center;
+    }
+    .page7Bottom {
+        padding: 2rem;
+    }
+    .page7BottomContent {
+        display: block;
+        margin: 2rem 0;
+        text-align: center;
+    }
+    .pageUpcoming {
+        padding: 0 2rem;
+        background-color: #fff;
+    }
+    .page7Last {
+        padding: 2rem;
+    }
+    .page7LastContent {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

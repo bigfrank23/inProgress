@@ -47,7 +47,7 @@ const Page8 = () => {
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
-          <h1>Header</h1>
+          <h1>Page 8</h1>
         </div>
       </div>
       <div className="page8Top">

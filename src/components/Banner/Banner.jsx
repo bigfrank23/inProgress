@@ -5,7 +5,7 @@ import './banner.css'
 
 const Container = styled.div`
     width: 100%;
-    height: 40vh;
+    /* height: 40vh; */
 `
 const Banner = () => {
   return (

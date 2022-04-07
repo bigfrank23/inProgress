@@ -20,12 +20,16 @@ const Btn = styled.button`
     background: ${props => props.outline ? 'transparent' : 'green'};
     border: ${props => props.outline ? '1px solid #232e32' : 'none'};
     cursor: pointer;
+    @media only screen and (max-width: 600px) {
+    font-size: .8rem;
+    font-weight: 500;
+  }
 `
 
-const Button = ({outline= false, BtnText= 'text'}) => {
+const Button = ({outline= false, BtnText= 'text', onClick=true}) => {
   return (
     <Container>
-        <Btn outline={outline}>{BtnText}</Btn>
+        <Btn outline={outline} onClick={onClick}>{BtnText}</Btn>
     </Container>
   )
 }

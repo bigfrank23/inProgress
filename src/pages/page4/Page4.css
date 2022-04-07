@@ -114,3 +114,58 @@
     background: green;
     padding: 2rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .page4Top {
+        display: block;
+        gap: 1rem;
+        margin-top: 45rem;
+        padding: 2rem;
+    }
+    .page4TopLeft, .page4TopCenter, .page4TopRight {
+        /* flex: 1 1; */
+        margin: 2rem 0 4rem 0;
+    }
+    .spacerBx {
+        width: 100%;
+        padding: 0rem 0;
+    }
+    .page4Center {
+        padding: 2rem;
+    }
+    .page4CenterTop .page4CenterTopBtn {
+        display: block;
+        text-align: center;
+        /* justify-content: center; */
+        /* gap: 10px; */
+        margin-top: 1rem;
+    }
+    .page4BtnMid{
+        padding: 1rem 0;
+    }
+    .btnBx {
+        gap: 1rem;
+    }
+    .page4CenterBx {
+        display: block;
+        gap: 1rem;
+    }
+    .viewBtn{
+        padding: 2rem 0;
+    }
+    .spacingDiv{
+        padding: 0 !important;
+    }
+    .page4ButtomCardBx {
+        display: block !important;
+    }
+    .page4buttomCard2{
+        margin: 2rem 0;
+    }
+    .page4buttomCard3{
+        margin-bottom: 4rem;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

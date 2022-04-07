@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Navbar from '../../components/Navbar/Navbar';
 import Img from '../../images/splash2.jpg'
@@ -72,12 +72,23 @@ const Collapsible = ({children}) => {
         </div>
       </div>
       <div className="he" {...getToggleProps()}>
-        {isExpanded ? 	<i className= "fa fa-angle-double-up readMoreIcon" /> : <i className= "fa fa-angle-double-down readMoreIcon" />}
+        {/* {isExpanded ? 	<i className= "fa fa-angle-double-up readMoreIcon" /> : <i className= "fa fa-angle-double-down readMoreIcon" />} */}
+        <div style={{padding: "1rem 0"}}>
+            <Button BtnText="Full Detail" outline={true}/>
+          </div>
       </div>
     </div>
   );
 }
 const Page2 = () => {
+  const [itemsToShow, setItemsToShow] = useState(6)
+
+  const showMore = () => {
+    setItemsToShow(cwc.length)
+  }
+  const showLess = () => {
+    setItemsToShow(6)
+  }
   return (
     <Container>
       <div className="page1Wrapper">
@@ -88,7 +99,7 @@ const Page2 = () => {
       </div>
       <div className="pageContent2">
         <div className="pageContentTitle">
-          <Header children="Meet Our team" color={true} transform="uppercase" />
+          <Header children="The Executives" color={true} transform="uppercase" />
         </div>
         <div className="pageContentTop center">
           <div className="centerTitle">
@@ -103,8 +114,8 @@ const Page2 = () => {
                 </div>
                 <div className="centerContentText">
                   <h3>{data.name}</h3>
-                  <p>{data.church}</p>
                   <Collapsible>
+                  <p>{data.church}</p>
                     <p>{data.address}</p>
                     <p>{data.headOffice}</p>
                     <p>{data.tel}</p>
@@ -126,7 +137,7 @@ const Page2 = () => {
             <div className="centerTitle">
               <H2 children="The Directors" />
             </div>
-            <div className="centerContent">
+            <div className="centerContent2">
               {directors.map((data) => (
                 <div className="centerContentB">
                   <div className="imgBx">
@@ -134,8 +145,8 @@ const Page2 = () => {
                   </div>
                   <div className="centerContentText">
                     <h3>{data.name}</h3>
-                    <p>{data.church}</p>
                     <Collapsible>
+                    <p>{data.church}</p>
                       <p>{data.address}</p>
                       <p>{data.headOffice}</p>
                       <p>{data.tel}</p>
@@ -156,9 +167,9 @@ const Page2 = () => {
           <hr className="hr" />
           <div className="pageContentTop center">
             <div className="centerTitle">
-              <H2 children="The Chairmen" />
+              <H2 children="The Provincial Chairmen" />
             </div>
-            <div className="centerContent">
+            <div className="centerContent2">
               {directors.map((data) => (
                 <div className="centerContentB">
                   <div className="imgBx">
@@ -166,8 +177,8 @@ const Page2 = () => {
                   </div>
                   <div className="centerContentText">
                     <h3>{data.name}</h3>
-                    <p>{data.church}</p>
                     <Collapsible>
+                    <p>{data.church}</p>
                       <p>{data.address}</p>
                       <p>{data.headOffice}</p>
                       <p>{data.tel}</p>

@@ -11,8 +11,8 @@ const PStyle = styled.div`
   font-size: 1rem;
   /* text-align: center; */
   color: ${(props) => (props.color ? "#fff" : "#111")};
-  @media only screen and (max-width: 768px) {
-    font-size: 1.3rem;
+  @media only screen and (max-width: 600px) {
+    font-size: .8rem;
     padding: 0;
   }
 `;

@@ -39,3 +39,19 @@
 .sectThree{
     padding: 4rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .secOne{
+        margin-top: 45rem;
+        padding: 2rem;
+    }
+    .secTwo{
+        padding: 2rem;
+    }
+    .sectThree {
+        padding: 2rem;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

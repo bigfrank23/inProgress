@@ -1,7 +1,7 @@
 .header{
     margin: auto;
     margin-bottom: 60px;
-    margin-top: 25rem;
+    margin-top: 4rem;
 }
 .header .topHeader{
     font-style: italic;
@@ -27,7 +27,7 @@
 .card1{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    /* width: 400px; */
     transition: transform .2s ease-in-out;
     transform: scale(1);
     background-color: #f1f1eb;
@@ -43,7 +43,9 @@
 
 .contentTextWrapper .contentText{
     background-color: #f1f1eb;
-    padding: 20px 35px 30px;
+    /* padding: 20px 35px 30px; */
+    padding: 1rem 0;
+    text-align: center;
     position: relative;
     margin-bottom: 0.5em;
     margin-top: 0;
@@ -53,7 +55,8 @@
 .contentTextWrapper .contentPara{
     font-weight: 300;
     font-size: 1rem;
-    padding: 20px 35px 30px;
+    /* padding: 20px 35px 30px; */
+    padding: 0 2rem;
 }
 .circledArrow{
     font-size: 1.5rem !important;

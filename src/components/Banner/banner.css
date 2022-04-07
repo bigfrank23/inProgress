@@ -7,13 +7,14 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    padding: 4rem;
     /* align-items: center; */
 }
 
 .bannerCenter{
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: 5rem;
     align-self: center;
 }
 
@@ -91,3 +92,30 @@
 .angleBanner{
     align-self: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .bannerCenter{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        align-self: center;
+    }
+    .banner .bannerBtn{
+        margin-bottom: 2rem;
+    }
+    .navyblue .navyblueContainer{
+        display: block;
+    }
+    .divider{
+        width: 100%;
+        background-color: #000;
+        height: 2px;
+        align-self: center;
+    }
+    .banner{
+        padding: 2rem;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

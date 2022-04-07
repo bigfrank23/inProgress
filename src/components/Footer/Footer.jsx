@@ -5,6 +5,10 @@ import PFN from '../../images/PFN4.png'
 import styled from 'styled-components'
 import Button from '../Button/Button'
 import { Link } from 'react-router-dom';
+import Header from '../Text/Header'
+import PText from '../Text/PText'
+import { mobile } from '../../responsive'
+import H3 from '../Text/H3'
 
 const Container = styled.div`
   width: 100%;
@@ -23,7 +27,7 @@ const Container = styled.div`
       .lineShape {
         width: 50%;
         height: 20px;
-        background: green;
+        background: #fff;
         position: absolute;
         transform: translate(-50%, 100%);
         left: 50%;
@@ -52,12 +56,15 @@ const Container = styled.div`
   }
   .bottomFooter {
     padding: 4rem;
+    ${mobile({padding: "2rem"})}
     .bottomFooterContent {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      ${mobile({display: "block"})}
       .logoBox {
         display: flex;
+        ${mobile({padding: "3rem 0", justifyContent: "center"})}
         .logoText {
           align-self: center;
           margin-left: 10px;
@@ -73,24 +80,32 @@ const Container = styled.div`
         list-style: none;
         display: flex;
         gap: 20px;
+        ${mobile({display: "block", textAlign: "center"})}
         a {
           color: #232e32;
           font-weight: 900;
           text-decoration: none;
           text-transform: uppercase;
+          .listItems{
+            ${mobile({marginBottom: "1rem"})}
+          }
         }
       }
       .footerButton {
+        ${mobile({margin: "3rem 0"})}
         .buttonBox {
           display: flex;
           gap: 1rem;
+          ${mobile({justifyContent: "center"})}
         }
         .socialBox {
           float: right;
           margin-top: 20px;
+          ${mobile({float: "unset"})}
           .social {
             display: flex;
             gap: 10px;
+            ${mobile({justifyContent: "center"})}
             a {
               color: #fff;
               background: green;
@@ -119,10 +134,10 @@ const Footer = () => {
         <div className="topFooter">
             <div className="center">
                 <div className="lineShape"></div>
-                <h1 className='mainText'>Lorem, ipsum dolor sit.</h1>
+                <div className='mainText'> <Header color={true} children="Lorem, ipsum dolor sit."/> </div>
                 <div className="btnContent">
                     <div className="topTextBox">
-                    <span>Lorem, ipsum dolor.</span>
+                    <PText children="Lorem, ipsum dolor." color={true}/>
                     </div>
                     <div className="topBtnBox">
                         <Link to='#' className='links' style={{background: '#fff', borderRadius: '20px'}}>
@@ -146,13 +161,13 @@ const Footer = () => {
                 </div>
                 <ul className="list">
                     <Link to="#" className='links'>
-                        <li className="listItems">Lorem.</li>
+                        <li className="listItems"><H3 children="Lorem" /></li>
                     </Link>
                     <Link to="#" className='links'>
-                        <li className="listItems">Lorem.</li>
+                        <li className="listItems"><H3 children="Lorem" /></li>
                     </Link>
                     <Link to="#" className='links'>
-                        <li className="listItems">Lorem.</li>
+                        <li className="listItems"><H3 children="Lorem" /></li>
                     </Link>
                 </ul>
                 <div className="footerButton">

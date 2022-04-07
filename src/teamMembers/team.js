@@ -1,4 +1,4 @@
-import Img from '../images/splash3.jpg'
+import Img from '../images/pro3.jpg'
 export const cwc = [
   {
     id: 1,

@@ -37,3 +37,23 @@
 .Hr:last-child{
     display: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .page5 {
+        margin-top: 45rem;
+    }
+    .page5Bx {
+        display: block;
+        padding: 2rem 2rem;
+    }
+    .page5Bx .page5BxContent {
+        text-align: center;
+    }
+    .page5Date, .page5Time, .page5Location {
+        display: flex;
+        justify-content: center;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

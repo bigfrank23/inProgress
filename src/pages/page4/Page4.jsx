@@ -107,7 +107,10 @@ const Page4 = () => {
           </div>
           <div className="page4CenterTopBtn">
             <Button />
+            <div className='page4BtnMid'>
             <Button />
+
+            </div>
             <Button />
           </div>
         </div>
@@ -166,7 +169,7 @@ const Page4 = () => {
       <div className="viewBtn" style={{textAlign: 'center'}}>
         <Button />
       </div>
-      <div style={{padding: '6rem 4rem 4rem 4rem'}}>
+      <div className='spacingDiv' style={{padding: '6rem 4rem 4rem 4rem'}}>
       <Upcomin />
       </div >
       <Footer />

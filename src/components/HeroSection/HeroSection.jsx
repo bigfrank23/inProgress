@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Img1 from '../../images/pro4.webp'
 import Img2 from '../../images/pro5.jpg'
-import Img3 from '../../images/pro8.jpg'
+import Img3 from '../../images/pro3.jpg'
+import Img4 from '../../images/pro9.jpg'
 import Button from '../Button/Button'
 import './heroSection.css'
 
 const image1 = Img1
 const image2 = Img2
 const image3 = Img3
+const image4 = Img4
 
 const Container = styled.div`
     /* background */
@@ -26,6 +28,7 @@ const TopText = styled.h4`
     font-weight: 300;
     margin: 0;
     text-transform: uppercase;
+    text-align: center;
 `
 const CenterTextContainer = styled.div`
     margin-bottom: 50px;
@@ -60,7 +63,7 @@ const HeroSection = () => {
   return (
     <Container id='hero'>
         <BackgroundSlider
-            images={[image1, image2, image3]}
+            images={[image1, image2, image3, image4]}
             duration={10} transition={2}
          />
         <Content>

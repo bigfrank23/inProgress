@@ -7,6 +7,9 @@ import Img3 from '../../images/bg2.jpg'
 import BgImg from '../../images/splash1.jpg'
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
+import H2 from '../../components/Text/H2';
+import { mobile } from '../../responsive';
+import PText from '../../components/Text/PText';
 
 const Container = styled.div`
   width: 100%;
@@ -49,24 +52,31 @@ const Container = styled.div`
     padding: 4rem;
     color: #fff;
     text-align: center;
+    ${mobile({marginTop: "45rem", padding: "2rem"})}
   }
   .pageContent{
       padding: 4rem;
+      ${mobile({padding: "2rem"})}
   }
   .pageContentTop{
       display: flex;
       padding: 2rem 0;
       gap: 2rem;
+      ${mobile({display: "block"})}
       .left{
         flex: 1;
         .pageContentTitle{
             margin-bottom: 1.5rem;
+        }
+        .pageContentPara{
+            ${mobile({textAlign: "center"})}
         }
       }
       .right{
           width: 400px;
           height: 400px;
           flex: 1;
+          ${mobile({width: "unset", height: "unset", padding: "2rem 0"})}
           img{
               width: 100%;
               height: 100%;
@@ -91,19 +101,19 @@ const Page1 = () => {
         </div>
         <div className="pageBanner">
             <div className="pageBannerText">
-                <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit <br />. Repellendus, cupiditate.</h1>
-                <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h1>
+                <H2 color={true} children="Lorem, ipsum dolor sit amet consectetur adipisicing elit <br />. Repellendus, cupiditate." />
+                <H2 color={true} children="Lorem, ipsum dolor sit amet consectetur adipisicing elit" />
             </div>
         </div>
         <div className="pageContent">
             <div className="pageContentTop">
                 <div className="left">
                     <div className="pageContentTitle">
-                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <H2 children="Lorem ipsum dolor sit amet." />
                     </div>
                     <div className="pageContentPara">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique.</p>
+                        <PText children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique." />
+                        <PText children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique." />
                     </div>
                 </div>
                 <div className="right">
@@ -113,11 +123,12 @@ const Page1 = () => {
             <div className="pageContentTop center">
                 <div className="left">
                     <div className="pageContentTitle">
-                        <h2>Lorem ipsum dolor sit amet.</h2>
+                    <H2 children="Lorem ipsum dolor sit amet." />
                     </div>
                     <div className="pageContentPara">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique.</p>
+                    <PText children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique." />
+                    <PText children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique." />
+                        
                     </div>
                     <div className="pageBtn" style={{display: 'flex', gap: '2rem', marginTop: '2rem'}}>
                         <Button />
@@ -131,11 +142,12 @@ const Page1 = () => {
             <div className="pageContentTop bottom">
                 <div className="left">
                     <div className="pageContentTitle">
-                        <h2>Lorem ipsum dolor sit amet.</h2>
+                    <H2 children="Lorem ipsum dolor sit amet." />
                     </div>
                     <div className="pageContentPara">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique.</p>
+                    <PText children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique." />
+                    <PText children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quidem tempore sunt! Ad, cumque officiis cupiditate tenetur illo repudiandae similique." />
+                        
                     </div>
                     <div className="pageBtn" style={{display: 'flex', justifyContent: 'center', marginTop: '2rem'}}>
                         <Button />
