@@ -1,0 +1,7 @@
+.hidden{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    transition: height .5s ease-in-out;
+}

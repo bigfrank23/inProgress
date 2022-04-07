@@ -1,0 +1,31 @@
+.collapsible .content {
+    padding: 6px;
+    background-color: rgb(240, 240, 240);
+    font-size: 14px;
+}
+.collapsible .main {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid rgba(0,0,0,.125);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -1px;
+    padding: 18px 15px;
+}
+.collapsible .main .title {
+    font-weight: 600;
+}
+.preferences label {
+    display: block;
+    padding-bottom: 4px;
+}
+.chevIcon{
+    color: #1c6677;
+    font-size: 26px !important;
+    transition: transform .3s;
+    font-weight: 300 !important;
+}
+.colContent{
+    padding: 1.25rem;
+    background-color: #fff;
+}

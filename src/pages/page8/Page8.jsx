@@ -10,6 +10,7 @@ import H2 from '../../components/Text/H2';
 import './Page8.css'
 import H3 from '../../components/Text/H3';
 import Footer from '../../components/Footer/Footer';
+import Collapse from '../../components/collapse/Collapse';
 
 const Container = styled.div`
   width: 100%;
@@ -139,6 +140,14 @@ const Page8 = () => {
                           <i className="fa fa-arrow-circle-right arrowCirce" aria-hidden="true"></i>
                       </div>
                   </div>
+              </div>
+          </div>
+          <div className="page8Bottom">
+              <div className="page8BottomTittle">
+                  <H2 children="Frequently asked Questions" />
+              </div>
+              <div className="colCard">
+                  <Collapse />
               </div>
           </div>
           <Footer />

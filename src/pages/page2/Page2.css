@@ -27,7 +27,7 @@
     padding: 0 8rem;
     justify-content: center;
     align-items: center;
-    /* gap: 4rem; */
+    gap: 1rem;
     flex-wrap: wrap;
 }
 .centerContentB{
@@ -38,8 +38,24 @@
     text-align: center;
     margin-top: 1rem;
     line-height: 4vh;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px 3px;
 }
 .hr{
     border: 1px solid #ddd;
-    margin: 1rem 0;
+    margin: 2rem 0;
+}
+#ReactBackgroundSlider > figure{
+    background-position: inherit !important;
+}
+.readMoreIcon{
+    font-size: 1.5rem;
+    background: red;
+    color: #fff;
+    padding: 2px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
 }

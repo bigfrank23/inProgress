@@ -7,11 +7,14 @@ import Img3 from '../../images/bg2.jpg'
 import BgImg from '../../images/splash1.jpg'
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
+// import Collapsible from "react-collapsible";
+import useCollapse from "react-collapsed";
 
 import './Page2.css'
 import Header from '../../components/Text/Header';
 import H2 from '../../components/Text/H2';
-import {cwc, team} from '../../teamMembers/team'
+import {cwc, directors, team} from '../../teamMembers/team'
+import ReadMore from '../../components/readMore/ReadMore';
 
 const Container = styled.div`
   width: 100%;
@@ -59,86 +62,134 @@ const Container = styled.div`
       padding: 4rem;
   }
 `;
+const Collapsible = ({children}) => {
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+  return (
+    <div className="collapsible">
+      <div {...getCollapseProps()}>
+        <div className="con">
+          {children}
+        </div>
+      </div>
+      <div className="he" {...getToggleProps()}>
+        {isExpanded ? 	<i className= "fa fa-angle-double-up readMoreIcon" /> : <i className= "fa fa-angle-double-down readMoreIcon" />}
+      </div>
+    </div>
+  );
+}
 const Page2 = () => {
   return (
     <Container>
-        <div className="page1Wrapper">
-            {/* <Navbar /> */}
-            <div className="page1Header">
-                <h1>Our Team</h1>
-            </div>
+      <div className="page1Wrapper">
+        {/* <Navbar /> */}
+        <div className="page1Header">
+          <h1>Our Team</h1>
         </div>
-        <div className="pageContent2">
-            <div className="pageContentTitle">
-                <Header children='Meet Our team' color={true} transform='uppercase' />
-            </div>
-            <div className="pageContentTop center">
-                <div className="centerTitle">
-                    <H2 children='The  Central Working Committee (CWC)' />
-                </div>
-
-                <div className="centerContent">
-                    {cwc.map((data)=> (
-                        <div className="centerContentB">
-                            <div className="imgBx">
-
-                            <img src={data.img} width={50} alt="" />
-                            </div>
-                            <div className="centerContentText">
-                                <h3>{data.name}</h3>
-                                <p>{data.church}</p>
-                                <p>{data.address}</p>
-                                <p>{data.tel}</p>
-                                <p>{data.dOb}</p>
-                                <p>{data.email}</p>
-                                <p>{data.chapter}</p>
-                                <p>{data.province}</p>
-                                {/* <span>{data.address}</span> */}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <hr className='hr' />
-                <div className="centerContent">
-                    <div className="centerContentB">
-                        <div className="imgBx">
-
-                        <img src={Img} width={50} alt="" />
-                        </div>
-                        <div className="centerContentText">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem, ipsum.</p>
-                            <span>Lorem, ipsum.</span>
-                        </div>
-                    </div>
-                    <div className="centerContentB">
-                        <div className="imgBx">
-
-                        <img src={Img} alt="" />
-                        </div>
-                        <div className="centerContentText">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem, ipsum.</p>
-                            <span>Lorem, ipsum.</span>
-                        </div>
-                    </div>
-                    <div className="centerContentB">
-                        <div className="imgBx">
-
-                        <img src={Img} alt="" />
-                        </div>
-                        <div className="centerContentText">
-                            <h3>Lorem, ipsum.</h3>
-                            <p>Lorem, ipsum.</p>
-                            <span>Lorem, ipsum.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div className="pageContent2">
+        <div className="pageContentTitle">
+          <Header children="Meet Our team" color={true} transform="uppercase" />
         </div>
-        <Footer />
+        <div className="pageContentTop center">
+          <div className="centerTitle">
+            <H2 children="The  Central Working Committee (CWC)" />
+          </div>
+
+          <div className="centerContent">
+            {cwc.map((data) => (
+              <div className="centerContentB">
+                <div className="imgBx">
+                  <img src={data.img} width={50} alt="" />
+                </div>
+                <div className="centerContentText">
+                  <h3>{data.name}</h3>
+                  <p>{data.church}</p>
+                  <Collapsible>
+                    <p>{data.address}</p>
+                    <p>{data.headOffice}</p>
+                    <p>{data.tel}</p>
+                    <p>{data.email}</p>
+                    <p>{data.dOb}</p>
+                    <p>{data.chapter}</p>
+                    <p>{data.province}</p>
+                    <p>{data.associatePastor}</p>
+                    <p>{data.associatePastorChapter}</p>
+                    <p>{data.associatePastorProvince}</p>
+                    <p>{data.associatePastorTel}</p>
+                  </Collapsible>
+                </div>
+              </div>
+            ))}
+          </div>
+          <hr className="hr" />
+          <div className="pageContentTop center">
+            <div className="centerTitle">
+              <H2 children="The Directors" />
+            </div>
+            <div className="centerContent">
+              {directors.map((data) => (
+                <div className="centerContentB">
+                  <div className="imgBx">
+                    <img src={data.img} width={50} alt="" />
+                  </div>
+                  <div className="centerContentText">
+                    <h3>{data.name}</h3>
+                    <p>{data.church}</p>
+                    <Collapsible>
+                      <p>{data.address}</p>
+                      <p>{data.headOffice}</p>
+                      <p>{data.tel}</p>
+                      <p>{data.email}</p>
+                      <p>{data.dOb}</p>
+                      <p>{data.chapter}</p>
+                      <p>{data.province}</p>
+                      <p>{data.associatePastor}</p>
+                      <p>{data.associatePastorChapter}</p>
+                      <p>{data.associatePastorProvince}</p>
+                      <p>{data.associatePastorTel}</p>
+                    </Collapsible>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <hr className="hr" />
+          <div className="pageContentTop center">
+            <div className="centerTitle">
+              <H2 children="The Chairmen" />
+            </div>
+            <div className="centerContent">
+              {directors.map((data) => (
+                <div className="centerContentB">
+                  <div className="imgBx">
+                    <img src={data.img} width={50} alt="" />
+                  </div>
+                  <div className="centerContentText">
+                    <h3>{data.name}</h3>
+                    <p>{data.church}</p>
+                    <Collapsible>
+                      <p>{data.address}</p>
+                      <p>{data.headOffice}</p>
+                      <p>{data.tel}</p>
+                      <p>{data.email}</p>
+                      <p>{data.dOb}</p>
+                      <p>{data.chapter}</p>
+                      <p>{data.province}</p>
+                      <p>{data.associatePastor}</p>
+                      <p>{data.associatePastorChapter}</p>
+                      <p>{data.associatePastorProvince}</p>
+                      <p>{data.associatePastorTel}</p>
+                    </Collapsible>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </Container>
-  )
+  );
 }
 
 export default Page2
