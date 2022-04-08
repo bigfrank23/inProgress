@@ -15,6 +15,7 @@ import Header from '../../components/Text/Header';
 import H2 from '../../components/Text/H2';
 import {cwc, directors, team} from '../../teamMembers/team'
 import ReadMore from '../../components/readMore/ReadMore';
+import PopUp from '../../components/popUp/PopUp';
 
 const Container = styled.div`
   width: 100%;
@@ -74,7 +75,10 @@ const Collapsible = ({children}) => {
       <div className="he" {...getToggleProps()}>
         {/* {isExpanded ? 	<i className= "fa fa-angle-double-up readMoreIcon" /> : <i className= "fa fa-angle-double-down readMoreIcon" />} */}
         <div style={{padding: "1rem 0"}}>
-            <Button BtnText="Full Detail" outline={true}/>
+          <PopUp>
+
+            
+          </PopUp>
           </div>
       </div>
     </div>
@@ -114,9 +118,9 @@ const Page2 = () => {
                 </div>
                 <div className="centerContentText">
                   <h3>{data.name}</h3>
-                  <Collapsible>
                   <p>{data.church}</p>
                     <p>{data.address}</p>
+                  <Collapsible>
                     <p>{data.headOffice}</p>
                     <p>{data.tel}</p>
                     <p>{data.email}</p>

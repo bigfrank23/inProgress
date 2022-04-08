@@ -7,9 +7,9 @@ import styled from 'styled-components'
 import Header from '../../components/Text/Header';
 import PText from '../../components/Text/PText';
 import H2 from '../../components/Text/H2';
-import './Page8.css'
 import H3 from '../../components/Text/H3';
 import Footer from '../../components/Footer/Footer';
+import './Page9.css'
 
 const Container = styled.div`
   width: 100%;
@@ -39,7 +39,8 @@ const Container = styled.div`
     }
   }
 `
-const page9 = () => {
+const Page9 = () => {
+  const cards = [1, 2, 3]
   return (
     <Container>
       <div className="page1Wrapper">
@@ -48,8 +49,65 @@ const page9 = () => {
           <h1>Page 9</h1>
         </div>
       </div>
+      <div className="page9TopContainer">
+        <div className="page9TopHeader">
+          <Header color={true} children="Lorem ipsium" />
+        </div>
+        <div className="page9TopTitle">
+          <H2 children="Lorem ipsium est ilor kop grt" />
+        </div>
+        <div className="page9TopPara">
+          <PText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at sint aspernatur asperiores minus autem expedita. Perferendis eius ullam, error quae cupiditate fugit. Ipsum voluptate quasi doloremque tenetur reiciendis aspernatur.
+          </PText>
+        </div>
+        <div className="page9TopContent">
+          <div className="page9TopContentTitle">
+            <H2 color="true">Lorem, ipsum.</H2>
+          </div>
+          <div className="page9TopContentTitle2">
+            <H3 color="true">Lorem, ipsum.</H3>
+          </div>
+          <div className="page9TopContentPara">
+            <PText color="true">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto optio incidunt sed, pariatur quos quaerat, iure est nobis ipsa non earum quisquam culpa suscipit ex iusto deleniti? Eum laboriosam eligendi error magnam fugiat repudiandae aliquam ad minima debitis, iusto culpa id dolores enim earum non nulla vel delectus nam totam!
+            </PText>
+          </div>
+          <div className="page9TopContentTitle2">
+            <H3 color="true">Lorem, ipsum.</H3>
+          </div>
+          <div className="page9TopContentTitle2">
+            <H3 color="true">Complete your SHAPE profile online »</H3>
+          </div>
+        </div>
+      </div>
+      <div className="page9CenterContainer">
+        <div className="page9CenterTitle">
+          <H2>Lorem, ipsum dolor.</H2>
+        </div>
+        <div className="page9HoverCard">
+          {cards.map(()=> (
+            <div className="page9Card">
+              <div className="page9CardImgBx">
+                <img src={Img} alt="" />
+              </div>
+              <div className="page9CardTxt">
+                <div className="page9CardTxtTitle">
+                  <H2>Lorem ipsum dolor sit.</H2>
+                </div>
+                <div className="page9CardTxtPara">
+                  <PText>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, saepe? Aspernatur pariatur saepe ipsa obcaecati voluptas inventore quam quasi eaque id! Ipsa iste odio maiores, excepturi voluptatibus delectus voluptatem ab?
+                  </PText>
+                </div>
+                <i className="fa fa-arrow-circle-right page9Icon" aria-hidden="true" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </Container>
   )
 }
 
-export default page9
+export default Page9
