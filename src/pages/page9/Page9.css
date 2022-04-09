@@ -1,5 +1,4 @@
 .page9TopContainer{
-    margin-top: 45rem;
     padding: 4rem;
 }
 .page9TopHeader, .page9TopTitle, .page9TopPara{
@@ -24,6 +23,7 @@
 }
 .page9CenterTitle{
     text-align: center;
+    margin-bottom: 4rem;
 }
 .page9TopContentTitle2{
     padding: 1rem 0;
@@ -33,9 +33,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 1rem;
     column-gap: 1rem;
+    padding: 0 4rem;
 }
 .page9Card{
-    margin: 4rem 0;
     transition: transform .2s ease-in-out;
     transform: scale(1);
 }
@@ -43,7 +43,7 @@
     transform: scale(1.1);
 }
 .page9CardImgBx{
-    width: 350px;
+    /* width: 350px; */
 }
 .page9CardImgBx img{
     width: 100%;
@@ -63,3 +63,70 @@
     color: green;
     font-size: 1.5rem !important;
 }
+.page9Bottom{
+    padding: 4rem;
+}
+.page9BottomTitle{
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.page9BottomContent{
+    display: flex;
+    justify-content: center;
+    padding: 0 4rem;
+    gap: 1rem;
+}
+.page9BottomBanner{
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuXzY4T0hvViIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjkuNSIgaGVpZ2h0PSI5LjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjkuNSIgc3Ryb2tlPSIjMTk0ZDMzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fNjhPSG9WKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');
+    padding: 4rem;
+}
+.page9BottomBannerTitle, .page9BottomBannerPara, .page9BottomBannerBtn{
+    text-align: center;
+}
+.page9BottomBannerPara{
+    background: #fff;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .page9TopContainer {
+    padding: 2rem;
+}
+.page9TopContent {
+    padding: 2rem 2rem;
+}
+    .page9CenterContainer {
+    padding: 2rem 0;
+    }
+    .page9HoverCard {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    padding: 0;
+    /* column-gap: 1rem; */
+    /* padding: 0 2rem; */
+    }
+    .page9CardTxt {
+    max-width: 100%;
+    }
+    .page9Card:hover{
+    transform: scale(1);
+}
+.page9Bottom {
+    padding: 2rem;
+}
+.page9BottomTitle {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.page9BottomContent {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

@@ -1,5 +1,5 @@
 .page5{
-    margin-top: 50rem;
+    /* margin-top: 50rem; */
 }
 .page5Bx{
     display: flex;
@@ -40,7 +40,7 @@
 
 @media only screen and (max-width: 600px) {
     .page5 {
-        margin-top: 45rem;
+        /* margin-top: 45rem; */
     }
     .page5Bx {
         display: block;

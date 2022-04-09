@@ -30,9 +30,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
-    height: 100%;
+    height: 100vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -48,11 +48,11 @@ const Container = styled.div`
       background-position: center;
       background-repeat: no-repeat;
     position: relative;
-    margin-top: 50rem;
+    /* margin-top: 50rem; */
     padding: 4rem;
     color: #fff;
     text-align: center;
-    ${mobile({marginTop: "45rem", padding: "2rem"})}
+    ${mobile({ padding: "2rem"})}
   }
   .pageContent{
       padding: 4rem;

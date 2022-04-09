@@ -30,9 +30,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
-    height: 100%;
+    height: 100vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -170,7 +170,43 @@ const Page4 = () => {
         <Button />
       </div>
       <div className='spacingDiv' style={{padding: '6rem 4rem 4rem 4rem'}}>
-      <Upcomin />
+        <div className="page4Bottom">
+          <div className="page4BottomTitle">
+            <H2>Upcoming Events</H2>
+          </div>
+          <div className="page4BottomContent">
+            <Upcomin 
+              title1="Lorem ipsium"
+              title2="Lorem ipsium"
+              title3="Lorem ipsium"
+              title4="Lorem ipsium"
+              title5="Lorem ipsium"
+              para1="2/45"
+              para2='Lagos'
+              image={Img2}
+            />
+            <Upcomin 
+              title1="Lorem ipsium"
+              title2="Lorem ipsium"
+              title3="Lorem ipsium"
+              title4="Lorem ipsium"
+              title5="Lorem ipsium"
+              para1="2/45"
+              para2='Lagos'
+              image={Img2}
+            />
+            <Upcomin 
+              title1="Lorem ipsium"
+              title2="Lorem ipsium"
+              title3="Lorem ipsium"
+              title4="Lorem ipsium"
+              title5="Lorem ipsium"
+              para1="2/45"
+              para2='Lagos'
+              image={Img2}
+            />
+          </div>
+        </div>
       </div >
       <Footer />
       </Container>

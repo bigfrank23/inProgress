@@ -15,7 +15,6 @@ import Header from '../../components/Text/Header';
 import H2 from '../../components/Text/H2';
 import {cwc, directors, team} from '../../teamMembers/team'
 import ReadMore from '../../components/readMore/ReadMore';
-import PopUp from '../../components/popUp/PopUp';
 
 const Container = styled.div`
   width: 100%;
@@ -36,9 +35,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
-    height: 100%;
+    height: 100vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -75,10 +74,6 @@ const Collapsible = ({children}) => {
       <div className="he" {...getToggleProps()}>
         {/* {isExpanded ? 	<i className= "fa fa-angle-double-up readMoreIcon" /> : <i className= "fa fa-angle-double-down readMoreIcon" />} */}
         <div style={{padding: "1rem 0"}}>
-          <PopUp>
-
-            
-          </PopUp>
           </div>
       </div>
     </div>

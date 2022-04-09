@@ -1,5 +1,4 @@
 .pageContent2{
-    margin-top: 50rem;
     padding: 4rem;
 }
 .pageContentTitle{
@@ -88,7 +87,6 @@
 
 @media only screen and (max-width: 600px) {
     .pageContent2{
-        margin-top: 45rem;
         padding: 2rem;
     }
     .centerContent, .centerContent2{

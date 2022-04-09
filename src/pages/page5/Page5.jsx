@@ -29,9 +29,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
-    height: 100%;
+    height: 100vh;
     .page1Header {
       color: #fff;
       text-align: center;

@@ -10,6 +10,8 @@ import H2 from '../../components/Text/H2';
 import H3 from '../../components/Text/H3';
 import Footer from '../../components/Footer/Footer';
 import './Page9.css'
+import Upcomin from './../../components/Upcoming/Upcomin';
+import Button from '../../components/Button/Button';
 
 const Container = styled.div`
   width: 100%;
@@ -30,9 +32,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
-    height: 100%;
+    height: 100vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -40,7 +42,7 @@ const Container = styled.div`
   }
 `
 const Page9 = () => {
-  const cards = [1, 2, 3]
+  const cards = [1, 2, 3, 4, 5, 6, 7]
   return (
     <Container>
       <div className="page1Wrapper">
@@ -106,6 +108,43 @@ const Page9 = () => {
           ))}
         </div>
       </div>
+      <div className='page9Bottom'>
+        <div className="page9BottomTitle">
+          <H2>Upcoming Events</H2>
+        </div>
+        <div className="page9BottomContent">
+          <Upcomin title1="lorekroe"
+            title3="Celebrate Recovery"
+            title4="Date"
+            para1="2/0"
+            title5="Location"
+            para2="Lagos"
+            image={Img2}
+          />
+          <Upcomin title1="lorekroe"
+            title3="Celebrate Recovery"
+            title4="Date"
+            para1="2/0"
+            title5="Location"
+            para2="Lagos"
+            image={Img2}
+          />
+        </div>
+      </div>
+      <div className="page9BottomBanner">
+        <div className="page9BottomBannerTitle">
+          <H2>Lorem ipsum dolor sit amet.</H2>
+        </div>
+        <div className="page9BottomBannerPara">
+          <PText>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis reprehenderit, itaque adipisci eius impedit ut dolore at corrupti maiores dolorem quo eum eligendi libero magnam inventore cum, minima ad officia.
+          </PText>
+        </div>
+        <div className="page9BottomBannerBtn">
+          <Button BtnText='Contact Us' />
+        </div>
+      </div>
+      <Footer />
     </Container>
   )
 }

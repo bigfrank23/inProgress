@@ -1,7 +1,6 @@
 .page4Top{
     display: flex;
     gap: 1rem;
-    margin-top: 50rem;
     padding: 4rem;
 }
 .page4CenterBx{
@@ -77,6 +76,11 @@
 }
 .page4Bottom{
     /* padding: 6rem 4rem 4rem 4rem; */
+    flex: 1;
+}
+.page4BottomContent{
+    display: flex;
+    gap: 1rem;
 }
 .page4Bottom .page4BottomTitle{
     text-align: center;
@@ -101,7 +105,7 @@
     box-shadow: 1px 1px 1px gray;
 }
 .page4ButtomCardOverlay{
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../images/splash3.jpg');
+    /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../images/splash3.jpg'); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -119,7 +123,6 @@
     .page4Top {
         display: block;
         gap: 1rem;
-        margin-top: 45rem;
         padding: 2rem;
     }
     .page4TopLeft, .page4TopCenter, .page4TopRight {
