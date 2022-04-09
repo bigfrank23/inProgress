@@ -38,6 +38,7 @@
 .page9Card{
     transition: transform .2s ease-in-out;
     transform: scale(1);
+    background: #f1f1eb;
 }
 .page9Card:hover{
     transform: scale(1.1);
