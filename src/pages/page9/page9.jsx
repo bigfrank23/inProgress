@@ -10,7 +10,7 @@ import H2 from '../../components/Text/H2';
 import H3 from '../../components/Text/H3';
 import Footer from '../../components/Footer/Footer';
 import './Page9.css'
-import Upcomin from './../../components/Upcoming/Upcomin';
+import Upcomin from '../../components/Upcoming/Upcomin';
 import Button from '../../components/Button/Button';
 
 const Container = styled.div`

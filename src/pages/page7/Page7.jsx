@@ -153,7 +153,10 @@ const Page7 = () => {
           </div>
       </div>
       <div className='pageUpcoming'>
+          <div className="mt">
+
           <H2>Upcoming Events</H2>
+          </div>
           <Upcomin 
           image={Img2}
           title4="Date"

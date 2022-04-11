@@ -1,0 +1,17 @@
+.pageContentTopList{
+    padding: 1rem;
+}
+.pageContentTopListItems{
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+.reduce{
+    padding: 0 4rem;
+}
+.changeText{
+    color: #008753;
+    font-size: 35px;
+    text-transform: capitalize;
+    font-style: normal;
+    font-weight: 900;
+}

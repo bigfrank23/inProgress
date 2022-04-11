@@ -100,5 +100,24 @@
     }
   }
   @media only screen and (min-width: 600px) {
-    
+    .page11CenterContentRight {
+        flex: 1 1;
+        padding: 0 0rem 0 2rem;
+    }
+    .page11BottomContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
   }
+  @media only screen and (min-width: 992px) {
+    .page11CenterContentRight {
+        flex: 2 1;
+        padding: 0 4rem 0 2rem;
+    }
+    .page11BottomContent {
+        display: flex;
+    }
+  }
+@media only screen and (min-width: 1200px) {
+}

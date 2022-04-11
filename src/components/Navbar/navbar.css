@@ -73,8 +73,8 @@
     text-transform: uppercase;
 }
 .navButtons #leftBtn{
-    background-color: green!important;
-    border-color: green!important;
+    background-color: #008753 !important;
+    border-color: #008753 !important;
     margin-right: 20px;
 }
 .navButtons .rightBtn{
@@ -89,7 +89,7 @@
     list-style: none;
     background: #232e32;
     padding: 1rem 10px;
-    line-height: 5vh;
+    line-height: 2;
     border-radius: 5px;
     height: 0px;
     opacity: 0;
@@ -168,8 +168,6 @@
     .logoText h1{
         font-size: 2rem !important;
     }
-
-/* lllll */
     .navLinks{
         display: none;
     }
@@ -179,10 +177,41 @@
 }
 @media only screen and (min-width: 600px) {
     .openLinkBtn{
+        display: block;
+    }
+    .mobileNav{
+        display: block;
+    }
+    .navLinks{
+        display: none;
+    }
+    .navButtons{
+        display: none;
+    }
+    .top .nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+    .navListItems {
+        padding: 1.5rem 0;
+    }
+    
+  }@media only screen and (min-width: 992px) {
+    .openLinkBtn{
         display: none;
     }
     .mobileNav{
         display: none;
     }
-    
+    .navLinks{
+        display: block;
+    }
+    .navButtons{
+        display: flex;
+    }
   }
+@media only screen and (min-width: 1200px) {
+
+}
+ 

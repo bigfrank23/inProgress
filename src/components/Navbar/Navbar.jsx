@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Announcement from '../announcement/Announcement'
 import { Link } from 'react-router-dom'
 import './navbar.css'
-import LogoImg from '../../images/PFN4.png'
+import LogoImg from '../../images/PFN10.png'
 import { mobile } from '../../responsive'
 
 const Container = styled.div`
@@ -35,7 +35,7 @@ const Navbar = () => {
                     <ul className="navList">
                         <li className="navListItems">About
                         <ul className="hover">
-                            <Link to='/page1' className='links'>
+                            <Link to='/about' className='links'>
                                 <li className="hoverItems">About PFN</li>
                             </Link>
                             <Link to='/page2' className='links'>

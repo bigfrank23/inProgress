@@ -174,5 +174,34 @@
     }
   }
   @media only screen and (min-width: 600px) {
-    
+    .page4Top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 4rem;
+        /* flex-wrap: wrap; */
+    }
+    .page4CenterBx {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .page4BottomContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
   }
+  @media only screen and (min-width: 992px) {
+    .page4Top {
+        display: flex;
+    }
+    .page4CenterBx {
+        display: flex;
+    }
+    .page4BottomContent {
+        display: flex;
+    }
+  }
+@media only screen and (min-width: 1200px) {
+}

@@ -1,5 +1,6 @@
 import Home from "./pages/Home/Home";
-import Page1 from "./pages/page1/Page1";
+// import Page1 from "./pages/page1/Page1";
+import About from "./pages/about/About";
 import Page2 from "./pages/page2/Page2";
 import Page3 from "./pages/page3/Page3";
 import Page4 from "./pages/page4/Page4";
@@ -30,7 +31,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/page1' component={Page1} />
+          <Route exact path='/about' component={About} />
           <Route exact path='/page2' component={Page2} />
           <Route exact path='/page3' component={Page3} />
           <Route exact path='/page4' component={Page4} />

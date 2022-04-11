@@ -17,7 +17,7 @@ const Btn = styled.button`
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    background: ${props => props.outline ? 'transparent' : 'green'};
+    background: ${props => props.outline ? 'transparent' : '#008753'};
     border: ${props => props.outline ? '1px solid #232e32' : 'none'};
     cursor: pointer;
     @media only screen and (max-width: 600px) {

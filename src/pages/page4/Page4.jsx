@@ -142,7 +142,6 @@ const Page4 = () => {
               <Button />
             </div>
             <div className="spanTxt">
-
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. <Link to="#">your link</Link> Omnis, autem!</span>
             </div>
           </div>

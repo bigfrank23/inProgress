@@ -108,5 +108,17 @@
     }
   }
   @media only screen and (min-width: 600px) {
-    
+    .page16BottomContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 4rem;
+    }
   }
+  @media only screen and (min-width: 992px) {
+    .page16BottomContent {
+        display: flex;
+    }
+  }
+@media only screen and (min-width: 1200px) {
+}

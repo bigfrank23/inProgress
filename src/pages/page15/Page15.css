@@ -95,5 +95,14 @@
     }
   }
   @media only screen and (min-width: 600px) {
-    
+    .page15CenterContentRight {
+        flex: 1 1;
+    }
   }
+  @media only screen and (min-width: 992px) {
+    .page15CenterContentRight {
+        flex: 2 1;
+    }
+  }
+@media only screen and (min-width: 1200px) {
+}

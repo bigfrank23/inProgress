@@ -6,11 +6,11 @@ const H2Style = styled.div`
   margin: 0 auto;
   font-size: 1rem;
   /* line-height: 1.3em; */
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-style: normal;
   font-weight: 900;
   /* text-align: center; */
-  color: ${props => props.color ? '#fff' : '#111'};
+  color: ${props => props.color ? '#fff' : 'red'};
   /* color: #fff; */
   @media only screen and (max-width: 600px) {
     font-size: .9rem;
