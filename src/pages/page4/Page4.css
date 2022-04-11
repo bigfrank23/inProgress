@@ -159,6 +159,10 @@
     .spacingDiv{
         padding: 0 !important;
     }
+    .page4BottomContent {
+        display: block;
+        padding: 0 2rem 2rem 2rem;
+    }
     .page4ButtomCardBx {
         display: block !important;
     }

@@ -94,12 +94,12 @@
 @media only screen and (max-width: 600px) {
     .page9TopContainer {
     padding: 2rem;
-}
-.page9TopContent {
-    padding: 2rem 2rem;
-}
+    }
+    .page9TopContent {
+        padding: 1rem;
+    }
     .page9CenterContainer {
-    padding: 2rem 0;
+    padding: 2rem;
     }
     .page9HoverCard {
     display: grid;
@@ -114,19 +114,25 @@
     }
     .page9Card:hover{
     transform: scale(1);
-}
-.page9Bottom {
-    padding: 2rem;
-}
-.page9BottomTitle {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-.page9BottomContent {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-}
+    }
+    .page9Bottom {
+        padding: 2rem;
+    }
+    .page9BottomTitle {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .page9BottomContent {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .page9BottomBanner {
+        padding: 2rem;
+    }
+    .page9BottomBannerPara {
+        padding: 1rem;
+    }
   }
   @media only screen and (min-width: 600px) {
     

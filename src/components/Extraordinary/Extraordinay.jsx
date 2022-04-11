@@ -8,6 +8,7 @@ import './Extraordinary.css'
 import { mobile } from '../../responsive'
 import H3 from '../Text/H3'
 import PText from '../Text/PText'
+import { Grid } from '@material-ui/core'
 
 
 const Container = styled.div`
@@ -19,10 +20,12 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-`
+    ${mobile({ marginTop: "1rem", padding: "2rem" })}
+    `
 const ExtraContentContainer = styled.div`
     /* text-align: center; */
     padding: 4rem;
+    ${mobile({padding: "2rem" })}
 `
 const ExtraTextContainer = styled.div`
     text-align: center;
@@ -90,7 +93,7 @@ const ExtraContentContainer2 = styled.div`
     align-self: flex-start;
     width: 100%;
     padding: 0 4rem 4rem 4rem;
-    ${mobile({padding: "0 4rem", width: "unset", alignSelf: "unset"})}
+    ${mobile({padding: "0", width: "unset", alignSelf: "unset"})}
     .extraLink{
     display: flex;
     justify-content: center;
@@ -107,7 +110,7 @@ const ExtraText2 = styled.h1`
     text-align: center;
 `
 const ExtraCard = styled.div`
-    width: 300px;
+    /* width: 300px; */
     /* height: 100%; */
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -116,16 +119,17 @@ const ExtraCard = styled.div`
     &:hover{
         transform: scale(1.1);
     }
+    ${mobile({margin: "1rem 0"})}
 `
 const ExtraCardImgContainer = styled.div`
-    width: 300px;
+    width: 100%;
     background-color: green;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     `
 const ExtraCardImg = styled.img`
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 `
@@ -179,24 +183,28 @@ const Extraordinay = () => {
                         <ExtraTextContainer2>
                             <ExtraText2>Lorem ipsum dolor sit amet.</ExtraText2>
                         </ExtraTextContainer2>
-                    <div className='extraGrid'>
+                    {/* <div className='extraGrid'> */}
+                        <Grid container spacing={3}>
                         {items.map(()=>(
-                            <ExtraCard>
-                                <ExtraCardImgContainer>
-                                    <ExtraCardImg src={PlayImg}/>
-                                </ExtraCardImgContainer>
-                                <ExtraContentText2>
-                                    <ExtraTitle> <H3 children="Lorem ipsum imus eius minima" color={true} /> </ExtraTitle>
-                                    {/* <div style={{display: 'flex', color: "white"}}> */}
-                                    <ExtraDate> <PText children="Lorem, ipsum." color={true} /> </ExtraDate> 
-                                    {/* </div> */}
-                                    {/* <div style={{display: 'flex', color: "white"}}> */}
-                                    <ExtraLocation><PText children="Lorem, ipsum." color={true} /> </ExtraLocation> 
-                                    {/* </div> */}
-                                </ExtraContentText2>
-                            </ExtraCard>
+                            <Grid item xs={12} sm={6} md={4}>
+                                <ExtraCard>
+                                    <ExtraCardImgContainer>
+                                        <ExtraCardImg src={PlayImg}/>
+                                    </ExtraCardImgContainer>
+                                    <ExtraContentText2>
+                                        <ExtraTitle> <H3 children="Lorem ipsum imus eius minima" color={true} /> </ExtraTitle>
+                                        {/* <div style={{display: 'flex', color: "white"}}> */}
+                                        <ExtraDate> <PText children="Lorem, ipsum." color={true} /> </ExtraDate> 
+                                        {/* </div> */}
+                                        {/* <div style={{display: 'flex', color: "white"}}> */}
+                                        <ExtraLocation><PText children="Lorem, ipsum." color={true} /> </ExtraLocation> 
+                                        {/* </div> */}
+                                    </ExtraContentText2>
+                                </ExtraCard>
+                            </Grid>
                         ))}
-                    </div>
+                    </Grid>
+                    {/* </div> */}
                     <Link to='#' className='extraLink'>
                     <Button BtnText='VIEW ALL EVENTS'/>
                     </Link>

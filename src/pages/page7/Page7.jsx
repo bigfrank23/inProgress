@@ -153,7 +153,14 @@ const Page7 = () => {
           </div>
       </div>
       <div className='pageUpcoming'>
-          <Upcomin />
+          <H2>Upcoming Events</H2>
+          <Upcomin 
+          image={Img2}
+          title4="Date"
+          title5="Location"
+          para1="4/5"
+          para2="Lagos"
+          />
       </div>
       <div className="page7Last">
           <div className="page7LastTitle" style={{textAlign: 'center'}}>

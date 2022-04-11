@@ -87,6 +87,7 @@
     }
     .page7Content {
         text-align: center;
+        padding: 1rem;
     }
     .page7Bottom {
         padding: 2rem;
@@ -97,7 +98,8 @@
         text-align: center;
     }
     .pageUpcoming {
-        padding: 0 2rem;
+        padding: 2rem;
+        text-align: center;
         background-color: #fff;
     }
     .page7Last {

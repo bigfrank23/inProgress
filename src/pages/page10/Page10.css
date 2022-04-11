@@ -96,3 +96,39 @@
     color: green;
     font-size: 1.5rem !important;
 }
+
+@media only screen and (max-width: 600px) {
+    .page10Top {
+    padding: 2rem;
+}
+.page10TopContent {
+    display: block;
+    padding: 0 0rem;
+    /* gap: 1rem; */
+}
+.page10Center {
+    padding: 2rem;
+}
+.page10CenterContent {
+    padding: 2rem 0rem;
+    display: block;
+    /* gap: 2rem; */
+}
+.page10CenterContentPara p {
+    margin: 1rem 0;
+}
+.page10Bottom {
+    background-color: #fff;
+    padding: 0 2rem 2rem 2rem;
+}
+.page10BottomContent {
+    display: block;
+    padding: 0 0rem;
+}
+.page9Card {
+    margin: 0 0 4rem 0;
+}
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

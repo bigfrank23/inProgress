@@ -6,7 +6,7 @@ const PStyle = styled.div`
   margin: 0 auto;
   font-size: 1.8rem;
   line-height: 25px;
-  font-weight: 400;
+  font-weight: ${(props=> props.weight ? 'bold' : '400')};
   font-style: normal;
   font-size: 1rem;
   /* text-align: center; */
@@ -17,9 +17,9 @@ const PStyle = styled.div`
   }
 `;
 
-function PText({ children , color = false}) {
+function PText({ children , color = false, weight=false}) {
   return (
-    <PStyle className="para" color={color}>
+    <PStyle className="para" color={color} weight={weight}>
       <p>{children}</p>
     </PStyle>
   );

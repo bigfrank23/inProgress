@@ -1,0 +1,62 @@
+.page14Top{
+    padding: 4rem;
+    background: #fff;
+}
+.page14TopContent{
+    padding: 4rem;
+    text-align: center;
+}
+.page14TopTitle, .page14TopTitle2{
+    padding: 1rem 0;
+}
+.page14TopVid{
+    padding: 2rem 0;
+}
+.page14TopVid iframe{
+    width: 100%;
+}
+
+/* Center */
+.page14Center{
+    padding: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+.page14CenterLeft, .page14CenterRight{
+    flex: 1;
+    text-align: center;
+}
+.page14CenterLeft{
+}
+.page14CenterLeft img{
+    width: 100%;
+}
+.page14CenterRightPara{
+    padding: 1rem 0;
+}
+
+/* Bottom */
+.page14Bottom{
+    padding: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .page14Top {
+    padding: 2rem;
+    }
+    .page14TopContent {
+        padding: 0rem;
+        text-align: center;
+    }
+    .page14Center {
+        padding: 2rem;
+        display: block;
+        /* gap: 2rem; */
+    }
+    .page14Bottom {
+        padding: 2rem;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

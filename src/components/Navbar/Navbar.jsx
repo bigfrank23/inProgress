@@ -7,10 +7,14 @@ import LogoImg from '../../images/PFN4.png'
 import { mobile } from '../../responsive'
 
 const Container = styled.div`
-    ${mobile({display: 'none'})}
+    /* ${mobile({display: 'none'})} */
 `
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
+
+    const closeNav = () => {
+        setShowNav(false)
+    }
   return (
     <Container id='navbar'>
         {/* <Announcement /> */}
@@ -32,69 +36,83 @@ const Navbar = () => {
                         <li className="navListItems">About
                         <ul className="hover">
                             <Link to='/page1' className='links'>
-                                <li className="hoverItems">History</li>
+                                <li className="hoverItems">About PFN</li>
                             </Link>
                             <Link to='/page2' className='links'>
-                                <li className="hoverItems">Our Team</li>
+                                <li className="hoverItems">History of PFN</li>
                             </Link>
                             <Link to='/page3' className='links'>
-                                <li className="hoverItems">Profile of Past Executives</li>
+                                <li className="hoverItems">What we believe</li>
+                            </Link>
+                            <Link to='/page3' className='links'>
+                                <li className="hoverItems">Our mission</li>
                             </Link>
                         </ul>
                         </li>
-                        <li className="navListItems">Events
+                        <li className="navListItems">Leadership
                         <ul className="hover">
                             <Link to='/page4' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                                <li className="hoverItems">The national president</li>
                             </Link>
                             <Link to='/page5' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                                <li className="hoverItems">Past PFN chairmen</li>
                             </Link>
                             <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
-                            </Link>
-                        </ul>
-                        </li>
-                        <li className="navListItems">Connect
-                        <ul className="hover">
-                            <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
-                            </Link>
-                            <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
-                            </Link>
-                            <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                                <li className="hoverItems">PFN lagos state executives</li>
                             </Link>
                         </ul>
                         </li>
-                        <li className="navListItems">Get involved
+                        <li className="navListItems">PFN lagos state structure
                         <ul className="hover">
                             <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
-                            </Link>
-                            <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
-                            </Link>
-                            <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
-                            </Link>
-                        </ul>
-                        </li>
-                        <li className="navListItems">Find help
-                        <ul className="hover">
-                            <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
-                            </Link>
-                            <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
-                            </Link>
-                            <Link to='#' className='links'>
-                                <li className="hoverItems">Lorem, ipsum dolor.</li>
+                                <li className="hoverItems">The lagos state executive structure</li>
                             </Link>
                         </ul>
                         </li>
                     </ul>
+                </div>
+                {showNav && (<div className="mobileNav">
+                    <ul className="navList">
+                        <li className="navListItems">About
+                        <ul className="hover">
+                            <Link to='/page1' className='links'>
+                                <li className="hoverItems">About PFN</li>
+                            </Link>
+                            <Link to='/page2' className='links'>
+                                <li className="hoverItems">History of PFN</li>
+                            </Link>
+                            <Link to='/page3' className='links'>
+                                <li className="hoverItems">What we believe</li>
+                            </Link>
+                            <Link to='/page3' className='links'>
+                                <li className="hoverItems">Our mission</li>
+                            </Link>
+                        </ul>
+                        </li>
+                        <li className="navListItems">Leadership
+                        <ul className="hover">
+                            <Link to='/page4' className='links'>
+                                <li className="hoverItems">The national president</li>
+                            </Link>
+                            <Link to='/page5' className='links'>
+                                <li className="hoverItems">Past PFN chairmen</li>
+                            </Link>
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">PFN lagos state executives</li>
+                            </Link>
+                        </ul>
+                        </li>
+                        <li className="navListItems">PFN lagos state structure
+                        <ul className="hover">
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">The lagos state executive structure</li>
+                            </Link>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>)}
+                <div className="openLinkBtn" onClick={()=> setShowNav(!showNav)}>
+                        {showNav ? <>&#10005;</> : <>&#8801;</>}
                 </div>
                 <div className="navButtons">
                     <div className="leftBtn">

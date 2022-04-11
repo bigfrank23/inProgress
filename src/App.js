@@ -10,6 +10,11 @@ import Page8 from "./pages/page8/Page8";
 import Page9 from "./pages/page9/Page9";
 import Page10 from "./pages/page10/Page10";
 import Page11 from "./pages/page11/Page11";
+import Page12 from "./pages/page12/Page12";
+import Page13 from "./pages/page13/Page13";
+import Page14 from "./pages/page14/Page14";
+import Page15 from "./pages/page15/Page15";
+import Page16 from "./pages/page16/Page16";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import styled from "styled-components";
@@ -36,6 +41,11 @@ function App() {
           <Route exact path='/page9' component={Page9} />
           <Route exact path='/page10' component={Page10} />
           <Route exact path='/page11' component={Page11} />
+          <Route exact path='/page12' component={Page12} />
+          <Route exact path='/page13' component={Page13} />
+          <Route exact path='/page14' component={Page14} />
+          <Route exact path='/page15' component={Page15} />
+          <Route exact path='/page16' component={Page16} />
         </Switch>
       </Router>
     </Container>

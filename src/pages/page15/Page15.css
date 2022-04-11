@@ -1,102 +1,97 @@
-.page11Top{
+.page15Top{
     padding: 4rem;
     background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuXzY4T0hvViIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjkuNSIgaGVpZ2h0PSI5LjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjkuNSIgc3Ryb2tlPSIjMTk0ZDMzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fNjhPSG9WKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');
 }
-.page11TopContent{
-    text-align: center;
+.page15TopContent{
     padding: 4rem;
+    text-align: center;
 }
-.page11TopTitle{
-    padding: 1rem 0;
-}
-.page11TopPara{
+.page15TopPara{
     background: #fff;
     border-radius: 5px;
     padding: 2rem;
+    margin: 1rem 0 2rem 0;
 }
-
 /* Center */
-.page11Center{
+.page15Center{
     padding: 4rem;
 }
-.page11CenterContent{
-    display: flex;
-    padding: 2rem 0;
+.page15CenterTitle{
+    text-align: center;
 }
-.page11CenterContentLeft{
+.page15CenterContent{
+    display: flex;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+.page15CenterContentLeft{
     flex: 1;
 }
-.page11CenterContentLeft img{
+.page15CenterContentLeft img{
     width: 100%;
-    height: 100%;
+    border-radius: 10px;
 }
-.page11CenterContentRight{
+.page15CenterContentRight{
     flex: 2;
-    padding: 0 4rem 0 2rem;
 }
-.page11CenterContentRightPara{
-    padding: 2rem 0;
+.page15CenterContentRightPara{
+    padding: 1rem 0;
 }
 
 /* Bottom */
-.page11Bottom{
-    padding: 0 4rem;
-}
-.page11BottomTitle{
-    text-align: center;
-    margin-bottom: 2rem;
-}
-.page11BottomContent{
-    display: flex;
-    justify-content: center;
-    padding: 0 4rem 4rem 4rem;
-    gap: 1rem;
-}
-.page11Banner{
-    background: green;
-    text-align: center;
+.page15Bottom{
     padding: 4rem;
 }
-.page11BannerPara{
+.page15BottomTitle{
+    text-align: center;
+}
+.page15BottomContent{
+    background: green;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+.page15BottomContent:nth-child(3){
+    background: red;
+}
+.page15BottomContent:last-child{
+    background: #fff;
+}
+.page15BottomPara{
     padding: 1rem 0;
 }
 
 @media only screen and (max-width: 600px) {
-    .page11Top {
+    .page15Top {
     padding: 2rem;
     }
-    .page11TopContent {
-        text-align: center;
+    .page15TopContent {
         padding: 0rem;
+        text-align: center;
     }
-    .page11TopPara {
+    .page15TopPara {
+        background: #fff;
+        border-radius: 5px;
         padding: 1rem;
+        margin: 1rem 0 2rem 0;
     }
-    .page11Center {
+    .page15Center {
         padding: 2rem;
     }
-    .page11CenterContent {
+    .page15CenterContent {
         display: block;
-        padding: 2rem 0;
-    }
-    .page11CenterContentRight {
-        padding: 0;
-        text-align: center;
-    }
-    .page11Bottom {
-        padding: 0 2rem;
-    }
-    .page11BottomContent {
-        display: block;
-        /* justify-content: center; */
-        padding: 0;
-        /* gap: 1rem; */
-    }
-    .page11Banner {
-        background: green;
-        text-align: center;
-        padding: 2rem;
         margin-top: 2rem;
+        /* gap: 2rem; */
+    }
+    .page15CenterContentRight {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .page15Bottom {
+        padding: 2rem;
+    }
+    .page15BottomContent {
+        padding: 1rem;
     }
   }
   @media only screen and (min-width: 600px) {

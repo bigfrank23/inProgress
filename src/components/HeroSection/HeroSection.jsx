@@ -8,6 +8,7 @@ import Img3 from '../../images/pro3.jpg'
 import Img4 from '../../images/pro9.jpg'
 import Button from '../Button/Button'
 import './heroSection.css'
+import { mobile } from '../../responsive'
 
 const image1 = Img1
 const image2 = Img2
@@ -18,10 +19,10 @@ const Container = styled.div`
     /* background */
 `
 const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-
-`
+  display: flex;
+  flex-direction: column;
+  ${mobile({ position: "relative", top: "15%" })}
+`;
 const TopText = styled.h4`
     color: #fff;
     font-size: 22px;

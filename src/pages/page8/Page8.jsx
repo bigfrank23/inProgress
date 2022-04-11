@@ -11,6 +11,7 @@ import './Page8.css'
 import H3 from '../../components/Text/H3';
 import Footer from '../../components/Footer/Footer';
 import Collapse from '../../components/collapse/Collapse';
+import ControlledAccordions from '../../components/accordion/MUIaccordion';
 
 const Container = styled.div`
   width: 100%;
@@ -147,7 +148,7 @@ const Page8 = () => {
                   <H2 children="Frequently asked Questions" />
               </div>
               <div className="colCard">
-                  <Collapse />
+                  <ControlledAccordions />
               </div>
           </div>
           <Footer />

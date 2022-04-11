@@ -1,11 +1,11 @@
 .extraGrid{
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 1rem;
-    row-gap: 1rem;
+    row-gap: 1rem; */
 }
-@media only screen and (max-width: 380px){
+@media only screen and (max-width: 600px){
     .extraGrid{
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
     }
 }

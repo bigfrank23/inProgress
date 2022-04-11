@@ -1,0 +1,112 @@
+.page16Top{
+    padding: 4rem;
+}
+.page16TopHeader{
+    text-align: center;
+}
+.page16TopTitle{
+    text-align: center;
+    padding: 1rem 0;
+}
+.page16TopContent{
+    display: flex;
+    padding: 2rem 0;
+}
+.page16TopContentLeft{
+    flex: 1;
+}
+.page16TopContentLeft img{
+    width: 100%;
+}
+.page16TopContentRight{
+    flex: 1;
+    text-align: center;
+    padding: 2rem 2rem 0 2rem;
+    align-self: flex-end;
+}
+.page16TopContentRightPara{
+    padding: 1rem 0;
+}
+.page16TopContentRightBtn{
+    padding: 1rem 0;
+}
+.page16TopDivider{
+    width: 100px;
+    height: 2px;
+    background: grey;
+    margin: auto;
+}
+/* Center */
+.page16Center{
+    padding: 4rem;
+}
+.page16MainTitle{
+    /* text-align: center; */
+}
+.page16CenterContent{
+    display: flex;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+.page16CenterContentLeft{
+    flex: 1;
+}
+.page16CenterContentpara{
+    padding: 1rem 0;
+}
+.page16CenterContentRight{
+    flex: 1;
+}
+.page16CenterButton{
+    padding: 1rem 0;
+}
+.page16CenterLastPara{
+    margin-bottom: 2rem;
+}
+
+/* Bottom */
+.page16Bottom{
+    padding: 4rem;
+}
+.page16BottomTitle{
+    text-align: center;
+}
+.page16BottomContent{
+    display: flex;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .page16Top {
+        padding: 2rem;
+    }
+    .page16TopContent {
+        display: block;
+        padding: 2rem 0;
+    }
+    .page16TopContentRight {
+        text-align: center;
+        padding: 2rem 0rem 0 0rem;
+    }
+    .page16Center {
+        padding: 2rem;
+    }
+    .page16CenterContent {
+        display: block;
+        margin-top: 2rem;
+    }
+    .page16Bottom {
+        padding: 2rem;
+    }
+    .page16BottomContent {
+        display: block;
+        padding: 2rem 0;
+    }
+    .page4ButtomCardBx .page4buttomCard1 {
+        margin-top: 2rem;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

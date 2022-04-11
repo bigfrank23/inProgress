@@ -121,7 +121,13 @@ const Page6 = () => {
               </div>
           </div>
           <div className="page6Bx4">
-            <Upcomin />
+            <Upcomin
+            image={Img2}
+            title4="Date"
+            title5="Location"
+            para1="5/3"
+            para2="Lagos"
+             />
           </div>
           <div className="page6Bx5">
             <div className="page6Bx5Title">

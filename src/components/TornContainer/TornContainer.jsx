@@ -1,18 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { mobile } from '../../responsive'
 import Button from '../Button/Button'
 import H2 from '../Text/H2'
 import Header from '../Text/Header'
 import './tornContainer.css'
 
 const Container = styled.div`
-    margin-top: 10rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
+  margin-top: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${mobile({ marginTop: "1rem" })}
+`;
 const TornContainer = () => {
   return (
     <Container id='tornContainer'>

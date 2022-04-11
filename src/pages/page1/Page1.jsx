@@ -39,14 +39,7 @@ const Container = styled.div`
     }
   }
   .pageBanner {
-    background: linear-gradient(
-        rgba(0,0,0, 0.5),
-        rgba(0,0,0, 0.5)
-      ),
-      url(${BgImg});
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    background: green;
     position: relative;
     /* margin-top: 50rem; */
     padding: 4rem;
@@ -62,7 +55,7 @@ const Container = styled.div`
       display: flex;
       padding: 2rem 0;
       gap: 2rem;
-      ${mobile({display: "block"})}
+      ${mobile({display: "block", padding: 0})}
       .left{
         flex: 1;
         .pageContentTitle{

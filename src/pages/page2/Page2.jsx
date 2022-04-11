@@ -5,7 +5,7 @@ import Img from '../../images/splash2.jpg'
 import Img2 from '../../images/splash3.jpg'
 import Img3 from '../../images/bg2.jpg'
 import BgImg from '../../images/splash1.jpg'
-import Button from '../../components/Button/Button';
+// import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 // import Collapsible from "react-collapsible";
 import useCollapse from "react-collapsed";
@@ -15,6 +15,22 @@ import Header from '../../components/Text/Header';
 import H2 from '../../components/Text/H2';
 import {cwc, directors, team} from '../../teamMembers/team'
 import ReadMore from '../../components/readMore/ReadMore';
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 const Container = styled.div`
   width: 100%;
@@ -72,6 +88,7 @@ const Collapsible = ({children}) => {
         </div>
       </div>
       <div className="he" {...getToggleProps()}>
+        
         {/* {isExpanded ? 	<i className= "fa fa-angle-double-up readMoreIcon" /> : <i className= "fa fa-angle-double-down readMoreIcon" />} */}
         <div style={{padding: "1rem 0"}}>
           </div>
@@ -88,6 +105,10 @@ const Page2 = () => {
   const showLess = () => {
     setItemsToShow(6)
   }
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <Container>
       <div className="page1Wrapper">
@@ -107,28 +128,53 @@ const Page2 = () => {
 
           <div className="centerContent">
             {cwc.map((data) => (
-              <div className="centerContentB">
+              <>
+              <div className="centerContentB"  onClick={handleOpen}>
                 <div className="imgBx">
                   <img src={data.img} width={50} alt="" />
                 </div>
                 <div className="centerContentText">
                   <h3>{data.name}</h3>
                   <p>{data.church}</p>
-                    <p>{data.address}</p>
-                  <Collapsible>
-                    <p>{data.headOffice}</p>
-                    <p>{data.tel}</p>
-                    <p>{data.email}</p>
-                    <p>{data.dOb}</p>
-                    <p>{data.chapter}</p>
-                    <p>{data.province}</p>
-                    <p>{data.associatePastor}</p>
-                    <p>{data.associatePastorChapter}</p>
-                    <p>{data.associatePastorProvince}</p>
-                    <p>{data.associatePastorTel}</p>
-                  </Collapsible>
                 </div>
               </div>
+              <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                      {data.name}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      {data.church}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      {data.address}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      {data.headOffice}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      {data.tel}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      {data.email}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      {data.dOb}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      {data.chapter}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      {data.province}
+                    </Typography>
+                  </Box>
+                </Modal>
+              </>
             ))}
           </div>
           <hr className="hr" />

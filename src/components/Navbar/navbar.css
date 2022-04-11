@@ -89,10 +89,12 @@
     list-style: none;
     background: #232e32;
     padding: 1rem 10px;
-    line-height: 4vh;
+    line-height: 5vh;
     border-radius: 5px;
-    display: none;
-    transition: all .5s ease;
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .8s ease;
 }
 .hover a{
     color: white;
@@ -100,18 +102,87 @@
     text-transform: capitalize;
     font-size: 1rem;
     transition: all .5s ease;
+    /* padding: 5px; */
 }
 .navListItems:hover .hover{
+    height: 100%;
+    opacity: 1;
+}
+
+.openLinkBtn{
+    color: white;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 45px;
     display: block;
-    transition: all .5s ease;
-    animation: show 1s ease;
+    z-index: 1;
 }
-@keyframes show{
-    0%{
-        padding: 1rem 3px;
+.mobileNav{
+    background: black;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.mobileNav .navList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobileNav .navList .navListItems .hover{
+    color: white;
+    position: absolute;
+    margin-top: 1rem;
+    list-style: none;
+    background: #232e32;
+    padding: 1rem 10px;
+    line-height: 4vh;
+    border-radius: 5px;
+    height: 0px;
+    display: none;
+    overflow: hidden;
+    transition: all .8s ease;
+}
+.mobileNav .navList .navListItems:hover .hover{
+    position: relative;
+    display: block;
+    height: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .top .nav .logo{
+    display: block;
     }
-    100%{
-        padding: 1rem 10px;
-        line-height: 4vh;
+    .top .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    }
+    .logoText h1{
+        font-size: 2rem !important;
+    }
+
+/* lllll */
+    .navLinks{
+        display: none;
+    }
+    .navButtons{
+        display: none;
     }
 }
+@media only screen and (min-width: 600px) {
+    .openLinkBtn{
+        display: none;
+    }
+    .mobileNav{
+        display: none;
+    }
+    
+  }

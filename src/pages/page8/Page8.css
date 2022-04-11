@@ -76,6 +76,12 @@
     .page8Top {
         padding: 2rem;
     }
+    .page8TopPara {
+    padding: 1rem;
+    }
+    .page8TopContent {
+    padding: 1rem;
+    }
     .page8Center {
         background: #fff;
         padding: 2rem;

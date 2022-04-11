@@ -12,15 +12,15 @@
     text-align: center;
 }
 .nextContent{
-    display: grid;
+    /* display: grid;
     grid-template-columns: 270px 270px 270px;
     grid-template-rows: 200px 200px;
     column-gap: 5rem;
     row-gap: 5rem;
-    justify-content: center;
+    justify-content: center; */
 }
 .nextContent .contentBox{
-    width: 300px;
+    width: 100%;
 }
 .nextContent .contentBox img{
     width: 100%;
@@ -36,8 +36,12 @@
     font-size: 1rem;
 }
 
-@media only screen and (max-width: 380px){
+@media only screen and (max-width: 600px){
     .nextContent{
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
+        /* row-gap: 2rem; */
+    }
+    .contentText{
+        padding: 1rem 0;
     }
 }
