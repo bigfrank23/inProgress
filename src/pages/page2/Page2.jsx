@@ -47,6 +47,7 @@ const Container = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +99,6 @@ const Collapsible = ({children}) => {
 }
 const Page2 = () => {
   const [itemsToShow, setItemsToShow] = useState(6)
-
   const showMore = () => {
     setItemsToShow(cwc.length)
   }
@@ -106,7 +106,8 @@ const Page2 = () => {
     setItemsToShow(6)
   }
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [modalData, setModalData] = useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
@@ -129,13 +130,18 @@ const Page2 = () => {
           <div className="centerContent">
             {cwc.map((data) => (
               <>
-              <div className="centerContentB"  onClick={handleOpen}>
+              <div className="centerContentB"  onClick={()=> {setOpen(true); setModalData(data)}}>
                 <div className="imgBx">
                   <img src={data.img} width={50} alt="" />
                 </div>
                 <div className="centerContentText">
                   <h3>{data.name}</h3>
                   <p>{data.church}</p>
+                  <div className="page2Icons">
+                    <i className="fa fa-facebook page2SocialIcon" aria-hidden="true" />
+                    <i className="fa fa-twitter page2SocialIcon" aria-hidden="true" />
+                    <i className="fa fa-instagram page2SocialIcon" aria-hidden="true" />
+                  </div>
                 </div>
               </div>
               <Modal
@@ -146,31 +152,31 @@ const Page2 = () => {
                 >
                   <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h6" component="h2">
-                      {data.name}
+                      {modalData.name}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      {data.church}
+                      {modalData.church}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      {data.address}
+                      {modalData.address}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      {data.headOffice}
+                      {modalData.headOffice}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      {data.tel}
+                      {modalData.tel}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      {data.email}
+                      {modalData.email}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      {data.dOb}
+                      {modalData.dOb}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      {data.chapter}
+                      {modalData.chapter}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      {data.province}
+                      {modalData.province}
                     </Typography>
                   </Box>
                 </Modal>

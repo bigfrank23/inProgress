@@ -1,22 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Announcement from '../announcement/Announcement'
 import { Link } from 'react-router-dom'
 import './navbar.css'
 import LogoImg from '../../images/PFN10.png'
 import { mobile } from '../../responsive'
+import Button2 from '../Button/Button2'
 
 const Container = styled.div`
     /* ${mobile({display: 'none'})} */
 `
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
+    const [scroll, setScroll] = useState(false)
 
     const closeNav = () => {
         setShowNav(false)
     }
+
+    useEffect(()=>{
+        window.addEventListener('scroll', ()=>{
+            if (window.scrollY > 300) {
+                setScroll(true)
+            }else{
+                setScroll(false)
+            }
+        })
+    })
   return (
-    <Container id='navbar'>
+    <Container id='navbar' className={scroll && 'activeNavbar'}>
         {/* <Announcement /> */}
         <div className="top">
             <div className="eventTime">
@@ -26,8 +38,8 @@ const Navbar = () => {
                 <div className="logo">
                     <img src={LogoImg} width={100} alt="logo" />
                     <div className="logoText">
-                        <h1 style={{fontSize: '4rem'}}>PFN</h1>
-                        <h3>Lagos State</h3>
+                        <h1 id='logoTxt' style={{fontSize: '5rem'}}>PFN</h1>
+                        <h3 id='logoTxt2'>Lagos State</h3>
                         
                     </div>
                 </div>
@@ -38,14 +50,17 @@ const Navbar = () => {
                             <Link to='/about' className='links'>
                                 <li className="hoverItems">About PFN</li>
                             </Link>
-                            <Link to='/page2' className='links'>
+                            <Link to='/history' className='links'>
                                 <li className="hoverItems">History of PFN</li>
                             </Link>
-                            <Link to='/page3' className='links'>
+                            <Link to='/what-we-believe' className='links'>
                                 <li className="hoverItems">What we believe</li>
                             </Link>
                             <Link to='/page3' className='links'>
                                 <li className="hoverItems">Our mission</li>
+                            </Link>
+                            <Link to='/page2' className='links'>
+                                <li className="hoverItems">Our team</li>
                             </Link>
                         </ul>
                         </li>
@@ -64,7 +79,7 @@ const Navbar = () => {
                         </li>
                         <li className="navListItems">PFN lagos state structure
                         <ul className="hover">
-                            <Link to='#' className='links'>
+                            <Link to='/lses' className='links'>
                                 <li className="hoverItems">The lagos state executive structure</li>
                             </Link>
                         </ul>
@@ -115,11 +130,16 @@ const Navbar = () => {
                         {showNav ? <>&#10005;</> : <>&#8801;</>}
                 </div>
                 <div className="navButtons">
-                    <div className="leftBtn">
-                        <Link to="#" id='leftBtn' className='links'>
+                <div className="leftBtn">
+                    {
+                        !scroll ? (
+                        <Link to="#" id='leftBtn' className={!scroll ? "links" : "leftBtn"}>
                             <h3>Messages</h3>
                         </Link>
+                    ) : <Button2 BtnText='Messages'  />
+                    }
                     </div>
+                    
                     <div className="rightBtn">
                         <Link to="#" id='rightBtn' className='links'>
                             <h3>Give</h3>

@@ -6,6 +6,17 @@
     width: 100%;
     z-index: 1;
 }
+.activeNavbar {
+    background-color: #008753;
+    position: fixed !important;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding-bottom: 1.5rem;
+    transition: 0.25s;
+  }
 .top{
     display: flex;
     flex-direction: column;
@@ -19,14 +30,25 @@
 .top .nav{
     display: flex;
     justify-content: space-around;
+    padding: 0 7rem !important;
 }
 .top .nav .logo{
     display: flex;
 }
 .top .nav .logo .logoText{
-    margin-left: 10px;
-    align-self: center;
+    margin-left: 3px;
+    align-self: flex-start;
     color: #fff;
+}
+#logoTxt{
+    letter-spacing: 3px;
+}
+#logoTxt2{
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-left: 4px;
+    position: relative;
+    top: -15px;
 }
 .navLinks{
     align-self: center;
@@ -76,6 +98,10 @@
     background-color: #008753 !important;
     border-color: #008753 !important;
     margin-right: 20px;
+}
+.leftBtn{
+    margin-right: 20px;
+    align-self: center;
 }
 .navButtons .rightBtn{
     background-color: transparent;

@@ -6,7 +6,7 @@
     margin-bottom: 1rem;
 }
 .reduce{
-    padding: 0 4rem;
+    padding: 0 7rem;
 }
 .changeText{
     color: #008753;
@@ -14,4 +14,10 @@
     text-transform: capitalize;
     font-style: normal;
     font-weight: 900;
+}
+
+@media only screen and (max-width: 600px) {
+    .reduce{
+        padding: 0;
+    }
 }

@@ -8,8 +8,11 @@ import Img4 from '../../images/web2.jpg'
 import BgImg from '../../images/splash1.jpg'
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
+import AboutImg1 from '../../images/about1.jpg'
+import AboutImg2 from '../../images/about2.jpg'
+import AboutImg3 from '../../images/about3.jpg'
 import H2 from '../../components/Text/H2';
-import { mobile } from '../../responsive';
+import { landscapeTab, mobile, tab } from '../../responsive';
 import PText from '../../components/Text/PText';
 import './About.css'
 import Header from '../../components/Text/Header';
@@ -60,9 +63,11 @@ const Container = styled.div`
   }
   .pageContentTop{
       display: flex;
-      padding: 2rem 0;
-      gap: 2rem;
+      padding: 2rem 3rem;
+      gap: 3rem;
       ${mobile({display: "block", padding: 0})}
+      ${tab({display: "block"})}
+      ${landscapeTab({display: "flex"})}
       .left{
         flex: 1;
         .pageContentTitle{
@@ -79,9 +84,12 @@ const Container = styled.div`
           height: 400px;
           flex: 1;
           ${mobile({width: "unset", height: "unset", padding: "2rem 0"})}
+          ${tab({margin: "auto"})}
+          ${landscapeTab({margin: "auto"})}
           img{
               width: 100%;
               height: 100%;
+              object-fit: contain;
           }
       }
   }
@@ -137,7 +145,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="right">
-                    <img src={Img2} alt="" />
+                    <img src={AboutImg1} alt="" />
                 </div>
             </div>
             <div className="pageContentTop center">
@@ -173,7 +181,7 @@ const About = () => {
                     </div> */}
                 </div>
                 <div className="right">
-                    <img src={Img2} alt="" />
+                    <img src={AboutImg2} alt="" />
                 </div>
             </div>
             <div className="pageContentTop bottom">
@@ -203,7 +211,7 @@ const About = () => {
                     </div> */}
                 </div>
                 <div className="right">
-                    <img src={Img2} alt="" />
+                    <img src={AboutImg3} alt="" />
                 </div>
             </div>
         </div>

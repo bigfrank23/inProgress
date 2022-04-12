@@ -84,6 +84,14 @@
     cursor: pointer;
     text-align: center;
 }
+.page2Icons{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.page2SocialIcon{
+    margin-left: 10px;
+}
 
 @media only screen and (max-width: 600px) {
     .pageContent2{

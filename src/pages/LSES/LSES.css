@@ -1,0 +1,153 @@
+.page12Top{
+    padding: 4rem;
+}
+.page12TopContent{
+    padding: 4rem;
+    text-align: center;
+}
+.page12TopTitle, .page12TopPara{
+    padding: 1rem 0;
+}
+.page12TopBtn{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Center */
+.page12Center{
+    padding: 4rem;
+    background-color: #fff;
+}
+.page12CenterTitle{
+    padding: 1rem 0;
+}
+.page12CenterPara{
+    padding-top: 1rem;
+}
+
+.page12Center2{
+    padding: 4rem;
+    background: green;
+}
+.page12Center2Para{
+    padding: 1rem 0;
+}
+.page12Center2Btn{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.page12Center3{
+    padding: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+.page12Center3Left{
+    flex: 1;
+}
+.page12Center3Left img{
+    width: 100%;
+    /* border-radius: 50%; */
+}
+.page12Center3Right{
+    flex: 2;
+    align-self: center;
+}
+.page12Center3RightPara{
+    padding: 1rem 0;
+}
+
+/* Bottom */
+.page12Bottom{
+    padding: 4rem;
+    text-align: center;
+    background: #fff;
+}
+.colCard2{
+    padding: 2rem 0;
+}
+.page12Bottom2{
+    text-align: center;
+    padding: 4rem;
+}
+.page12BottomTitle2{
+    padding: 2rem;
+}
+.page12BottomImgBx{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.page12BottomImg{
+    width: 200px;
+    height: 200px;
+}
+.page12BottomImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.lsesList{
+    padding: 1rem;
+}
+.page12TopContentBox{
+    display: flex;
+}
+.page12TopContentBoxLeft{
+    display: flex;
+    flex-direction: column;
+}
+.page12TopContentBoxLeft img{
+    width: 70%;
+}
+.page12TopContentBoxRight{}
+.page12TopContentBoxRight img{
+    width: 70%;
+}
+.page12TopContentBoxLeftPara{
+    margin-top: 2rem;
+    padding: 0 12rem 0 0;
+    text-align: left;
+    max-width: 600px;
+}
+
+@media only screen and (max-width: 600px) {
+    .page12Top {
+    padding: 2rem;
+    }
+    .page12TopContent {
+        padding: 0rem;
+        text-align: center;
+    }
+    .page12TopBtn {
+        display: block;
+    }
+    /* .jtZqMD {
+        width: auto;
+        height: auto;
+        padding: 1rem 0;
+    } */
+    .page12Center {
+        padding: 2rem;
+    }
+    .page12Center2 {
+        padding: 2rem;
+    }
+    .page12Center3 {
+        padding: 2rem;
+        display: block;
+        /* gap: 2rem; */
+    }
+    .page12Bottom {
+        padding: 2rem;
+    }
+    .page12Bottom2 {
+        text-align: center;
+        padding: 2rem;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

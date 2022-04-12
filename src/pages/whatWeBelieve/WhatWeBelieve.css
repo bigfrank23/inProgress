@@ -1,0 +1,58 @@
+.secOne{
+    padding: 4rem 7rem;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuXzY4T0hvViIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjkuNSIgaGVpZ2h0PSI5LjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjkuNSIgc3Ryb2tlPSIjMTk0ZDMzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fNjhPSG9WKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');
+}
+.sectOneHeader{
+    text-align: center;
+    /* padding: 1rem 0; */
+}
+.sectOneTitle , .sectTwoTitle{
+    padding: 1rem 0;
+    text-align: center;
+}
+.sectOnePara{
+    padding: 5px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+.sectTwo{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/living-generously.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4rem 7rem;
+}
+.sectTwoHeader{
+    text-align: center;
+}
+.sectTwoBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectThreeHeader, .sectThreeTitle, .sectThreePara{
+    text-align: left;
+    padding-top: 1rem;
+}
+.sectThree{
+    padding: 4rem 7rem;
+}
+.believeListItem{
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .secOne{
+        padding: 2rem;
+    }
+    .secTwo{
+        padding: 2rem;
+    }
+    .sectThree {
+        padding: 2rem;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }
