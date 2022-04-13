@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Announcement from '../announcement/Announcement'
 import { Link } from 'react-router-dom'
 import './navbar.css'
-import LogoImg from '../../images/PFN10.png'
+import LogoImg from '../../images/pfnLogo.png'
 import { mobile } from '../../responsive'
 import Button2 from '../Button/Button2'
 
@@ -37,11 +37,6 @@ const Navbar = () => {
             <div className="nav">
                 <div className="logo">
                     <img src={LogoImg} width={100} alt="logo" />
-                    <div className="logoText">
-                        <h1 id='logoTxt' style={{fontSize: '5rem'}}>PFN</h1>
-                        <h3 id='logoTxt2'>Lagos State</h3>
-                        
-                    </div>
                 </div>
                 <div className="navLinks">
                     <ul className="navList">
@@ -66,10 +61,10 @@ const Navbar = () => {
                         </li>
                         <li className="navListItems">Leadership
                         <ul className="hover">
-                            <Link to='/page4' className='links'>
+                            <Link to='/the-national' className='links'>
                                 <li className="hoverItems">The national president</li>
                             </Link>
-                            <Link to='/page5' className='links'>
+                            <Link to='/past-pfn-chairmen' className='links'>
                                 <li className="hoverItems">Past PFN chairmen</li>
                             </Link>
                             <Link to='#' className='links'>

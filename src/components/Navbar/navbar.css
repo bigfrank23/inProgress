@@ -7,7 +7,7 @@
     z-index: 1;
 }
 .activeNavbar {
-    background-color: #008753;
+    background-color: #006633;
     position: fixed !important;
     margin: 0;
     top: 0;
@@ -33,7 +33,10 @@
     padding: 0 7rem !important;
 }
 .top .nav .logo{
-    display: flex;
+    width: 250px;
+}
+.top .nav .logo img{
+    width: 100%;
 }
 .top .nav .logo .logoText{
     margin-left: 3px;

@@ -8,6 +8,7 @@ import Page5 from "./pages/page5/Page5";
 import Page6 from "./pages/page6/Page6";
 import Page7 from "./pages/page7/Page7";
 import History from "./pages/history/History";
+import History2 from "./pages/history2/History2";
 import Page8 from "./pages/page8/Page8";
 import Page9 from "./pages/page9/Page9";
 import Page10 from "./pages/page10/Page10";
@@ -22,6 +23,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import styled from "styled-components";
 import WhatWeBelieve from "./pages/whatWeBelieve/WhatWeBelieve";
+import TheNational from "./pages/theNational/TheNational";
+import PastPfn from "./pages/pastPfn/PastPfn";
 
 const Container = styled.div`
   width: 100%;
@@ -37,10 +40,12 @@ function App() {
           <Route exact path='/about' component={About} />
           <Route exact path='/page2' component={Page2} />
           <Route exact path='/what-we-believe' component={WhatWeBelieve} />
-          <Route exact path='/page4' component={Page4} />
+          <Route exact path='/the-national' component={TheNational} />
+          <Route exact path='/past-pfn-chairmen' component={PastPfn} />
           <Route exact path='/page5' component={Page5} />
           <Route exact path='/page6' component={Page6} />
           <Route exact path='/history' component={History} />
+          <Route exact path='/history2' component={History2} />
           <Route exact path='/page8' component={Page8} />
           <Route exact path='/page9' component={Page9} />
           <Route exact path='/page10' component={Page10} />

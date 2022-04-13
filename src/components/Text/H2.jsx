@@ -10,7 +10,7 @@ const H2Style = styled.div`
   font-style: normal;
   font-weight: 900;
   /* text-align: center; */
-  color: ${props => props.color ? '#fff' : 'red'};
+  color: ${props => props.color ? '#fff' : '#990000'};
   /* color: #fff; */
   @media only screen and (max-width: 600px) {
     font-size: .9rem;

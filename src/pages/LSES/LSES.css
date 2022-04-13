@@ -1,8 +1,8 @@
 .page12Top{
-    padding: 4rem;
+    padding: 0 4rem;
 }
 .page12TopContent{
-    padding: 4rem;
+    padding: 0 4rem;
     text-align: center;
 }
 .page12TopTitle, .page12TopPara{
@@ -16,7 +16,7 @@
 
 /* Center */
 .page12Center{
-    padding: 4rem;
+    padding: 0rem 7rem;
     background-color: #fff;
 }
 .page12CenterTitle{
@@ -27,8 +27,8 @@
 }
 
 .page12Center2{
-    padding: 4rem;
-    background: green;
+    padding: 4rem 7rem;
+    background: #990000;
 }
 .page12Center2Para{
     padding: 1rem 0;
@@ -102,15 +102,28 @@
 .page12TopContentBoxLeft img{
     width: 70%;
 }
-.page12TopContentBoxRight{}
+.page12TopContentBoxRight{
+    display: flex;
+    flex-direction: column;
+}
 .page12TopContentBoxRight img{
     width: 70%;
 }
 .page12TopContentBoxLeftPara{
     margin-top: 2rem;
-    padding: 0 12rem 0 0;
+    padding: 0 3rem 0 0;
     text-align: left;
     max-width: 600px;
+}
+.page12TopContentBoxRightList{
+    padding: 0 1rem;
+}
+#page12KnowMoreBtn{
+    text-align: left;
+    padding: 1rem 0;
+}
+.page12ParaSpace{
+    margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 600px) {

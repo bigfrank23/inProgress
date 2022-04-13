@@ -90,20 +90,12 @@ const LSES = () => {
                             </H3>
                             <div style={{maxWidth: "500px"}}>
                             <PText>
-                            </PText> 
-                            <PText>
-                               The State Advisory Council builds pathways within the Advisory Leadership System by improving the lives of it's members and growing our state through it.
+                               builds pathways within the Advisory Leadership System by improving the lives of it's members and growing our state through it.
                                 The Advisory Council model allows the Chairman to access the wisdom and support of servants of God of influence and integrity in the State.
                                 The State Advisory Council comprises of twelve leaders from within the State
 
                             </PText>
-                            <PText>
-
-                            </PText>
-
                             </div>
-                            <PText>
-                            </PText>
                         </div>
                     </div>
                     <div className="page12TopContentBoxRight">
@@ -113,16 +105,26 @@ const LSES = () => {
                             	The State Executive Council
                             </H3>
                             <PText>
-                            The Central Working Committee (CWC).
-                            </PText>
-                            <PText>
-                            The State Directors.
-                            </PText>
-                            <PText>
-                            The Provincial Chairmen.
+                            <ul className="page12TopContentBoxRightList">
+                                <li className="page12TopContentBoxRightListItem">
+                                    The Central Working Committee (CWC)
+                                </li>
+                                <li className="page12TopContentBoxRightListItem">
+                                    The State Directors &
+                                </li>
+                                <li className="page12TopContentBoxRightListItem">
+                                    The Provincial Chairmen
+                                </li>
+                            </ul>
+                            <div style={{marginTop: "1rem"}}>
+                                The State Executive Council is led and headed by the Chairman and is composed of appointed and 
+                                elected officers, which includes the State Directors and the Chairmen of the various Provinces, 
+                                which cover geographical areas carefully delineated to effectively cover the state.
+
+                            </div>
                             </PText>
                         </div>
-                        <Link to="/page2">
+                        <Link to="/page2" id="page12KnowMoreBtn">
                             <Button BtnText="Know more" outline />
                         </Link>
                     </div>
@@ -131,36 +133,35 @@ const LSES = () => {
         </div>
         <div className="page12Center">
             <div className="page12CenterMainTitle">
-                <H2>THE LAGOS STATE EXECUTIVE STRUCTURE.</H2>
+                {/* <H2>THE LAGOS STATE EXECUTIVE STRUCTURE.</H2> */}
             </div>
             <div className="page12CenterTitle">
-                <H3>The Lagos State PFN is composed of:</H3>
+                {/* <H3>:</H3> */}
                 <div className="page12CenterPara">
                     <PText>
-                        <ol className="lsesList">
-                            <li className="lsesListItem">
-                                <b>State</b>
-                            </li>
-                            <li className="lsesListItem">
-                                <b>Provinces</b>
-                            </li>
-                            <li className="lsesListItem">
-                                <b>Chapters</b>
-                            </li>
-                        </ol>
                         <PText>
-                        The Lagos State Pentecostal Fellowship has evolved from its early years and has developed in terms of its organization and structure from the days of region and zones to now Presently the state is made up of a multilayered structure for ease of administration and service delivery.
+                        <b>The Lagos State PFN is composed of</b> Provinces and Chapters. <br />
+                        <div className="page12ParaSpace">
+                        The Lagos State Pentecostal Fellowship has evolved from its early years and has developed in terms of its organization and structure from the days of region and zones to now Presently the state is made up of a multilayered structure for ease of administration and service delivery. 
 
+                        </div>
                      <PText>The state is led by the Chairman who heads an executive council composed of appointed and elected officers, also included in the executive council are the Chairman of the various provinces, next in line are the provinces which cover geographical areas carefully delineated to effectively cover the state.</PText>
+                        <div className="page12ParaSpace">
 
                      <PText>There are at present 21 Provinces who headed by Provincial Chairmen who lead a Provincial Executive Council which like the state Executive is composed of selected and appointed officials and the various Chapter Chairmen.</PText>
+                        </div>
 
                      <PText>At the base of the administrative structure are the chapter Chairmen who are the grass root mobilisers and administrators of the PFN vision. Our chapter Chairmen are very vital in the Lagos PFN hierarchy as they are responsible for implementing the PFN program at the grass roots. There are presently well over 500 chapters in the state and the number differs from province to province.</PText>
+                        <div className="page12ParaSpace">
+
                         <PText>Supporting the work of the PFN executives at all levels are the various directorates that offer invaluable inputs on specialized subjects and issues ranging from security to inter-governmental matter. </PText>
+                        </div>
 
                         <PText> Also very crucial, is the very important input of the esteemed minsters who make up the Lagos State Advisory Council, the Advisory Council model allows the Chairman to access the wisdom and support of servants of God of influence and integrity in the State. </PText>
-
+                            <div className="page12ParaSpace">
                         <PText> The model is also replicated at the provincial and Chapter levels. </PText>
+
+                            </div>
 
                         </PText>
                     </PText>
