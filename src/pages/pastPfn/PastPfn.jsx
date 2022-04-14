@@ -14,6 +14,7 @@ import PImg9 from '../../images/pastPfn9.png'
 import PImg10 from '../../images/pastPfn10.jpg'
 import logoImg from '../../images/PFN4.png'
 import BgImg from '../../images/splash1.jpg'
+import Footer from '../../components/Footer/Footer'
 
 // import './Page3.css'
 import './PastPfn.css'
@@ -157,9 +158,9 @@ const PastPfn = () => {
                         <div className="pastPfnGridContent">
                             <div className="pastPfnGridContentBx">
                                 <div className="pastPfnGridContentImg">
-                                    <div className="lll">
-                                    <img src={data.img} alt="" />
-                                    </div>
+                                    {/* <div className="lll"> */}
+                                        <img src={data.img} alt="" />
+                                    {/* </div> */}
                                     <div className="mmm">
                                         <img src={logoImg} alt="" />
                                     </div>
@@ -175,6 +176,7 @@ const PastPfn = () => {
                 ))}
             </Grid>
         </div>
+        <Footer />
     </Container>
   )
 }

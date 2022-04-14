@@ -30,15 +30,15 @@
 .top .nav{
     display: flex;
     justify-content: space-around;
-    padding: 0 7rem !important;
+    padding: 0 4rem !important;
 }
 .top .nav .logo{
-    width: 250px;
+    width: 200px;
 }
 .top .nav .logo img{
-    width: 100%;
+    width: 200px;
 }
-.top .nav .logo .logoText{
+/* .top .nav .logo .logoText{
     margin-left: 3px;
     align-self: flex-start;
     color: #fff;
@@ -52,7 +52,7 @@
     margin-left: 4px;
     position: relative;
     top: -15px;
-}
+} */
 .navLinks{
     align-self: center;
 }
@@ -61,6 +61,7 @@
     margin: 0;
     padding: 0 40px;
     display: flex;
+    text-align: center;
 }
 .navListItems{
     color: #fff;
@@ -82,6 +83,7 @@
 }
 .navButtons{
     display: flex;
+    gap: 1rem;
     align-self: center;
 }
 .navButtons #rightBtn, #leftBtn{
@@ -100,10 +102,10 @@
 .navButtons #leftBtn{
     background-color: #008753 !important;
     border-color: #008753 !important;
-    margin-right: 20px;
+    /* margin-right: 10px; */
 }
 .leftBtn{
-    margin-right: 20px;
+    /* margin-right: 20px; */
     align-self: center;
 }
 .navButtons .rightBtn{

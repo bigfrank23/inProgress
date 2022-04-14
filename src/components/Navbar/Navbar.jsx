@@ -79,6 +79,25 @@ const Navbar = () => {
                             </Link>
                         </ul>
                         </li>
+                        <li className="navListItems">Get involved
+                        <ul className="hover">
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">The Provinces</li>
+                                <li className="hoverItems">Volunteers</li>
+                                <li className="hoverItems">Outreach</li>
+                            </Link>
+                        </ul>
+                        </li>
+                        <li className="navListItems">Events
+                        <ul className="hover">
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Gallery</li>
+                                <li className="hoverItems">Watch Live</li>
+                                <li className="hoverItems">Past Events</li>
+                                <li className="hoverItems">Upcoming Events</li>
+                            </Link>
+                        </ul>
+                        </li>
                     </ul>
                 </div>
                 {showNav && (<div className="mobileNav">
@@ -116,6 +135,25 @@ const Navbar = () => {
                         <ul className="hover">
                             <Link to='#' className='links'>
                                 <li className="hoverItems">The lagos state executive structure</li>
+                            </Link>
+                        </ul>
+                        </li>
+                        <li className="navListItems">Get involved
+                        <ul className="hover">
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">The Provinces</li>
+                                <li className="hoverItems">Volunteers</li>
+                                <li className="hoverItems">Outreach</li>
+                            </Link>
+                        </ul>
+                        </li>
+                        <li className="navListItems">Events
+                        <ul className="hover">
+                            <Link to='#' className='links'>
+                                <li className="hoverItems">Gallery</li>
+                                <li className="hoverItems">Watch Live</li>
+                                <li className="hoverItems">Past Events</li>
+                                <li className="hoverItems">Upcoming Events</li>
                             </Link>
                         </ul>
                         </li>
