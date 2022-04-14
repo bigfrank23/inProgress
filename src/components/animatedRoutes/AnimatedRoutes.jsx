@@ -1,3 +1,4 @@
+import React from 'react'
 import Home from "./pages/Home/Home";
 // import Page1 from "./pages/page1/Page1";
 import About from "./pages/about/About";
@@ -19,31 +20,23 @@ import Page13 from "./pages/page13/Page13";
 import Page14 from "./pages/page14/Page14";
 import Page15 from "./pages/page15/Page15";
 import Page16 from "./pages/page16/Page16";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from './components/Navbar/Navbar';
-import styled from "styled-components";
 import WhatWeBelieve from "./pages/whatWeBelieve/WhatWeBelieve";
 import TheNational from "./pages/theNational/TheNational";
 import PastPfn from "./pages/pastPfn/PastPfn";
-import PfnExecutives from "./pages/pfnExecutives/PfnExecutives";
+import page10 from ''
 
-const Container = styled.div`
-  width: 100%;
-`
+import { useLocation, Switch, Route } from 'react-router-dom'
 
-function App() {
+const AnimatedRoutes = () => {
+    const location = useLocation()
   return (
-    <Container>
-      <Router>
-        <Navbar />
-        <Switch>
+    <Switch key={location.pathname}>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
           <Route exact path='/page2' component={Page2} />
           <Route exact path='/what-we-believe' component={WhatWeBelieve} />
           <Route exact path='/the-national' component={TheNational} />
           <Route exact path='/past-pfn-chairmen' component={PastPfn} />
-          <Route exact path='/pfn-executives' component={PfnExecutives} />
           <Route exact path='/page5' component={Page5} />
           <Route exact path='/page6' component={Page6} />
           <Route exact path='/history' component={History} />
@@ -58,9 +51,7 @@ function App() {
           <Route exact path='/page15' component={Page15} />
           <Route exact path='/page16' component={Page16} />
         </Switch>
-      </Router>
-    </Container>
-  );
+  )
 }
 
-export default App;
+export default AnimatedRoutes

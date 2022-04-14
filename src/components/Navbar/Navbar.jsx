@@ -45,7 +45,7 @@ const Navbar = () => {
                             <Link to='/about' className='links'>
                                 <li className="hoverItems">About PFN</li>
                             </Link>
-                            <Link to='/history' className='links'>
+                            <Link to='/history2' className='links'>
                                 <li className="hoverItems">History of PFN</li>
                             </Link>
                             <Link to='/what-we-believe' className='links'>
@@ -67,7 +67,7 @@ const Navbar = () => {
                             <Link to='/past-pfn-chairmen' className='links'>
                                 <li className="hoverItems">Past PFN chairmen</li>
                             </Link>
-                            <Link to='#' className='links'>
+                            <Link to='/pfn-executives' className='links'>
                                 <li className="hoverItems">PFN lagos state executives</li>
                             </Link>
                         </ul>
@@ -107,7 +107,7 @@ const Navbar = () => {
                             <Link to='/page1' className='links'>
                                 <li className="hoverItems">About PFN</li>
                             </Link>
-                            <Link to='/page2' className='links'>
+                            <Link to='/history2' className='links'>
                                 <li className="hoverItems">History of PFN</li>
                             </Link>
                             <Link to='/page3' className='links'>
@@ -126,7 +126,7 @@ const Navbar = () => {
                             <Link to='/page5' className='links'>
                                 <li className="hoverItems">Past PFN chairmen</li>
                             </Link>
-                            <Link to='#' className='links'>
+                            <Link to='/pfn-executives' className='links'>
                                 <li className="hoverItems">PFN lagos state executives</li>
                             </Link>
                         </ul>

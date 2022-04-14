@@ -15,6 +15,7 @@ import PImg10 from '../../images/pastPfn10.jpg'
 import logoImg from '../../images/PFN4.png'
 import BgImg from '../../images/splash1.jpg'
 import Footer from '../../components/Footer/Footer'
+import BGImg3 from '../../images/bg4.jpg'
 
 // import './Page3.css'
 import './PastPfn.css'
@@ -32,10 +33,10 @@ const Container = styled.div`
   .page1Wrapper {
     /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
     clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${Img});
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url(${BGImg3});
     background-size: cover;
-    background-position: center;
+    background-position-y: -145px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;

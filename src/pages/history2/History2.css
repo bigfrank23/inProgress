@@ -6,6 +6,7 @@
 }
 .historyFlexContainer{
     /* display: flex; */
+    padding: 0 7rem;
 }
 .historyGridContainer{
     margin-bottom: 2rem;
@@ -72,10 +73,10 @@
 }
 .historyContainerRight{
     flex: 1;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
 }
 .historyMainTxt{
-    background-color: lightcoral;
+    background-color: #990000;
     border-radius: 5px;
     padding: 1rem;
     text-align: justify;
@@ -84,10 +85,10 @@
     font-size: 3rem;
     font-weight: 900;
     padding: 0;
-    color: #222;
+    color: #fff;
 }
 #hr{
-    border: 1px solid #ccc;
+    border: 1px solid green;
     width: 50%;
     margin: 1rem 0;
 }

@@ -10,10 +10,10 @@ import Button from '../Button/Button'
 import './heroSection.css'
 import { mobile } from '../../responsive'
 
+// const image3 = Img3
+const image4 = Img4
 const image1 = Img1
 const image2 = Img2
-const image3 = Img3
-const image4 = Img4
 
 const Container = styled.div`
     /* background */
@@ -64,7 +64,7 @@ const HeroSection = () => {
   return (
     <Container id='hero'>
         <BackgroundSlider
-            images={[image1, image2, image3, image4]}
+            images={[image1, image2, image4]}
             duration={10} transition={2}
          />
         <Content>

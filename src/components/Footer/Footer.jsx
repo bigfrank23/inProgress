@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import Header from '../Text/Header'
 import PText from '../Text/PText'
 import { mobile } from '../../responsive'
+import FooterImg from '../../images/footer.jpg'
 import H3 from '../Text/H3'
 
 const Container = styled.div`
@@ -15,8 +16,11 @@ const Container = styled.div`
   margin-top: 2rem;
   background: url(${Img2});
   .topFooter {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${Img});
+    background: 
+      url(${FooterImg});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 50vh;
     width: 100%;
     display: flex;
@@ -25,6 +29,7 @@ const Container = styled.div`
     padding: 4rem;
     .center {
       .lineShape {
+        display: none;
         width: 50%;
         height: 20px;
         background: #fff;
@@ -33,6 +38,7 @@ const Container = styled.div`
         left: 50%;
       }
       .mainText {
+        display: none;
         font-size: 46px;
         margin-top: 0;
         text-transform: uppercase;
@@ -42,6 +48,7 @@ const Container = styled.div`
         z-index: 2;
       }
       .btnContent {
+        display: none;
         .topTextBox {
           text-align: center;
           color: #fff;
@@ -108,7 +115,7 @@ const Container = styled.div`
             ${mobile({justifyContent: "center"})}
             a {
               color: #fff;
-              background: #008753;;
+              background: #008753;
               font-weight: 400;
               font-size: 1rem;
               padding: 5px;
