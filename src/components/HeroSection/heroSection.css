@@ -6,3 +6,66 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     padding: 0 2rem;
 }
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+.topText h4{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.centerTextContainer{
+    margin-bottom: 50px;
+}
+.centerText h1{
+    color: #fff;
+    line-height: 40px;
+    margin-top: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+/* .div1, .div2, .div3{
+    opacity: 0;
+    height: 0;
+} */
+.div1{
+    animation: animation 12s infinite;
+    /* animation-delay: 6s; */
+}
+/* .div2{
+    animation: animation 12s infinite;
+    animation-delay: 4s;
+}
+.div3{
+    animation: animation 12s infinite;
+    animation-delay: 8s;
+} */
+/* @keyframes animation{
+    0%{
+        opacity: 0;
+        height: auto;
+    }
+    16%{
+        opacity: 1;
+    }
+    33%{
+        opacity: 0;
+        height: 0;
+    }
+    100%{
+        opacity: 0;
+        height: 0;
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+    .content{
+        position: relative;
+        top: 15%;
+    }
+}

@@ -17,7 +17,7 @@
     text-align: center;
 }
 .sectTwo{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/living-generously.jpg');
+    background: linear-gradient(rgba(18,30,34,.8), rgba(18,30,34,.8) ), url('../../images/worship.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -5,6 +5,7 @@ import FindPeople from '../../components/FindPeople/FindPeople'
 import Footer from '../../components/Footer/Footer'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import Navbar from '../../components/Navbar/Navbar'
+import Slider from '../../components/slider/Slider'
 import TornContainer from '../../components/TornContainer/TornContainer'
 import WhatsNext from '../../components/WhatsNext/WhatsNext'
 
@@ -15,6 +16,7 @@ const Home = () => {
         <HeroSection />
         <Banner />
         <FindPeople />
+        <Slider />
         <TornContainer />
         <Extraordinay />
         <WhatsNext />

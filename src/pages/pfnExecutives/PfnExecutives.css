@@ -66,6 +66,43 @@
       margin-top: 1rem;
       cursor: pointer;
   }
-  .pfn-back-para{
-      padding: 1rem 0;
+  .flipBackTitle{
+    margin-bottom: 1rem;
   }
+  .pfn-back-para{
+    padding-bottom: 1rem;
+    text-align: left;
+    display: flex;
+    gap: 10px;
+  }
+  .fa5Icon{
+    color: #333;
+    align-self: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #pfnExecutivesContainer {
+      padding-top: 0;
+  }
+    .pfnExecutivesContainer {
+    padding: 2rem;
+    display: block;
+  }
+  .flip-box {
+    margin-bottom: 1rem;
+}
+  }
+  @media only screen and (min-width: 600px) {
+     .pfnExecutivesContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .pfnExecutivesContainer {
+    gap: 1rem;
+    padding: 2rem 2rem;
+}
+  }
+  @media only screen and (min-width: 992px) {
+  }
+@media only screen and (min-width: 1200px) {
+}

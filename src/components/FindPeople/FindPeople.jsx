@@ -5,7 +5,12 @@ import Img from '../../images/splash2.jpg'
 import BorderImg from '../../images/bannerH.png'
 import Header from '../Text/Header'
 import H2 from '../Text/H2'
-import { Grid } from '@material-ui/core'
+import { Grid } from '@mui/material'
+import Img2 from '../../images/sec.png'
+import { Link } from 'react-router-dom'
+import Typist from "react-text-typist";
+import Typed from 'react-typed';
+import Button2 from '../Button/Button2'
 
 const Container = styled.div`
     width: 100%;
@@ -18,42 +23,81 @@ const Container = styled.div`
 `
 
 const FindPeople = () => {
-    const cards = [1, 2, 3]
+    const cards = [
+        {
+            id: 1,
+            img: Img2,
+            title: "The Central Working Commitee(CWC)",
+            desc: "Know More"
+        },
+        {
+            id: 2,
+            img: Img2,
+            title: "The State Directors",
+            desc: "Know More"
+        },
+        {
+            id: 3,
+            img: Img2,
+            title: "The Provincial Chairmen",
+            desc: "Know More"
+        },
+    ]
   return (
     <Container>
-        <div className="header">
-            <div className="topHeader">
-                <Header children="Lorem, ipsum dolor." color={true}/>
-            </div>
-            <div className="centerHeader">
-                <H2 children="Lorem, ipsum dolor." />
-            </div>
-            <div className="bottomHeader">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, sequi numquam aperiam eligendi nemo eveniet.</p>
-            </div>
+      <div className="header">
+        <div className="topHeader">
+          <Header children="THE STATE EXECUTIVE COUNCIL" color={true} />
         </div>
-        {/* <div className="content"> */}
-            <Grid container spacing={2}>
-                {cards.map((card)=> (
-                    <Grid item xs={12} sm={6} md={4}>
-                        <div className="card1">
-                            <img src={Img} alt="" />
-                            <div className="contentTextWrapper">
-                                <div className="contentText">
-                                    <H2 children="Lorem ipsum dolor sit" />
-                                </div>
-                                <div className="contentPara">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magnam ipsam, voluptatem delectus dolores accusamus saepe quod illum a distinctio nulla facere nemo nam repudiandae nesciunt qui nostrum. In accusamus amet debitis libero id? Asperiores, dignissimos. Porro tempora tenetur omnis deleniti facere, animi cum? Temporibus at doloribus sequi blanditiis libero.
-                                </div>
-                            </div>
-                            <i className="fa fa-arrow-circle-right circledArrow" aria-hidden="true" />
-                        </div>
-                    </Grid>
-                ))}
-            </Grid>
-        {/* </div> */}
+        <div className="centerHeader">
+          <H2 children="Our Team is composed of" />
+        </div>
+        <div className="bottomHeader">
+            <p>
+            <Typed
+                strings={[
+                "The Central Working Commitee",
+                "The State directors",
+                "The Provincial Chairmen",
+                ]}
+                typeSpeed={40}
+                backSpeed={50}
+                loop
+            />
+            </p>
+        </div>
+      </div>
+      {/* <div className="content"> */}
+      <Grid
+        container
+        spacing={2}
+        sx={{ padding: { xs: "0 2rem", sm: "0 2rem", md: "4rem 7rem" } }}
+      >
+        {cards.map((item) => (
+          <Grid item xs={12} sm={6} md={4} key={item.id}>
+            <Link to="/pfn-executives" className="links">
+              <div className="card1">
+                <img src={item.img} alt="" />
+                <div className="contentTextWrapper">
+                  <div className="contentText">
+                    <H2>{item.title}</H2>
+                  </div>
+                  <div className="contentPara">
+                      <Button2 BtnText={item.desc} />
+                  </div>
+                </div>
+                <i
+                  className="fa fa-arrow-circle-right circledArrow"
+                  aria-hidden="true"
+                />
+              </div>
+            </Link>
+          </Grid>
+        ))}
+      </Grid>
+      {/* </div> */}
     </Container>
-  )
+  );
 }
 
 export default FindPeople

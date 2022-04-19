@@ -26,6 +26,8 @@ import WhatWeBelieve from "./pages/whatWeBelieve/WhatWeBelieve";
 import TheNational from "./pages/theNational/TheNational";
 import PastPfn from "./pages/pastPfn/PastPfn";
 import PfnExecutives from "./pages/pfnExecutives/PfnExecutives";
+import Gallery from './pages/gallery/Gallery'
+import Posts from './pages/blog/posts/Posts'
 
 const Container = styled.div`
   width: 100%;
@@ -57,6 +59,8 @@ function App() {
           <Route exact path='/page14' component={Page14} />
           <Route exact path='/page15' component={Page15} />
           <Route exact path='/page16' component={Page16} />
+          <Route exact path='/gallery' component={Gallery} />
+          <Route exact path='/blogs' component={Posts} />
         </Switch>
       </Router>
     </Container>

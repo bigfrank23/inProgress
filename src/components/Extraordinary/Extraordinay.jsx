@@ -9,11 +9,14 @@ import { mobile } from '../../responsive'
 import H3 from '../Text/H3'
 import PText from '../Text/PText'
 import { Grid } from '@material-ui/core'
+import Img1 from '../../images/gallery/88.jpg'
+import Img2 from '../../images/gallery/33.jpg'
+import Img3 from '../../images/gallery/58.jpg'
 
 
 const Container = styled.div`
     background: url(${BgImg});
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     height: 100%;
     width: 100%;
     display: flex;
@@ -24,20 +27,20 @@ const Container = styled.div`
     `
 const ExtraContentContainer = styled.div`
     /* text-align: center; */
-    padding: 4rem;
+    padding: 4rem 7rem;
     ${mobile({padding: "2rem" })}
 `
 const ExtraTextContainer = styled.div`
     text-align: center;
 `
 const ExtraText = styled.h1`
-    font-size: 2.5rem;
-    font-style: italic;
-    color: green;
-    margin: 0 auto 20px auto;
-    text-align: center;
-    ${mobile({padding: '1rem 0', fontSize: '1.7rem'})}
-`
+  font-size: 2.5rem;
+  font-style: italic;
+  color: #008753;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  ${mobile({ padding: "1rem 0", fontSize: "1.7rem" })}
+`;
 const ExtraContent = styled.div`
     display: flex;
     gap: 20px;
@@ -92,7 +95,7 @@ const ExtraName = styled.p`
 const ExtraContentContainer2 = styled.div`
     align-self: flex-start;
     width: 100%;
-    padding: 0 4rem 4rem 4rem;
+    padding: 0 7rem 4rem 7rem;
     ${mobile({padding: "0", width: "unset", alignSelf: "unset"})}
     .extraLink{
     display: flex;
@@ -123,7 +126,7 @@ const ExtraCard = styled.div`
 `
 const ExtraCardImgContainer = styled.div`
     width: 100%;
-    background-color: green;
+    background-color: #008753;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     `
@@ -134,7 +137,7 @@ const ExtraCardImg = styled.img`
     border-top-right-radius: 10px;
 `
 const ExtraContentText2 = styled.div`
-    background-color: green;
+    background-color: #008753;
     padding: 2rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -160,57 +163,91 @@ const ExtraLocation = styled.div`
       /* margin-right: 5px; */
 `
 const Extraordinay = () => {
-    const items = [1, 2, 3, 4, 5]
+    const cards = [
+        {
+            id: 1,
+            img: Img1,
+            title: "Upcoming Events",
+            desc: "Know More"
+        },
+        {
+            id: 2,
+            img: Img2,
+            title: "Current Events",
+            desc: "Know More"
+        },
+        {
+            id: 3,
+            img: Img3,
+            title: "Past Events",
+            desc: "Know More"
+        },
+    ]
   return (
     <Container>
-        <ExtraContentContainer>
-            <ExtraTextContainer>
-                <ExtraText>Lorem ipsum dolor sit amet.</ExtraText>
-            </ExtraTextContainer>
-            <ExtraContent>
-                <ExtraImg>
-                    <ExtraIconContainer>
-                        <i className="fa fa-play playIcon" aria-hidden="true" />
-                    </ExtraIconContainer>
-                </ExtraImg>
-                <ExtraContentText>
-                    <ExtraDesc>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto et, enim totam ducimus eius minima quos quas sunt eos pariatur!"</ExtraDesc>
-                    <ExtraName>Lorem, ipsum.</ExtraName>
-                </ExtraContentText>
-            </ExtraContent>
-        </ExtraContentContainer>
-                <ExtraContentContainer2>
-                        <ExtraTextContainer2>
-                            <ExtraText2>Lorem ipsum dolor sit amet.</ExtraText2>
-                        </ExtraTextContainer2>
-                    {/* <div className='extraGrid'> */}
-                        <Grid container spacing={3}>
-                        {items.map(()=>(
-                            <Grid item xs={12} sm={6} md={4}>
-                                <ExtraCard>
-                                    <ExtraCardImgContainer>
-                                        <ExtraCardImg src={PlayImg}/>
-                                    </ExtraCardImgContainer>
-                                    <ExtraContentText2>
-                                        <ExtraTitle> <H3 children="Lorem ipsum imus eius minima" color={true} /> </ExtraTitle>
-                                        {/* <div style={{display: 'flex', color: "white"}}> */}
-                                        <ExtraDate> <PText children="Lorem, ipsum." color={true} /> </ExtraDate> 
-                                        {/* </div> */}
-                                        {/* <div style={{display: 'flex', color: "white"}}> */}
-                                        <ExtraLocation><PText children="Lorem, ipsum." color={true} /> </ExtraLocation> 
-                                        {/* </div> */}
-                                    </ExtraContentText2>
-                                </ExtraCard>
-                            </Grid>
-                        ))}
-                    </Grid>
-                    {/* </div> */}
-                    <Link to='#' className='extraLink'>
-                    <Button BtnText='VIEW ALL EVENTS'/>
-                    </Link>
-                </ExtraContentContainer2>
+      <ExtraContentContainer>
+        <ExtraTextContainer>
+          <ExtraText>Get to know us</ExtraText>
+        </ExtraTextContainer>
+        <ExtraContent>
+          <ExtraImg>
+            <ExtraIconContainer>
+              <i className="fa fa-play playIcon" aria-hidden="true" />
+            </ExtraIconContainer>
+          </ExtraImg>
+          <ExtraContentText>
+            <ExtraDesc>
+              "PFN is the umbrella Body which coordinates the activities of
+              Penticostal, Evangelical and Chrismatic Ministries, Churches and
+              Associations, for the purpose of unity as underlined by the prayer
+              of the Lord Jesus in John 17."
+            </ExtraDesc>
+            <Link to="#">
+              <ExtraName>Know more</ExtraName>
+            </Link>
+          </ExtraContentText>
+        </ExtraContent>
+      </ExtraContentContainer>
+      <ExtraContentContainer2>
+        <ExtraTextContainer2>
+          <ExtraText2>Our Events</ExtraText2>
+        </ExtraTextContainer2>
+        {/* <div className='extraGrid'> */}
+        <Grid container spacing={3}>
+          {cards.map((card) => (
+            <Grid item xs={12} sm={6} md={4} key={card.id}>
+              <ExtraCard>
+                <ExtraCardImgContainer>
+                  <ExtraCardImg src={card.img} />
+                </ExtraCardImgContainer>
+                <ExtraContentText2>
+                  <ExtraTitle>
+                    {" "}
+                    <H3 children={card.title} color={true} />{" "}
+                  </ExtraTitle>
+                  {/* <div style={{display: 'flex', color: "white"}}> */}
+                  <ExtraDate>
+                    {" "}
+                    <PText children="" color={true} />{" "}
+                  </ExtraDate>
+                  {/* </div> */}
+                  {/* <div style={{display: 'flex', color: "white"}}> */}
+                  <ExtraLocation>
+                    <PText children="View Detail" color={true} />{" "}
+                  </ExtraLocation>
+                  {/* </div> */}
+                </ExtraContentText2>
+              </ExtraCard>
+            </Grid>
+          ))}
+        </Grid>
+        {/* </div> */}
+        <Link to="#" className="extraLink">
+          <Button BtnText="VIEW ALL EVENTS" />
+        </Link>
+      </ExtraContentContainer2>
     </Container>
-  )
+  );
 }
 
 export default Extraordinay

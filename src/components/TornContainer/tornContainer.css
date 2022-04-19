@@ -1,5 +1,7 @@
 #tornContainer{
-    background: linear-gradient(rgba(18,30,34,.8), rgba(18,30,34,.8) ), url('../../images/living-generously.jpg');
+    background: linear-gradient(rgba(18,30,34,.8), rgba(18,30,34,.8) ), url('../../images/worship.jpg');
+    background-position: center;
+    background-size: cover;
     border: 25px solid #000;
     border-image: url(../../images/bannerH.png) 45% stretch;
     border-left: 0;

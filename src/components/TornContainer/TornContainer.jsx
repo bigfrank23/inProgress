@@ -8,7 +8,7 @@ import Header from '../Text/Header'
 import './tornContainer.css'
 
 const Container = styled.div`
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -19,13 +19,13 @@ const TornContainer = () => {
   return (
     <Container id='tornContainer'>
         <div className="tornContent">
-            <div className="contentHeader"><Header children="Lorem ipsum dolor sit amet consectetur adipisicing." color={true}/> </div>
-            <div className="tornContentTitle"><H2 children="Lorem ipsum dolor sit amet consectetur adipisicing." color={true} /></div>
-            <div className="tornContentDesc"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta nece
-                ssitatibus quaerat quas culpa nemo qui dolorum sequi quisquam magni repellendus asperna
-                tur aut saepe nostrum exercitationem praesentium sit, nisi consectetur laborum.</p></div>
+            <div className="contentHeader"><Header children="Join us Today" color={true}/> </div>
+            <div className="tornContentTitle"><H2 children="Find meaningful connection and purpose" color={true} /></div>
+            <div className="tornContentDesc"><p>At PFN Lagos, we're not just looking for volunteers. We're looking
+              to help people discover their purpose. If getting involved in a fellowship is your next step, Contact
+              <div style={{color: "red"}}><i>info@pfnlagosstate.org </i></div> or check with one of the provinces or chapters.</p></div>
                 <Link to="#" style={{display: 'flex', justifyContent: 'center', margin: "18px 0"}}>
-                    <Button BtnText='Stories'/>
+                    <Button BtnText='Contact us now'/>
                 </Link>
         </div>
 

@@ -1,8 +1,10 @@
 .banner{
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../../images/federico-respini-sYffw0LNr7s-unsplash.jpg');
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url('../../images/web3.jpg');
     background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat-x;
+    border-top: 40px double #008753;
+    border-bottom: 40px double #008753;
     width: 100%;
     height: 100%;
     display: flex;
@@ -16,6 +18,28 @@
     flex-direction: column;
     gap: 5rem;
     align-self: center;
+}
+
+blockquote h2:before { 
+    content: open-quote;
+    font-weight: bold;
+    font-size: 6rem;
+    color:#889c0b;
+    line-height: 0;
+} 
+    /* blockquote h2:after { 
+    content: close-quote;
+    font-weight: bold;
+    font-size: 6rem;
+    color:#889c0b;
+  
+} */
+
+.bannerTitle h2{
+    color: #990000;
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
 }
 
 .banner .bannerBtn{
@@ -42,13 +66,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 7rem;
 }
 .navyblue .navyblueContainer{
     display: flex;
     background-color: #fff;
 }
 .navyblueContentLeft, .navyblueContentRight{
-    background-color: #e3e3e3;
+    background: url('../../images/map.PNG');
+    background-position: -329px;
+    width: 500px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -62,10 +90,10 @@
 }
 .navyblueContentLeft .title a:hover, .navyblueContentRight .title a:hover{
     text-decoration: underline;
-    text-decoration-color: #f85656;
+    text-decoration-color: #990000;
 }
 .navyblueContentLeft .title h2, .navyblueContentRight .title h2{
-    color: cadetblue;
+    color: #990000;
     font-size: 25px;
     font-weight: 900;
     margin-right: 10px;
@@ -80,14 +108,14 @@
 }
 .divider{
     width: 2px;
-    background-color: #000;
+    background-color: green;
     height: 80px;
     align-self: center;
 }
 .markerBanner{
     margin-bottom: 15px;
     font-size: 3rem !important;
-    color: cadetblue;
+    color: #990000;
 }
 .angleBanner{
     align-self: center;

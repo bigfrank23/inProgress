@@ -1,7 +1,8 @@
 .header{
     margin: auto;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
     margin-top: 4rem;
+    padding: 0 7rem;
 }
 .header .topHeader{
     font-style: italic;
@@ -39,9 +40,11 @@
 .card1 img{
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
 }
-
+.contentTextWrapper{
+    padding: 1rem;
+}
 .contentTextWrapper .contentText{
     background-color: #f1f1eb;
     /* padding: 20px 35px 30px; */
@@ -57,13 +60,14 @@
     font-weight: 300;
     font-size: 1rem;
     /* padding: 20px 35px 30px; */
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
+    text-align: center;
 }
 .circledArrow{
     font-size: 1.5rem !important;
     align-self: flex-end;
     color: green;
-    margin-right: 20px;
+    padding: 1rem;
 }
 
 @media only screen and (max-width: 600px){

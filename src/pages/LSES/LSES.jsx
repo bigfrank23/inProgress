@@ -124,7 +124,7 @@ const LSES = () => {
                             </div>
                             </PText>
                         </div>
-                        <Link to="/page2" id="page12KnowMoreBtn">
+                        <Link to="#" id="page12KnowMoreBtn">
                             <Button BtnText="Know more" outline />
                         </Link>
                     </div>
@@ -169,20 +169,22 @@ const LSES = () => {
             </div>
         </div>
         <div className="page12Center2">
-            <div className="page12Center2Title">
+            {/* <div className="page12Center2Title">
                 <H2 color>Lorem, ipsum dolor.</H2>
-            </div>
+            </div> */}
             <div className="page12Center2Para">
                 <PText color>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam tenetur, tempora perferendis deserunt repellendus nihil nemo culpa non voluptate ipsa mollitia beatae consequuntur illo consectetur delectus minima error eum sequi dolores ea fuga! Quae reiciendis eum quibusdam non velit doloremque numquam beatae hic laudantium vitae ab, itaque rerum dignissimos. Libero.
+                   At PFN Lagos, we're not just looking for volunteers. We're looking
+              to help people discover their purpose. If getting involved in a fellowship is your next step, Contact
+              <div style={{color: "red"}}><i>info@pfnlagosstate.org </i></div> or check with one of the provinces or chapters
                 </PText>
             </div>
             <div className="page12Center2Btn">
-                <Button2/>
-                <Button2/>
+                <Button2 BtnText="Contact now"/>
+                {/* <Button2/> */}
             </div>
         </div>
-        <div className="page12Center3">
+        {/* <div className="page12Center3">
             <div className="page12Center3Left">
                 <img src={Img2} alt="" />
             </div>
@@ -235,7 +237,7 @@ const LSES = () => {
                     Lorem ipsum dolor
                 </PText>
             </div>
-        </div>
+            </div> */}
         <Footer />
       </Container>
   )

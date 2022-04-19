@@ -10,14 +10,15 @@ import PText from '../Text/PText'
 import { mobile } from '../../responsive'
 import FooterImg from '../../images/footer.jpg'
 import H3 from '../Text/H3'
+import { tab } from './../../responsive';
+import { landscapeTab } from './../../responsive';
 
 const Container = styled.div`
   width: 100%;
   margin-top: 2rem;
   background: url(${Img2});
   .topFooter {
-    background: 
-      url(${FooterImg});
+    background: url(${FooterImg});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,6 +28,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     padding: 4rem;
+    ${mobile({ height: "100%" })}
+    ${tab({ height: "100%" })}
+    ${landscapeTab({ height: "50vh" })}
     .center {
       .lineShape {
         display: none;
@@ -63,15 +67,15 @@ const Container = styled.div`
   }
   .bottomFooter {
     padding: 4rem;
-    ${mobile({padding: "2rem"})}
+    ${mobile({ padding: "2rem" })}
     .bottomFooterContent {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      ${mobile({display: "block"})}
+      ${mobile({ display: "block" })}
       .logoBox {
         display: flex;
-        ${mobile({padding: "3rem 0", justifyContent: "center"})}
+        ${mobile({ padding: "3rem 0", justifyContent: "center" })}
         .logoText {
           align-self: center;
           margin-left: 10px;
@@ -87,32 +91,32 @@ const Container = styled.div`
         list-style: none;
         display: flex;
         gap: 20px;
-        ${mobile({display: "block", textAlign: "center"})}
+        ${mobile({ display: "block", textAlign: "center" })}
         a {
           color: #232e32;
           font-weight: 900;
           text-decoration: none;
           text-transform: uppercase;
-          .listItems{
-            ${mobile({marginBottom: "1rem"})}
+          .listItems {
+            ${mobile({ marginBottom: "1rem" })}
           }
         }
       }
       .footerButton {
-        ${mobile({margin: "3rem 0"})}
+        ${mobile({ margin: "3rem 0" })}
         .buttonBox {
           display: flex;
           gap: 1rem;
-          ${mobile({justifyContent: "center"})}
+          ${mobile({ justifyContent: "center" })}
         }
         .socialBox {
           float: right;
           margin-top: 20px;
-          ${mobile({float: "unset"})}
+          ${mobile({ float: "unset" })}
           .social {
             display: flex;
             gap: 10px;
-            ${mobile({justifyContent: "center"})}
+            ${mobile({ justifyContent: "center" })}
             a {
               color: #fff;
               background: #008753;
