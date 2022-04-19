@@ -5,7 +5,7 @@ import BgImg from '../../images/bg2.jpg'
 import PlayImg from '../../images/splash1.jpg'
 import Button from '../Button/Button'
 import './Extraordinary.css'
-import { mobile } from '../../responsive'
+import { landscapeTab, mobile, tab } from '../../responsive'
 import H3 from '../Text/H3'
 import PText from '../Text/PText'
 import { Grid } from '@material-ui/core'
@@ -45,6 +45,8 @@ const ExtraContent = styled.div`
     display: flex;
     gap: 20px;
     ${mobile({display: 'block'})}
+    ${tab({display: 'block'})}
+    ${landscapeTab({display: 'flex'})}
 `
 const ExtraImg = styled.div`
     /* flex: 1; */
@@ -59,6 +61,8 @@ const ExtraImg = styled.div`
     justify-content: center;
     align-items: center;
     ${mobile({height: '300px', width: '300px'})}
+    ${tab({height: '600px', width: "100%"})}
+    ${landscapeTab({height: "450px", width: "450px"})}
 `
 const ExtraIconContainer = styled.div`
     background: linear-gradient(#7bff7b, #7bff7b);

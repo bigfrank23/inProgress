@@ -68,4 +68,20 @@
         position: relative;
         top: 15%;
     }
+    .topText h4{
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin: 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .centerText h1{
+        font-size: 1.5rem;
+        color: #fff;
+        line-height: 40px;
+        margin-top: 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
 }

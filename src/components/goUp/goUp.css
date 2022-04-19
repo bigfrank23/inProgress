@@ -1,0 +1,22 @@
+.goUpBox{
+    position: fixed;
+    font-size: 1rem;
+    right: 2rem;
+    bottom: 5rem;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    border-radius: 5px;
+    filter: drop-shadow(0 40px 15px);
+    transform: rotate(340deg);
+    cursor: pointer;
+    transition: 1s;
+}
+.goUpIcon{
+    color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

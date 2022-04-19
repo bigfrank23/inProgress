@@ -1,6 +1,7 @@
 .pagination-container {
   display: flex;
   list-style-type: none;
+  padding-top: 2rem;
 }
 
 .pagination-item {
@@ -64,5 +65,13 @@ pointer-events: none;
 .arrow:hover {
   background-color: transparent;
   cursor: default;
+}
+
+@media only screen and (max-width: 600px) {
+  .pagination-container {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
 }
     

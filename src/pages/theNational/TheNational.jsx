@@ -93,7 +93,7 @@ const TheNational = () => {
                         </div>
                     </div>
                 </div>
-                <div className="nationalCenterContent">
+                <div className="nationalCenterContent" id="nationalCenterContent">
                     <div className="nationalCenterContentImgBx">
                         <img src={PresidentImg3} alt="" />
                     </div>

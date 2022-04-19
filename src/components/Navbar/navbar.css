@@ -30,7 +30,7 @@
 .top .nav{
     display: flex;
     justify-content: space-around;
-    padding: 0 4rem !important;
+    padding: 0 7rem !important;
 }
 .top .nav .logo{
     width: 200px;
@@ -127,6 +127,7 @@
     overflow: hidden;
     transition: all .8s ease;
 }
+
 .hover a{
     color: white;
     font-weight: 300;
@@ -195,7 +196,7 @@
     display: flex;
     /* justify-content: space-between; */
     gap: 1rem;
-    padding: 0 1rem;
+    padding: 0 1rem !important;
     }
     .logoText h1{
         font-size: 2rem !important;
@@ -205,6 +206,9 @@
     }
     .navButtons{
         display: none;
+    }
+    .mobileNav .navList .navListItems:hover .hover {
+        line-height: 8vh;
     }
 }
 @media only screen and (min-width: 600px) {

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import './banner.css'
+import mapImg from '../../images/map1.PNG'
 
 const Container = styled.div`
     width: 100%;
@@ -40,6 +41,7 @@ const Banner = () => {
             <div className="desc">
               <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
             </div> */}
+            <img src={mapImg} alt="" />
           </div>
         </div>
       </div>

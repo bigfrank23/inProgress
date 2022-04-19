@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom'
 import Typist from "react-text-typist";
 import Typed from 'react-typed';
 import Button2 from '../Button/Button2'
+import PText from '../Text/PText'
 
 const Container = styled.div`
     width: 100%;
@@ -53,7 +54,7 @@ const FindPeople = () => {
           <H2 children="Our Team is composed of" />
         </div>
         <div className="bottomHeader">
-            <p>
+          
             <Typed
                 strings={[
                 "The Central Working Commitee",
@@ -64,7 +65,7 @@ const FindPeople = () => {
                 backSpeed={50}
                 loop
             />
-            </p>
+            
         </div>
       </div>
       {/* <div className="content"> */}

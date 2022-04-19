@@ -73,14 +73,13 @@ blockquote h2:before {
     background-color: #fff;
 }
 .navyblueContentLeft, .navyblueContentRight{
-    background: url('../../images/map.PNG');
-    background-position: -329px;
+    /* background: url('../../images/map.PNG');
+    background-position: -329px; */
     width: 500px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    border-radius: 5px;
+    border-radius: 5px; 
+}
+.navyblueContentLeft img, .navyblueContentRight img{
+    width: 100%;
 }
 .navyblueContentLeft .icon, .navyblueContentRight .icon{
     text-align: center;
@@ -142,6 +141,21 @@ blockquote h2:before {
     }
     .banner{
         padding: 2rem;
+    }
+    .bannerTitle h2{
+        max-width: 100%;
+    }
+    .navyblueContentLeft{
+        width: 100%;
+    }
+    .navyblue {
+        padding: 0;
+    }
+    .header {
+        margin: auto;
+        /* margin-bottom: 60px; */
+        margin-top: 2rem;
+        padding: 0 2rem;
     }
   }
   @media only screen and (min-width: 600px) {

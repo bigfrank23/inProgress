@@ -23,6 +23,9 @@
     border-radius: 10px;
     border: 5px solid #fff;
 }
+.pastPfnGrid {
+    padding: 0 4rem;
+}
 .mmm{
     width: 50px;
 }
@@ -33,4 +36,34 @@
 .postPfnGridContentTxt{
     padding: 2rem;
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .pastPfnGrid{
+        padding: 2rem;
+    }
+    .pastPfnGridContent {
+        padding: 2rem;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .historyFlexContainer {
+        /* display: flex; */
+        padding: 0;
+    }
+    .pastPfnGridContent {
+        padding: 3rem;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .historyFlexContainer {
+        /* display: flex; */
+        padding: 0 7rem;
+    }
+    .pastPfnGridContent {
+        padding: 4rem;
+    }
+    .pastPfnGrid{
+        padding: 0 4rem;
+    }
 }

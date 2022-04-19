@@ -28,6 +28,8 @@ import PastPfn from "./pages/pastPfn/PastPfn";
 import PfnExecutives from "./pages/pfnExecutives/PfnExecutives";
 import Gallery from './pages/gallery/Gallery'
 import Posts from './pages/blog/posts/Posts'
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
+import GoUp from "./components/goUp/GoUp";
 
 const Container = styled.div`
   width: 100%;
@@ -38,6 +40,7 @@ function App() {
     <Container>
       <Router>
         <Navbar />
+        <ScrollToTop />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
@@ -63,6 +66,7 @@ function App() {
           <Route exact path='/blogs' component={Posts} />
         </Switch>
       </Router>
+      <GoUp />
     </Container>
   );
 }

@@ -7,16 +7,15 @@ import LogoImg from '../../images/pfnLogo.png'
 import { mobile } from '../../responsive'
 import Button2 from '../Button/Button2'
 
-const Container = styled.div`
+const Container = styled.nav`
     /* ${mobile({display: 'none'})} */
 `
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
+    const [closeNav, setCloseNav] = useState(false)
     const [scroll, setScroll] = useState(false)
 
-    const closeNav = () => {
-        setShowNav(false)
-    }
+    
 
     useEffect(()=>{
         window.addEventListener('scroll', ()=>{
@@ -50,7 +49,7 @@ const Navbar = () => {
               <li className="navListItems">
                 About
                 <ul className="hover">
-                  <Link to="/about" className="links">
+                  <Link to="/about" className="links" onClick={()=> setCloseNav(true)}>
                     <li className="hoverItems">About PFN</li>
                   </Link>
                   <Link to="/history2" className="links">
@@ -122,22 +121,22 @@ const Navbar = () => {
           {showNav && (
             <div className="mobileNav">
               <ul className="navList">
-                <Link to="/" className="links">
+                <Link to="/" className="links" onClick={()=> setShowNav(false)}>
                   <li className="navListItems">Menu</li>
                 </Link>
                 <li className="navListItems">
                   About
                   <ul className="hover">
-                    <Link to="/page1" className="links">
+                    <Link to="/about" className="links" onClick={()=> setShowNav(false)}>
                       <li className="hoverItems">About PFN</li>
                     </Link>
-                    <Link to="/history2" className="links">
+                    <Link to="/history2" className="links" onClick={()=> setShowNav(false)}>
                       <li className="hoverItems">History of PFN</li>
                     </Link>
-                    <Link to="/what-we-believe" className="links">
+                    <Link to="/what-we-believe" className="links" onClick={()=> setShowNav(false)}>
                       <li className="hoverItems">What we believe</li>
                     </Link>
-                    <Link to="#" className="links">
+                    <Link to="#" className="links" >
                       <li className="hoverItems">Our mission</li>
                     </Link>
                   </ul>
@@ -145,13 +144,13 @@ const Navbar = () => {
                 <li className="navListItems">
                   Leadership
                   <ul className="hover">
-                    <Link to="/page4" className="links">
+                    <Link to="/the-national" className="links" onClick={()=> setShowNav(false)}>
                       <li className="hoverItems">The national president</li>
                     </Link>
-                    <Link to="/page5" className="links">
+                    <Link to="/past-pfn-chairmen" className="links" onClick={()=> setShowNav(false)}>
                       <li className="hoverItems">Past PFN chairmen</li>
                     </Link>
-                    <Link to="/pfn-executives" className="links">
+                    <Link to="/pfn-executives" className="links" onClick={()=> setShowNav(false)}>
                       <li className="hoverItems">PFN lagos state executives</li>
                     </Link>
                   </ul>
@@ -159,7 +158,7 @@ const Navbar = () => {
                 <li className="navListItems">
                   PFN lagos state structure
                   <ul className="hover">
-                    <Link to="#" className="links">
+                    <Link to="/lses" className="links" onClick={()=> setShowNav(false)}>
                       <li className="hoverItems">
                         The lagos state executive structure
                       </li>
@@ -180,7 +179,7 @@ const Navbar = () => {
                   Events
                   <ul className="hover">
                     <Link to="#" className="links">
-                      <Link to="/gallery">
+                      <Link to="/gallery" className='links' onClick={()=> setShowNav(false)}>
                         <li className="hoverItems">Gallery</li>
                       </Link>
                       <li className="hoverItems">Watch Live</li>
@@ -189,7 +188,7 @@ const Navbar = () => {
                     </Link>
                   </ul>
                 </li>
-                <Link to="/blogs" className="links">
+                <Link to="/blogs" className="links" onClick={()=> setShowNav(false)}>
                   <li className="navListItems">Blogs</li>
                 </Link>
               </ul>

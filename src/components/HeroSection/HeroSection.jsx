@@ -3,8 +3,8 @@ import BackgroundSlider from 'react-background-slider'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 // import Img1 from '../../images/pro4.webp'
-import Img2 from '../../images/pro5.jpg'
-import Img3 from '../../images/yyy.jpg'
+import Img2 from '../../images/pro10.png'
+import Img3 from '../../images/pro4.webp'
 import Img4 from '../../images/pro9.jpg'
 import Button from '../Button/Button'
 import './heroSection.css'
@@ -101,14 +101,20 @@ const HeroSection = () => {
           </div>
           <div className="div3">
             <div className="topText">
-              <h4>To unite all Pentecostal churches,</h4>
+              <h4>To unite </h4>
             </div>
             <div className="centerTextContainer">
               <div className="centerText">
-                <h1>bodies and believers for the fellowship,</h1>
+                <h1>all Pentecostal churches,</h1>
               </div>
               <div className="centerText">
-                <h1>Encouragement and inspiration</h1>
+                <h1>bodies and believers</h1>
+              </div>
+              <div className="topText">
+                <h4>for the fellowship,</h4>
+              </div>
+              <div className="topText">
+                <h4>Encouragement and inspiration</h4>
               </div>
             </div>
           </div>
