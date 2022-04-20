@@ -81,11 +81,11 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="navListItems">
-                PFN lagos state structure
+                Lagos state structure
                 <ul className="hover">
                   <Link to="/lses" className="links">
                     <li className="hoverItems">
-                      The lagos state executive structure
+                      The executive structure
                     </li>
                   </Link>
                 </ul>

@@ -72,7 +72,7 @@ const HeroSection = () => {
       />
       {/* <Content> */}
       <div className="content">
-        <TextLoop springConfig={{ stiffness: 180, damping: 8 }} interval={5000}>
+        <TextLoop interval={10000}>
           <div className="div1">
             <div className="topText">
               <h4>loving radically, living generously</h4>

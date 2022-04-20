@@ -6,7 +6,9 @@ import BorderImg from '../../images/bannerH.png'
 import Header from '../Text/Header'
 import H2 from '../Text/H2'
 import { Grid } from '@mui/material'
-import Img2 from '../../images/sec.png'
+import Img2 from '../../images/cwc3.png'
+import Img3 from '../../images/dir2.png'
+import Img4 from '../../images/chiarman2.png'
 import { Link } from 'react-router-dom'
 import Typist from "react-text-typist";
 import Typed from 'react-typed';
@@ -33,13 +35,13 @@ const FindPeople = () => {
         },
         {
             id: 2,
-            img: Img2,
+            img: Img3,
             title: "The State Directors",
             desc: "Know More"
         },
         {
             id: 3,
-            img: Img2,
+            img: Img4,
             title: "The Provincial Chairmen",
             desc: "Know More"
         },

@@ -22,7 +22,7 @@ const GoUp = () => {
 
   return (
     <div>
-        <div className={scroll ? "goUpBox" : null} onClick={handleClick}>
+        <div className={scroll ? "goUpBox" : "null"} onClick={handleClick}>
             <FontAwesomeIcon className='goUpIcon' icon={faAngleUp} />
         </div>
     </div>

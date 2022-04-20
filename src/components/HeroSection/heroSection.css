@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     height: 100px;
+    position: relative;
+    top: 20%;
 }
 .topText h4{
     color: #fff;
@@ -61,6 +63,23 @@
         opacity: 0;
         height: 0;
     }
+} */
+
+/* #ReactBackgroundSlider > figure {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: -13px 0 !important;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: -1000;
+    margin: 0;
+    backface-visibility: hidden;
+    animation: imageAnimation 36s linear infinite -0.5s;
 } */
 
 @media only screen and (max-width: 600px) {

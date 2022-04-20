@@ -12,6 +12,7 @@ import FooterImg from '../../images/footer.jpg'
 import H3 from '../Text/H3'
 import { tab } from './../../responsive';
 import { landscapeTab } from './../../responsive';
+import NewsLetter from '../newsLetter/NewsLetter'
 
 const Container = styled.div`
   width: 100%;
@@ -102,6 +103,20 @@ const Container = styled.div`
           }
         }
       }
+      .newsLetterTitle{
+        text-align: center;
+      }
+      .newsLetterInputContainer{
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0 0 0;
+        .newsLetterInput{
+          border: 1px solid green;
+          outline: 0;
+          padding: 10px;
+          border-radius: 30px;
+        }
+      }
       .footerButton {
         ${mobile({ margin: "3rem 0" })}
         .buttonBox {
@@ -137,7 +152,7 @@ const Container = styled.div`
 const Credits = styled.section`
     text-align: center;
     color: #b5b5b4;
-    font-size: 18px;
+    font-size: 1rem;
 `;
 const Footer = () => {
   return (
@@ -170,17 +185,19 @@ const Footer = () => {
                         <h2>Lagos State</h2>
                     </div>
                 </div>
-                <ul className="list">
-                    <Link to="#" className='links'>
-                        <li className="listItems"><H3 children="Lorem" /></li>
-                    </Link>
-                    <Link to="#" className='links'>
-                        <li className="listItems"><H3 children="Lorem" /></li>
-                    </Link>
-                    <Link to="#" className='links'>
-                        <li className="listItems"><H3 children="Lorem" /></li>
-                    </Link>
-                </ul>
+                <form className="newsLetter">
+                    <div className="newsLetterTitle">
+                      <H3>
+                        Subscribe For NewsLetter
+                      </H3>
+                    </div>
+                    <div className="newsLetterInputContainer">
+                      <input type="email" name="email" id="email" placeholder='email' className='newsLetterInput' />
+                      <div className="newsLetterBtn">
+                        <Button BtnText='Subscribe' />
+                      </div>
+                    </div>
+                </form>
                 <div className="footerButton">
                     <div className="buttonBox">
                         <Button />
@@ -202,9 +219,14 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <Credits>
-            &copy; 2022 PFN Lagos. All Rights Reserved.
-        </Credits>
+        <div style={{display: "flex", justifyContent: "space-around"}}>
+          <Credits>
+              &copy; 2022 PFN Lagos. All Rights Reserved.
+          </Credits>
+          <Credits>
+              Designed & Developed by Elonatech Nigeria Limited
+          </Credits>
+        </div>
     </Container>
   )
 }
