@@ -13,6 +13,7 @@ import H3 from '../Text/H3'
 import { tab } from './../../responsive';
 import { landscapeTab } from './../../responsive';
 import NewsLetter from '../newsLetter/NewsLetter'
+import MailchimpFormContainer from '../mailchimpFormContainer/MailchimpFormContainer'
 
 const Container = styled.div`
   width: 100%;
@@ -198,6 +199,7 @@ const Footer = () => {
                       </div>
                     </div>
                 </form>
+                {/* <MailchimpFormContainer /> */}
                 <div className="footerButton">
                     <div className="buttonBox">
                         <Button />
