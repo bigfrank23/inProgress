@@ -4,6 +4,7 @@ import Announcement from '../announcement/Announcement'
 import { Link } from 'react-router-dom'
 import './navbar.css'
 import LogoImg from '../../images/pfnLogo.png'
+import Img from '../../images/splash2.jpg'
 import { mobile } from '../../responsive'
 import Button2 from '../Button/Button2'
 
@@ -14,6 +15,7 @@ const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
     const [closeNav, setCloseNav] = useState(false)
     const [scroll, setScroll] = useState(false)
+    const [openMain, setOpenMain] = useState(false)
 
     
 
@@ -43,9 +45,75 @@ const Navbar = () => {
           </div>
           <div className="navLinks">
             <ul className="navList">
-              <Link to="/" className="links" style={{ marginRight: "20px" }}>
-                <li className="navListItems">Menu</li>
-              </Link>
+              {/* <Link to="/" className="links" style={{ marginRight: "20px" }}> */}
+              <li className="navListItems" onClick={()=> setOpenMain(!openMain)}>
+                  Menu
+                <ul className={openMain ? "mainListItems" : "notActiveMain"}>
+                  <div className={openMain ? "mainListItemsTop" : "notActiveMain"}>
+                    <div className="logo"><img src={LogoImg} width={100} alt="logo" /></div>
+                    <div className="time">10:30am</div>
+                    <div className="closeMenu" > <h3 onClick={()=> setOpenMain(false)}>close</h3></div>
+                  </div>
+                  <div className={openMain ? "mainListItemsCenter" : "notActiveMain"}>
+                    <div className="mainListItemsCenterLeft">
+                      <div className="mainListItemsCenterLeftContainer">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                      </div>
+                      <div className="mainListItemsCenterLeftImg">
+                        <img src={Img} alt="" />
+                      </div>
+                      <div className="mainListItemsCenterLeftBottomTxt">
+                        <h4>Lorem ipsum dolor sit.</h4>
+                        <h4>Lorem ipsum</h4>
+                      </div>
+                    </div>
+                    <div className="mainListItemsCenterRight">
+                      <div className="mainListItemsCenterRightTopTxt">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <div className="mainListItemsCenterRightTopPara">
+                          <p>Lorem.</p>
+                          <i className="fa fa-angle-down" aria-hidden="true" />
+                        </div>
+                      </div>
+                      <div className="mainListItemsCenterRightCenter">
+                        <hr className='mainListHr' />
+                        <div className="mainListItemsCenterRightNavContainer">
+                          <ul className="mainListItemsCenterRightList">
+                            <li className="mainListItemsCenterRightListItems">what we believe</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                          </ul>
+                          <ul className="mainListItemsCenterRightList">
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                          </ul>
+                          <ul className="mainListItemsCenterRightList">
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="mainListItemsCenterRightBottom">
+                        <div className="mainListItemsCenterRightSocials">
+                          <i className="fa fa-facebook" aria-hidden="true" />
+                          <i className="fa fa-twitter" aria-hidden="true" />
+                          <i className="fa fa-instagram" aria-hidden="true" />
+                          <i className="fa fa-youtube" aria-hidden="true" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                </li>
+              {/* </Link> */}
               <li className="navListItems">
                 About
                 <ul className="hover">
@@ -70,7 +138,7 @@ const Navbar = () => {
                 Leadership
                 <ul className="hover">
                   <Link to="/the-national" className="links">
-                    <li className="hoverItems">The national president</li>
+                    <li className="hoverItems">The national</li>
                   </Link>
                   <Link to="/past-pfn-chairmen" className="links">
                     <li className="hoverItems">Past PFN chairmen</li>

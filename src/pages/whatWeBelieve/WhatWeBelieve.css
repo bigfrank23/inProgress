@@ -1,27 +1,39 @@
 .secOne{
     padding: 4rem 7rem;
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuXzY4T0hvViIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjkuNSIgaGVpZ2h0PSI5LjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjkuNSIgc3Ryb2tlPSIjMTk0ZDMzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fNjhPSG9WKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');
+    background: url('../../images/dark2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuXzY4T0hvViIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjkuNSIgaGVpZ2h0PSI5LjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjkuNSIgc3Ryb2tlPSIjMTk0ZDMzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fNjhPSG9WKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg=='); */
 }
 .sectOneHeader{
     text-align: center;
     /* padding: 1rem 0; */
 }
-.sectOneTitle , .sectTwoTitle{
+.sectOneTitle{
     padding: 1rem 0;
     text-align: center;
 }
+.sectTwoTitle{
+    padding: 0;
+    text-align: center;
+}
+.sectTwoTitle p{
+    font-size: 1.5rem;
+    color: #fff;
+}
 .sectOnePara{
     padding: 5px;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 5px;
     text-align: center;
 }
 .sectTwo{
-    background: linear-gradient(rgba(18,30,34,.8), rgba(18,30,34,.8) ), url('../../images/worship.jpg');
+    background: linear-gradient(rgba(18,30,34,.5), rgba(18,30,34,.5) ), url('../../images/banner2.png');
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     padding: 4rem 7rem;
+    margin: 1.5rem 0;
 }
 .sectTwoHeader{
     text-align: center;
@@ -36,11 +48,15 @@
     padding-top: 1rem;
 }
 .sectThree{
-    padding: 4rem 7rem;
+    padding: 0rem 7rem;
 }
-.believeListItem{
+.believeList{
     padding: 1rem;
 }
+.believeListItem{
+    padding: 1px 0;
+}
+
 
 @media only screen and (max-width: 600px) {
     .secOne{

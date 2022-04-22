@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from '../../images/living-generously.jpg'
 import Img2 from '../../images/bg2.jpg'
-import PFN from '../../images/PFN4.png'
+import PFN from '../../images/footerImg.png'
 import styled from 'styled-components'
 import Button from '../Button/Button'
 import { Link } from 'react-router-dom';
@@ -180,11 +180,11 @@ const Footer = () => {
         <div className="bottomFooter">
             <div className="bottomFooterContent">
                 <div className="logoBox">
-                    <img src={PFN} width={100} alt="" />
-                    <div className="logoText">
+                    <img src={PFN} width={200} alt="" />
+                    {/* <div className="logoText">
                         <h1>PFN</h1>
                         <h2>Lagos State</h2>
-                    </div>
+                    </div> */}
                 </div>
                 <form className="newsLetter">
                     <div className="newsLetterTitle">

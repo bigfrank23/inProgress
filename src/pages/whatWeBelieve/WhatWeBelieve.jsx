@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navbar from '../../components/Navbar/Navbar';
-import Img from '../../images/splash2.jpg'
+// import Img from '../../images/splash2.jpg'
+import Img from '../../images/believe.png'
 import Img2 from '../../images/splash3.jpg'
 import Img3 from '../../images/bg2.jpg'
 import BgImg from '../../images/splash1.jpg'
@@ -14,6 +15,7 @@ import Header from '../../components/Text/Header';
 import PText from './../../components/Text/PText';
 import H2 from './../../components/Text/H2';
 import H3 from '../../components/Text/H3';
+import Header2 from '../../components/Text/Header2';
 
 const Container = styled.div`
   width: 100%;
@@ -23,12 +25,12 @@ const Container = styled.div`
   align-content: center;
   justify-content: center; */
   .page1Wrapper {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${Img});
-    background-size: cover;
-    background-position: center;
+    background-size: 100%;
+    background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
@@ -37,7 +39,7 @@ const Container = styled.div`
     width: 100%;
     position: relative;
     top: 0;
-    height: 100vh;
+    height: 80vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -77,44 +79,25 @@ const WhatWeBelieve = () => {
         </div> */}
         <div className="sectOneTitle">
           {" "}
-          <H2 children="Get to know us more" />{" "}
+          <Header2 color>Get to know us more</Header2>
+          <H2 children="" />{" "}
         </div>
         <div className="sectOnePara">
           {" "}
-          <PText
-            children="We believe in water baptism by immersion in the name of the
-                Father, Son and Holy Spirit (Matthew 28:19-20). (B) we believe
-                in the Lord’s Supper which is the regular partaking of bread,
-                the fruit of the vine, symbolic of the body and the blood of
-                Jesus Christ (1Cor. 11:23)"
-          />
+          <H3 color>
+            "We believe in water baptism by immersion in the name of the
+              Father, Son and Holy Spirit (Matthew 28:19-20). (B) we believe
+              in the Lord’s Supper which is the regular partaking of bread,
+              the fruit of the vine, symbolic of the body and the blood of
+              Jesus Christ (1Cor. 11:23)"
+          </H3>
         </div>
       </div>
-      <div className="sectTwo">
-        <div className="sectTwoHeader">
-          {" "}
-          {/* <Header children="Lorem, ipsum dolor" color />{" "} */}
-        </div>
-        <div className="sectTwoTitle">
-          {" "}
-          <H2 color>
-            At PFN Lagos, we're not just looking for volunteers. We're looking
-            to help people discover their purpose. If getting involved in a
-            fellowship is your next step, Contact
-            <div style={{ color: "red" }}>
-              <i>info@pfnlagosstate.org </i>
-            </div>{" "}
-            or check with one of the provinces or chapters.
-          </H2>
-        </div>
-        <div className="sectTwoBtn">
-          <Button BtnText="Contact now" />
-        </div>
-      </div>
+      
       <div className="sectThree">
-        <div className="sectThreeHeader">
+        {/* <div className="sectThreeHeader">
           <Header children="What we believe" color={false} />
-        </div>
+        </div> */}
         <div className="sectThreeTitle">
           <H2 children="STANDARD OF FAITH" />
         </div>
@@ -214,19 +197,19 @@ const WhatWeBelieve = () => {
           </ol>
         </div>
         <div className="sectThreeTitle">
-          <H3 children="MEMBERSHIP" />
+          <H2 children="MEMBERSHIP" />
         </div>
         <div className="sectThreePara">
           <PText children="The fellowship membership is open to all Pentecostal churches, organizations and believers who will subscribe to its standard of faith and the code of ethics without reservation as a mark of identification of true Pentecostal believers." />
         </div>
         <div className="sectThreeTitle">
-          <H3 children="ASSOCIATE MEMBERSHIP " />
+          <H2 children="ASSOCIATE MEMBERSHIP " />
         </div>
         <div className="sectThreePara">
-          <PText children="status is open to local churches in every status of the federation whose central bodies or organizations have not been affiliated or accepted by the National PFN." />
+          <PText children="Status is open to local churches in every status of the federation whose central bodies or organizations have not been affiliated or accepted by the National PFN." />
         </div>
         <div className="sectThreeTitle">
-          <H3 children="PROGRAM" />
+          <H2 children="PROGRAM" />
         </div>
         <div className="sectThreePara">
           <PText>
@@ -255,6 +238,29 @@ const WhatWeBelieve = () => {
             </li>
           </ol>
         </div>
+      </div>
+      <div className="sectTwo">
+        <div className="sectTwoHeader">
+          {" "}
+          {/* <Header children="Lorem, ipsum dolor" color />{" "} */}
+        </div>
+        <div className="sectTwoTitle">
+          {" "}
+          {/* <H3 color weight> */}
+          <p>
+            At PFN Lagos, we're not just looking for volunteers. We're looking
+            to help people discover their purpose. <br /> If getting involved in a
+            fellowship is your next step, <br /> Contact
+            <div style={{ color: "#990000", fontStyle: "lowercase"}}>
+              <i>info@pfnlagosstate.org </i>
+            </div>{" "}
+            or <br /> check with one of the provinces.
+          </p>
+          {/* </H3> */}
+        </div>
+        {/* <div className="sectTwoBtn">
+          <Button BtnText="Contact now" />
+        </div> */}
       </div>
       <Footer />
     </Container>
