@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "../../images/sac.png";
 import Img1 from "../../images/sec.png";
-import Img2 from "../../images/splash3.jpg";
+import Img2 from "../../images/canva2.jpg";
 import Img3 from "../../images/bg2.jpg";
 import Img4 from "../../images/My-Post-15.png";
 import styled from "styled-components";
@@ -16,7 +16,6 @@ import Collapse from "../../components/collapse/Collapse";
 import Footer from "../../components/Footer/Footer";
 import ControlledAccordions from "../../components/accordion/MUIaccordion";
 import { Link } from "react-router-dom";
-import { maxWidth } from "@mui/system";
 
 const Container = styled.div`
   width: 100%;
@@ -26,9 +25,11 @@ const Container = styled.div`
   /* display: flex;
   align-content: center;
   justify-content: center; */
+  background-size: contain;
   .page1Wrapper {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
+    clip-path: polygon(54% 0, 84% 0, 100% 0, 100% 85%, 80% 92%, 50% 100%, 19% 93%, 0 83%, 0 0, 26% 0);
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${Img2});
     background-size: cover;
@@ -41,7 +42,7 @@ const Container = styled.div`
     width: 100%;
     position: relative;
     top: 0;
-    height: 100vh;
+    height: 62vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -62,12 +63,12 @@ const OurMission = () => {
       {/* <div className="ourMissionContainer"> */}
       <div className="ourMissionContainerBody">
         <div className="ourMissionContainerTitle">
-          <PText weight>
+          <p>
             Penticostal Fellowship of Nigeria is the coming together of the holy
             spirit filled Christian Churches and Organization who believe and
             practice the full GOSPEL MESSAGE(ACT2), in an independence ad
-            autonomous Christian Fellowship for the following objectives :
-          </PText>
+            autonomous Christian Fellowship for the following objectives below <i className="fa fa-hand-o-down" />
+          </p>
         </div>
         <div className="ourMissionBxCard">
           <div className="ourMissionBx">
@@ -78,20 +79,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />{" "}
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To maintain close relationship among member Churches Organizations, and other approved Christian or Religious Organizations, both in and outside Nigeria, for the purpose of undertaking joint programs for the furtherance of the Gospel.
               </p>
             </div>
           </div>
@@ -104,20 +92,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To co-operate with other Christian Organizations established for the purpose of Christianity.
               </p>
             </div>
           </div>
@@ -130,20 +105,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To encourage unhindered propagation of the doctrine of Christ throughout Nigeria and uphold Christian Ethics.
               </p>
             </div>
           </div>
@@ -156,20 +118,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To protect and uphold Christian Ethics and integrity, and see to its healthy development, free from Political, Religious, Racial and Ethnic interference.
               </p>
             </div>
           </div>
@@ -182,20 +131,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To co-operate with every level of Government and governmental bodies in matters concerning the spread of Christianity, religious tolerance, total freedom of worship, maintenance of peaceful co-existence among all shades of belief
               </p>
             </div>
           </div>
@@ -208,20 +144,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To educate its members and aggregate public opinion on matters of National Importance, thereby assisting in creating and developing a Nation where probity, equity, good character, peace and good governance are guaranteed.
               </p>
             </div>
           </div>
@@ -234,20 +157,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To ensure by reputation, that the views of the Organization on Local, National and International issues are sufficiently enlightened.
               </p>
             </div>
           </div>
@@ -260,20 +170,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To appoint representatives to the National Executive Committee of the Christian Association of Nigeria (CAN), of whom, one shall be alternative representative.
               </p>
             </div>
           </div>
@@ -286,20 +183,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To serve as the mouthpiece of the Pentecostal Movement in Nigeria, for reflecting sound and fundamental views based upon belief, truth and wisdom of the Holy Spirit.
               </p>
             </div>
           </div>
@@ -312,20 +196,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing el it. Quod
-                eos earum quidem corporis possimus magni? Temporibus ,
-                consectetur maxime natus, exercitationem deserunt veritatis
-                facere voluptas dignissimos ad quia repellendus, qui quasi
-                repudiandae molestiae excepturi nobis blanditiis culpa ullam
-                nulla distinctio. Excepturi quaerat, il lum odit earum laborum
-                cum pariatur sint, maiores architecto, eum velit aspernatur
-                dolorum maxime totam commodi eius. Veritatis amet tempora
-                quibusdam ipsam rerum, dolores nostrum sequi, totam perspiciatis
-                reprehenderit, accusamus dolor? Quam eius necessitatibus,
-                laborum, soluta eligendi iste porro vitae adipisci ipsum, vel
-                nihil cupiditate nesciunt debitis quibusdam? Sequi vitae
-                corporis ullam? Expedita et ratione molestias quo voluptatibus
-                nobis.
+              To set up standards of Faith, Doctrine and code of Ethics, to which members must subscribe.
               </p>
             </div>
           </div>

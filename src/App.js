@@ -31,6 +31,7 @@ import Posts from './pages/blog/posts/Posts'
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import GoUp from "./components/goUp/GoUp";
 import OurMission from "./pages/ourMission/OurMission";
+import ExtraPage from "./pages/extraPage/ExtraPage";
 
 const Container = styled.div`
   width: 100%;
@@ -66,6 +67,7 @@ function App() {
           <Route exact path='/gallery' component={Gallery} />
           <Route exact path='/our-mission' component={OurMission} />
           <Route exact path='/blogs' component={Posts} />
+          <Route exact path='/extra' component={ExtraPage} />
         </Switch>
       </Router>
       <GoUp />

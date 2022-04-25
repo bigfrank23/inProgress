@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom'
 import './navbar.css'
 import LogoImg from '../../images/pfnLogo.png'
 import Img from '../../images/splash2.jpg'
+import Img5 from '../../images/pfnLogo.png'
 import { mobile } from '../../responsive'
 import Button2 from '../Button/Button2'
+import moment from 'moment'
 
 const Container = styled.nav`
     /* ${mobile({display: 'none'})} */
@@ -15,7 +17,8 @@ const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
     const [closeNav, setCloseNav] = useState(false)
     const [scroll, setScroll] = useState(false)
-    const [openMain, setOpenMain] = useState(false)
+    const [openMain, setOpenMain] = useState('')
+    const [dropdownNav, setDropdownNav] = useState(false)
 
     
 
@@ -44,23 +47,19 @@ const Navbar = () => {
             <img src={LogoImg} width={100} alt="logo" />
           </div>
           <div className="navLinks">
-            <ul className="navList">
-              {/* <Link to="/" className="links" style={{ marginRight: "20px" }}> */}
-              <li className="navListItems" onClick={()=> !openMain ? setOpenMain(true) : setOpenMain(false)}>
-                  Menu
-                <ul className={openMain ? "mainListItems" : "notActiveMain"}>
+          <div className={openMain ? "mainListItems" : "notActiveMain"}>
                   <div className={openMain ? "mainListItemsTop" : "notActiveMain"}>
                     <div className="logo"><img src={LogoImg} width={100} alt="logo" /></div>
-                    <div className="time">10:30am</div>
-                    <div className="closeMenu" > <h3 onClick={()=> console.log("jhdjhw")}>close</h3></div>
+                    <div className="time">{moment().format('LLLL')}</div>
+                    <div className="closeMenu"  onClick={()=> setOpenMain(false)}> <h3>close</h3></div>
                   </div>
                   <div className={openMain ? "mainListItemsCenter" : "notActiveMain"}>
                     <div className="mainListItemsCenterLeft">
                       <div className="mainListItemsCenterLeftContainer">
-                        <h3>Lorem ipsum dolor sit amet.</h3>
+                        <h3>Featured</h3>
                       </div>
-                      <div className="mainListItemsCenterLeftImg">
-                        <img src={Img} alt="" />
+                      <div className={openMain ? "mainListItemsCenterLeftImg" : 'notActiveMainImg'}>
+                        {openMain ? <img src={Img} alt="" /> : <img src={Img5} alt="" />}
                       </div>
                       <div className="mainListItemsCenterLeftBottomTxt">
                         <h4>Lorem ipsum dolor sit.</h4>
@@ -69,10 +68,19 @@ const Navbar = () => {
                     </div>
                     <div className="mainListItemsCenterRight">
                       <div className="mainListItemsCenterRightTopTxt">
-                        <h2>Lorem ipsum dolor sit.</h2>
-                        <div className="mainListItemsCenterRightTopPara">
-                          <p>Lorem.</p>
-                          <i className="fa fa-angle-down" aria-hidden="true" />
+                        <Link to="/" id="links">
+                          <h2>Penticostal Fellowship of Nigeria</h2>
+                        </Link>
+                        <div className="mainListItemsCenterRightTopPara" onClick={()=> setDropdownNav(!dropdownNav)}>
+                          <p>Lagos State</p>
+                          <div>
+                            {!dropdownNav ? <i className="fa fa-angle-down" aria-hidden="true" /> : <i className="fa fa-angle-up" aria-hidden="true" />}
+                          <div className="mainListItemsCenterRightTopParaDropdownItem" style={dropdownNav ? {"opacity": "1", position: "absolute", transition: "0.8s"} : {opacity: "0", position: "absolute", transition: "0.8s"}}>
+                            <Link to="#" id='links'>
+                            <h6>Provinces</h6>
+                            </Link>
+                          </div>
+                          </div>
                         </div>
                       </div>
                       <div className="mainListItemsCenterRightCenter">
@@ -111,7 +119,11 @@ const Navbar = () => {
                       </div>
                     </div>
                   </div>
-                </ul>
+                </div>
+            <ul className="navList" >
+              {/* <Link to="/" className="links" style={{ marginRight: "20px" }}> */}
+              <li className="navListItems" onClick={()=> setOpenMain(true)}>
+                  Menu
                 </li>
               {/* </Link> */}
               <li className="navListItems">
@@ -126,7 +138,7 @@ const Navbar = () => {
                   <Link to="/what-we-believe" className="links">
                     <li className="hoverItems">What we believe</li>
                   </Link>
-                  <Link to="#" className="links">
+                  <Link to="/our-mission" className="links">
                     <li className="hoverItems">Our mission</li>
                   </Link>
                   {/* <Link to="/page2" className="links">

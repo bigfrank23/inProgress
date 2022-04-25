@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navbar from './../../components/Navbar/Navbar';
-import Img from '../../images/splash2.jpg'
+import Img from '../../images/aboutBg.png'
 import Img2 from '../../images/splash3.jpg'
 import Img3 from '../../images/bg2.jpg'
 import Img4 from '../../images/web2.jpg'
@@ -25,13 +25,15 @@ const Container = styled.div`
   align-content: center;
   justify-content: center; */
   .page1Wrapper {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
+    /* clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
+    clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), black
       url(${Img});
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: 0 15px;
     background-repeat: no-repeat;
+    /* background-position-x: 7%; */
     background-attachment: fixed;
     display: flex;
     align-items: center;
@@ -39,7 +41,7 @@ const Container = styled.div`
     width: 100%;
     position: relative;
     top: 0;
-    height: 100vh;
+    height: 65vh;
     .page1Header {
       color: #fff;
       text-align: center;
