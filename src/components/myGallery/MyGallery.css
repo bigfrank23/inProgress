@@ -52,10 +52,32 @@
     padding: 20px 0 20px;
     margin: 0 auto;
 }
-.model.open svg{
+.model.open .closeIcon{
     position: fixed;
     top: 10px;
     right: 10px;
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    cursor: pointer;
+}
+.model.open .nextArrow{
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    cursor: pointer;
+}
+.model.open .prevArrow{
+    position: fixed;
+    top: 50%;
+    left: 10px;
     width: 2rem;
     height: 2rem;
     padding: 5px;

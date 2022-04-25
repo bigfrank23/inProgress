@@ -2,6 +2,8 @@ import React, { useState, useMemo } from "react";
 import Pagination from "../pagination/Pagination";
 import './MyGallery.css'
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { images } from './../../teamMembers/gallery';
 
 let PageSize = 10;
@@ -22,11 +24,15 @@ const MyGallery = () => {
     setModel(true);
   };
 
+  const [count, setCount] = useState(0)
+
   return (
     <>
       <div className={model ? "model open" : "model"}>
         <img src={tempImg} alt="" />
-        <CloseIcon onClick={() => setModel(false)} />
+        <CloseIcon className="closeIcon" onClick={() => setModel(false)} />
+        {count < images.length - 1 && <ArrowForwardIosIcon className="nextArrow" onClick={() => setCount(count + 1)} />}
+        {count > 0 &&  <ArrowBackIosNewIcon className="prevArrow" onClick={() => setCount(count - 1)} />}
       </div>
       <div className="myGalleryContainer">
         {currentData.map((data, i) => (

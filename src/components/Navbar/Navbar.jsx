@@ -46,13 +46,13 @@ const Navbar = () => {
           <div className="navLinks">
             <ul className="navList">
               {/* <Link to="/" className="links" style={{ marginRight: "20px" }}> */}
-              <li className="navListItems" onClick={()=> setOpenMain(!openMain)}>
+              <li className="navListItems" onClick={()=> !openMain ? setOpenMain(true) : setOpenMain(false)}>
                   Menu
                 <ul className={openMain ? "mainListItems" : "notActiveMain"}>
                   <div className={openMain ? "mainListItemsTop" : "notActiveMain"}>
                     <div className="logo"><img src={LogoImg} width={100} alt="logo" /></div>
                     <div className="time">10:30am</div>
-                    <div className="closeMenu" > <h3 onClick={()=> setOpenMain(false)}>close</h3></div>
+                    <div className="closeMenu" > <h3 onClick={()=> console.log("jhdjhw")}>close</h3></div>
                   </div>
                   <div className={openMain ? "mainListItemsCenter" : "notActiveMain"}>
                     <div className="mainListItemsCenterLeft">
