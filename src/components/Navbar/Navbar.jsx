@@ -56,19 +56,19 @@ const Navbar = () => {
                   <div className={openMain ? "mainListItemsCenter" : "notActiveMain"}>
                     <div className="mainListItemsCenterLeft">
                       <div className="mainListItemsCenterLeftContainer">
-                        <h3>Featured</h3>
+                        <h3>Featured Events</h3>
                       </div>
                       <div className={openMain ? "mainListItemsCenterLeftImg" : 'notActiveMainImg'}>
                         {openMain ? <img src={Img} alt="" /> : <img src={Img5} alt="" />}
                       </div>
                       <div className="mainListItemsCenterLeftBottomTxt">
-                        <h4>Lorem ipsum dolor sit.</h4>
-                        <h4>Lorem ipsum</h4>
+                        <h4>Upcoming Events</h4>
+                        <h4>Past Events</h4>
                       </div>
                     </div>
                     <div className="mainListItemsCenterRight">
                       <div className="mainListItemsCenterRightTopTxt">
-                        <Link to="/" id="links">
+                        <Link to="/" id="links" onClick={()=> setOpenMain(false)}>
                           <h2>Penticostal Fellowship of Nigeria</h2>
                         </Link>
                         <div className="mainListItemsCenterRightTopPara" onClick={()=> setDropdownNav(!dropdownNav)}>
@@ -88,24 +88,48 @@ const Navbar = () => {
                         <div className="mainListItemsCenterRightNavContainer">
                           <ul className="mainListItemsCenterRightList">
                             <li className="mainListItemsCenterRightListItems">what we believe</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <Link to="#" id='links'>
+                            <li className="mainListItemsCenterRightListItems">About us</li>
+                            </Link>
+                            <Link to="#"id='links'>
+                            <li className="mainListItemsCenterRightListItems">History</li>
+                            </Link>
+                            <Link to="#"id='links'>
+                            <li className="mainListItemsCenterRightListItems">Mission</li>
+                            </Link>
+                            <Link to="#"id='links'>
+                            <li className="mainListItemsCenterRightListItems">Quotes</li>
+                            </Link>
                           </ul>
                           <ul className="mainListItemsCenterRightList">
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Contact us</li>
+                            <Link to="#" id="links">
+                            <li className="mainListItemsCenterRightListItems">Volunteer</li>
+                            </Link>
+                            <Link to="#" id="links">
+                            <li className="mainListItemsCenterRightListItems">The National</li>
+                            </Link>
+                            <Link to="#" id="links">
+                            <li className="mainListItemsCenterRightListItems">Past PFN Chairmen</li>
+                            </Link>
+                            <Link to="#" id="links">
+                            <li className="mainListItemsCenterRightListItems">PFN Lagos State Executives</li>
+                            </Link>
                           </ul>
                           <ul className="mainListItemsCenterRightList">
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
-                            <li className="mainListItemsCenterRightListItems">Lorem, ipsum.</li>
+                            <li className="mainListItemsCenterRightListItems">Gallery</li>
+                            <Link to='#' id='links'>
+                            <li className="mainListItemsCenterRightListItems">Blog</li>
+                            </Link>
+                            <Link to='#' id='links'>
+                            <li className="mainListItemsCenterRightListItems">Prayer Line</li>
+                            </Link>
+                            <Link to='#' id='links'>
+                            <li className="mainListItemsCenterRightListItems">Upcoming Events</li>
+                            </Link>
+                            <Link to='#' id='links'>
+                            <li className="mainListItemsCenterRightListItems">Past Events</li>
+                            </Link>
                           </ul>
                         </div>
                       </div>
@@ -173,9 +197,13 @@ const Navbar = () => {
               <li className="navListItems">
                 Get involved
                 <ul className="hover">
-                  <Link to="#" className="links">
+                  <Link to="/provinces" className="links">
                     <li className="hoverItems">The Provinces</li>
+                  </Link>
+                  <Link to="#" className="links">
                     <li className="hoverItems">Volunteers</li>
+                  </Link>
+                  <Link to="#" className="links">
                     <li className="hoverItems">Outreach</li>
                   </Link>
                 </ul>
@@ -183,18 +211,34 @@ const Navbar = () => {
               <li className="navListItems">
                 Events
                 <ul className="hover">
-                  <Link to="#" className="links">
                     <Link to="/gallery" className="links">
                       <li className="hoverItems">Gallery</li>
                     </Link>
+                    <Link to="#" className='links'>
                     <li className="hoverItems">Watch Live</li>
+                    </Link>
+                    <Link to="#" className='links'>
                     <li className="hoverItems">Past Events</li>
+                    </Link>
+                    <Link to="#" className='links'>
                     <li className="hoverItems">Upcoming Events</li>
-                  </Link>
+                    </Link>
+                    <Link to='/blogs' className='links'>
+                    <li className="hoverItems">Blogs</li>
+                    </Link>
                 </ul>
               </li>
-              <Link to="/blogs" className="links">
-                <li className="navListItems">Blogs</li>
+              <Link to="#" className="links">
+                <li className="navListItems">Get in Touch
+                <ul className="hover">
+                    <Link to="#" className="links">
+                      <li className="hoverItems">Prayer line</li>
+                    </Link>
+                    <Link to='#' className='links'>
+                    <li className="hoverItems">Contact us</li>
+                    </Link>
+                </ul>
+                </li>
               </Link>
             </ul>
           </div>
@@ -248,9 +292,13 @@ const Navbar = () => {
                 <li className="navListItems">
                   Get involved
                   <ul className="hover">
-                    <Link to="#" className="links">
+                    <Link to="/extra" className="links">
                       <li className="hoverItems">The Provinces</li>
+                    </Link>
+                    <Link to="#" className="links">
                       <li className="hoverItems">Volunteers</li>
+                    </Link>
+                    <Link to="#" className="links">
                       <li className="hoverItems">Outreach</li>
                     </Link>
                   </ul>

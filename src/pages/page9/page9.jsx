@@ -48,19 +48,20 @@ const Page9 = () => {
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
-          <h1>Page 9</h1>
+          <h1>Volunteer</h1>
         </div>
       </div>
       <div className="page9TopContainer">
         <div className="page9TopHeader">
-          <Header color={true} children="Lorem ipsium" />
+          <Header color={true} children="Doing good" />
         </div>
         <div className="page9TopTitle">
-          <H2 children="Lorem ipsium est ilor kop grt" />
+          <H2 children="FIND MEANINGFUL CONNECTION AND PURPOSE" />
         </div>
         <div className="page9TopPara">
           <PText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at sint aspernatur asperiores minus autem expedita. Perferendis eius ullam, error quae cupiditate fugit. Ipsum voluptate quasi doloremque tenetur reiciendis aspernatur.
+          At PFN Lagos, we’re not just looking for volunteers. We’re looking to help people discover their purpose.
+           If getting involved in a fellowship is your next step contact info@pfnlagosstate.org or check with one of the many provinces or chapters.
           </PText>
         </div>
         <div className="page9TopContent">

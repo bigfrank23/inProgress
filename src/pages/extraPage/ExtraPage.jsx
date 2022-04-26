@@ -70,29 +70,74 @@ const ExtraPage = () => {
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
-          <h1>Extra</h1>
+          <h1>Provinces</h1>
         </div>
       </div>
         
-      <div className="extraContainer">
-            <div className="extraBox">
-                <div className="extraContent">
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, et. Velit ad, modi voluptates.
-                    </p>
-                </div>
-            </div>
+        <div className="extraCardContainer">
+          <div className="extraCard">
+            <div className="extraContainer">
+                  <div className="extraBox">
+                      <div className="extraContent">
+                          <p>
+                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, et. Velit ad, modi voluptates.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <svg id='extraSvg'>
+                <filter id='wavy'>
+                    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+                        <animate attributeName='baseFrequency' dur='60s' values='0.02; 0.05; 0.02' repeatCount='indefinite' />
+                    </feTurbulence>
+                    <feDisplacementMap in='SourceGraphic' scale='30' />
+                </filter>
+            </svg>
+            {/* </div> */}
+          </div>
+          <div className="extraCard">
+            <div className="extraContainer">
+                  <div className="extraBox">
+                      <div className="extraContent">
+                          <p>
+                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, et. Velit ad, modi voluptates.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <svg id='extraSvg'>
+                <filter id='wavy'>
+                    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+                        <animate attributeName='baseFrequency' dur='60s' values='0.02; 0.05; 0.02' repeatCount='indefinite' />
+                    </feTurbulence>
+                    <feDisplacementMap in='SourceGraphic' scale='30' />
+                </filter>
+            </svg>
+            {/* </div> */}
+          </div>
+          <div className="extraCard">
+            <div className="extraContainer">
+                  <div className="extraBox">
+                      <div className="extraContent">
+                          <p>
+                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, et. Velit ad, modi voluptates.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <svg id='extraSvg'>
+                <filter id='wavy'>
+                    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+                        <animate attributeName='baseFrequency' dur='60s' values='0.02; 0.05; 0.02' repeatCount='indefinite' />
+                    </feTurbulence>
+                    <feDisplacementMap in='SourceGraphic' scale='30' />
+                </filter>
+            </svg>
+            {/* </div> */}
+          </div>
+
         </div>
-        <svg>
-          <filter id='wavy'>
-              <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
-                  <animate attributeName='baseFrequency' dur='60s' values='0.02; 0.05; 0.02' repeatCount='indefinite' />
-              </feTurbulence>
-              <feDisplacementMap in='SourceGraphic' scale='30' />
-          </filter>
-      </svg>
-      {/* </div> */}
-     
+     <Footer />
  </Container>
   )
 }

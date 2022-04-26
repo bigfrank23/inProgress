@@ -12,6 +12,7 @@
     height: 100px;
     position: relative;
     top: 20%;
+    user-select: none;
 }
 .topText h4{
     color: #fff;

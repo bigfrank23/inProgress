@@ -23,6 +23,7 @@ const Container = styled.div`
     border: 10px solid transparent;
   padding: 15px; */
   /* border-image: url(${BorderImg}) 20% round; */
+  user-select: none;
 `
 
 const FindPeople = () => {

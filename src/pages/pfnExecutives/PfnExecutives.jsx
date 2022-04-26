@@ -13,6 +13,8 @@ import { faChurch, faAddressCard, faPhone, faAt, faCalendar } from "@fortawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Grid from '@mui/material/Grid'
 import { chairmen, directors } from "../../teamMembers/team";
+import H3 from "../../components/Text/H3";
+import Header from "../../components/Text/Header";
 
 const Container = styled.div`
   width: 100%;
@@ -65,6 +67,10 @@ const PfnExecutives = () => {
           <h1>The PFN Lagos State Executives</h1>
         </div>
       </div>
+      <div className="pfnExecTitle1">
+        <div className="execTitle">
+            <Header color>The CWC</Header>
+        </div>
       <div className="pfnExecutivesContainer">
         <div class="flip-box">
           <div class="flip-box-inner">
@@ -282,7 +288,12 @@ const PfnExecutives = () => {
           </div>
         </div>
       </div>
+      </div>
 
+        <div className="pfnExecTitle2">
+        <div className="execTitle">
+          <Header color>The Directors</Header>
+      </div>
       <div className="pfnExecutivesContainer">
         <Grid container spacing={2}>
           {directors.map((data) => (
@@ -336,58 +347,64 @@ const PfnExecutives = () => {
           ))}
         </Grid>
       </div>
+      </div>
 
-      <div className="pfnExecutivesContainer">
-        <Grid container spacing={2}>
-          {chairmen.map((data) => (
-            <Grid key={data.id} item xs={12} sm={6} md={6} lg={3}>
-              <div class="flip-box">
-                <div class="flip-box-inner">
-                  <div class="flip-box-front">
-                    <img src={data.img} alt="" />
-                    <div className="pfnExecutivesTxt">
-                      <h2>{data.name}</h2>
-                      <h5>{data.title}</h5>
+            <div className="pfnExecTitle3">
+                <div className="execTitle">
+                <Header color>The Chairmen</Header>
+              </div>
+        <div className="pfnExecutivesContainer">
+          <Grid container spacing={2}>
+            {chairmen.map((data) => (
+              <Grid key={data.id} item xs={12} sm={6} md={6} lg={3}>
+                <div class="flip-box">
+                  <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                      <img src={data.img} alt="" />
+                      <div className="pfnExecutivesTxt">
+                        <h2>{data.name}</h2>
+                        <h5>{data.title}</h5>
+                      </div>
+                      <Button2 BtnText="Hover" />
                     </div>
-                    <Button2 BtnText="Hover" />
-                  </div>
-                  <div class="flip-box-back">
-                    <div className="flip-box-back-content">
-                      <H2>More Details</H2>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon className="fa5Icon" icon={faChurch} />
-                        {data.church}
-                      </p>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon
-                          className="fa5Icon"
-                          icon={faAddressCard}
-                        />
-                        {data.address}
-                      </p>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon className="fa5Icon" icon={faPhone} />
-                        {data.tel}
-                      </p>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon
-                          className="fa5Icon"
-                          icon={faCalendar}
-                        />
-                        {data.dOb}
-                      </p>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon className="fa5Icon" icon={faAt} />
-                        {data.email}
-                      </p>
+                    <div class="flip-box-back">
+                      <div className="flip-box-back-content">
+                        <H2>More Details</H2>
+                        <p className="pfn-back-para">
+                          <FontAwesomeIcon className="fa5Icon" icon={faChurch} />
+                          {data.church}
+                        </p>
+                        <p className="pfn-back-para">
+                          <FontAwesomeIcon
+                            className="fa5Icon"
+                            icon={faAddressCard}
+                          />
+                          {data.address}
+                        </p>
+                        <p className="pfn-back-para">
+                          <FontAwesomeIcon className="fa5Icon" icon={faPhone} />
+                          {data.tel}
+                        </p>
+                        <p className="pfn-back-para">
+                          <FontAwesomeIcon
+                            className="fa5Icon"
+                            icon={faCalendar}
+                          />
+                          {data.dOb}
+                        </p>
+                        <p className="pfn-back-para">
+                          <FontAwesomeIcon className="fa5Icon" icon={faAt} />
+                          {data.email}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Grid>
-          ))}
-        </Grid>
-      </div>
+              </Grid>
+            ))}
+          </Grid>
+        </div>
+            </div>
       <Footer />
     </Container>
   );

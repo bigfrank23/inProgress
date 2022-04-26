@@ -1,3 +1,4 @@
+import React, {useEffect, useState} from 'react'
 import Home from "./pages/Home/Home";
 // import Page1 from "./pages/page1/Page1";
 import About from "./pages/about/About";
@@ -32,12 +33,22 @@ import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import GoUp from "./components/goUp/GoUp";
 import OurMission from "./pages/ourMission/OurMission";
 import ExtraPage from "./pages/extraPage/ExtraPage";
+import Spinner from "react-spinkit";
+import ContactPage from './pages/contactPage/ContactPage';
 
 const Container = styled.div`
   width: 100%;
 `
 
 function App() {
+  // const [isLoading, setIsloading] = useState(true)
+  // if (isLoading) return <Spinner name="circle" style={{ width: 100, height: 100 }} />
+  useEffect(()=>{
+    window.addEventListener("load", ()=> {
+      <Spinner name="circle" style={{ width: 100, height: 100 }} />
+    })
+    
+  })
   return (
     <Container>
       <Router>
@@ -67,7 +78,8 @@ function App() {
           <Route exact path='/gallery' component={Gallery} />
           <Route exact path='/our-mission' component={OurMission} />
           <Route exact path='/blogs' component={Posts} />
-          <Route exact path='/extra' component={ExtraPage} />
+          <Route exact path='/provinces' component={ExtraPage} />
+          <Route exact path='/contact' component={ContactPage} />
         </Switch>
       </Router>
       <GoUp />

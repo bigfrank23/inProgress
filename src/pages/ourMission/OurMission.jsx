@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "../../images/sac.png";
 import Img1 from "../../images/sec.png";
-import Img2 from "../../images/canva2.jpg";
+import Img2 from "../../images/mission4.png";
 import Img3 from "../../images/bg2.jpg";
 import Img4 from "../../images/My-Post-15.png";
 import styled from "styled-components";
@@ -32,9 +32,9 @@ const Container = styled.div`
     clip-path: polygon(54% 0, 84% 0, 100% 0, 100% 85%, 80% 92%, 50% 100%, 19% 93%, 0 83%, 0 0, 26% 0);
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${Img2});
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
-    background-position: center;
+    background-position: 0 15px;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;

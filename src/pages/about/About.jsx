@@ -31,7 +31,7 @@ const Container = styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), black
       url(${Img});
     background-size: contain;
-    background-position: 0 15px;
+    background-position: 0 125px;
     background-repeat: no-repeat;
     /* background-position-x: 7%; */
     background-attachment: fixed;

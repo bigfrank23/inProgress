@@ -1,5 +1,5 @@
 .page9TopContainer{
-    padding: 4rem;
+    padding: 4rem 7rem;
 }
 .page9TopHeader, .page9TopTitle, .page9TopPara{
     text-align: center;
@@ -7,8 +7,12 @@
 .page9TopTitle{
     padding: 1rem 0;
 }
+.page9TopPara{
+    max-width: 65%;
+    margin: auto;
+}
 .page9TopContent{
-    background-color: green;
+    background-color: #008753;
     padding: 2rem 4rem;
     margin-top: 1rem;
     border-radius: 5px;

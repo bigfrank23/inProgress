@@ -4,6 +4,10 @@
     gap: 1rem;
     padding: 2rem 7rem;
 }
+.execTitle{
+  text-align: center;
+  padding-top: 2rem;
+}
 .flip-box {
     background-color: transparent;
     width: 300px;

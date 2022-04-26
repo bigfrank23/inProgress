@@ -11,6 +11,7 @@
     justify-content: center;
     padding: 4rem;
     /* align-items: center; */
+    user-select: none;
 }
 
 .bannerCenter{
@@ -71,6 +72,7 @@ blockquote h2:before {
     height: 100%;
     width: 100%;
     padding: 0 7rem;
+    user-select: none;
 }
 .navyblue .navyblueContainer{
     display: flex;
