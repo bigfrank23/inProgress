@@ -15,6 +15,8 @@ import PText from './../../components/Text/PText';
 import H2 from './../../components/Text/H2';
 import H3 from '../../components/Text/H3';
 import Header2 from '../../components/Text/Header2';
+import { provinces } from '../../teamMembers/provinces';
+import { Grid } from '@material-ui/core';
 
 const Container = styled.div`
   width: 100%;
@@ -73,70 +75,48 @@ const ExtraPage = () => {
           <h1>Provinces</h1>
         </div>
       </div>
-        
-        <div className="extraCardContainer">
-          <div className="extraCard">
-            <div className="extraContainer">
-                  <div className="extraBox">
-                      <div className="extraContent">
-                          <p>
-                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, et. Velit ad, modi voluptates.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <svg id='extraSvg'>
-                <filter id='wavy'>
-                    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
-                        <animate attributeName='baseFrequency' dur='60s' values='0.02; 0.05; 0.02' repeatCount='indefinite' />
-                    </feTurbulence>
-                    <feDisplacementMap in='SourceGraphic' scale='30' />
-                </filter>
-            </svg>
-            {/* </div> */}
-          </div>
-          <div className="extraCard">
-            <div className="extraContainer">
-                  <div className="extraBox">
-                      <div className="extraContent">
-                          <p>
-                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, et. Velit ad, modi voluptates.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <svg id='extraSvg'>
-                <filter id='wavy'>
-                    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
-                        <animate attributeName='baseFrequency' dur='60s' values='0.02; 0.05; 0.02' repeatCount='indefinite' />
-                    </feTurbulence>
-                    <feDisplacementMap in='SourceGraphic' scale='30' />
-                </filter>
-            </svg>
-            {/* </div> */}
-          </div>
-          <div className="extraCard">
-            <div className="extraContainer">
-                  <div className="extraBox">
-                      <div className="extraContent">
-                          <p>
-                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, et. Velit ad, modi voluptates.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <svg id='extraSvg'>
-                <filter id='wavy'>
-                    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
-                        <animate attributeName='baseFrequency' dur='60s' values='0.02; 0.05; 0.02' repeatCount='indefinite' />
-                    </feTurbulence>
-                    <feDisplacementMap in='SourceGraphic' scale='30' />
-                </filter>
-            </svg>
-            {/* </div> */}
-          </div>
+          <div className='extraPageContainer'>
+          <h2 className='extraPageContainerTitle'>PFN LAGOS STATE PROVINCES, THEIR RESPECTIVE CHAIRMEN, SECRETARIAT <br /> AND MEETING DAYS</h2>
+            <div className="extraCardContainer">
+            <Grid container spacing={8}>
+                {provinces.map((data)=> (
+                  <Grid item xs={12} sm={4} md={4} key={data.id}>
+                    <div className="extraCard" >
+                        <div className="extraContainer">
+                              <div className="extraBox">
+                                  <div className="extraContent">
+                                      <h4>
+                                        {data.province}
+                                      </h4>
+                                      <p>
+                                      <span style={{color: "tomato", fontWeight: 'bold'}}>Chairman:</span> {data.chairman}
+                                      </p>
+                                      <p>
+                                      <span style={{color: "tomato", fontWeight: 'bold'}}>Secretariat:</span>  {data.Secretariat}
+                                      </p>
+                                      <p>
+                                      <span style={{color: "tomato", fontWeight: 'bold'}}>Meeting days:</span>  {data.MeetingDays}
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <svg id='extraSvg'>
+                            <filter id='wavy'>
+                                <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+                                    <animate attributeName='baseFrequency' dur='60s' values='0.02; 0.05; 0.02' repeatCount='indefinite' />
+                                </feTurbulence>
+                                <feDisplacementMap in='SourceGraphic' scale='30' />
+                            </filter>
+                        </svg>
+                      {/* </div> */}
+                    </div>
+                  </Grid>
+                ))}
 
-        </div>
+            </Grid>
+            </div>
+            
+          </div>
      <Footer />
  </Container>
   )

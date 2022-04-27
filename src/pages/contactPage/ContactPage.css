@@ -1,4 +1,10 @@
 @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+
+.contactPageGetinTouchContainer{
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+
 .contact2 {
   font-family: "Montserrat", sans-serif;
   color: #8d97ad;
@@ -8,7 +14,6 @@
   /* background-color: red !important; */
   background-position: center top;
 }
-
 .contact2 h1,
 .contact2 h2,
 .contact2 h3,
@@ -77,3 +82,10 @@
   background: -o-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
   background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);
 }
+#textArea{
+  height: 300px !important;
+  resize: none !important;
+}
+/* .contactPageBannerContainer{
+  background: url('../../images/web3.jpg') !important;
+} */

@@ -9,6 +9,7 @@ import Img5 from '../../images/pfnLogo.png'
 import { mobile } from '../../responsive'
 import Button2 from '../Button/Button2'
 import moment from 'moment'
+import Button from '../Button/Button'
 
 const Container = styled.nav`
     /* ${mobile({display: 'none'})} */
@@ -43,9 +44,11 @@ const Navbar = () => {
           &nbsp;22: 33: 33
         </div>
         <div className="nav">
-          <div className="logo">
-            <img src={LogoImg} width={100} alt="logo" />
-          </div>
+          <Link to="/">
+            <div className="logo">
+              <img src={LogoImg} width={100} alt="logo" />
+            </div>
+          </Link>
           <div className="navLinks">
           <div className={openMain ? "mainListItems" : "notActiveMain"}>
                   <div className={openMain ? "mainListItemsTop" : "notActiveMain"}>
@@ -234,7 +237,7 @@ const Navbar = () => {
                     <Link to="#" className="links">
                       <li className="hoverItems">Prayer line</li>
                     </Link>
-                    <Link to='#' className='links'>
+                    <Link to='/contact' className='links'>
                     <li className="hoverItems">Contact us</li>
                     </Link>
                 </ul>
@@ -330,10 +333,11 @@ const Navbar = () => {
               {!scroll ? (
                 <Link
                   to="#"
-                  id="leftBtn"
+                  // id="leftBtn"
                   className={!scroll ? "links" : "leftBtn"}
                 >
-                  <h3>Give</h3>
+                  {/* <h3>Give</h3> */}
+                  <Button BtnText="Give" />
                 </Link>
               ) : (
                 <Button2 BtnText="Give" />

@@ -16,6 +16,9 @@ import H2 from './../../components/Text/H2';
 import H3 from '../../components/Text/H3';
 import Header2 from '../../components/Text/Header2';
 import { Link } from 'react-router-dom';
+import BannerImg from '../../images/web3.jpg'
+import SendIcon from '@mui/icons-material/Send';
+// import './ContactPage.css'
 
 const Container = styled.div`
   width: 100%;
@@ -80,7 +83,20 @@ const ContactPage = () => {
           <h1>Contact us</h1>
         </div>
       </div>
-<div className="contact2" id="contact">
+      <div className="contactPageGetinTouchContainer d-flex" style={{padding: "0rem 7rem 2rem 7rem"}}>
+        <div style={{clipPath: "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)", background: "gray", color: '#fff', padding: '4rem'}}>
+          <h2>Get in touch with us today</h2>
+          <h4>We’d love to hear from you</h4>
+          <p>Send us a message and we’ll respond as soon as possible</p>
+          {/* <div className="col-lg-12">
+            <a  href="#contact">
+              <button type="submit" className="btn btn-dark mt-3 mb-3 text-white border-0 py-2 px-3"><span> CONTACT NOW <i className="fa fa-arrow-right"></i></span></button>
+            </a>
+          </div> */}
+        </div>
+          <div></div>
+        </div>
+<div className="contact2 mt-3" id="contact">
   <div className="container">
     <div className="row contact-container">
       <div className="col-lg-12">
@@ -88,58 +104,66 @@ const ContactPage = () => {
           <div className="row">
             <div className="col-lg-8">
               <div className="contact-box p-4">
-                <h4 className="title">Contact Us</h4>
+                <h4 className="title text-center">Contact Form</h4>
+                <marquee>
+                <span>"Neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord." Romans 8:39</span>
+                </marquee>
                 <form>
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="form-group mt-3">
-                        <input className="form-control" type="text" placeholder="name" />
+                        <input className="form-control" type="text" placeholder="Name" />
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="form-group mt-3">
-                        <input className="form-control" type="text" placeholder="email" />
+                        <input className="form-control" type="text" placeholder="Email" />
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="form-group mt-3">
-                        <input className="form-control" type="text" placeholder="phone" />
+                        <input className="form-control" type="text" placeholder="Phone" />
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="form-group mt-3">
-                        <input className="form-control" type="text" placeholder="location" />
+                        <input className="form-control" type="text" placeholder="Location" />
                       </div>
                     </div>
                     <div className="col-lg-12">
                       <div className="form-group mt-3">
-                        <input className="form-control" type="text" placeholder="message" />
+                        <textarea className="form-control" id='textArea' style={{height: "300px", resize: "none"}} type="text" placeholder="Message" />
                       </div>
                     </div>
                     <div className="col-lg-12">
-                      <button type="submit" className="btn btn-danger-gradiant mt-3 mb-3 text-white border-0 py-2 px-3"><span> SUBMIT NOW <i className="ti-arrow-right"></i></span></button>
+                      <button type="submit" className="btn btn-dark mt-3 mb-3 text-white border-0 py-2 px-3"><span> SUBMIT NOW <SendIcon /> </span></button>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-            <div className="col-lg-4 bg-image" style={{background: `url(${Img4})`}}>
+            <div className="col-lg-4 bg-image" style={{background: "#263948"}}>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253664.50294512132!2d3.2922873848851304!3d6.583612394604272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8de2d6dc2833%3A0x6b683e00c6393bd7!2sPentecostal%20Fellowship%20of%20Nigeria%2C%20Lagos%20State!5e0!3m2!1sen!2sng!4v1651050624529!5m2!1sen!2sng" width="100%" height="300" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               <div className="detail-box p-4">
                 <h5 className="text-white font-weight-light mb-3">ADDRESS</h5>
-                <p className="text-white op-7">601. Lagos
+                <p className="text-white op-7"> <i className="fa fa-address-book" aria-hidden="true" /> 5-9 Bode Thomas Rd, Onipanu 100252,
                   <br /> Lagos</p>
                 <h5 className="text-white font-weight-light mb-3 mt-4">CALL US</h5>
-                <p className="text-white op-7">251 546 9442
-                  <br /> 630 446 8851</p>
-                <div className="round-social light">
+                <p className="text-white op-7"><i className="fa fa-phone" aria-hidden="true" /> 09014544520
+                  {/* <br /> <i className="fa fa-phone" aria-hidden="true" /> 630 446 8851 */}
+                  </p>
+                <div className="round-social light d-flex gap-3">
                     <Link to="#">
-                  <div className="ml-0 text-decoration-none text-white border border-white rounded-circle"><i className="icon-social-facebook"></i></div>
+                  <div className="ml-0 text-decoration-none text-white"><i className="fa fa-facebook" aria-hidden="true" /></div>
                     </Link>
                     <Link to="#">
-                  <div className="text-decoration-none text-white border border-white rounded-circle"><i className="icon-social-twitter"></i></div>
+                  <div className="text-decoration-none text-white"><i className="fa fa-twitter" aria-hidden="true" /></div>
                     </Link>
                     <Link to="#">
-                  <div className="text-decoration-none text-white border border-white rounded-circle"><i className="icon-social-youtube"></i></div>
+                  <div className="text-decoration-none text-white"><i className="fa fa-instagram" aria-hidden="true" /></div>
+                    </Link>
+                    <Link to="#">
+                  <div className="text-decoration-none text-white"><i className="fa fa-youtube" aria-hidden="true" /></div>
                     </Link>
                 </div>
               </div>
@@ -149,6 +173,12 @@ const ContactPage = () => {
       </div>
     </div>
   </div>
+</div>
+<div className="contactPageBannerContainer" style={{background: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),url(${BannerImg})`, height: "250px", backgroundSize: 'cover', display: 'flex', alignItems: "center", justifyContent: "center"}}>
+  <div className="contactPageMapTitle">
+    <h5 style={{color: "#990000", fontStyle: "italic"}}>"Give ear and hear my voice, Listen and hear my words."</h5>
+    <h3 className='text text-center'>Isaiah 28:23</h3>
+</div>
 </div>
  <Footer />
     </Container>
