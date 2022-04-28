@@ -14,6 +14,7 @@ import { tab } from './../../responsive';
 import { landscapeTab } from './../../responsive';
 import NewsLetter from '../newsLetter/NewsLetter'
 import MailchimpFormContainer from '../mailchimpFormContainer/MailchimpFormContainer'
+import ReactMailChimpForm from '../reactMailChimpForm/ReactMailChimpForm'
 
 const Container = styled.div`
   width: 100%;
@@ -202,8 +203,9 @@ const Footer = () => {
                 {/* <MailchimpFormContainer /> */}
                 <div className="footerButton">
                     <div className="buttonBox">
-                        <Button />
-                        <Button outline />
+                        <Button BtnText='Messages' />
+                        <Button outline BtnText='Give' />
+                        <ReactMailChimpForm />
                     </div>
                     <div className="socialBox">
                         <div className="social">

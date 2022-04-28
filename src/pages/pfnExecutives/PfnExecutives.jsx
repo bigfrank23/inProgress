@@ -17,6 +17,7 @@ import H3 from "../../components/Text/H3";
 import Header from "../../components/Text/Header";
 
 const Container = styled.div`
+  user-select: none;
   width: 100%;
   height: 100%;
   background: #fff;

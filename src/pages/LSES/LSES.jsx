@@ -19,6 +19,7 @@ import { Link } from "react-router-dom";
 import { maxWidth } from "@mui/system";
 
 const Container = styled.div`
+  user-select: none;
   width: 100%;
   height: 100%;
   background: url(${Img3});
@@ -40,7 +41,7 @@ const Container = styled.div`
     width: 100%;
     position: relative;
     top: 0;
-    height: 100vh;
+    height: 65vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -56,9 +57,9 @@ const LSES = () => {
         <div className="page1Wrapper">
             <div className="page1Header">
             <h1>THE LAGOS STATE EXECUTIVE STRUCTURE</h1>
-            <div className="giveNowBtn">
+            {/* <div className="giveNowBtn">
                 <Button BtnText="Give Now"/>
-            </div>
+            </div> */}
             </div>
         </div>
         <div className="page12Top">

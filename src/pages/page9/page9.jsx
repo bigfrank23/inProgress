@@ -1,17 +1,19 @@
 import React from 'react'
 import Img from "../../images/splash3.jpg";
 import Img1 from "../../images/splash3.jpg";
-import Img2 from "../../images/splash3.jpg";
+import Img2 from "../../images/volunteer.jpg";
 import Img3 from "../../images/bg2.jpg";
 import styled from 'styled-components'
 import Header from '../../components/Text/Header';
 import PText from '../../components/Text/PText';
 import H2 from '../../components/Text/H2';
 import H3 from '../../components/Text/H3';
+import H4 from '../../components/Text/H4';
 import Footer from '../../components/Footer/Footer';
 import './Page9.css'
 import Upcomin from '../../components/Upcoming/Upcomin';
 import Button from '../../components/Button/Button';
+import { directorate } from '../../teamMembers/directorate';
 
 const Container = styled.div`
   width: 100%;
@@ -21,20 +23,22 @@ const Container = styled.div`
   align-content: center;
   justify-content: center; */
   .page1Wrapper {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
+    clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url(${Img2});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-clip: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     position: relative;
     top: 0;
-    height: 100vh;
+    height: 65vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -48,7 +52,7 @@ const Page9 = () => {
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
-          <h1>Volunteer</h1>
+          <h1>Directorate</h1>
         </div>
       </div>
       <div className="page9TopContainer">
@@ -86,23 +90,23 @@ const Page9 = () => {
       </div>
       <div className="page9CenterContainer">
         <div className="page9CenterTitle">
-          <H2>Lorem, ipsum dolor.</H2>
+          <h2>Join A Team</h2>
         </div>
         <div className="page9HoverCard">
-          {cards.map(()=> (
+          {directorate.map((data)=> (
             <div className="page9Card">
               <div className="page9CardImgBx">
-                <img src={Img} alt="" />
+                <img src={data.img} alt="" />
               </div>
               <div className="page9CardTxt">
                 <div className="page9CardTxtTitle">
-                  <H2>Lorem ipsum dolor sit.</H2>
+                  <h3>{data.directorate}</h3>
                 </div>
-                <div className="page9CardTxtPara">
+                {/* <div className="page9CardTxtPara">
                   <PText>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, saepe? Aspernatur pariatur saepe ipsa obcaecati voluptas inventore quam quasi eaque id! Ipsa iste odio maiores, excepturi voluptatibus delectus voluptatem ab?
                   </PText>
-                </div>
+                </div> */}
                 <i className="fa fa-arrow-circle-right page9Icon" aria-hidden="true" />
               </div>
             </div>

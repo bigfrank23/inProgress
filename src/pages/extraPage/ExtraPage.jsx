@@ -19,6 +19,7 @@ import { provinces } from '../../teamMembers/provinces';
 import { Grid } from '@material-ui/core';
 
 const Container = styled.div`
+  user-select: none;
   width: 100%;
   height: 100%;
   background: url(${Img3});
@@ -40,7 +41,7 @@ const Container = styled.div`
     width: 100%;
     position: relative;
     top: 0;
-    height: 80vh;
+    height: 65vh;
     .page1Header {
       color: #fff;
       text-align: center;

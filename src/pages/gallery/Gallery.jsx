@@ -15,6 +15,7 @@ import H2 from '../../components/Text/H2'
 import Footer from '../../components/Footer/Footer'
 
 const Container = styled.div`
+  user-select: none;
   width: 100%;
   height: 100%;
   background: url(${Img3});

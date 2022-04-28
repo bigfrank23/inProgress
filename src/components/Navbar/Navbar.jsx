@@ -13,6 +13,7 @@ import Button from '../Button/Button'
 
 const Container = styled.nav`
     /* ${mobile({display: 'none'})} */
+    user-select: none;
 `
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
@@ -106,7 +107,7 @@ const Navbar = () => {
                           </ul>
                           <ul className="mainListItemsCenterRightList">
                             <li className="mainListItemsCenterRightListItems">Contact us</li>
-                            <Link to="#" id="links">
+                            <Link to="/volunteer" id="links">
                             <li className="mainListItemsCenterRightListItems">Volunteer</li>
                             </Link>
                             <Link to="#" id="links">
@@ -203,8 +204,8 @@ const Navbar = () => {
                   <Link to="/provinces" className="links">
                     <li className="hoverItems">The Provinces</li>
                   </Link>
-                  <Link to="#" className="links">
-                    <li className="hoverItems">Volunteers</li>
+                  <Link to="/volunteer" className="links">
+                    <li className="hoverItems">Volunteer</li>
                   </Link>
                   <Link to="#" className="links">
                     <li className="hoverItems">Outreach</li>

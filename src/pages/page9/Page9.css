@@ -29,6 +29,13 @@
     text-align: center;
     margin-bottom: 4rem;
 }
+.page9CenterTitle h2{
+    font-weight: 900;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    color: #990000;
+}
 .page9TopContentTitle2{
     padding: 1rem 0;
 }
@@ -49,9 +56,11 @@
 }
 .page9CardImgBx{
     /* width: 350px; */
+    height: 250px;
 }
 .page9CardImgBx img{
     width: 100%;
+    height: 250px;
 }
 .page9CardTxt{
     padding: 1rem;
@@ -59,6 +68,12 @@
     display: flex;
     flex-direction: column;
     background-color: #f1f1eb;
+}
+.page9CardTxtTitle h3{
+    font-weight: 900;
+    font-size: 1.17em;
+    text-transform: uppercase;
+    font-family: 'Poppins';
 }
 .page9CardTxtPara{
     padding: 1rem 0;
