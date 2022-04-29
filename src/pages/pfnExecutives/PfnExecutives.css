@@ -61,6 +61,10 @@
   .pfnExecutivesTxt{
     padding: 1rem 0;
   }
+  .pfnExecutivesTxt h2{
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
   .pfnExecutivesIcons{
       font-size: 2rem;
       color: #222;
@@ -74,10 +78,11 @@
     margin-bottom: 1rem;
   }
   .pfn-back-para{
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     text-align: left;
     display: flex;
     gap: 10px;
+    margin-bottom: 0 !important;
   }
   .fa5Icon{
     color: #333;

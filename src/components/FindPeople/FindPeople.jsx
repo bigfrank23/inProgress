@@ -61,14 +61,13 @@ const FindPeople = () => {
             <Typed
                 strings={[
                 "The Central Working Commitee",
-                "The State directors",
+                "The State Directors",
                 "The Provincial Chairmen",
                 ]}
                 typeSpeed={40}
                 backSpeed={50}
                 loop
             />
-            
         </div>
       </div>
       {/* <div className="content"> */}

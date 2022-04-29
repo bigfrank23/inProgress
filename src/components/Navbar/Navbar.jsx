@@ -204,8 +204,8 @@ const Navbar = () => {
                   <Link to="/provinces" className="links">
                     <li className="hoverItems">The Provinces</li>
                   </Link>
-                  <Link to="/volunteer" className="links">
-                    <li className="hoverItems">Volunteer</li>
+                  <Link to="/directorate" className="links">
+                    <li className="hoverItems">Directorate</li>
                   </Link>
                   <Link to="#" className="links">
                     <li className="hoverItems">Outreach</li>
@@ -235,8 +235,8 @@ const Navbar = () => {
               <Link to="#" className="links">
                 <li className="navListItems">Get in Touch
                 <ul className="hover">
-                    <Link to="#" className="links">
-                      <li className="hoverItems">Prayer line</li>
+                    <Link to="/prayer" className="links">
+                      <li className="hoverItems">Prayer</li>
                     </Link>
                     <Link to='/contact' className='links'>
                     <li className="hoverItems">Contact us</li>

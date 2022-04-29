@@ -27,7 +27,7 @@
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../images/splash1.jpg');
 } */
 .overlayTxt .txtGreen{
-    color: green;
+    color: #006633;
 }
 .overlayTxt .txtWhite{
     color: #fff;
@@ -115,7 +115,7 @@
     height: 200px;
 }
 .page4ButtomCardTextContent{
-    background: green;
+    background: #006633;
     padding: 2rem;
 }
 

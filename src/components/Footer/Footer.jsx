@@ -205,7 +205,7 @@ const Footer = () => {
                     <div className="buttonBox">
                         <Button BtnText='Messages' />
                         <Button outline BtnText='Give' />
-                        <ReactMailChimpForm />
+                        {/* <ReactMailChimpForm /> */}
                     </div>
                     <div className="socialBox">
                         <div className="social">

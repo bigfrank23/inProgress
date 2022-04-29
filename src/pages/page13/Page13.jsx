@@ -33,7 +33,7 @@ const Container = styled.div`
     width: 100%;
     position: relative;
     top: 0;
-    height: 100vh;
+    height: 65vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -45,16 +45,18 @@ const Page13 = () => {
     <Container>
       <div className="page1Wrapper">
         <div className="page1Header">
-          <h1>Page 13</h1>
+          <h1>Prayer</h1>
         </div>
       </div>
       <div className="page13Top">
           <div className="page13TopContent">
             <div className="page13TopTitle">
-                <H2>Lorem ipsum dolor sit.</H2>
+                <H2>God is listening</H2>
             </div>
             <div className="page13TopPara">
-                <PText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tempore a ad nisi, consectetur facere? Officia unde sint nobis veritatis repellendus, quidem tempora assumenda a tenetur minus quod suscipit quibusdam itaque corporis magni quo eveniet hic natus delectus aperiam esse sequi labore. Veritatis quasi nihil unde ipsam labore dolores quidem?</PText>
+                <PText>
+                Penticostal Fellowship of Nigeria, Lagos State provides tools, teams, and times to help individuals – and the church family as a whole – pray. Prayer is vitally important to your relationship with God. We would love to pray for you, a friend, or a family member.
+                </PText>
             </div>
           </div>
       </div>
@@ -66,45 +68,47 @@ const Page13 = () => {
               <form>
                   <div className="inputName">
                     <label htmlFor="name"><PText>Name*</PText></label>
-                    <input type="text" placeholder="Full Name" />
+                    <input type="text" placeholder="John doe" />
                   </div>
                   <div className="inputEmail">
                     <label htmlFor="name"><PText>Email*</PText></label>
-                    <input type="text" placeholder="" />
+                    <input type="text" placeholder="johndoe@email.com" />
                   </div>
-                  <div className="radio">
-                      <label htmlFor=""><PText>Lorem, ipsium.</PText></label>
-                      <input type="radio" />
-                  </div>
-                  <div className="radio">
-                      <label htmlFor=""><PText>Lorem, ipsum.</PText></label>
-                      <input type="radio" />
-                  </div>
-                  <div className="radio">
-                      <label htmlFor=""><PText>Lorem, ipsum.</PText></label>
-                      <input type="radio" />
+                  <div className="radioBx">
+                    <PText>Which Province do you belong?*</PText>
+                    <div className="radio">
+                        <label htmlFor=""><PText>Lorem, ipsium.</PText></label>
+                        <input type="radio" />
+                    </div>
+                    <div className="radio">
+                        <label htmlFor=""><PText>Lorem, ipsum.</PText></label>
+                        <input type="radio" />
+                    </div>
+                    <div className="radio">
+                        <label htmlFor=""><PText>Lorem, ipsum.</PText></label>
+                        <input type="radio" />
+                    </div>
                   </div>
                   <div className="textArea">
-                      <PText>Lorem, ipsum.*</PText>
+                      <PText>Prayer Request*</PText>
                       <textarea name="" id=""/>
                   </div>
-                  <Button />
+                  <Button BtnText="SUBMIT" />
               </form>
           </div>
       </div>
       <div className="page13Bottom">
           <div className="page13BottomContent">
               <div className="page13BottomTitle">
-                  <H2 color>Lorem ipsum dolor sit amet.</H2>
+                  <H2 color>Join the Prayer Team</H2>
               </div>
               <div className="page13BottomPara">
                   <PText color>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus voluptatem sit odit voluptates alias, ad ut id deleniti in commodi nulla. Consequuntur esse sequi quam, aperiam libero modi iste aliquid, quae ratione necessitatibus delectus! Quaerat necessitatibus similique veniam error deserunt voluptate quidem, nobis itaque consequatur sit, neque labore libero provident!
-
+                  If you have a heart for people and prayer, we’d love to hear from you. You will be connected to a virtual prayer team, invited to pray weekly for our church prayer requests, and/or equip you to become a prayer minister for those that are in need after service. Contact us to express your interest in joining our prayer team. 
                   </PText>
               </div>
               <div className="page13BottomBtn">
-                  <Button2 />
+                  <Button2 BtnText="JOIN THE TEAM" />
               </div>
           </div>
       </div>

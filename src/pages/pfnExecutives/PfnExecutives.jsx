@@ -81,7 +81,9 @@ const PfnExecutives = () => {
                 <h2>PASTOR LEKE AKINOLA</h2>
                 <h5>DEPUTY CHAIRMAN</h5>
               </div>
-              <Button2 BtnText="Hover" />
+              <div>
+              <i class="fa fa-rotate-right"></i>
+              </div>
             </div>
             <div class="flip-box-back">
               <div className="flip-box-back-content">
@@ -352,7 +354,7 @@ const PfnExecutives = () => {
 
             <div className="pfnExecTitle3">
                 <div className="execTitle">
-                <Header color>The Chairmen</Header>
+                <Header color>The Province Chairmen</Header>
               </div>
         <div className="pfnExecutivesContainer">
           <Grid container spacing={2}>

@@ -12,16 +12,21 @@
     margin: auto;
 }
 .page9TopContent{
-    background-color: #008753;
-    padding: 2rem 4rem;
+    /* background-color: #008753; */
+    background: url("../../images/teal-watercolor.jpg");
+    /* padding: 2rem 4rem;
     margin-top: 1rem;
-    border-radius: 5px;
+    border-radius: 5px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 25px;
 }
 .page9TopContentTitle, .page9TopContentTitle2, .page9TopContentPara{
     /* text-align: center; */
 }
 .page9CenterContainer{
-    background-color: #fff;
+    background-color: antiquewhite;
     padding: 4rem;
 
 }
@@ -47,20 +52,22 @@
     padding: 0 4rem;
 }
 .page9Card{
+    background: #f1f1eb;
     transition: transform .2s ease-in-out;
     transform: scale(1);
-    background: #f1f1eb;
+    cursor: pointer;
 }
 .page9Card:hover{
     transform: scale(1.1);
+    box-shadow: 10px, 10px, 10px gray;
 }
 .page9CardImgBx{
     /* width: 350px; */
-    height: 250px;
+    /* height: 250px; */
 }
 .page9CardImgBx img{
     width: 100%;
-    height: 250px;
+    /* height: 250px; */
 }
 .page9CardTxt{
     padding: 1rem;
@@ -80,8 +87,10 @@
 }
 .page9Icon{
     align-self: flex-end;
-    color: green;
+    color: #1c6677 !important;
     font-size: 1.5rem !important;
+    float: right;
+    margin-right: 1rem;
 }
 .page9Bottom{
     padding: 4rem;
@@ -97,17 +106,20 @@
     gap: 1rem;
 }
 .page9BottomBanner{
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuXzY4T0hvViIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjkuNSIgaGVpZ2h0PSI5LjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjkuNSIgc3Ryb2tlPSIjMTk0ZDMzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fNjhPSG9WKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');
+    background: url("../../images/green-watercolor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 4rem;
 }
 .page9BottomBannerTitle, .page9BottomBannerPara, .page9BottomBannerBtn{
     text-align: center;
 }
 .page9BottomBannerPara{
-    background: #fff;
-    padding: 2rem;
     margin: 1rem 0;
     border-radius: 5px;
+}
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop{
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)) !important;
 }
 
 @media only screen and (max-width: 600px) {

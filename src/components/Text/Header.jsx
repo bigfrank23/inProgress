@@ -7,10 +7,11 @@ const HeaderStyle = styled.div`
   font-size: 1.2rem;
   font-weight: 900;
   font-style: ${props => props.fontStyle ? 'normal' : 'italics'};
+  font-family: 'Tangerine', cursive;
   /* text-align: center; */
   /* padding: 1rem 0; */
   /* line-height: 1.3em; */
-  color: ${props => props.color ? '#008753' : '#111'};
+  color: ${props => props.color ? '#006633' : '#111'};
   text-transform: ${props => props.transform ? 'uppercase' : 'capitalize'};
   @media only screen and (max-width: 600px) {
     font-size: 1rem;
@@ -20,7 +21,7 @@ const HeaderStyle = styled.div`
 const Header = ({children, color= false, transform=false, fontStyle=false}) => {
   return (
     <HeaderStyle className='mainHeader' color={color} transform={transform}>
-      <h1 style={{ fontFamily: "Poppins, sans-serif" }}>{children}</h1>
+      <h1 style={{ fontFamily: "'Tangerine', cursive", fontSize: "3.5rem" }}>{children}</h1>
     </HeaderStyle>
   );
 }

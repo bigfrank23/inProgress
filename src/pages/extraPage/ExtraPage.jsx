@@ -68,6 +68,20 @@ const Container = styled.div`
 `;
 
 const ExtraPage = () => {
+  const allProvinces = provinces.sort(function(a, b) {
+    const nameA = a.province.toUpperCase(); // ignore upper and lowercase
+    const nameB = b.province.toUpperCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+  
+    // names must be equal
+    return 0;
+  });
+
   return (
     <Container>
       <div className="page1Wrapper">
@@ -80,7 +94,7 @@ const ExtraPage = () => {
           <h2 className='extraPageContainerTitle'>PFN LAGOS STATE PROVINCES, THEIR RESPECTIVE CHAIRMEN, SECRETARIAT <br /> AND MEETING DAYS</h2>
             <div className="extraCardContainer">
             <Grid container spacing={8}>
-                {provinces.map((data)=> (
+                {allProvinces.map((data)=> (
                   <Grid item xs={12} sm={4} md={4} key={data.id}>
                     <div className="extraCard" >
                         <div className="extraContainer">

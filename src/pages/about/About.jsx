@@ -46,6 +46,7 @@ const Container = styled.div`
     .page1Header {
       color: #fff;
       text-align: center;
+      text-shadow: 0 4px brown;
     }
   }
   .pageBanner {

@@ -67,11 +67,11 @@ function App() {
           <Route exact path='/history' component={History} />
           <Route exact path='/history2' component={History2} />
           <Route exact path='/page8' component={Page8} />
-          <Route exact path='/volunteer' component={Page9} />
+          <Route exact path='/directorate' component={Page9} />
           <Route exact path='/page10' component={Page10} />
           <Route exact path='/page11' component={Page11} />
           <Route exact path='/lses' component={LSES} />
-          <Route exact path='/page13' component={Page13} />
+          <Route exact path='/prayer' component={Page13} />
           <Route exact path='/page14' component={Page14} />
           <Route exact path='/page15' component={Page15} />
           <Route exact path='/page16' component={Page16} />
