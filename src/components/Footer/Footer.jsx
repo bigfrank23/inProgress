@@ -12,9 +12,7 @@ import FooterImg from '../../images/footer.jpg'
 import H3 from '../Text/H3'
 import { tab } from './../../responsive';
 import { landscapeTab } from './../../responsive';
-import NewsLetter from '../newsLetter/NewsLetter'
 import MailchimpFormContainer from '../mailchimpFormContainer/MailchimpFormContainer'
-import ReactMailChimpForm from '../reactMailChimpForm/ReactMailChimpForm'
 
 const Container = styled.div`
   width: 100%;
@@ -111,7 +109,7 @@ const Container = styled.div`
       .newsLetterInputContainer{
         display: flex;
         justify-content: center;
-        padding: 1rem 0 0 0;
+        /* padding: 1rem 0 0 0; */
         .newsLetterInput{
           border: 1px solid green;
           outline: 0;
@@ -187,41 +185,35 @@ const Footer = () => {
                         <h2>Lagos State</h2>
                     </div> */}
                 </div>
-                <form className="newsLetter">
-                    <div className="newsLetterTitle">
-                      <H3>
-                        Subscribe For NewsLetter
-                      </H3>
-                    </div>
-                    <div className="newsLetterInputContainer">
-                      <input type="email" name="email" id="email" placeholder='email' className='newsLetterInput' />
-                      <div className="newsLetterBtn">
-                        <Button BtnText='Subscribe' />
-                      </div>
-                    </div>
-                </form>
-                {/* <MailchimpFormContainer /> */}
+                <div className="newsLetterInputContainer">
+                    <MailchimpFormContainer />
+                </div>
                 <div className="footerButton">
                     <div className="buttonBox">
                         <Button BtnText='Messages' />
                         <Button outline BtnText='Give' />
-                        {/* <ReactMailChimpForm /> */}
                     </div>
                     <div className="socialBox">
-                        <div className="social">
-                            <Link to="#" className='links'>
-                                <i className="fa fa-youtube footerSocialIcon" aria-hidden="true" />
-                            </Link>
-                            <Link to="#" className='links'>
+                        <div className="social" style={{cursor: "pointer"}}>
+                            <a to="www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
                                 <i className="fa fa-facebook footerSocialIcon" aria-hidden="true" />
-                            </Link>
-                            <Link to="#" className='links'>
+                            </a>
+                            <a to="www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
                                 <i className="fa fa-twitter footerSocialIcon" aria-hidden="true" />
-                            </Link>
+                            </a>
+                            <a to="www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                                <i className="fa fa-instagram footerSocialIcon" aria-hidden="true" />
+                            </a>
+                            <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                                <i className="fa fa-youtube footerSocialIcon" aria-hidden="true" />
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div style={{textAlign: "center"}}>
+        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" height="35" style={{border: "none", overflow: "hidden"}} scrolling="no" frameborder="0" allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
         </div>
         <div style={{display: "flex", justifyContent: "space-around"}}>
           <Credits>

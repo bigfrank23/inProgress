@@ -19,6 +19,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { faChurch, faAddressCard, faPhone, faAt, faCalendar, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { provinces } from '../../teamMembers/provinces';
+import DirectorateImg from '../../images/directorate.png'
 
 const Container = styled.div`
   width: 100%;
@@ -32,7 +33,7 @@ const Container = styled.div`
     clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
     clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(${Img2});
+      url(${DirectorateImg});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

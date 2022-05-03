@@ -15,6 +15,7 @@ import Grid from '@mui/material/Grid'
 import { chairmen, directors } from "../../teamMembers/team";
 import H3 from "../../components/Text/H3";
 import Header from "../../components/Text/Header";
+import flipImg from '../../images/flip.png'
 
 const Container = styled.div`
   user-select: none;
@@ -73,6 +74,48 @@ const PfnExecutives = () => {
             <Header color>The CWC</Header>
         </div>
       <div className="pfnExecutivesContainer">
+      <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src={Img2} alt="" />
+              <div className="pfnExecutivesTxt">
+                <h2>APOSTLE ENYINNAYA OKWUONU</h2>
+                <h5>CHAIRMAN</h5>
+              </div>
+              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
+            </div>
+            <div class="flip-box-back">
+              <div className="flip-box-back-content">
+                <H2>More Details</H2>
+                <p className="pfn-back-para">
+                  <FontAwesomeIcon className="fa5Icon" icon={faChurch} />
+                  New Life Christian Church
+                </p>
+                <p className="pfn-back-para">
+                  <FontAwesomeIcon className="fa5Icon" icon={faAddressCard} />
+                  97c, Marine Road, Apapa GRA
+                </p>
+                <p className="pfn-back-para">
+                  <FontAwesomeIcon className="fa5Icon" icon={faPhone} />
+                  08023355366, 07061000181
+                </p>
+                <p className="pfn-back-para">
+                  <FontAwesomeIcon className="fa5Icon" icon={faCalendar} />
+                  30th March
+                </p>
+                <p className="pfn-back-para">
+                  <FontAwesomeIcon className="fa5Icon" icon={faAt} />
+                  enyinnaya56@yahoo.com
+                </p>
+                <div className="pfnExecutivesIcons">
+                  <i className="fa fa-facebook" aria-hidden="true" />
+                  <i className="fa fa-twitter" aria-hidden="true" />
+                  <i className="fa fa-instagram" aria-hidden="true" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="flip-box">
           <div class="flip-box-inner">
             <div class="flip-box-front">
@@ -82,7 +125,7 @@ const PfnExecutives = () => {
                 <h5>DEPUTY CHAIRMAN</h5>
               </div>
               <div>
-              <i class="fa fa-rotate-right"></i>
+              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
               </div>
             </div>
             <div class="flip-box-back">
@@ -125,7 +168,7 @@ const PfnExecutives = () => {
                 <h2>APOSTLE AKINYELE AKINDEJOYE</h2>
                 <h5>SECRETARY</h5>
               </div>
-              <Button2 BtnText="Hover" />
+              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
             </div>
             <div class="flip-box-back">
               <div className="flip-box-back-content">
@@ -160,7 +203,9 @@ const PfnExecutives = () => {
             </div>
           </div>
         </div>
-        <div class="flip-box">
+        
+      <div className="pfnExecutivesContainer" id="pfnExecutivesContainer">
+      <div class="flip-box">
           <div class="flip-box-inner">
             <div class="flip-box-front">
               <img src={Img2} alt="" />
@@ -168,7 +213,7 @@ const PfnExecutives = () => {
                 <h2>REV (DR) PEACE GOODEY</h2>
                 <h5>TREASURER</h5>
               </div>
-              <Button2 BtnText="Hover" />
+              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
             </div>
             <div class="flip-box-back">
               <div className="flip-box-back-content">
@@ -204,50 +249,6 @@ const PfnExecutives = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="pfnExecutivesContainer" id="pfnExecutivesContainer">
-        <div class="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
-              <img src={Img2} alt="" />
-              <div className="pfnExecutivesTxt">
-                <h2>APOSTLE ENYINNAYA OKWUONU</h2>
-                <h5>CHAIRMAN</h5>
-              </div>
-              <Button2 BtnText="Hover" />
-            </div>
-            <div class="flip-box-back">
-              <div className="flip-box-back-content">
-                <H2>More Details</H2>
-                <p className="pfn-back-para">
-                  <FontAwesomeIcon className="fa5Icon" icon={faChurch} />
-                  New Life Christian Church
-                </p>
-                <p className="pfn-back-para">
-                  <FontAwesomeIcon className="fa5Icon" icon={faAddressCard} />
-                  97c, Marine Road, Apapa GRA
-                </p>
-                <p className="pfn-back-para">
-                  <FontAwesomeIcon className="fa5Icon" icon={faPhone} />
-                  08023355366, 07061000181
-                </p>
-                <p className="pfn-back-para">
-                  <FontAwesomeIcon className="fa5Icon" icon={faCalendar} />
-                  30th March
-                </p>
-                <p className="pfn-back-para">
-                  <FontAwesomeIcon className="fa5Icon" icon={faAt} />
-                  enyinnaya56@yahoo.com
-                </p>
-                <div className="pfnExecutivesIcons">
-                  <i className="fa fa-facebook" aria-hidden="true" />
-                  <i className="fa fa-twitter" aria-hidden="true" />
-                  <i className="fa fa-instagram" aria-hidden="true" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="flip-box">
           <div class="flip-box-inner">
             <div class="flip-box-front">
@@ -256,7 +257,7 @@ const PfnExecutives = () => {
                 <h2>PASTOR BAYO OYEYEMI</h2>
                 <h5>Financial Secretary</h5>
               </div>
-              <Button2 BtnText="Hover" />
+              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
             </div>
             <div class="flip-box-back">
               <div className="flip-box-back-content">
@@ -290,6 +291,7 @@ const PfnExecutives = () => {
             </div>
           </div>
         </div>
+        </div>
       </div>
       </div>
 
@@ -309,7 +311,7 @@ const PfnExecutives = () => {
                       <h2>{data.name}</h2>
                       <h5>{data.title}</h5>
                     </div>
-                    <Button2 BtnText="Hover" />
+                    <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
                   </div>
                   <div class="flip-box-back">
                     <div className="flip-box-back-content">
@@ -368,7 +370,7 @@ const PfnExecutives = () => {
                         <h2>{data.name}</h2>
                         <h5>{data.title}</h5>
                       </div>
-                      <Button2 BtnText="Hover" />
+                      <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
                     </div>
                     <div class="flip-box-back">
                       <div className="flip-box-back-content">

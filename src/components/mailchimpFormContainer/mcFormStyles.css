@@ -1,11 +1,11 @@
  /* Styles the h3 */
 .mc__title {
-  max-width: 235px;
-  text-align: center;
+  /* max-width: 235px;
+  text-align: center; */
 
   /* Replace with your brand's main text color */
-  color: #000;
-  margin: 25px auto 35px;
+  /* color: #000;
+  margin: 25px auto 35px; */
 }
 
 /* Positions the form in the middle of the modal and ensures the content doesn't jump as status messages get added/removed */
@@ -17,22 +17,45 @@
 
 /* Positions Text and form fields nicely in the middle with some spacing. */
 .mc__form {
-  display: grid;
+  /* display: grid;
   grid-template-rows: min-content min-content;
   grid-row-gap: 40px;
   justify-content: stretch;
   align-items: center;
-  transition: height .2s ease;
+  transition: height .2s ease; */
 }
 
 /* Seperates the input fields vertically */
-.mc__field-container {
+/* .mc__field-container {
   display: grid;
   grid-row-gap: 30px;
-}
+} */
 
 /* Provides styles for status messages */
+.mc__alert--succes{
+  color: lightseagreen;
+}
+.mc__alert--sending{
+  color: #333233;
+}
+.mc__alert--error{
+  color: red;
+}
 
+.mc__btn{
+  border: 2px solid;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 900;
+    min-width: 125px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #008753;
+    border: none;
+}
 
 
 /* ----------------------------------------------

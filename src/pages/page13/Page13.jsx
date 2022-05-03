@@ -11,6 +11,7 @@ import PText from "../../components/Text/PText";
 import Button2 from "../../components/Button/Button2";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
+import PrayerImg from '../../images/prayer.png'
 
 const Container = styled.div`
   width: 100%;
@@ -20,10 +21,10 @@ const Container = styled.div`
   align-content: center;
   justify-content: center; */
   .page1Wrapper {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${Img5});
+      url(${PrayerImg});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
