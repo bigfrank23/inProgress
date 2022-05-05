@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import Navbar from '../../components/Navbar/Navbar';
 // import Img from '../../images/splash2.jpg'
@@ -18,6 +18,8 @@ import Header2 from '../../components/Text/Header2';
 import { Link } from 'react-router-dom';
 import BannerImg from '../../images/web3.jpg'
 import SendIcon from '@mui/icons-material/Send';
+import sending from '../../images/sending.gif'
+import axios from 'axios'
 // import './ContactPage.css'
 
 const Container = styled.div`
@@ -77,6 +79,64 @@ const Container = styled.div`
 
 
 const ContactPage = () => {
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [location, setLocation] = useState('')
+  // const [subject, setSubject] = useState('')
+  // const [company, setCompany] = useState('')
+  const[loading, setLoading] = useState(false)
+
+  const handleRequest = async (e) => {
+    if(email && location && name && message && phone !== ""){
+      if(message !== ""){
+      e.preventDefault()
+    setLoading(true)
+    // console.log({email, message, name, subject, company})
+
+    const body = {
+      email,
+      message, 
+      // subject, 
+      name,
+      // company,
+      phone,
+      location
+    }
+
+   await axios.post('http://localhost:5000/mail/', body, {
+      headers: {
+        'Content-type': 'application/json'
+      }
+    }).then((res) => {
+      alert('Email Sent Successfully')
+      // console.log('Email Sent Successfully')
+      setLoading(false)
+      console.log(res)
+      // window.location.reload()
+      if (res.data.status === 'success') {
+        alert("Message Sent.");
+        // console.log("Message Sent.");
+        setEmail("")
+        setName("")
+        setLocation("")
+        setPhone("")
+        setMessage("")
+      }
+    }).catch((err) => {
+      console.log(err)
+      setLoading(false)
+    })
+      } else {
+        alert('Compose Email')
+      }
+      
+    } else {
+      alert('Please fill all required form')
+    }
+  }
+
   return (
     <Container>
       <div className="page1Wrapper">
@@ -110,35 +170,63 @@ const ContactPage = () => {
                 <marquee>
                 <span>"Neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord." Romans 8:39</span>
                 </marquee>
-                <form>
+                <form onSubmit = {handleRequest} method = "post">
+                <div className = "form__title">
+                  <h4>{loading ? 'Sending...' : ""}</h4>
+                  {/* {
+                  loading && <img 
+                    src = {sending}
+                    alt = "loading..."
+                    style = {{
+                      // filter: "invert(1)",
+                      position: "absolute",
+                      width : 200,
+                      height : 200,
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)"
+                    }}
+                  />
+                } */}
+                </div>
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="form-group mt-3">
-                        <input className="form-control" type="text" placeholder="Name" />
+                        <input className="form-control" type="text" placeholder="Name" id = "name" value = {name} onChange = {(e) => setName(e.target.value)} />
+                      </div>
+                    </div>
+                    {/* <div className="col-lg-6">
+                      <div className="form-group mt-3">
+                        <input className="form-control" type="text" placeholder="Company" id = "company" value = {company} onChange = {(e) => setCompany(e.target.value)} />
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="form-group mt-3">
-                        <input className="form-control" type="text" placeholder="Email" />
+                        <input className="form-control" type="text" placeholder="Subject" id = "subject" value = {subject} onChange = {(e) => setSubject(e.target.value)} />
+                      </div>
+                    </div> */}
+                    <div className="col-lg-6">
+                      <div className="form-group mt-3">
+                        <input className="form-control" type="text" placeholder="Email" id = "email" value = {email} onChange = {(e) => setEmail(e.target.value)} />
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="form-group mt-3">
-                        <input className="form-control" type="text" placeholder="Phone" />
+                        <input className="form-control" type="text" placeholder="Phone" id = "phone" value = {phone} onChange = {(e) => setPhone(e.target.value)} />
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="form-group mt-3">
-                        <input className="form-control" type="text" placeholder="Location" />
+                        <input className="form-control" type="text" placeholder="Location" id = "location" value = {location} onChange = {(e) => setLocation(e.target.value)} />
                       </div>
                     </div>
                     <div className="col-lg-12">
                       <div className="form-group mt-3">
-                        <textarea className="form-control" id='textArea' style={{height: "300px", resize: "none"}} type="text" placeholder="Message" />
+                        <textarea className="form-control" style={{height: "300px", resize: "none"}} type="text" placeholder="Message" id = "message" value = {message} onChange = {(e) => setMessage(e.target.value)} />
                       </div>
                     </div>
                     <div className="col-lg-12">
-                      <button type="submit" className="btn btn-dark mt-3 mb-3 text-white border-0 py-2 px-3"><span> SUBMIT NOW <SendIcon /> </span></button>
+                      <button type="submit" className="btn btn-dark mt-3 mb-3 text-white border-0 py-2 px-3" disabled = {loading} onClick = {handleRequest}><span> SUBMIT NOW <SendIcon /> </span></button>
                     </div>
                   </div>
                 </form>

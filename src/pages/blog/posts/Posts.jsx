@@ -4,11 +4,13 @@ import Img3 from "../../../images/bg2.jpg";
 import Img5 from "../../../images/pro9.jpg";
 import styled from "styled-components";
 import H2 from '../../../components/Text/H2';
-import Button from "../../../components/Button/Button";
+// import Button from "../../../components/Button/Button";
 import './Posts.css'
 import H3 from "../../../components/Text/H3";
 import { postData } from "../data";
 import Footer from "../../../components/Footer/Footer";
+import Button from '@mui/material/Button'
+import { Link, useNavigate} from "react-router-dom";
 
 const Container = styled.div`
   user-select: none;
@@ -65,7 +67,17 @@ const Container = styled.div`
 `;
 
 const Posts = () => {
+  // let navigate = useNavigate()
+  const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
   const [show, setShow] = useState(true)
+
+  // const handleClick = () => {
+  //   if (user) {
+  //     return <Redirect to="/write" />
+  //   }else{
+  //     return <Redirect to="/login" />
+  //   }
+  // }
   return (
     <Container>
       <div className="page1Wrapper">
@@ -76,6 +88,16 @@ const Posts = () => {
       <div className="postsContainer">
         <div className="postsMainTitle">
           <H2>All Posts</H2>
+          {
+            user ?
+            <Link to='/write'>
+              <Button variant="contained">Create a post</Button>
+            </Link>
+            :
+            <Link to='/login'>
+              <Button variant="contained">Create a post</Button>
+            </Link>
+          }
         </div>
         {postData.map((data) => (
           <div className="postContents">

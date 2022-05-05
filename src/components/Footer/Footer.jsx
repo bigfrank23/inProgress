@@ -195,13 +195,13 @@ const Footer = () => {
                     </div>
                     <div className="socialBox">
                         <div className="social" style={{cursor: "pointer"}}>
-                            <a to="www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                            <a href="www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
                                 <i className="fa fa-facebook footerSocialIcon" aria-hidden="true" />
                             </a>
-                            <a to="www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                            <a href="www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
                                 <i className="fa fa-twitter footerSocialIcon" aria-hidden="true" />
                             </a>
-                            <a to="www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                            <a href="www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
                                 <i className="fa fa-instagram footerSocialIcon" aria-hidden="true" />
                             </a>
                             <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>

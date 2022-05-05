@@ -20,7 +20,7 @@ import Page13 from "./pages/page13/Page13";
 import Page14 from "./pages/page14/Page14";
 import Page15 from "./pages/page15/Page15";
 import Page16 from "./pages/page16/Page16";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import styled from "styled-components";
 import WhatWeBelieve from "./pages/whatWeBelieve/WhatWeBelieve";
@@ -35,6 +35,9 @@ import OurMission from "./pages/ourMission/OurMission";
 import ExtraPage from "./pages/extraPage/ExtraPage";
 import Spinner from "react-spinkit";
 import ContactPage from './pages/contactPage/ContactPage';
+import Write from './pages/blog/write/Write';
+import Register from './pages/blog/auth/register/Register';
+import Login from './pages/blog/auth/login/Login';
 
 const Container = styled.div`
   width: 100%;
@@ -49,6 +52,8 @@ function App() {
     })
     
   })
+
+  const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
   return (
     <Container>
       <Router>
@@ -80,6 +85,9 @@ function App() {
           <Route exact path='/blogs' component={Posts} />
           <Route exact path='/provinces' component={ExtraPage} />
           <Route exact path='/contact' component={ContactPage} />
+          <Route exact path='/write' component={Write} />
+          <Route exact path='/register' component={Register} />
+          <Route exact path='/login' component={Login} />
         </Switch>
       </Router>
       <GoUp />

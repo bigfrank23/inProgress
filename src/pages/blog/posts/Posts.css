@@ -5,6 +5,12 @@
     padding: 2rem;
     text-align: center;
 }
+/* .postsMainTitle button{
+    padding: 1rem;
+    outline: 0;
+    border: none;
+    background-color: black;
+} */
 .postContents{
     padding: 2rem;
     background-color: #fff;

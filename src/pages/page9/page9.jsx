@@ -20,6 +20,7 @@ import { faChurch, faAddressCard, faPhone, faAt, faCalendar, faArrowUpRightFromS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { provinces } from '../../teamMembers/provinces';
 import DirectorateImg from '../../images/directorate.png'
+import axios from 'axios';
 
 const Container = styled.div`
   width: 100%;
@@ -99,6 +100,67 @@ const Page9 = () => {
     // names must be equal
     return 0;
   });
+
+  const [fullname, setFullname] = useState('')
+  const [address, setAddress] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [province, setProvince] = useState('')
+  const [message, setMessage] = useState('')
+  // const [company, setCompany] = useState('')
+  const[loading, setLoading] = useState(false)
+
+  const handleRequest = async (e) => {
+    if(email && fullname && address && message && phone && province !== ""){
+      if(message !== ""){
+      e.preventDefault()
+    setLoading(true)
+    // console.log({email, message, name, subject, company})
+
+    const body = {
+      email,
+      message, 
+      fullname,
+      province,
+      phone,
+      address
+    }
+
+   await axios.post('http://localhost:5000/directorate/', body, {
+      headers: {
+        'Content-type': 'application/json'
+      }
+    }).then((res) => {
+      alert('Email Sent Successfully')
+      // console.log('Email Sent Successfully')
+      setLoading(false)
+      console.log(res)
+      // window.location.reload()
+      if (res.data.status === 'success') {
+        alert("Message Sent.");
+        // console.log("Message Sent.");
+        setEmail("")
+        setFullname("")
+        setAddress("")
+        setPhone("")
+        setMessage("")
+        setProvince("")
+      }
+    }).catch((err) => {
+      console.log(err)
+      setLoading(false)
+    })
+      } else {
+        alert('Compose Email')
+      }
+      
+    } else {
+      alert('Please fill all required form')
+    }
+  }
+
+
+
   return (
     <Container>
       <div className="page1Wrapper">
@@ -176,40 +238,30 @@ const Page9 = () => {
                       {modalData.directorate}
                     </Typography>
                     <div style={{padding: "2rem"}}>
-                    <form>
-                      {/* <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputEmail4">Email</label>
-                          <input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputPassword4">Password</label>
-                          <input type="password" className="form-control" id="inputPassword4" placeholder="Password" />
-                        </div>
-                      </div> */}
+                    <form onSubmit = {handleRequest} method = "post">
                       <div class="form-group">
                         <label for="name">Full name</label>
-                        <input type="text" className="form-control" id="name"  />
+                        <input type="text" className="form-control" id="name" value = {fullname} onChange = {(e) => setFullname(e.target.value)}  />
                       </div>
                       <div class="form-group">
                         <label for="inputAddress">Address</label>
-                        <input type="text" className="form-control" id="inputAddress"  />
+                        <input type="text" className="form-control" id="inputAddress" value = {address} onChange = {(e) => setAddress(e.target.value)}  />
                       </div>
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" className="form-control" id="email"  />
+                        <input type="email" className="form-control" id="email" value = {email} onChange = {(e) => setEmail(e.target.value)}  />
                       </div>
                       <div class="form-group my-3">
                         <label for="phone">Phone Number</label>
-                        <input type="number" className="form-control" id="phone"  />
+                        <input type="number" className="form-control" id="phone" value = {phone} onChange = {(e) => setPhone(e.target.value)}  />
                       </div>
                       <div className="form-row">
                         <div className="form-group col-md-6">
                           <label for="inputState">Select your province</label>
-                          <select id="inputState" class="form-control">
+                          <select id="inputState" class="form-control" value = {province} onChange = {(e) => setProvince(e.target.value)}>
                             <option selected>Select</option>
                               {allProvinces.map((data)=> (
-                                <option>
+                                <option value={data.province}>
                                   {data.province}
                                 </option>
                               ))}
@@ -218,9 +270,9 @@ const Page9 = () => {
                       </div>
                         <div class="form-group my-3">
                         <label for="exampleFormControlTextarea1">Your Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value = {message} onChange = {(e) => setMessage(e.target.value)} />
                       </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary" disabled = {loading} onClick = {handleRequest}>Submit</button>
                     </form>
                     </div>
                   </Box>
