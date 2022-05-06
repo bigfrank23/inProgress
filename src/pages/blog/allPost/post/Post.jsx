@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
-import Img3 from "../../../images/bg2.jpg";
-import Img5 from "../../../images/pro9.jpg";
+import Img3 from "../../../../images/bg2.jpg";
+import Img5 from "../../../../images/pro9.jpg";
+import UserImg from "../../../../images/user.png";
 import styled from "styled-components";
-import H2 from '../../../components/Text/H2';
+import H2 from '../../../../components/Text/H2';
 // import Button from "../../../components/Button/Button";
-import './Posts.css'
-import H3 from "../../../components/Text/H3";
-import { postData } from "../data";
-import Footer from "../../../components/Footer/Footer";
+import './Post.css'
+import H3 from "../../../../components/Text/H3";
+// import { postData } from "../../data";
+import Footer from "../../../../components/Footer/Footer";
 import Button from '@mui/material/Button'
 import { Link, useNavigate} from "react-router-dom";
+import moment from "moment";
 
 const Container = styled.div`
   user-select: none;
@@ -66,9 +68,8 @@ const Container = styled.div`
   }
 `;
 
-const Posts = () => {
+const Post = ({postData}) => {
   // let navigate = useNavigate()
-  const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
   const [show, setShow] = useState(true)
 
   // const handleClick = () => {
@@ -79,44 +80,26 @@ const Posts = () => {
   //   }
   // }
   return (
-    <Container>
-      <div className="page1Wrapper">
-        <div className="page1Header">
-          <h1>Blog</h1>
-        </div>
-      </div>
+     <Container>
       <div className="postsContainer">
-        <div className="postsMainTitle">
-          <H2>All Posts</H2>
-          {
-            user ?
-            <Link to='/write'>
-              <Button variant="contained">Create a post</Button>
-            </Link>
-            :
-            <Link to='/login'>
-              <Button variant="contained">Create a post</Button>
-            </Link>
-          }
-        </div>
-        {postData.map((data) => (
+        {/* {postData.map((data) => ( */}
           <div className="postContents">
             <div className="postsContentTop">
               <div className="postsAuthorInfo">
                 <div className="postsProfile">
                   <div className="postsAuthorImg">
-                    <img src={data.userImg} alt="" />
+                    <img src={!postData.profilePic && UserImg} alt="" />
                   </div>
                   <div className="postsAuthor">
-                    <span>{data.name}</span>
+                    <span>{postData.username}</span>
                   </div>
                 </div>
                 <div className="postsDate">
-                  <span>{data.postTime}</span>
+                  <span>{moment(postData.createdAt).fromNow()}</span>
                 </div>
               </div>
               <div className="postsTitle">
-                <H3>{data.postTitle}</H3>
+                <H3>{postData.title}</H3>
               </div>
             </div>
             <div
@@ -125,36 +108,29 @@ const Posts = () => {
               }
             >
               <div className="postsImg">
-                <img src={data.postImg} alt="" />
+                <img src={postData.selectedFile} alt="" />
               </div>
-              <div className={!show ? "postsTxt" : "postsTxtActive"}>
+              <div className="postsTxtActive">
                 <div className="reactions">
                   <i className="fa fa-heart" aria-hidden="true" />
                   <i className="fa fa-comment" aria-hidden="true" />
                 </div>
                 <p>
-                  <p>{data.postTxt} </p>
-                  <p>{data.postTxt2} </p>
-                  <p>{data.postTxt3} </p>
-                  <p>{data.postTxt4} </p>
-                  <p>{data.postTxt5} </p>
-                  <p>{data.postTxt6} </p>
+                  {postData.desc}
                 </p>
               </div>
               <div className="postsBtn">
-                <Button
-                  BtnText={show ? "More" : "Less"}
-                  onClick={() => setShow(!show)}
-                />
+              <Link to={`/full_detail/${postData._id}`}>
+                <Button variant="contained" color="secondary">Full Details</Button>
+              </Link>
               </div>
             </div>
-            <div className="postsContentBottom"></div>
+            {/* <div className="postsContentBottom"></div> */}
           </div>
-        ))}
+        {/* ))} */}
       </div>
-      <Footer />
     </Container>
   );
 };
 
-export default Posts;
+export default Post;

@@ -3,7 +3,7 @@ import axios from 'axios'
 const API = axios.create({baseURL: "http://localhost:5000/api"});
 
 //Route
-export const getAll = () => API.get("/allPosts/")
+// export const getAll = () => API.get("/allPosts/")
 export const createPost = (writeData) => API.post("/post/", writeData)
 export const getAllPost = () => API.get("/post/")
 // export const getAllPost_others = () => API.get("/others/")

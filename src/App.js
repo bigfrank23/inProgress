@@ -28,7 +28,7 @@ import TheNational from "./pages/theNational/TheNational";
 import PastPfn from "./pages/pastPfn/PastPfn";
 import PfnExecutives from "./pages/pfnExecutives/PfnExecutives";
 import Gallery from './pages/gallery/Gallery'
-import Posts from './pages/blog/posts/Posts'
+import Post from './pages/blog/allPost/post/Post'
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import GoUp from "./components/goUp/GoUp";
 import OurMission from "./pages/ourMission/OurMission";
@@ -38,6 +38,10 @@ import ContactPage from './pages/contactPage/ContactPage';
 import Write from './pages/blog/write/Write';
 import Register from './pages/blog/auth/register/Register';
 import Login from './pages/blog/auth/login/Login';
+import AllPosts from './pages/blog/allPost/AllPosts';
+import FullDetail from './pages/blog/fullDetail/FullDetail';
+import Settings from './pages/blog/settings/Settings';
+import Login2 from './pages/blog/auth/login2/Login2';
 
 const Container = styled.div`
   width: 100%;
@@ -82,12 +86,16 @@ function App() {
           <Route exact path='/page16' component={Page16} />
           <Route exact path='/gallery' component={Gallery} />
           <Route exact path='/our-mission' component={OurMission} />
-          <Route exact path='/blogs' component={Posts} />
+          {/* <Route exact path='/blogs' component={Post} /> */}
+          <Route exact path='/blogs' component={AllPosts} />
+          <Route exact path="/full_detail/:id" component={FullDetail} />
+          <Route exact path="/settings" component={Settings} />
           <Route exact path='/provinces' component={ExtraPage} />
           <Route exact path='/contact' component={ContactPage} />
           <Route exact path='/write' component={Write} />
           <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
+          <Route exact path='/admin_login' component={Login2} />
         </Switch>
       </Router>
       <GoUp />

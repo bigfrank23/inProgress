@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 .header{
     margin: auto;
     /* margin-bottom: 60px; */
@@ -5,8 +7,7 @@
     padding: 0 7rem;
 }
 .header .topHeader{
-    font-style: italic;
-    color: green;
+    margin-top: 2rem;
 }
 .header .centerHeader{
     padding: 0 0 24px;
@@ -19,6 +20,11 @@
 }
 .header .topHeader, .centerHeader, .bottomHeader{
     text-align: center;
+}
+.topHeader h2{
+    color: #006633;
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
 }
 .content{
     padding: 0 4rem;

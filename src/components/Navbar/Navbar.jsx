@@ -5,22 +5,62 @@ import { Link } from 'react-router-dom'
 import './navbar.css'
 import LogoImg from '../../images/pfnLogo.png'
 import Img from '../../images/splash2.jpg'
+import ProfileImg from '../../images/profile.png'
 import Img5 from '../../images/pfnLogo.png'
 import { mobile } from '../../responsive'
 import Button2 from '../Button/Button2'
 import moment from 'moment'
 import Button from '../Button/Button'
+import { PaystackButton } from 'react-paystack';
+
+import { useDispatch } from 'react-redux';
+import { LOGOUT } from '../../pages/blog/redux/constants/actionTypes';
 
 const Container = styled.nav`
     /* ${mobile({display: 'none'})} */
     user-select: none;
 `
+
+const config = {
+  reference: (new Date()).getTime().toString(),
+  email: "user@example.com",
+  amount: 20000,
+  publicKey: 'pk_test_dsdfghuytfd2345678gvxxxxxxxxxx',
+};
+
+const user = JSON.parse(localStorage.getItem('mern_crud3_copy_user'))
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
     const [closeNav, setCloseNav] = useState(false)
     const [scroll, setScroll] = useState(false)
     const [openMain, setOpenMain] = useState('')
     const [dropdownNav, setDropdownNav] = useState(false)
+
+    const dispatch = useDispatch()
+
+   // you can call this function anything
+   const handlePaystackSuccessAction = (reference) => {
+    // Implementation for whatever you want to do with reference and after success call.
+    console.log(reference);
+  };
+
+  // you can call this function anything
+  const handlePaystackCloseAction = () => {
+    // implementation for  whatever you want to do when the Paystack dialog closed.
+    console.log('closed')
+  }
+
+  const componentProps = {
+      ...config,
+      text: 'GIVE NOW',
+      onSuccess: (reference) => handlePaystackSuccessAction(reference),
+      onClose: handlePaystackCloseAction,
+  };
+    
+    const handleLogOut = () => {
+        dispatch({type: LOGOUT})
+        window.location.replace("/")
+    }
 
     
 
@@ -37,13 +77,29 @@ const Navbar = () => {
     <Container id="navbar" className={scroll && "activeNavbar"}>
       {/* <Announcement /> */}
       <div className="top">
-        <div className="eventTime">
-          <Link to="#" className="links" id="topLinks">
-            {" "}
-            Watch Live:{" "}
-          </Link>{" "}
-          &nbsp;22: 33: 33
-        </div>
+        {
+          user ?
+          <div className="eventTime">
+            <div className="authBx">
+              <Link to="/settings" id='links'>
+                <div className="authBxImg">
+                  <img src={ !user.user.profilePic ? ProfileImg : user.user.profilePic } alt="" className='profileImg' />
+                </div>
+                <div className="authBxName">
+                  <span>{user.user.username}</span>
+                </div>
+              </Link>
+            </div>
+            <h6 className="authBxLogout" onClick={handleLogOut}>Log out</h6>
+          </div>
+          :
+          <div className="eventTime">
+            <Link to="/admin_login" id='links'>
+            <h6 className="authBxLogout">Log in</h6>
+            </Link>
+          </div>
+
+        }
         <div className="nav">
           <Link to="/">
             <div className="logo">
@@ -91,7 +147,7 @@ const Navbar = () => {
                         <hr className='mainListHr' />
                         <div className="mainListItemsCenterRightNavContainer">
                           <ul className="mainListItemsCenterRightList">
-                            <li className="mainListItemsCenterRightListItems">what we believe</li>
+                            <li className="mainListItemsCenterRightListItems">Who we are</li>
                             <Link to="#" id='links'>
                             <li className="mainListItemsCenterRightListItems">About us</li>
                             </Link>
@@ -102,13 +158,13 @@ const Navbar = () => {
                             <li className="mainListItemsCenterRightListItems">Mission</li>
                             </Link>
                             <Link to="#"id='links'>
-                            <li className="mainListItemsCenterRightListItems">Quotes</li>
+                            <li className="mainListItemsCenterRightListItems">Messages</li>
                             </Link>
                           </ul>
                           <ul className="mainListItemsCenterRightList">
-                            <li className="mainListItemsCenterRightListItems">Contact us</li>
+                            <li className="mainListItemsCenterRightListItems">Our Structure</li>
                             <Link to="/volunteer" id="links">
-                            <li className="mainListItemsCenterRightListItems">Volunteer</li>
+                            <li className="mainListItemsCenterRightListItems">Directorate</li>
                             </Link>
                             <Link to="#" id="links">
                             <li className="mainListItemsCenterRightListItems">The National</li>
@@ -121,7 +177,7 @@ const Navbar = () => {
                             </Link>
                           </ul>
                           <ul className="mainListItemsCenterRightList">
-                            <li className="mainListItemsCenterRightListItems">Gallery</li>
+                            <li className="mainListItemsCenterRightListItems">Activities</li>
                             <Link to='#' id='links'>
                             <li className="mainListItemsCenterRightListItems">Blog</li>
                             </Link>
@@ -339,6 +395,7 @@ const Navbar = () => {
                 >
                   {/* <h3>Give</h3> */}
                   <Button BtnText="Give" />
+                  {/* <PaystackButton {...componentProps} /> */}
                 </Link>
               ) : (
                 <Button2 BtnText="Give" />

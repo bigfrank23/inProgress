@@ -58,7 +58,7 @@ export const deletePost = (id) => async (dispatch) => {
     try{
         await api.deletePost(id);
         dispatch({type: DELETE, payload: id});
-        window.location.replace("/");
+        window.location.replace("/blogs");
     } catch (error) {
         console.log(error);
     }

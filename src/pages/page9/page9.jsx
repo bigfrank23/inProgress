@@ -32,7 +32,7 @@ const Container = styled.div`
   .page1Wrapper {
     /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
     clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
-    clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    /* clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url(${DirectorateImg});
     background-size: cover;
@@ -45,7 +45,7 @@ const Container = styled.div`
     width: 100%;
     position: relative;
     top: 0;
-    height: 65vh;
+    height: 53vh;
     .page1Header {
       color: #fff;
       text-align: center;
