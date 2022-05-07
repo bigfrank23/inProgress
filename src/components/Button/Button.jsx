@@ -29,7 +29,7 @@ const Btn = styled.button`
 const Button = ({outline= false, BtnText= 'text', onClick=true}) => {
   return (
     <Container>
-        <Btn outline={outline} onClick={onClick}>{BtnText}</Btn>
+        <Btn outline={outline} >{BtnText}</Btn>
     </Container>
   )
 }

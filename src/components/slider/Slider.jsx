@@ -9,12 +9,26 @@ import { Link } from 'react-router-dom';
 
 const slides = [
   {
+    title: "Recent Blog",
+    description: "Pentecostal and charismatic revivals in Nigeria",
+    p: "Perhaps no single phenomenon has contributed to the growth of the Church in Nigeria like the 20th century revivals. Between 1914 and 1990s, no less than six major revivals occurred, which impacted the Church in Nigeria in no small measure. This is why some argue that the greatest need of the Church now is for revival and reformation. The past revivals brought growth to the Church, but failed to bring about a moral reformation of the society. This was a great shortcoming of the past revivals.",
+    img: Img2,
+    to: '/blog'
+  },
+  {
     title: "By Austen C. Ukachi",
     description: "Pentecostal and charismatic revivals in Nigeria",
     p: "Perhaps no single phenomenon has contributed to the growth of the Church in Nigeria like the 20th century revivals. Between 1914 and 1990s, no less than six major revivals occurred, which impacted the Church in Nigeria in no small measure. This is why some argue that the greatest need of the Church now is for revival and reformation. The past revivals brought growth to the Church, but failed to bring about a moral reformation of the society. This was a great shortcoming of the past revivals.",
     img: Img2,
+    to: '/blog'
   },
-  { title: "View All" },
+  {
+    title: "By Austen C. Ukachi",
+    description: "Pentecostal and charismatic revivals in Nigeria",
+    p: "Perhaps no single phenomenon has contributed to the growth of the Church in Nigeria like the 20th century revivals. Between 1914 and 1990s, no less than six major revivals occurred, which impacted the Church in Nigeria in no small measure. This is why some argue that the greatest need of the Church now is for revival and reformation. The past revivals brought growth to the Church, but failed to bring about a moral reformation of the society. This was a great shortcoming of the past revivals.",
+    img: Img2,
+    to: '/blog'
+  },
 ];
 
 const Slider = () => {

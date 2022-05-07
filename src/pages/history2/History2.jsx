@@ -1,6 +1,12 @@
 import React from 'react'
 import Img from "../../images/splash3.jpg";
 import Img2 from "../../images/splash3.jpg";
+import HistoryImg1 from "../../images/history.png";
+import HistoryImg2 from "../../images/history2.png";
+// import HistoryImg2 from "../../images/history2.jpg";
+import HistoryImg3 from "../../images/history3.png";
+import HistoryImg4 from "../../images/history4.png";
+import HistoryImg5 from "../../images/history5.jpeg";
 import Img3 from "../../images/bg2.jpg";
 import Img4 from "../../images/bg2.jpg";
 import styled from 'styled-components'
@@ -82,13 +88,13 @@ const History2 = () => {
         <div className="historyFlexContainer">
           <div className={scroll ? "animate1" : "historyGridContainer"}>
             <div className={scroll ? "animate2" : "firstImgBx"}>
-              <img src={Img2} alt="" />
+              <img src={HistoryImg1} alt="" />
             </div>
             <div className="secondImgBx">
-              <img src={Img2} alt="" />
+              <img src={HistoryImg2} alt="" />
             </div>
             <div className="thirdImgBx">
-              <img src={Img2} alt="" />
+              <img src={HistoryImg3} alt="" />
             </div>
           </div>
           <div className="historyContainerRight">
@@ -100,7 +106,7 @@ const History2 = () => {
                 <p id='large'>
                 Yet, the Pentecostal movement in Nigeria is less than 100
                 <div className={scroll2 ? "animate3" : "historyFloatImgBx"}>
-                  <img src={Img2} width={200} alt="" /> 
+                  <img src={HistoryImg5} width={200} alt="" /> 
                   </div>
                 launched an indigenous
                 years old. It started in early 1900s when Anglican

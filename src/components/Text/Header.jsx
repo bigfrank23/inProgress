@@ -20,7 +20,7 @@ const HeaderStyle = styled.div`
 `;
 const Header = ({children, color= false, transform=false, fontStyle=false}) => {
   return (
-    <HeaderStyle className='mainHeader' color={color} transform={transform}>
+    <HeaderStyle className='mainHeader' color={color} transform>
       <h1 style={{ fontFamily: "'Tangerine', cursive", fontSize: "3.5rem" }}>{children}</h1>
     </HeaderStyle>
   );

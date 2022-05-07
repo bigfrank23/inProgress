@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import Header from '../Text/Header'
 import PText from '../Text/PText'
 import { mobile } from '../../responsive'
-import FooterImg from '../../images/footer.jpg'
+import FooterImg from '../../images/footer.png'
 import H3 from '../Text/H3'
 import { tab } from './../../responsive';
 import { landscapeTab } from './../../responsive';
@@ -213,7 +213,7 @@ const Footer = () => {
             </div>
         </div>
         <div style={{textAlign: "center"}}>
-        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" height="35" style={{border: "none", overflow: "hidden"}} scrolling="no" frameborder="0" allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
+        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" height="35" style={{border: "none", overflow: "hidden"}} scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
         </div>
         <div style={{display: "flex", justifyContent: "space-around"}}>
           <Credits>

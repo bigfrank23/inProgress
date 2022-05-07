@@ -71,6 +71,7 @@ function App() {
           <Route exact path='/the-national' component={TheNational} />
           <Route exact path='/past-pfn-chairmen' component={PastPfn} />
           <Route exact path='/pfn-executives' component={PfnExecutives} />
+          <Route exact path='/page4' component={Page4} />
           <Route exact path='/page5' component={Page5} />
           <Route exact path='/page6' component={Page6} />
           <Route exact path='/history' component={History} />

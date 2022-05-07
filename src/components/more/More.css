@@ -1,0 +1,24 @@
+#moreContainer{
+    background-color: lightskyblue;
+    padding: 2rem 7rem;
+}
+#moreRow{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.blogIndexTitle, .announcementIndexTitle, .newsfeedIndexTitle{
+    text-align: center;
+}
+.blogIndexImg{
+    height: 350px;
+}
+.blogIndexImg img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.blogIndexPara{
+    padding: 1rem 0;
+}

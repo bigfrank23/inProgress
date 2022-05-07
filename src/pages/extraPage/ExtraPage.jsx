@@ -112,6 +112,12 @@ const ExtraPage = () => {
                                       <p>
                                       <span style={{color: "tomato", fontWeight: 'bold'}}>Meeting days:</span>  {data.MeetingDays}
                                       </p>
+                                      <p>
+                                      <span style={{color: "tomato", fontWeight: 'bold'}}>Time:</span>  {data.time}
+                                      </p>
+                                      <p>
+                                      <span style={{color: "tomato", fontWeight: 'bold'}}>Venue:</span>  {data.venue}
+                                      </p>
                                   </div>
                               </div>
                           </div>

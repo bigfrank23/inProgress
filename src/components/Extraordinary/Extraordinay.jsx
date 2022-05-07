@@ -9,9 +9,10 @@ import { landscapeTab, mobile, tab } from '../../responsive'
 import H3 from '../Text/H3'
 import PText from '../Text/PText'
 import { Grid } from '@material-ui/core'
-import Img1 from '../../images/gallery/88.jpg'
+import Img1 from '../../images/announcement.jpeg'
 import Img2 from '../../images/gallery/33.jpg'
 import Img3 from '../../images/gallery/58.jpg'
+import H2 from '../Text/H2'
 
 
 const Container = styled.div`
@@ -33,10 +34,10 @@ const ExtraContentContainer = styled.div`
 const ExtraTextContainer = styled.div`
     text-align: center;
 `
-const ExtraText = styled.h1`
-  font-size: 2.5rem;
-  font-style: italic;
-  color: #008753;
+const ExtraText = styled.h2`
+  color: #006633;
+  font-family: 'Indie Flower', cursive;
+  font-size: 3rem;
   margin: 0 auto 20px auto;
   text-align: center;
   ${mobile({ padding: "1rem 0", fontSize: "1.7rem" })}
@@ -111,8 +112,10 @@ const ExtraContentContainer2 = styled.div`
 const ExtraTextContainer2 = styled.div`
     text-align: center;
 `
-const ExtraText2 = styled.h1`
-    font-size: 25px;
+const ExtraText2 = styled.h2`
+    color: #006633;
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
     margin: 0 0 30px;
     text-align: center;
 `
@@ -130,13 +133,15 @@ const ExtraCard = styled.div`
 `
 const ExtraCardImgContainer = styled.div`
     width: 100%;
-    background-color: #008753;
+    /* height: 200px; */
+    /* background-color: #008753; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     `
 const ExtraCardImg = styled.img`
-    width: 100%;
-    /* height: 200px; */
+    /* object-fit: contain; */
+    width: 80%;
+    height: 400px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 `
@@ -224,24 +229,28 @@ const Extraordinay = () => {
                 <ExtraCardImgContainer>
                   <ExtraCardImg src={card.img} />
                 </ExtraCardImgContainer>
-                <ExtraContentText2>
-                  <ExtraTitle>
+                {/* <ExtraContentText2> */}
+                  {/* <ExtraTitle>
                     {" "}
                     <H3 children={card.title} color={true} />{" "}
-                  </ExtraTitle>
+                  </ExtraTitle> */}
                   {/* <div style={{display: 'flex', color: "white"}}> */}
-                  <ExtraDate>
+                  {/* <ExtraDate>
                     {" "}
                     <PText children="" color={true} />{" "}
-                  </ExtraDate>
+                  </ExtraDate> */}
                   {/* </div> */}
                   {/* <div style={{display: 'flex', color: "white"}}> */}
-                  <ExtraLocation>
+                  {/* <ExtraLocation>
                     <PText children="View Detail" color={true} />{" "}
-                  </ExtraLocation>
+                  </ExtraLocation> */}
                   {/* </div> */}
-                </ExtraContentText2>
+                {/* </ExtraContentText2> */}
               </ExtraCard>
+              <div style={{padding: '1rem'}}>
+                    {" "}
+                    <H2 children={card.title} />{" "}
+                  </div>
             </Grid>
           ))}
         </Grid>

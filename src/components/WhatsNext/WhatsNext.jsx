@@ -6,8 +6,10 @@ import PText from '../Text/PText'
 import './whatNext.css'
 import { Grid } from '@material-ui/core';
 import Img1 from '../../images/gallery/24.jpg'
-import Img2 from '../../images/vol.jpg'
+import Img2 from '../../images/directorate.png'
 import Img3 from '../../images/prayer.jpeg'
+import H3 from '../Text/H3'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
     width: 100%;
@@ -23,40 +25,45 @@ const WhatsNext = () => {
         img: Img3,
         title: "Prayer line",
         desc: "Know More",
+        to: "/prayer"
       },
       {
         id: 2,
         img: Img2,
-        title: "Volunteer",
+        title: "Directorate",
         desc: "Know More",
+        to: "/directorate"
       },
       {
         id: 3,
         img: Img1,
         title: "Gallery",
         desc: "Know More",
+        to: "/gallery"
       },
     ];
   return (
     <Container>
       <div className="nextHeader">
         <div className="nextTitle">
-          <h1>What's Next For You?</h1>
+          <h2>What's Next For You?</h2>
         </div>
         <div className="nextPara">
-          <PText children="We are here to support each other on journeys through life" />
+          <PText weight children="We are here to support each other on journeys through life" />
         </div>
       </div>
       <div className="nextContent">
           <Grid container spacing={3}>
         {items.map((item) => (
             <Grid item xs={12} sm={6} md={4} key={item.id}>
-              <div className="contentBox">
-                <img src={item.img} alt="" />
-                <div className="contentText">
-                  <H2>{item.title}</H2>
+              <Link to={item.to} id="links">
+                <div className="contentBox">
+                  <img src={item.img} alt="" />
+                  <div className="contentText">
+                    <H2>{item.title}</H2>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </Grid>
         ))}
         </Grid>

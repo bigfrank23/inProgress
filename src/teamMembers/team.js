@@ -1,4 +1,11 @@
 import Img from '../images/pro3.jpg'
+import Img2 from '../images/team/leke.jpg'
+import Img25 from '../images/team/fal.jpg'
+import ImgC18 from '../images/team/victor.jpg'
+import ImgB11 from '../images/team/ola.jpg'
+import ImgB8 from '../images/team/moses.png'
+import ImgB31 from '../images/team/juliet.png'
+import ImgB32 from '../images/team/frank.jpg'
 export const cwc = [
   {
     id: 1,
@@ -15,9 +22,10 @@ export const cwc = [
   },
   {
     id: 2,
-    img: Img,
+    img: Img2,
     name: "PASTOR LEKE AKINOLA",
     title: "DEPUTY CHAIRMAN ",
+    position: "General overseer",
     church: "Upper Room Baptist Church",
     address: "20, Davies Street, Off Demurin Street, Ketu Lagos",
     tel: "08035652137, 08057845480",
@@ -213,9 +221,10 @@ export const directors = [
   },
   {
     id: 8,
-    img: Img,
+    img: ImgB8,
     name: "BISHOP MOSES. A. IDRIS",
     title: "PRAYER DIRECTOR ",
+    position: "GENERAL OVERSEER",
     church: "MINISTRY NAME: LIVING ROCK GOSPEL CHURCH INT'L",
     address: "1/3 TINUADE ADEPEGBA STREET OFF ADEPEGBA ROAD, ABULE EGBA LAGOS.",
     headOffice: "",
@@ -267,9 +276,10 @@ export const directors = [
   },
   {
     id: 11,
-    img: Img,
+    img: ImgB11,
     name: "REV. OLADELE AFOLABI",
     title: "DIRECTOR -PROJECTS AND INFRASTRUCTURE",
+    position: "State Director, Project and Infrastructure",
     church: "Christ Base Assembly",
     address: "10 Shokoya Street Oworonsoki",
     headOffice: "",
@@ -542,9 +552,9 @@ export const directors = [
   },
   {
     id: 25,
-    img: Img,
+    img: Img25,
     name: "Pastor Emmanuel Olu Falodun",
-    title: "DEPUTY DIRECTOR, TRAINING ",
+    title: "Deputy Director - Directorate of Learning and Development ",
     church: "Christ Salvation Victory Mission Int'l",
     address: "63, Falohun Street, Orile Iganmu, Lagos",
     headOffice: "",
@@ -557,6 +567,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "Emmanuel Olu Falodun is one of Africa’s best leadership development coaches. Highly devoted, disciplined and dedicated to training and building leaders for maximum productivity. He is consumed with the passion to see people fulfill their God given mandate. He travels in Africa, Europe, America encouraging excellence and godliness. The vision for the top achievers network was birthed after years of working with young people across many fronts in 2010. Through various mediums, lives are being positively affected. He is the General Overseer of CHRIST SALVATION VICTORY MISSION INT’L. He founded the Victory Leadership Institute where leaders are being sharpened for excellence. He presides over the Power For Exploits Ministries which organizes Conferences, Seminar and Summits for empowerment since 1997. A graduate of University of Lagos, with B.Sc. Business Administration. He has a honorary Doctorate degree on Leadership & Christian ministry from Global Christian University, Nigeria This anointed vessel has authored over thirty books on Leadership, Prayer, Youth Empowerment and Church Ministry. He coordinates the Nations Prayer And Fasting Network (NAPFAN) a global prayer network of Christian leaders and the million-plus intercessors (millionplusintercessors.org) Through the Faith Heroes Africa Project (www.faithheroesafrica.org) He supervises the documentation of the moves of God in Africa. He's been married for over twenty three years to Pastor Ruth Oluyemi an intercessor and partner in ministry. "
   },
   {
     id: 26,
@@ -652,9 +663,10 @@ export const directors = [
   },
   {
     id: 31,
-    img: Img,
+    img: ImgB31,
     name: "Rev. Juliet Biniti",
     title: "DEPUTY SECRETARY",
+    position: "PRESIDENT/FOUNDER",
     church: "Precious Jewel Ministries International",
     address: "",
     headOffice: "",
@@ -670,21 +682,23 @@ export const directors = [
   },
   {
     id: 32,
-    img: Img,
-    name: "REV FRANK ERHABOR ",
+    img: ImgB32,
+    name: "REV FRANK ERHABOR",
     title: "DEP. FInancial SECRETARY",
+    position: "SENIOR PASTOR",
     church: "Good Success Christian Center",
     address: "6, Tologbo Road Magbon Badagry",
     headOffice: "",
     tel: "08033324470",
     dOb: " 6th July",
-    email: "revjulietbinitie@gmail.com",
+    email: "",
     chapter: "",
     province: "Badagry",
     associatePastor: "",
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "I'm born on 6th July 1962. Got born again 1976. CHURCH OF GOD. 1976-1986 FOUR-SQURE GOSPEL CHURCH 1986-1994 LIVING FAITH CHIRCH WINNERS CHAPEL 1995- Feb. 1999 SHEKINAH MINISTRY INT'L March 1999-Feb. 2001 Good Success Christian Centre April 2001-date. Ordained Into the ministry by BISHOP DAVID OYEDEPO March 1996. Served in living Faith from March 1996-December 1999. Moved to Shekinah ministry 2000 unser the leadership of LATE Apostle J M WILLIAMS. PFN JOURNEY: Area Coordinator, MAGBON. 2002-2004 Zonal Chairman MAGBON. 2005-March 2006 Regional Secretary. April 2006-June 2010 Province vice Chairman June 2010-2012 State Deputy Financial Secretary 2014-date. "
   },
   {
     id: 33,
@@ -1199,7 +1213,7 @@ export const chairmen = [
     {
         id: 17,
         img: Img,
-        name: "REV S.T ISRAEL",
+        name: "REV Sheriff Tosin Israel",
         title: "CHAIRMAN, MAINLAND PROVINCE",
         church: "CITY OF GOD RESURRECTION ASSEMBLY",
         address: "4A ADARAMAJA ST, IWAYA YABA LAGOS",
@@ -1216,7 +1230,7 @@ export const chairmen = [
     },
     {
         id: 18,
-        img: Img,
+        img: ImgC18,
         name: "Rev Aghraghra Victor Uzezi",
         title: 'CHAIRMAN, EPE PROVINCE ',
         church: "The Transformed Christian Assembly (Inc).",
@@ -1230,7 +1244,8 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        positon: "General Overseer"
     },
     {
         id: 19,

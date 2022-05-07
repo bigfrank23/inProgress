@@ -20,7 +20,7 @@ const InputField = props => {
                 className='primaryBtn primaryBtn--big g__justify-self-center'
                 type='submit'
                 value={props.label}
-                disabled={validateInput(props.formValues)}
+                disabled={validateInput(props.formvalues)}
             />
         )
     } else if (props.type === "textarea") {
@@ -31,7 +31,7 @@ const InputField = props => {
                     onChange={(e) => props.onChangeHandler(e.target.value)}
                     placeholder={props.placeholder}
                     value={props.value}
-                    required={props.isRequired}
+                    required={props.isrequired}
                     className="inputField__field"
                     rows={7}
                     name={props.name}
@@ -47,7 +47,7 @@ const InputField = props => {
                     type={props.type}
                     placeholder={props.placeholder}
                     value={props.value}
-                    required={props.isRequired}
+                    required={props.isrequired}
                     className="inputField__field"
                     name={props.name}
                 />

@@ -233,7 +233,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="col-lg-4 bg-image" style={{background: "#263948"}}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253664.50294512132!2d3.2922873848851304!3d6.583612394604272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8de2d6dc2833%3A0x6b683e00c6393bd7!2sPentecostal%20Fellowship%20of%20Nigeria%2C%20Lagos%20State!5e0!3m2!1sen!2sng!4v1651050624529!5m2!1sen!2sng" width="100%" height="300" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253664.50294512132!2d3.2922873848851304!3d6.583612394604272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8de2d6dc2833%3A0x6b683e00c6393bd7!2sPentecostal%20Fellowship%20of%20Nigeria%2C%20Lagos%20State!5e0!3m2!1sen!2sng!4v1651050624529!5m2!1sen!2sng" width="100%" height="300" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               <div className="detail-box p-4">
                 <h5 className="text-white font-weight-light mb-3">ADDRESS</h5>
                 <p className="text-white op-7"> <i className="fa fa-address-book" aria-hidden="true" /> 5-9 Bode Thomas Rd, Onipanu 100252,

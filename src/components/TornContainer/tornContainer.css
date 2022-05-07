@@ -11,10 +11,10 @@
     width: 50%;
     padding: 1rem 0;
 }
-.tornContent .contentHeader h1{
-    font-size: 2.5rem;
-    font-style: italic;
+.tornContent .contentHeader h2{
     color: #006633;
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
     margin: 0 auto 10px auto;
     text-align: center;
 }

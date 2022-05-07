@@ -32,7 +32,7 @@ const Container = styled.div`
     width: 100%;
     position: relative;
     top: 0;
-    height: 100vh;
+    height: 62vh;
     .page1Header {
       color: #fff;
       text-align: center;
@@ -46,7 +46,7 @@ const Page4 = () => {
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
-          <h1>Header</h1>
+          <h1>News Feed</h1>
         </div>
       </div>
       <div className="page4Top">

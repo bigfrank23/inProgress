@@ -214,6 +214,12 @@
 .mainListItemsCenterRightSocials{
     color: #bdbbb8;
     text-align: left;
+    display: flex;
+    gap: 1rem;
+}
+.mainListItemsCenterRightSocials a{
+    color: #bdbbb8;
+    text-align: left;
 }
 .mainListItemsCenterRightSocials .fa:not(:first-child){
     padding-left: 10px;
@@ -275,7 +281,7 @@
     background: #232e32;
     padding: 1rem 10px;
     /* padding: 0 10px; */
-    line-height: 2;
+    line-height: 1.8;
     border-radius: 5px;
     height: 0px;
     opacity: 0;

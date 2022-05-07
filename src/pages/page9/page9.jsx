@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Img from "../../images/splash3.jpg";
 import Img1 from "../../images/splash3.jpg";
 import Img2 from "../../images/volunteer.jpg";
+import UpcomingImg from "../../images/announcement.jpeg";
 import Img3 from "../../images/bg2.jpg";
 import styled from 'styled-components'
 import Header from '../../components/Text/Header';
@@ -21,6 +22,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { provinces } from '../../teamMembers/provinces';
 import DirectorateImg from '../../images/directorate.png'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 const Container = styled.div`
   width: 100%;
@@ -184,21 +187,33 @@ const Page9 = () => {
         </div>
         <div className="page9TopContent">
           <div className="page9TopContentTitle">
-            <H2 color="true">Lorem, ipsum.</H2>
+            <H2 color="true">HELP ME GET STARTED</H2>
           </div>
-          <div className="page9TopContentTitle2">
+          {/* <div className="page9TopContentTitle2">
             <H3 color="true">Lorem, ipsum.</H3>
-          </div>
+          </div> */}
           <div className="page9TopContentPara">
-            <PText color="true">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto optio incidunt sed, pariatur quos quaerat, iure est nobis ipsa non earum quisquam culpa suscipit ex iusto deleniti? Eum laboriosam eligendi error magnam fugiat repudiandae aliquam ad minima debitis, iusto culpa id dolores enim earum non nulla vel delectus nam totam!
+            <PText color="true" weight>
+            Supporting the work of the PFN executives at all levels are the various directorates that offer invaluable inputs on specialized subjects and issues ranging from security to inter-governmental matters, and a host of others.
             </PText>
           </div>
-          <div className="page9TopContentTitle2">
-            <H3 color="true">Lorem, ipsum.</H3>
+          <div className="page9TopContentPara">
+            <PText color="true" weight>
+            The Directorate is a department that is responsible for one particular thing.
+            </PText>
           </div>
+          <div className="page9TopContentPara">
+            <PText color="true" weight>
+            It's our way of connecting people to the things they love to do. We believe that if you are doing something you love (and something God has already prepared you for), you’ll experience a greater sense of connection and purpose!
+            </PText>
+          </div>
+          {/* <div className="page9TopContentTitle2">
+            <H3 color="true">Lorem, ipsum.</H3>
+          </div> */}
           <div className="page9TopContentTitle2">
-            <H3 color="true">Complete your SHAPE profile online »</H3>
+            <Link to="/contact" id='links'>
+              <H3 color="true">Reach Out »</H3>
+            </Link>
           </div>
         </div>
       </div>
@@ -281,29 +296,7 @@ const Page9 = () => {
           ))}
         </div>
       </div>
-      <div className='page9Bottom'>
-        <div className="page9BottomTitle">
-          <H2>Upcoming Events</H2>
-        </div>
-        <div className="page9BottomContent">
-          <Upcomin title1="lorekroe"
-            title3="Celebrate Recovery"
-            title4="Date"
-            para1="2/0"
-            title5="Location"
-            para2="Lagos"
-            image={Img2}
-          />
-          <Upcomin title1="lorekroe"
-            title3="Celebrate Recovery"
-            title4="Date"
-            para1="2/0"
-            title5="Location"
-            para2="Lagos"
-            image={Img2}
-          />
-        </div>
-      </div>
+     
       <div className="page9BottomBanner">
         <div className="page9BottomBannerTitle">
           <H2>need some help getting started?</H2>

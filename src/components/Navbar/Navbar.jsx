@@ -109,7 +109,9 @@ const Navbar = () => {
           <div className="navLinks">
           <div className={openMain ? "mainListItems" : "notActiveMain"}>
                   <div className={openMain ? "mainListItemsTop" : "notActiveMain"}>
+                    <Link to="/" id='links' onClick={()=> setOpenMain(false)}>
                     <div className="logo"><img src={LogoImg} width={100} alt="logo" /></div>
+                    </Link>
                     <div className="time">{moment().format('LLLL')}</div>
                     <div className="closeMenu"  onClick={()=> setOpenMain(false)}> <h3>close</h3></div>
                   </div>
@@ -136,7 +138,7 @@ const Navbar = () => {
                           <div>
                             {!dropdownNav ? <i className="fa fa-angle-down" aria-hidden="true" /> : <i className="fa fa-angle-up" aria-hidden="true" />}
                           <div className="mainListItemsCenterRightTopParaDropdownItem" style={dropdownNav ? {"opacity": "1", position: "absolute", transition: "0.8s"} : {opacity: "0", position: "absolute", transition: "0.8s"}}>
-                            <Link to="#" id='links'>
+                            <Link to="/provinces" id='links' onClick={()=> setOpenMain(false)}>
                             <h6>Provinces</h6>
                             </Link>
                           </div>
@@ -148,46 +150,46 @@ const Navbar = () => {
                         <div className="mainListItemsCenterRightNavContainer">
                           <ul className="mainListItemsCenterRightList">
                             <li className="mainListItemsCenterRightListItems">Who we are</li>
-                            <Link to="#" id='links'>
+                            <Link to="/about" id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">About us</li>
                             </Link>
-                            <Link to="#"id='links'>
+                            <Link to="/history2"id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">History</li>
                             </Link>
-                            <Link to="#"id='links'>
+                            <Link to="/our-mission"id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Mission</li>
                             </Link>
-                            <Link to="#"id='links'>
+                            <Link to="#"id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Messages</li>
                             </Link>
                           </ul>
                           <ul className="mainListItemsCenterRightList">
                             <li className="mainListItemsCenterRightListItems">Our Structure</li>
-                            <Link to="/volunteer" id="links">
+                            <Link to="/directorate" id="links" onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Directorate</li>
                             </Link>
-                            <Link to="#" id="links">
+                            <Link to="/the-national" id="links" onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">The National</li>
                             </Link>
-                            <Link to="#" id="links">
+                            <Link to="/past-pfn-chairmen" id="links" onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Past PFN Chairmen</li>
                             </Link>
-                            <Link to="#" id="links">
+                            <Link to="/pfn-executives" id="links" onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">PFN Lagos State Executives</li>
                             </Link>
                           </ul>
                           <ul className="mainListItemsCenterRightList">
                             <li className="mainListItemsCenterRightListItems">Activities</li>
-                            <Link to='#' id='links'>
+                            <Link to='/blogs' id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Blog</li>
                             </Link>
-                            <Link to='#' id='links'>
+                            <Link to='/prayer' id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Prayer Line</li>
                             </Link>
-                            <Link to='#' id='links'>
+                            <Link to='/gallery' id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Upcoming Events</li>
                             </Link>
-                            <Link to='#' id='links'>
+                            <Link to='/gallery' id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Past Events</li>
                             </Link>
                           </ul>
@@ -195,10 +197,18 @@ const Navbar = () => {
                       </div>
                       <div className="mainListItemsCenterRightBottom">
                         <div className="mainListItemsCenterRightSocials">
-                          <i className="fa fa-facebook" aria-hidden="true" />
-                          <i className="fa fa-twitter" aria-hidden="true" />
-                          <i className="fa fa-instagram" aria-hidden="true" />
-                          <i className="fa fa-youtube" aria-hidden="true" />
+                        <a href="www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
+                                <i className="fa fa-facebook" aria-hidden="true" />
+                            </a>
+                            <a href="www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
+                                <i className="fa fa-twitter" aria-hidden="true" />
+                            </a>
+                            <a href="www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
+                                <i className="fa fa-instagram" aria-hidden="true" />
+                            </a>
+                            <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" id='links'>
+                                <i className="fa fa-youtube" aria-hidden="true" />
+                            </a>
                         </div>
                       </div>
                     </div>
@@ -285,6 +295,9 @@ const Navbar = () => {
                     </Link>
                     <Link to='/blogs' className='links'>
                     <li className="hoverItems">Blogs</li>
+                    </Link>
+                    <Link to='/news-feed' className='links'>
+                    <li className="hoverItems">News Feed</li>
                     </Link>
                 </ul>
               </li>

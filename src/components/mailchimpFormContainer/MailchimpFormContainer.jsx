@@ -88,12 +88,12 @@ const CustomForm = ({ status, message, onValidated }) => {
               value={email}
               placeholder="email"
               className='newsLetterInput'
-              isRequired
+              isrequired="true"
             />
   
           <input
             type="submit"
-            formValues={[email]}
+            formvalues={[email]}
             className="mc__btn"
           />
           </div>
