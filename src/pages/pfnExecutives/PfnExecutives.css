@@ -8,6 +8,11 @@
   text-align: center;
   padding-top: 2rem;
 }
+.execTitle h2 {
+  color: #006633;
+  font-family: 'Indie Flower', cursive;
+  font-size: 3rem;
+}
 .flip-box {
     background-color: transparent;
     width: 300px;
@@ -88,6 +93,8 @@
     color: #333;
     align-self: center;
   }
+
+
 
   @media only screen and (max-width: 600px) {
     #pfnExecutivesContainer {

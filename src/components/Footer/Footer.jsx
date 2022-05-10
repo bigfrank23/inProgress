@@ -13,6 +13,7 @@ import H3 from '../Text/H3'
 import { tab } from './../../responsive';
 import { landscapeTab } from './../../responsive';
 import MailchimpFormContainer from '../mailchimpFormContainer/MailchimpFormContainer'
+import Button2 from '../Button/Button2'
 
 const Container = styled.div`
   width: 100%;
@@ -159,6 +160,9 @@ const Footer = () => {
     <Container>
         <div className="topFooter">
             <div className="center">
+              <Link to="/provinces">
+              <Button2 outline BtnText='Select a Province' />
+              </Link>
                 <div className="lineShape"></div>
                 <div className='mainText'> <Header color={true} children="Lorem, ipsum dolor sit."/> </div>
                 <div className="btnContent">

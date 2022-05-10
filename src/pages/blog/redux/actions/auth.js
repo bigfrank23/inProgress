@@ -16,10 +16,11 @@ export const register = (formData, history) => async(dispatch) => {
 export const login = (loginData, history) => async(dispatch) => {
     try {
         const {data} = await api.login(loginData)
-        dispatch({type: AUTH, payload: data}) && history.push("/")
+        dispatch({type: AUTH, payload: data}) && window.location.replace("/")
         // console.log(data);
     } catch (error) {
         console.log(error);
+        alert(error)
     }
 }
 

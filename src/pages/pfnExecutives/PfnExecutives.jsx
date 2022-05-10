@@ -1,9 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
+import { directorate } from '../../teamMembers/directorate';
+import { Modal, Box, Typography } from '@mui/material';
+import { makeStyles } from '@material-ui/core/styles';
+import PersonIcon from '@mui/icons-material/Person';
 import Img1 from "../../images/sec.png";
 import Img2 from "../../images/splash3.jpg";
 import Img3 from "../../images/bg2.jpg";
 import Img4 from "../../images/My-Post-15.png";
-import Img5 from "../../images/pro9.jpg";
+import Img5 from "../../images/slider1.jpg";
 import styled from "styled-components";
 import "./PfnExecutives.css";
 import Button2 from "../../components/Button/Button2";
@@ -52,16 +56,41 @@ const Container = styled.div`
   }
 `;
 
-  const pfnExecutives = [
-      {
-          id: '1',
-          img: Img2,
-          name: "John Doe",
-          email: "johndoe@email.com"
-      }
-  ]
+// Modal Style
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
+const useStyles = makeStyles((theme) => ({
+  /** Changed modalStyle */
+  modalStyle: { backgroundColor: "rgba(0, 0, 0, 0.1)", zIndex: "1" },
+  boxStyle: {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  backgroundColor: "#fff",
+  // border: "2px solid #000",
+  outline: 0,
+  boxShadow: 24,
+  p: 4,
+  }
+}));
 
 const PfnExecutives = () => {
+  const classes = useStyles()
+  const [open, setOpen] = useState(false);
+  const [modalData, setModalData] = useState("");
+  const handleClose = () => setOpen(false);
   return (
     <Container>
       <div className="page1Wrapper">
@@ -71,12 +100,13 @@ const PfnExecutives = () => {
       </div>
       <div className="pfnExecTitle1">
         <div className="execTitle">
-            <Header color>The CWC</Header>
+            {/* <Header color>The CWC</Header> */}
+            <h2>The CWC</h2>
         </div>
       <div className="pfnExecutivesContainer">
-      <div class="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
+      <div className="flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
               <img src={Img2} alt="" />
               <div className="pfnExecutivesTxt">
                 <h2>APOSTLE ENYINNAYA OKWUONU</h2>
@@ -84,7 +114,7 @@ const PfnExecutives = () => {
               </div>
               <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
             </div>
-            <div class="flip-box-back">
+            <div className="flip-box-back">
               <div className="flip-box-back-content">
                 <H2>More Details</H2>
                 <p className="pfn-back-para">
@@ -116,9 +146,9 @@ const PfnExecutives = () => {
             </div>
           </div>
         </div>
-        <div class="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
+        <div className="flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
               <img src={Img2} alt="" />
               <div className="pfnExecutivesTxt">
                 <h2>PASTOR LEKE AKINOLA</h2>
@@ -128,7 +158,7 @@ const PfnExecutives = () => {
               <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
               </div>
             </div>
-            <div class="flip-box-back">
+            <div className="flip-box-back">
               <div className="flip-box-back-content">
                 <H2>More Details</H2>
                 <p className="pfn-back-para">
@@ -160,9 +190,9 @@ const PfnExecutives = () => {
             </div>
           </div>
         </div>
-        <div class="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
+        <div className="flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
               <img src={Img2} alt="" />
               <div className="pfnExecutivesTxt">
                 <h2>APOSTLE AKINYELE AKINDEJOYE</h2>
@@ -170,7 +200,7 @@ const PfnExecutives = () => {
               </div>
               <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
             </div>
-            <div class="flip-box-back">
+            <div className="flip-box-back">
               <div className="flip-box-back-content">
                 <H2>More Details</H2>
                 <p className="pfn-back-para">
@@ -205,9 +235,9 @@ const PfnExecutives = () => {
         </div>
         
       <div className="pfnExecutivesContainer" id="pfnExecutivesContainer">
-      <div class="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
+      <div className="flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
               <img src={Img2} alt="" />
               <div className="pfnExecutivesTxt">
                 <h2>REV (DR) PEACE GOODEY</h2>
@@ -215,7 +245,7 @@ const PfnExecutives = () => {
               </div>
               <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
             </div>
-            <div class="flip-box-back">
+            <div className="flip-box-back">
               <div className="flip-box-back-content">
                 <H2>More Details</H2>
                 <p className="pfn-back-para">
@@ -249,9 +279,9 @@ const PfnExecutives = () => {
             </div>
           </div>
         </div>
-        <div class="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
+        <div className="flip-box">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
               <img src={Img2} alt="" />
               <div className="pfnExecutivesTxt">
                 <h2>PASTOR BAYO OYEYEMI</h2>
@@ -259,7 +289,7 @@ const PfnExecutives = () => {
               </div>
               <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
             </div>
-            <div class="flip-box-back">
+            <div className="flip-box-back">
               <div className="flip-box-back-content">
                 <H2>More Details</H2>
                 <p className="pfn-back-para">
@@ -297,15 +327,16 @@ const PfnExecutives = () => {
 
         <div className="pfnExecTitle2">
         <div className="execTitle">
-          <Header color>The Directors</Header>
+          {/* <Header color>The Directors</Header> */}
+          <h2>The Directors</h2>
       </div>
       <div className="pfnExecutivesContainer">
         <Grid container spacing={2}>
           {directors.map((data) => (
             <Grid key={data.id} item xs={12} sm={6} md={6} lg={3}>
-              <div class="flip-box">
-                <div class="flip-box-inner">
-                  <div class="flip-box-front">
+              <div className="flip-box">
+                <div className="flip-box-inner">
+                  <div className="flip-box-front">
                     <img src={data.img} alt="" />
                     <div className="pfnExecutivesTxt">
                       <h2>{data.name}</h2>
@@ -313,7 +344,7 @@ const PfnExecutives = () => {
                     </div>
                     <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
                   </div>
-                  <div class="flip-box-back">
+                  <div className="flip-box-back">
                     <div className="flip-box-back-content">
                       <div className="flipBackTitle">
                         <H2>More Details</H2>
@@ -356,15 +387,16 @@ const PfnExecutives = () => {
 
             <div className="pfnExecTitle3">
                 <div className="execTitle">
-                <Header color>The Province Chairmen</Header>
+                {/* <Header color>The Province Chairmen</Header> */}
+                <h2>The Province Chairmen</h2>
               </div>
         <div className="pfnExecutivesContainer">
           <Grid container spacing={2}>
             {chairmen.map((data) => (
               <Grid key={data.id} item xs={12} sm={6} md={6} lg={3}>
-                <div class="flip-box">
-                  <div class="flip-box-inner">
-                    <div class="flip-box-front">
+                <div className="flip-box">
+                  <div className="flip-box-inner">
+                    <div className="flip-box-front">
                       <img src={data.img} alt="" />
                       <div className="pfnExecutivesTxt">
                         <h2>{data.name}</h2>
@@ -372,7 +404,7 @@ const PfnExecutives = () => {
                       </div>
                       <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
                     </div>
-                    <div class="flip-box-back">
+                    <div className="flip-box-back" onClick={()=> {setOpen(true); setModalData(data)}}>
                       <div className="flip-box-back-content">
                         <H2>More Details</H2>
                         <p className="pfn-back-para">
@@ -405,6 +437,25 @@ const PfnExecutives = () => {
                     </div>
                   </div>
                 </div>
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                  className={classes.modalStyle}
+                >
+                  <Box className={classes.boxStyle}>
+                    <div style={{padding: "2rem", textAlign: "center", color: "red"}}>
+                      <PersonIcon />
+                    </div>
+                    <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign: "center", fontFamily: "sans-serif", fontSize: "1rem", padding: "0 2rem 2rem 2rem"}}>
+                      {modalData.bio}
+                    </Typography>
+                    <div style={{padding: "2rem"}}>
+                        {/* {data.email} */}
+                    </div>
+                  </Box>
+                </Modal>
               </Grid>
             ))}
           </Grid>

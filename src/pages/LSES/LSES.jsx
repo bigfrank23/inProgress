@@ -125,7 +125,7 @@ const LSES = () => {
                             </div>
                             </PText>
                         </div>
-                        <Link to="#" id="page12KnowMoreBtn">
+                        <Link to="/pfn-executives" id="page12KnowMoreBtn">
                             <Button BtnText="Know more" outline />
                         </Link>
                     </div>
@@ -143,24 +143,27 @@ const LSES = () => {
                         <PText>
                         <b>The Lagos State PFN is composed of</b> Provinces and Chapters. <br />
                         <div className="page12ParaSpace">
-                        The Lagos State Pentecostal Fellowship has evolved from its early years and has developed in terms of its organization and structure from the days of region and zones to now Presently the state is made up of a multilayered structure for ease of administration and service delivery. 
+                        The Lagos State Pentecostal Fellowship has evolved from its early years and has developed in terms of its organization and structure from the days of region and zones to now presently, Provinces and Chapters. The state is made up of a multilayered structure for ease of administration and service delivery.
+                        The state is led by the Chairman who heads an executive council composed of appointed and elected officers, also included in the executive council are the State Directors and the Chairmen of the various Provinces. 
 
                         </div>
-                     <PText>The state is led by the Chairman who heads an executive council composed of appointed and elected officers, also included in the executive council are the Chairman of the various provinces, next in line are the provinces which cover geographical areas carefully delineated to effectively cover the state.</PText>
+                     <PText>Next in line to the State are the Provinces which cover geographical areas carefully delineated to effectively cover the state.
+                    There are at present 21 Provinces headed by Provincial Chairmen who lead a Provincial Executive Council, which like the State Executive is composed of selected and appointed officials and the various Chapter Chairmen.
+                    </PText>
                         <div className="page12ParaSpace">
 
-                     <PText>There are at present 21 Provinces who headed by Provincial Chairmen who lead a Provincial Executive Council which like the state Executive is composed of selected and appointed officials and the various Chapter Chairmen.</PText>
+                     <PText>At the base of the administrative structure are the chapter Chairmen who are the grass root mobilisers and administrators of the PFN vision. Our chapter Chairmen are very vital in the Lagos PFN hierarchy as they are responsible for implementing the PFN program at the grass roots. There are presently well over 500 chapters in the state and the number differs from province to province.</PText>
                         </div>
 
                      <PText>At the base of the administrative structure are the chapter Chairmen who are the grass root mobilisers and administrators of the PFN vision. Our chapter Chairmen are very vital in the Lagos PFN hierarchy as they are responsible for implementing the PFN program at the grass roots. There are presently well over 500 chapters in the state and the number differs from province to province.</PText>
                         <div className="page12ParaSpace">
 
-                        <PText>Supporting the work of the PFN executives at all levels are the various directorates that offer invaluable inputs on specialized subjects and issues ranging from security to inter-governmental matter. </PText>
+                        <PText>Supporting the work of the PFN executives at all levels are the various directorates that offer invaluable inputs on specialized subjects and issues ranging from security to inter-governmental matters, and a host of others. </PText>
                         </div>
 
-                        <PText> Also very crucial, is the very important input of the esteemed minsters who make up the Lagos State Advisory Council, the Advisory Council model allows the Chairman to access the wisdom and support of servants of God of influence and integrity in the State. </PText>
+                        <PText> Also very crucial, is the very important input of the esteemed minsters who make up the Lagos State Advisory Council, the Advisory Council model allows the Chairman to access the wisdom and support of servants of God of influence and integrity in the State.</PText>
                             <div className="page12ParaSpace">
-                        <PText> The model is also replicated at the provincial and Chapter levels. </PText>
+                        <PText>The model is also replicated at the provincial and Chapter levels.</PText>
 
                             </div>
 

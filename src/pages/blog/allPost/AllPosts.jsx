@@ -9,6 +9,7 @@ import styled from "styled-components";
 import Footer from '../../../components/Footer/Footer';
 import { Button } from '@mui/material';
 import H2 from '../../../components/Text/H2';
+import Pagination from '../pagination/Pagination'
 
 // import './Posts.css'
 
@@ -75,6 +76,10 @@ const Allposts = () => {
   const [searchData, setSearchData] = useState('')
   const [postData, setPostData] = useState([])
 
+  // const [data, setData] = useState([])
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postPerPage] = useState(3);
+
     useEffect(()=> {
         dispatch(getPost(setPostData))
         // setColor(Math.random().toString(16).substr(-6));
@@ -90,6 +95,16 @@ const Allposts = () => {
       }
     })
 
+    //Get current posts
+    const indexOfLastPost = currentPage * postPerPage
+    const indexOfFirstPost = indexOfLastPost - postPerPage
+    const currentPosts = postData.slice(indexOfFirstPost, indexOfLastPost)
+
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber)
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+    }
+
   return (
     <Container>
       <div className="page1Wrapper">
@@ -102,19 +117,22 @@ const Allposts = () => {
           <H2>All Posts</H2>
           {
             user ?
-            <Link to='/write'>
+            <Link to='/write' id='links'>
               <Button variant="contained">Create a post</Button>
             </Link>
             :
-            <Link to='/login'>
+            <Link to='/login' id='links'>
               <Button variant="contained">Create a post</Button>
             </Link>
           }
         </div>
-      {filterData.map((val, index )=> (
+      {currentPosts.reverse().map((val, index )=> (
           <Post postData={val} key={index} />
           ))}
     </div>
+    <Pagination postsPerPage={postPerPage}
+          totalPosts={postData.length}
+          paginate={paginate} />
     <Footer />
     </Container>
   );

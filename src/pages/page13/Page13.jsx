@@ -12,6 +12,7 @@ import Button2 from "../../components/Button/Button2";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import PrayerImg from '../../images/prayer.png'
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -69,13 +70,13 @@ const Page13 = () => {
               <form>
                   <div className="inputName">
                     <label htmlFor="name"><PText>Name*</PText></label>
-                    <input type="text" placeholder="John doe" />
+                    <input type="text" placeholder="Full Name" />
                   </div>
                   <div className="inputEmail">
                     <label htmlFor="name"><PText>Email*</PText></label>
-                    <input type="text" placeholder="johndoe@email.com" />
+                    <input type="text" placeholder="Email" />
                   </div>
-                  <div className="radioBx">
+                  {/* <div className="radioBx">
                     <PText>Which Province do you belong?*</PText>
                     <div className="radio">
                         <label htmlFor=""><PText>Lorem, ipsium.</PText></label>
@@ -89,7 +90,7 @@ const Page13 = () => {
                         <label htmlFor=""><PText>Lorem, ipsum.</PText></label>
                         <input type="radio" />
                     </div>
-                  </div>
+                  </div> */}
                   <div className="textArea">
                       <PText>Prayer Request*</PText>
                       <textarea name="" id=""/>
@@ -108,9 +109,11 @@ const Page13 = () => {
                   If you have a heart for people and prayer, we’d love to hear from you. You will be connected to a virtual prayer team, invited to pray weekly for our church prayer requests, and/or equip you to become a prayer minister for those that are in need after service. Contact us to express your interest in joining our prayer team. 
                   </PText>
               </div>
-              <div className="page13BottomBtn">
-                  <Button2 BtnText="JOIN THE TEAM" />
-              </div>
+              <Link to="/directorate">
+                <div className="page13BottomBtn">
+                    <Button2 BtnText="JOIN THE TEAM" />
+                </div>
+              </Link>
           </div>
       </div>
       <Footer />

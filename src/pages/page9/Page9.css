@@ -4,6 +4,11 @@
 .page9TopHeader, .page9TopTitle, .page9TopPara{
     text-align: center;
 }
+.page9TopHeader h2{
+    color: #006633;
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
+}
 .page9TopTitle{
     padding: 1rem 0;
 }

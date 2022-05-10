@@ -88,7 +88,7 @@ const Post = ({postData}) => {
               <div className="postsAuthorInfo">
                 <div className="postsProfile">
                   <div className="postsAuthorImg">
-                    <img src={!postData.profilePic && UserImg} alt="" />
+                    <img src={!postData.profilePic ? UserImg : postData.profilePic} alt="" />
                   </div>
                   <div className="postsAuthor">
                     <span>{postData.username}</span>
@@ -113,14 +113,16 @@ const Post = ({postData}) => {
               <div className="postsTxtActive">
                 <div className="reactions">
                   <i className="fa fa-heart" aria-hidden="true" />
+                  &nbsp;{postData.likes?.length > 2 ? `You and ${postData.likes?.length - 1} others` : `${postData.likes?.length} like${postData.likes?.length > 1 ? 's' : ''}` } 
                   <i className="fa fa-comment" aria-hidden="true" />
+                  {postData.comments.length}
                 </div>
                 <p>
                   {postData.desc}
                 </p>
               </div>
               <div className="postsBtn">
-              <Link to={`/full_detail/${postData._id}`}>
+              <Link to={`/full_detail/${postData._id}`} id="links">
                 <Button variant="contained" color="secondary">Full Details</Button>
               </Link>
               </div>

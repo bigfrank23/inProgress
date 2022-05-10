@@ -169,12 +169,13 @@ const Page9 = () => {
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
-          <h1>Directorate</h1>
+          <h1>Directorates</h1>
         </div>
       </div>
       <div className="page9TopContainer">
         <div className="page9TopHeader">
-          <Header color={true} children="Doing good" />
+          {/* <Header color={true} children="Doing good" /> */}
+          <h2>Doing good</h2>
         </div>
         <div className="page9TopTitle">
           <H2 children="FIND MEANINGFUL CONNECTION AND PURPOSE" />
@@ -307,7 +308,9 @@ const Page9 = () => {
           </PText>
         </div>
         <div className="page9BottomBannerBtn">
+          <Link to="/contact" id='links'>
           <Button BtnText='Contact Us' />
+          </Link>
         </div>
       </div>
       <Footer />

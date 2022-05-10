@@ -28,7 +28,8 @@
 
 .page12Center2{
     padding: 4rem 7rem;
-    background: linear-gradient(rgba(18,30,34,.8), rgba(18,30,34,.8) ), url('../../images/worship.jpg');
+    background: linear-gradient(rgba(18,30,34,.8), rgba(18,30,34,.8) ), url('../../images/banner2.png');
+    background-size: cover;
 }
 .page12Center2Para{
     padding: 1rem 0;

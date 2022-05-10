@@ -95,7 +95,7 @@ const Navbar = () => {
           :
           <div className="eventTime">
             <Link to="/admin_login" id='links'>
-            <h6 className="authBxLogout">Log in</h6>
+            <h6 className="authBxLogout">{user ? "Log out" : "Log in"}</h6>
             </Link>
           </div>
 
@@ -247,7 +247,7 @@ const Navbar = () => {
                     <li className="hoverItems">The national</li>
                   </Link>
                   <Link to="/past-pfn-chairmen" className="links">
-                    <li className="hoverItems">Past PFN chairmen</li>
+                    <li className="hoverItems">Past Lagos State PFN chairmen</li>
                   </Link>
                   <Link to="/pfn-executives" className="links">
                     <li className="hoverItems">PFN lagos state executives</li>
@@ -262,6 +262,11 @@ const Navbar = () => {
                       The executive structure
                     </li>
                   </Link>
+                  <Link to="#" className="links">
+                    <li className="hoverItems">
+                      Chairman Messages
+                    </li>
+                  </Link>
                 </ul>
               </li>
               <li className="navListItems">
@@ -271,7 +276,7 @@ const Navbar = () => {
                     <li className="hoverItems">The Provinces</li>
                   </Link>
                   <Link to="/directorate" className="links">
-                    <li className="hoverItems">Directorate</li>
+                    <li className="hoverItems">Directorates</li>
                   </Link>
                   <Link to="#" className="links">
                     <li className="hoverItems">Outreach</li>
@@ -284,9 +289,9 @@ const Navbar = () => {
                     <Link to="/gallery" className="links">
                       <li className="hoverItems">Gallery</li>
                     </Link>
-                    <Link to="#" className='links'>
+                    <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                     <li className="hoverItems">Watch Live</li>
-                    </Link>
+                    </a>
                     <Link to="#" className='links'>
                     <li className="hoverItems">Past Events</li>
                     </Link>
@@ -357,7 +362,12 @@ const Navbar = () => {
                   <ul className="hover">
                     <Link to="/lses" className="links" onClick={()=> setShowNav(false)}>
                       <li className="hoverItems">
-                        The lagos state executive structure
+                        The Executive structure
+                      </li>
+                    </Link>
+                    <Link to="#" className="links" onClick={()=> setShowNav(false)}>
+                      <li className="hoverItems">
+                        Chairman Messages
                       </li>
                     </Link>
                   </ul>

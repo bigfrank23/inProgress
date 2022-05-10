@@ -1,17 +1,50 @@
-import Img from '../images/pro3.jpg'
+// import Img from '../images/pro3.jpg'
+import Img from '../images/team/img1.jpg'
 import Img2 from '../images/team/leke.jpg'
+import Img3 from '../images/team/akin.jpg'
 import Img25 from '../images/team/fal.jpg'
 import ImgC18 from '../images/team/victor.jpg'
+import ImgC6 from '../images/team/john.jpg'
 import ImgB11 from '../images/team/ola.jpg'
 import ImgB8 from '../images/team/moses.png'
 import ImgB31 from '../images/team/juliet.png'
 import ImgB32 from '../images/team/frank.jpg'
+import ImgB17 from '../images/team/tosin.jpg'
+import tonyeImg from '../images/team/tonye.png'
+import kenImg from '../images/team/ken.jpg'
+import obinnaImg from '../images/team/obinna.jpg'
+import benImg from '../images/team/ben.jpg'
+import helenImg from '../images/team/helen.jpg'
+import oladeleImg from '../images/team/oladele.jpg'
+import osayiImg from '../images/team/osayi.jpg'
+import phyllisImg from '../images/team/phyllis.jpeg'
+import tonyImg from '../images/team/tony.jpg'
+import idiongImg from '../images/team/idiong.jpg'
+import joyImg from '../images/team/joy.jpeg'
+import elebuteImg from '../images/team/elebute.jpg'
+import olaoyeImg from '../images/team/olaoye.jpg'
+import amusanImg from '../images/team/ola.jpeg'
+import tundeImg from '../images/team/tunde.jpg'
+import samuelImg from '../images/team/samuel.jpg'
+import oladitiImg from '../images/team/oladiti.jpg'
+import peterImg from '../images/team/peter.jpg'
+import clemsImg from '../images/team/clems.png'
+import folahanImg from '../images/team/folahan.jpg'
+import femiImg from '../images/team/femi.jpg'
+import ephriamImg from '../images/team/ephriam.jpg'
+import joshuaImg from '../images/team/joshua.JPG'
+import babatopeImg from '../images/team/babatope.jpg'
+import patrickImg from '../images/team/patrick.jpg'
+import davidImg from '../images/team/david.jpeg'
+import ericImg from '../images/team/eric.jpg'
+
 export const cwc = [
   {
     id: 1,
     img: Img,
-    name: "APOSTLE ENYINNAYA OKWUONU",
+    name: "APOSTLE Enyinnaya Emeka Okwuonu",
     title: "CHAIRMAN ",
+    position: "Lead Pastor",
     church: "New Life Christian Church",
     address: "97c, Marine Road, Apapa GRA",
     tel: "08023355366, 07061000181",
@@ -19,6 +52,7 @@ export const cwc = [
     email: "enyinnaya56@yahoo.com",
     chapter: "Apapa",
     province: "Apapa/Surulere",
+    bio: "My name is Apostle Dr Enyinnaya Emeka Okwuonu, married to Pastor Mrs Treasure Uloma Okwuonu, have three children and a grandson."
   },
   {
     id: 2,
@@ -36,9 +70,10 @@ export const cwc = [
   },
   {
     id: 3,
-    img: Img,
-    name: "APOSTLE AKINYELE AKINDEJOYE",
+    img: Img3,
+    name: "APOSTLE Mehmood Akinyele Akindejoye",
     title: "SECRETARY ",
+    positon: "Senior Pastor",
     church: "Guiding Light Assembly",
     address:
       "Epe Blk 2, Plot 5, Atowa Adegoke Street, Agric Estate, Papa-Epe, Lagos.",
@@ -48,12 +83,14 @@ export const cwc = [
     chapter: "Papa-Epe",
     province: "EPE",
     associatePastorTel: "08034202048",
+    bio: "Apostle Akin Akindejoye formerly a Muslim who got converted to Christianity. Trained in accounting, Theology and English, he is called to be a teacher and preacher of the word of God which he does with power, passion, insight and addiction for heaven. Pastor Akin, as he is fondly called, previously lectured at Community Bible Institute CBI and Light Bible Institute LBI, both in Lagos Nigeria. Pastor Akin is an author of several books including Subsidy, Journey of a Dream, Journey to Berachah, One Talent Servant, among others. He is the Senior Pastor of GLA Global City Church Epe, Lagos. He is also the Founder and President of AMA World Outreach. The ministry is the sponsor of the annual Youth Conference, Pentecostal Groove as well as the Adventure Seminar Series and Talent Warehouse.. He is a member of the Nigerian Coalition of Apostolic Leaders NCAL as well as the International Coalition Of Apostolic Leaders ICAL. He has held several leadership positions in the Pentecostal Fellowship of Nigeria. Be was the pioneer Secretary of Lekki Region, pioneer province Chairman of Epe-Lekki Province and State Deputy Secretary. He currently serves as the State Secretary, Pentecostal Fellowship of Nigeria PFN, Lagos State. He is happily married and blessed with children. Phone : +234-8033212772 E-mail : dejoye@gmail.com . "
   },
   {
     id: 4,
-    img: Img,
-    name: "REV (DR) PEACE GOODEY",
+    img: phyllisImg,
+    name: "REV (DR) Phyllis Peace Goodey",
     title: "TREASURER ",
+    position: "Lead Pastor",
     church: "Christ Believers Healing Ministries AKA Christ Believers Assembly",
     address: "",
     headOffice:
@@ -67,6 +104,7 @@ export const cwc = [
     associatePastorTel: "08035230642",
     associatePastorChapter: "Ajah",
     associatePastorProvince: "Eti/Osa",
+    bio: "My name is Dr Peace Goodey, I generally oversee to Parishes of Christ Believers Healing Ministry and I am also the founder of the Alabaster Jar Foundation For Teenage Mums. I have a degree in Optometry and a Post Graduate Diploma in Leadership and Theology from"
   },
   {
     id: 5,
@@ -148,9 +186,10 @@ export const directors = [
   },
   {
     id: 4,
-    img: Img,
-    name: "Evangelist Olalekan Amusan",
+    img: amusanImg,
+    name: "Evangelist Olalekan Babatunde Amusan",
     title: " DIRECTOR EVANGELISM AND MISSIONS",
+    positon: "Director of Missions and Network ",
     church: "Christ Image Assembly",
     address: "27 Carter Street Ebute Metta Lagos",
     headOffice: "",
@@ -158,17 +197,19 @@ export const directors = [
     tel: "08023468777",
     email: "lekanonmission@yahoo.com",
     chapter: "",
-    province: "",
+    province: "Ikeja",
     associatePastor: "",
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "Am an Evangelist by calling ,A theologian by training and a practicing Missionary . I am currently serving as Director of Evangelism &Missions in PFN Lagos .Also serving as Southwest Chairman of Nigeria Evangelical Missions Association.Lagos State coordinator of GO MOVEMENT. "
   },
   {
     id: 5,
-    img: Img,
+    img: obinnaImg,
     name: "Pastor Obinna Paul Egbuonu",
     title: "DIRECTOR PLANNING AND STRATEGY",
+    position: "Lead pastor",
     church: "The *Haven Rock Church",
     address: "28 Omotayo Banwo Street Ogudu Orioke Ogudu Lagos",
     headOffice: "",
@@ -181,6 +222,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "Born 8th January "
   },
   {
     id: 6,
@@ -202,8 +244,9 @@ export const directors = [
   },
   {
     id: 7,
-    img: Img,
+    img: benImg,
     name: "Apostle Dr Benjamin Omoregie Osagie",
+    position: "General Overseer",
     title: "DEPUTY DIRECTOR, EVANGELISM AND MISSIONS",
     church: "Rehoboth Church of Christ Ambassadors Worldwide",
     address:
@@ -218,6 +261,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "Apostle Dr Ben Omoregie is apostle of faith. I have been in church ministry from 1990. Rector, Christ Ambassadors Theological Academy and a Missionary. "
   },
   {
     id: 8,
@@ -240,9 +284,10 @@ export const directors = [
   },
   {
     id: 9,
-    img: Img,
+    img: osayiImg,
     name: "Rev Dr David Austin Osayi",
     title: "PROTOCOL DIRECTOR",
+    position: "SENIOR PASTOR",
     church: "The Reigning Christian Church",
     address: "12 Ajimson Street, waterside Ojo Volks",
     headOffice: "",
@@ -255,6 +300,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "REV DR DAVID AUSTIN OSAYI, THE SENIOR PASTOR, THE REIGNING CHRISTIAN CHURCH, OJO LAGOS, THE PRESIDENT END TIME CHRISTIAN MISSION, LAGOS NIGERIA DIRECTOR OF PROTOCOL PFN LAGOS STATE, MARRIED TO PASTOR PATIENCE N.OSAYI AND BLESSED WITH CHILDREN "
   },
   {
     id: 10,
@@ -279,7 +325,7 @@ export const directors = [
     img: ImgB11,
     name: "REV. OLADELE AFOLABI",
     title: "DIRECTOR -PROJECTS AND INFRASTRUCTURE",
-    position: "State Director, Project and Infrastructure",
+    position: "Senior Pastor",
     church: "Christ Base Assembly",
     address: "10 Shokoya Street Oworonsoki",
     headOffice: "",
@@ -292,12 +338,14 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "Senior and Lead Pastor of Christ Base Assembly. Our church has a mandate to raise leaders, win souls and impact our world "
   },
   {
     id: 12,
-    img: Img,
+    img: elebuteImg,
     name: "REV.DR. MOSES BABATUNDE ELEBUTE",
     title: "DIRECTOR - BUSINESS DEVELOPMENT ",
+    position: "Founding & Presiding Pastor",
     church: "International Christian Faith Mission",
     address: "14, Aina Close, New Garage, Gbagada, Lagos.",
     headOffice: "",
@@ -305,17 +353,20 @@ export const directors = [
     email: "moseselebute58@gmail.com",
     dOb: "December 4th",
     chapter: "Ilasamaja",
-    province: "Kosofe",
+    // province: "Kosofe",
+    province: "Mainland Province",
     associatePastor: "Pastor (Mrs) Toyin Elebute",
     associatePastorTel: "08053077798",
     associatePastorChapter: "Gbagada",
     associatePastorProvince: "Mainland",
+    bio: "Born to a Muslim family and became born again in 1976. Graduated with Master degree in Agricultural Economics from University of Ibadan. Obtained doctorate degree in Theology and PhD in Christian Education. Chapter President Eko chapter of Full Gospel Business Men Fellowship International, Lagos. Superintendent of Sunday school department in Foursquare Gospel Hdqt Church, Yaba, Lagos . In 1997, started a church called International Christian Faith Mission at Gbagada, Lagos. 8 year Mainland Province Chairman. Currently Director of Business Development Directorate at Lagos State PFN. President, Commonwealth Coop & Multipurpose Society to provide financial support for PFN members. I love Lord Jesus Christ."
   },
   {
     id: 13,
-    img: Img,
-    name: "PASTOR DR. BARNABAS OTOIBHI.",
+    img: joshuaImg,
+    name: "PASTOR DR. Barnabas Aihebho-oria Otoibhi ",
     title: "DEPUTY DIRECTOR, INTERGOVERNMENTAL RELATIONS",
+    position: "General Overseer",
     church: "Temple Rebuilders Ministry.",
     address:
       "5, Aimasiko Street, Off Afariogun Street, By Charity Bus-Stop, Oshodi, Lagos",
@@ -329,6 +380,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "PASTOR DR. BARNABAS AIHEBHO-ORIA OTOIBHI , was born to a heathen family on Dec. 15, 1958 . He got born again on June 23 , 1987 . He was a member of Nigerian Institute of Quantity Surveyors and Nigerian Institute of Building , before he received a Divine call into the preaching ministry with a Divine mandate to Rebuild the House (Temple) of God, on October 24 , 1994 and another mandate to be God's Spokesman on issues of governance , in January. 2009. He has served as Spokesman , Christian Association of Nigeria , Oshodi Local Government Chapter , Lagos . He has also served and Pentecostal Fellowship of Nigeria in various capacities as : Chapter Chairman, Oshodi ( 2007 to 2010) ; Province Deputy Chairman / Acting Province Chairman , Mushin Oshodi Isolo ( 2010 to 2012) ; Lagos State Deputy Director , Church Registration and Computerization (2012 to 2014) ; Lagos State Deputy Director, Inter Governmental Relations (2014 to 2018) ; Lagos State Deputy Director , Directorate of Politics and Governance (2018 to date ). He has also served in other organizations which are : Chairman, Parents Teachers Association, Rising Sun Group of Schools, Lagos State ( 1999 to 2010) ; Chairman , Parents Forum / Lagos State Schools Management Committee , Oshodi Comprehensive Senior High School, ( 2007 to 2015). He is a distinguished recipient of the Development In Nigeria Merit Award, by PSR Magazine, at Abuja, Nigeria. Pastor Dr. Barnabas Aihebho-oria Otoibhi is the National General Secretary, United Christian Ministerial Association (USA), Nigeria Chapter. He is the author of books such as 'Help For Cultists' , 'Memorandum of Understanding On Noise Pollution Control in Lagos State', 'Tonic For Relationships' and several articles. He is an Ambassador to Lagos State Government in Nigeria. He is happily married to Evangelist Tessy Otoibhi and they are blessed with godly children. "
   },
   {
     id: 14,
@@ -369,8 +421,9 @@ export const directors = [
   },
   {
     id: 16,
-    img: Img,
-    name: "APOSTLE KEN CHIDUBEM",
+    img: kenImg,
+    name: "Kennedy Chukwukadibia Chidubem ",
+    position: "Lead Pastor ",
     title: "YOUTH DIRECTOR",
     church: "World Lighters Ministries",
     address: "2 Ecwa church road by Alafia bus stop, Coker Orile Iganmu Lagos.",
@@ -379,29 +432,12 @@ export const directors = [
     email: "Kengivethemlight@gmail.com",
     dOb: "18/12",
     chapter: "",
-    province: "",
+    province: "Surulere province ",
     associatePastor: "",
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-  },
-  {
-    id: 17,
-    img: Img,
-    name: "Pastor David Oluwatosin Oladipupo",
-    title: "DEPUTY PROTOCOL DIRECTOR",
-    church: "CommunionHouse",
-    address: "3rd Avenue Gowon Estate, Egbeda",
-    headOffice: "",
-    tel: "08100675902",
-    email: "tsn_oladipupo@yahoo.com",
-    dOb: "02 August",
-    chapter: "",
-    province: "",
-    associatePastor: "",
-    associatePastorTel: "",
-    associatePastorChapter: "",
-    associatePastorProvince: "",
+    bio: "I was born 18th December 1975, from Umuekele in Eziama, Ahiazu Mbaise local government of Imo state. I hold a diploma wkth Obfemi Awolowo University and a Dlctorate degree in thelogy from Restoration Bkble Institute Lagos. Am happily married and blessed wkth godly seeds. "
   },
   {
     id: 17,
@@ -424,9 +460,10 @@ export const directors = [
   },
   {
     id: 18,
-    img: Img,
-    name: "Rev .Dr Dele Ajayi",
+    img: oladeleImg,
+    name: "Rev Dr Oladele Rufus Ajayi ",
     title: "DEPUTY DIRECTOR INTERMINISTERIAL",
+    position: "Chaplain",
     church: "Chapel of Christ The Light",
     address: "1,CIPM ROAD, CBD, ALAUSA, IKEJA",
     headOffice: "",
@@ -434,11 +471,12 @@ export const directors = [
     email: "oladeleajayi83@gmail.com",
     dOb: "13th January",
     chapter: "",
-    province: "",
+    province: "Ikeja",
     associatePastor: "",
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "MY PROFILE Rev'd Dr Oladele Ajayi is an ordained and a full time minister of gospel with over 25years experience. A highly motivated and goal oriented individual with diverse experience in church and people management. A thespian turned Preacher. He is an alumnus of LIFE Theological Seminary, Ikorodu, Lagos. He holds D.Th, B.Th, M.Th, DMIN (Guidance and Counseling), D.D and PhD (Church Management). He has attended various leadership course like Word of Life Bible Institute (WOFBI), Daystar Leadership Academy, Church and Society, Peace and Conflict Resolution, University of Leadership and Sound Doctrine, Institute of National Transformation. An erudite scholar, lecturer, a prolific writer and Conference Speaker who has authored both theological and inspirational books. He is an experienced leader, church consultant and mentor in Pastoral ministry and leadership development. He is currently a state duputy director Interministerial of the Pentecostal Fellowship of Nigeria, Lagos State. He is the Executive Director of LivingRight Initiative, a moral and character development NGO targeted at Youths moral transformation. He is the chaplain of Chapel of Christ the Light Alausa, Ikeja. A Lagos state government established church. Dr Dele and his wife Pastor Mrs Folashade Ajayi with their children served the Lord together and live in Lagos. "
   },
   {
     id: 19,
@@ -461,9 +499,10 @@ export const directors = [
   },
   {
     id: 20,
-    img: Img,
+    img: clemsImg,
     name: "APOSTLE CLEMS PREACHER AKIBOR",
     title: "DEPUTY DIRECTOR, STRATEGY AND PLANNING ",
+    position: "General Overseer",
     church: "Jubilee Family Christian Church int'l.",
     address: "40/41 Sule Descendants way, off Church bustop, Okoko Lagos.",
     headOffice: "",
@@ -471,17 +510,19 @@ export const directors = [
     email: "clemspreacher@gmail.com",
     dOb: "February 12th",
     chapter: "",
-    province: "",
+    province: "OJO",
     associatePastor: "",
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "I'm the current Deputy strategy and planning director of Lagos State PFN"
   },
   {
     id: 21,
-    img: Img,
-    name: "Mrs Helen Karika",
+    img: helenImg,
+    name: "Mrs Karika Helen Atebefia",
     title: "DIRECTOR, CHILDREN AND TEENS",
+    position: "National Secretary, ChildrenI Evangelism Ministry",
     church: "Upper Room Baptist Church",
     address: "Vina Street, Off Badore Road Badore, Ajah, Lekki Lagos.",
     headOffice: "",
@@ -489,15 +530,16 @@ export const directors = [
     email: "helenkarika@yahoo.com",
     dOb: "February 12",
     chapter: "",
-    province: "",
+    province: "Kosofe Province",
     associatePastor: "",
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "I am Helen Atebefia Karika, a Christian and National Children Evangelism Ministry Secretary of Upper Room Baptist Church. I am a trained and commissioned children minister. I also hold a post graduate diploma in Theology of the Upper Room Baptist Church Bible college. Studied biochemistry at the University of Benin, where I obtained a B.Sc degree. I articled with audit and accounting firms and qualified as a chartered accountant. I am also a chartered Tax practitioner. I am currently a business woman dealing in cement. I am married with children. "
   },
   {
     id: 22,
-    img: Img,
+    img: ericImg,
     name: "Rev Dr Eric IGHALO",
     title: "DIRECTOR, COMMUNITY AND PEOPLE DEVELOPMENT ",
     church: "Changemakers Africa Youth Empowerment Initiative.",
@@ -507,11 +549,13 @@ export const directors = [
     email: "changemakersafrica@gmail.com, ericandpartners@gmail.com",
     dOb: "19th Dec.",
     chapter: "",
-    province: "",
+    province: "IKEJA",
     associatePastor: "",
+    position: "President",
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "Dr Eric IGHALO is a Development Specialist, Financial Planner and committed Church leader with a passion for Youth and Community. Having served as National Supt. Of The Liberty Evangelical Church and National President of SCM of Nigeria, he is currently African Chair of the WSCF,Geneva, Chair of CRUDAN and an Elder at The Potters House of Lagos. Nigeria "
   },
   {
     id: 23,
@@ -533,9 +577,10 @@ export const directors = [
   },
   {
     id: 24,
-    img: Img,
+    img: joyImg,
     name: "BISHOP ( DR ) JOY OBERIKO",
     title: "DEPUTY DIRECTOR, DIGITAL MEDIA",
+    position: "G.O",
     church:
       "DIVINE SOULS FOR CHRIST CHURCH INTERNATIONAL ( BELIEVERS CATHEDRAL)",
     address: "NO 3 LUQMON AVENUE AHMADIYA LAGOS STATE.",
@@ -549,12 +594,14 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "I AM BISHOP JOY OBERIKO,G.O OF DIVINE SOULS FOR CHRIST CHURCH INTERNATIONAL "
   },
   {
     id: 25,
     img: Img25,
-    name: "Pastor Emmanuel Olu Falodun",
+    name: "Pastor Emmanuel Oluwemimo Falodun",
     title: "Deputy Director - Directorate of Learning and Development ",
+    position: "General Overseer",
     church: "Christ Salvation Victory Mission Int'l",
     address: "63, Falohun Street, Orile Iganmu, Lagos",
     headOffice: "",
@@ -571,12 +618,13 @@ export const directors = [
   },
   {
     id: 26,
-    img: Img,
-    name: "APOSTLE IDONG JAMES",
+    img: idiongImg,
+    name: "APOSTLE Idongesit Ezekiel James ",
     title: "DEPUTY DIRECTOR, SECURITY AND INTELLIGENCE",
+    position: "General overseer ",
     church: "ALIVE TABERNACLE INT'L",
     address:
-      "APOSTLE IDONG JAMES ALIVE TABERNACLE INT'L NO.9 IREPODUN STREET OFF ARIGBANLA ROAD, BEHIND NYSC ORIENTATION CAMP MURELO ABEKOKO BUSTOP, ORILE AGEGE L.G.AREA IYANA IPAJA, LAGOS",
+      "NO.9 IREPODUN STREET OFF ARIGBANLA ROAD, BEHIND NYSC ORIENTATION CAMP MURELO ABEKOKO BUSTOP, ORILE AGEGE L.G.AREA IYANA IPAJA, LAGOS",
     headOffice: "",
     tel: "08054449444/08033393359",
     email: "",
@@ -587,6 +635,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "I am Apostle Idongesit Ezekiel James,the General overseer of Alive Tabernacle Int'l Also the state Deputy director of Security and intelligence, lagos state pentecostal fellowship of Nigeria "
   },
   {
     id: 27,
@@ -679,6 +728,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "Rev. Juliet Binitie is a Social Entrepreneur, a Socio- Political commentator and consultant to Media houses like Channels and TVC, a Reformer with years of experience. Also, an Accredited Mediator in Nigeria. She currently serves as the Director for Programmes at the Institute for National Transformation. Also, as an Executive Director for Hiram Design Concept LTD. She is a CEO of newly founded Media organization known as Matters Arising Venture. She is an ordained Minister with a passion for National Transformation. She is a reformer and has a call to raise leadership for the Continent, including Women leadership. She serves in the Pentecostal Fellowship of Nigeria Lagos Chapter as the Asst. Secretary of Lagos State. She started in PFN almost 2 decade starting at the chapter level as Deputy treasurer. She served as Mainland Province secretary for 8 years. Juliet Binitie believes that the Transformation of Nigeria is possible and she has dedicated her life to this cause. She is a life Coach, an Interior designer and a facilitator on Nation Building principles and Social issues. She is a pioneer graduate of the Institute for National Transformation Nigeria and served as the Alumni Vice President for 5 years. She is a recent graduate of the Pioneer class of the school of Politics, Policy and Governance in Nigeria. She has authored books including 2 one year Devotionals. She is a Coach, an author, Facilitator and Mentor to many. Married for 27 years and a mother of two adults. "
   },
   {
     id: 32,
@@ -702,10 +752,11 @@ export const directors = [
   },
   {
     id: 33,
-    img: Img,
+    img: folahanImg,
     name: "REV. OLUSANYA FOLAHAN OLUMUYIWA ",
     title: "DEPUTY TREASURER ",
     church: "The Living Stone Builders Ministries",
+    position: "General Overseer",
     address:
       "56/58, Lambo Lasunwon Road, Opp Lagos State Poly, 1st Gate, Shagamu Rd, Ikorodu",
     headOffice: "",
@@ -713,16 +764,18 @@ export const directors = [
     dOb: " 6th February ",
     email: "folahanolusanya@yahoo.com ",
     chapter: "Jubilee",
-    province: "Ikorodu ",
+    province: "Itamaga Province. ",
     associatePastor: "",
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: "Born 6th February 1959; from Odogbolu, Ogun State. Graduated from University of Ibadan with Bachelors and Masters degrees in Agricultural Economics and MBA in General Management from Olabisi Onabanjo University, Ago-Iwoye. A former Polytechnic Lecturer and Bank Executive. A former pioneer and only Province Chairman of Old Ikorodu Province. A Teacher and Pastor by call. Holds a Bachelors Degree in Christian Leadership from ULS,USA."
   },
   {
     id: 34,
-    img: Img,
-    name: "Apostle Tonye Oliver ",
+    img: tonyeImg,
+    name: "Apostle Tonye Nengi Oliver ",
+    position: "President",
     title: "PUBLICITY SECRETARY ",
     church: "Jesus Heals the Sick Ministries",
     address: "951, Admiral Oduwaiye St Omole Phase 2",
@@ -736,6 +789,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    bio: 'Pastor Tonye Oliver is married to Pastor (Mrs ) Bike Oliver, together they oversee Jesus Heals the Sick Ministries, an apostolic ministry based in Lagos Nigeria. With a mandate to take the healing power of Jesus to this generation, he travels, holding crusades, healing schools, apostolic ministers conferences. He is a publisher and author of a number of publications notably the ministry flagship Publication the Power that Heals the Sick Magazine. He hosts the popular Healing Where Are You program on the Supernatural Online TV platform which can be watched on various platforms online. www.sotv.online/HEALING-WHERE-YOU-ARE www.trimurl.co/healingwhereyouare www.jesushealsthesick.org '
   },
   {
     id: 35,
@@ -900,6 +954,26 @@ export const directors = [
     associatePastorChapter: "",
     associatePastorProvince: "",
   },
+  {
+    id: 44,
+    img: davidImg,
+    name: "Pastor David Oluwatosin Oladipupo",
+    title: "DEPUTY PROTOCOL DIRECTOR",
+    position: "Overseer",
+    church: "CommunionHouse",
+    address: "3rd Avenue Gowon Estate, Egbeda",
+    headOffice: "",
+    tel: "08100675902",
+    email: "tsn_oladipupo@yahoo.com",
+    dOb: "02 August",
+    chapter: "",
+    province: "Alimosho",
+    associatePastor: "",
+    associatePastorTel: "",
+    associatePastorChapter: "",
+    associatePastorProvince: "",
+    bio: "Date of birth: 2 August 1970 Lead pastor CommunionHouse Married With a daughter "
+  },
 ];
 
 //The Chairmen
@@ -924,8 +998,9 @@ export const chairmen = [
     },
     {
         id: 2,
-        img: Img,
-        name: "REV EPHRAIM IFIONU",
+        img: ephriamImg,
+        name: "REV Ephraim Nnaemeka Ifionu",
+        position: "Senior Pastor",
         title: "CHAIRMAN - SURULERE PROVINCE",
         church: "Glory Restoration Ministries International",
         address: "30 Coker Road Orile Iganmu, Lagos.",
@@ -938,7 +1013,8 @@ export const chairmen = [
         associatePastor: "Rev. Mrs. Temi -James Iyanda",
         associatePastorTel: "07064680302",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "I am Rev Ephraim Nnaemeka Ifionu the Senior Pastor of Glory Restoration Ministries Int'l and the provincial chairman man of PFN Surulere Province."
     },
     {
         id: 3,
@@ -978,9 +1054,10 @@ export const chairmen = [
     },
     {
         id: 5,
-        img: Img,
-        name: "Rev. Tony Samson",
+        img: tonyImg,
+        name: "Rev. Tony Emuoruona Samson",
         title: "CHAIRMAN, LAGOS ISLAND PROVINCE",
+        position: "Zonal Pastor",
         church: "TREM (The Redeemed Evangelical Mission )",
         address: "20 Remi Olowude way Off Marwa Bus Stop Lekki, Lagos",
         headOffice: "",
@@ -996,9 +1073,10 @@ export const chairmen = [
     },
     {
         id: 6,
-        img: Img,
+        img: ImgC6,
         name: "Bishop John Oyedeji Seton Benhotons",
         title: "CHAIRMAN, BADAGRY PROVINCE ",
+        positon: "FOUNDER",
         church: "Didasko Global Mission/Reigning Word Fountain Church Association Avenue, Ibereko",
         address: "Ibereko",
         headOffice: "",
@@ -1010,30 +1088,14 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
-    },
-    {
-        id: 6,
-        img: Img,
-        name: "REV DR ANDREW ISIAKA OLADEPO",
-        title: "CHAIRMAN - IBEJU/LEKKI PROVINCE ",
-        church: "SCRIPTURE LIFE CHRISTIAN CENTRE INC",
-        address: "Plots 1/3 Scripture Life Way, Iya Alagbo Area Awoyaya. Ibeju Lekki Lagos.",
-        headOffice: "",
-        tel: "08023154453, 07043421533",
-        email: "andrewoladepo4scripturelife@yahoo.com",
-        dOb: "17th Oct.",
-        chapter: "",
-        province: "",
-        associatePastor: "",
-        associatePastorTel: "",
-        associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "PROFILE OF DR J.O.S BENHOTONS Dr John Oyedeji Benhotons is the CEO of DIDASKO global mission. Didasko mandate is Enriching leadership and perfecting the saints. He got called into ministry 5th April 1987 under the ministry of Rev. Dr Tunde Joda of the Christ Chapel internatioal Churches. He holds an Advanced Diploma in Accounting/Finance and Bachelor’s degree in Business Administration. He also hold a PhD in Christian Ministry/Theology. He is also the president of the WORD IMPACT NETWORK a ministry based in Ghana with a national office in Nigeria. He runs leadership training program in different major towns across the WEST COAST of Africa. He is also the founder and president of the INTERNATIONAL NETWORK OF COVENANT MINISTERS. (INOCOM) and runs a monthly interactive ministers forum known as APOSTOLIC MENTORING. Founder of the IMPACT CHRISTIAN LEADERSHIP ACADEMY. An academy that has been graduating students from year 2001 Married to Rev. Dr Shallom Folashade, Their marriage is blessed with five wonderful children and grandchildren. "
     },
     {
         id: 7,
-        img: Img,
-        name: "Pastor Tope ILESANMI",
+        img: babatopeImg,
+        name: "Pastor Babatope Rufus ILESANMI ",
+        position: "Senior Pastor ",
         title: "CHAIRMAN - IKEJA PROVINCE",
         church: "Revival Summit Ministries",
         address: "Plot 165, Obadina street, Omole Phase 1,Ikeja L/G.",
@@ -1042,16 +1104,18 @@ export const chairmen = [
         email: "pastortopesanmi@gmail.com",
         dOb: "23rd December.",
         chapter: "",
-        province: "",
+        province: "Ikeja Province",
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: " 'Tope Ilesanmi has a proven apostolic calling that involves sound teaching, family deliverance, community deliverance, and open-air crusades. He is a disciple of Rev. Joe Olaiya, the President and founder of Living Faith Foundation. An alumnus of Lagos State Polytechnic, he is also an associate member of Chartered Institute of Bankers, and of the Institute of Marketers. A Graduate several Leadership Institutes. He is currently running an Advance Diploma Course at School Of Politics, Policies and Governance under the leadership of Dr Oby Ezekwesili, former Minister of Education. He is a recipient of the Apostle Wole Oladiyun CLAM/PFN Award for Excellence in Evangelism/Outreach. Presently, he serves as the Chairman, Pentecostal Fellowship of Nigeria, Ikeja Province. He is a co-pioneer of Ido-Ekiti For Christ Ministry, and the founder of Revival Summit Ministries. He has authored 3 books till date. He is married to Tola Ilesanmi and they are blessed with children. "
     },
     {
         id: 8,
-        img: Img,
+        img: peterImg,
         name: "COMMANDER PETER OLABODE",
+        position:"President ",
         title: "CHAIRMAN - IKORODU PROVINCE ",
         church: "Moment of Grace and Fire Ministry",
         address: "2, Salvation and Praise City Close Keke Maruwa Last Bus Stop Selewu, Igbogbo Lagos",
@@ -1060,17 +1124,19 @@ export const chairmen = [
         email: "peterolabode8@gmail.co",
         dOb: "8/9",
         chapter: "",
-        province: "",
+        province: "Ikorodu",
         associatePastor: "Pastor Mrs. V. O. Olabode",
         associatePastorTel: "08032288773",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "Chairman, PFN Ikorodu Province"
     },
     {
         id: 9,
-        img: Img,
-        name: "BISHOP FEMI SONEYE",
+        img: femiImg,
+        name: "BISHOP FEMI EMMANUEL SONEYE",
         title: "CHAIRMAN - ETIOSA PROVINCE",
+        position: "SENIOR PASTOR",
         church: "MIRACLEBREED ASSEMBLY",
         address: "TRAILBLAZERS CONVENTION CENTER TREASURE ESTATE AFA BUS STOP, SHANGOTEDO KM 46, LEKKI-EPE EXPRESS WAY. LAGOS",
         headOffice: "",
@@ -1078,17 +1144,19 @@ export const chairmen = [
         email: "miraclebreed_assembly@yahoo.com, femi.soneye5570@gmail.com",
         dOb: "May 5th",
         chapter: "",
-        province: "",
+        province: "ETIOSA PROVINCE",
         associatePastor: "Pastor Mrs. V. O. Olabode",
         associatePastorTel: "08032288773",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "Bishop Femi Soneye holds an MBA in Marketing, a fellow Direct institute of Marketing, member institute of management. Chancellor Glowing light theological college, Married to Rev Dr Abidemi Soneye and blessed with two beautiful children."
     },
     {
         id: 10,
-        img: Img,
-        name: "APOSTLE PATRICK UTULU",
+        img: patrickImg,
+        name: "Apostle Dr. Patrick Utulu",
         title: "CHAIRMAN - AMUWO ODOFIN/ORIADE PROVINCE",
+        position: "General overseer",
         church: "Dominion Gate Min Int'L Inc,",
         address: "No 1 Church Street, Liverpool Estate, Zone 2, Satellite Town.",
         headOffice: "",
@@ -1100,7 +1168,8 @@ export const chairmen = [
         associatePastor: "Pastor Mrs. V. O. Olabode",
         associatePastorTel: "08032288773",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "Missionary Apostle, Trainer, Consultantant and humanitarian"
     },
     {
         id: 11,
@@ -1123,8 +1192,9 @@ export const chairmen = [
     {
         id: 12,
         img: Img,
-        name: "Bishop Dr Praise Oliver.",
+        name: "Bishop Dr GENERAL OLIVER PRAISE",
         title: "CHAIRMAN, AGEGE PROVINCE ",
+        position: "Fresh Fire Revival Chapel ",
         church: "FRESH FIRE REVIVAL CHAPEL",
         address: "No. 287 Lagos Abeokuta Express Way. Pleasure bus stop. Lagos.",
         headOffice: "",
@@ -1136,12 +1206,14 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "Bishop Dr Praise Oliver Akhanamoya is a native of Afashio Uzairue, Etsako west LGA of Edo State. Ordained into the ministry in May 1988. A Graduate of Electrical Electronics Engineering (UNIPORT). A Graduate of All nation bible school And was commissioned by the late ArchBishop Benson Idahosa in 1990. A two times Doctorate degree holder in Theology with several other certificates and awards. A Prophet by calling with strong teaching Grace. Traveled extensively propagating the Gospel of Jesus Christ. Gifted with strong Deliverance Ministry. Lover of Jesus Christ. Former Chapter Chapter of PFN Agege South West. Now the Province chairman of PFN Agege Ogba Province. "
     },
     {
         id: 13,
-        img: Img,
-        name: "Apostle.Dr.Joshua Olaoye",
+        img: olaoyeImg,
+        name: "Apostle.Dr.JOSHUA OLUWAGBEMIGA OLAOYE",
+        position: "GENERAL OVERSEER",
         title: "CHAIRMAN, KOSOFE PROVINCE",
         church: "TRIUMPHANT FAITH GLOBAL CHURCHES INC.",
         address: "6, OLAKUNLE STR., OWODE-AJEGUNLE, IKORODU ROAD, LAGOS.",
@@ -1150,17 +1222,19 @@ export const chairmen = [
         email: "joshuatfm@yahoo.com",
         dOb: "23RD SEPT.",
         chapter: "",
-        province: "",
+        province: "KOSOFE",
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "AN APOSTLE OF OUR LORD JESUS CHRIST,SENT TO THE NATIONS, TO LIBERATE NATIONS & DESTINIES."
     },
     {
         id: 14,
-        img: Img,
-        name: "Pastor (Barr.) Samuel O. Afilaka",
+        img: samuelImg,
+        name: "Pastor (Barr.) Samuel Olanrewaju Afilaka",
         title: "CHAIRMAN, AGBADO OKE ODO PROVINCE",
+        position: "General Overseer",
         church: "The Faithful Reconcilers' Bible Ministry (Reconcilers'Church)",
         address: "No. 14, Ifelodun Street, Agbelekale, Abule-Egba, Lagos State",
         headOffice: "",
@@ -1172,13 +1246,15 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "Born on 5th December, 1964 at Ise-Ijesa via Ilesa in Atakumosa East Local Government Area of Osun State, Nigeria. Got born again on 13th August, 1986. Called into Ministry on 26th February, 1993. Tutored in the christian way of life under the leadership of his biological father- Late Prophet Michael Afilaka in Christ Apostolic Church and his spiritual father - Late Rev. David Idowu Obembe of Christian Faith World Outreach Center (Overcomers' Church). Ilesa. He is the set man at The Reconcilers' Bible Ministry, Agbelekale, Abule-Egba, Lagos State founded in October, 2000. "
     },
     {
         id: 15,
-        img: Img,
+        img: tundeImg,
         name: "Rev Alfred Olatunde Shoyemi",
         title: "CHAIRMAN, IFAKO IJAIYE PROVINCE",
+        position: "General Overseer",
         church: "The Truth Christian Mission",
         address: "3/5 Adesola Street Off Sanni Balogun St. Abule-Egba Lagos.",
         headOffice: "",
@@ -1186,16 +1262,18 @@ export const chairmen = [
         email: "olatundeshoyemi@yahoo.com",
         dOb: "December 3",
         chapter: "",
-        province: "",
+        province: "Ifako-Ijaiye",
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "Holds Higher Diploma in Accounting and other Professional Certificates from ICAN and Institute Of Administrative Accountants. Formerly Management Accountant with AG Leventis Nigeria. Married to Olabisi Shoyemi with children and grandchildren. "
     },
     {
         id: 16,
-        img: Img,
+        img: oladitiImg,
         name: "BISHOP SAMUEL OLUDARE OLADITI",
+        position: "General Overseer",
         title: "CHAIRMAN, AYOBO/OKUNOLA PROVINCE",
         church: "VICTORY INTERNATIONAL FAITH MISSION",
         address: "11/13 VICTORY CLOSE OFF CANDOS ROAD BARUWA IPAJA LAGOS",
@@ -1204,17 +1282,19 @@ export const chairmen = [
         email: "vifmlagos@yahoo.com",
         dOb: "MARCH 10TH",
         chapter: "",
-        province: "",
+        province: "Ayobo Okunola Province",
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "Samuel Oludare Oladiti General Overseer of victory international faith mission Chairman of Ayobo/Okunola Province Born march 10 1967 Married and blessed with 4 kids "
     },
     {
         id: 17,
-        img: Img,
+        img: ImgB17,
         name: "REV Sheriff Tosin Israel",
         title: "CHAIRMAN, MAINLAND PROVINCE",
+        position: "Senior Pastor",
         church: "CITY OF GOD RESURRECTION ASSEMBLY",
         address: "4A ADARAMAJA ST, IWAYA YABA LAGOS",
         headOffice: "",
@@ -1226,7 +1306,8 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        bio: "Sheriif Tosin Israel was born 20th October, 1966, to a Muslim family. He got converted in 1979 and entered the ministry on 6th December, 1985. He was a missionary for 14 years to the middle belt and south west of Nigeria. He was the leader of Overcomes Crusade Team International, a youth forum in Lagos State. He founded a church in 1988 named the City of God Ressurection Assembly and joined PFN in 2002. He is currently the Chairman, Mainland province, Lagos State. He is happily married with four daughters."
     },
     {
         id: 18,
@@ -1245,7 +1326,8 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        positon: "General Overseer"
+        positon: "General Overseer",
+        bio: "My name is Reverend Victor Uzezi Aghraghra, General Overseer of The Transformed Christian Assembly Incorporated, and the PFN Chairman, Epe Province. "
     },
     {
         id: 19,
@@ -1283,4 +1365,23 @@ export const chairmen = [
         associatePastorChapter: "",
         associatePastorProvince: ""
     },
+    
+    {
+      id: 21,
+      img: Img,
+      name: "REV DR ANDREW ISIAKA OLADEPO",
+      title: "CHAIRMAN - IBEJU/LEKKI PROVINCE ",
+      church: "SCRIPTURE LIFE CHRISTIAN CENTRE INC",
+      address: "Plots 1/3 Scripture Life Way, Iya Alagbo Area Awoyaya. Ibeju Lekki Lagos.",
+      headOffice: "",
+      tel: "08023154453, 07043421533",
+      email: "andrewoladepo4scripturelife@yahoo.com",
+      dOb: "17th Oct.",
+      chapter: "",
+      province: "",
+      associatePastor: "",
+      associatePastorTel: "",
+      associatePastorChapter: "",
+      associatePastorProvince: ""
+  },
 ]
