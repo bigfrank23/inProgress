@@ -1,10 +1,11 @@
 import React from "react";
 import PresidentImg from "../../images/president.jpg";
-import PresidentImg2 from "../../images/president2.jpg";
-import PresidentImg3 from "../../images/president3.jpg";
+import PresidentImg2 from "../../images/president2.png";
+import PresidentImg3 from "../../images/president3.png";
 import PresidentImg4 from "../../images/president4.jpg";
+import PresidentImg5 from "../../images/president5.png";
 import Img1 from "../../images/sec.png";
-import Img2 from "../../images/splash3.jpg";
+import Img2 from "../../images/nationalBg.png";
 import Img3 from "../../images/bg2.jpg";
 import Img4 from "../../images/My-Post-15.png";
 import styled from "styled-components";
@@ -94,9 +95,20 @@ const TheNational = () => {
                         </div>
                     </div>
                 </div>
-                <div className="nationalCenterContent" id="nationalCenterContent">
+                <div className="nationalCenterContent">
                     <div className="nationalCenterContentImgBx">
                         <img src={PresidentImg3} alt="" />
+                    </div>
+                    <div className="nationalCenterContentTxt">
+                        <H3>Rev. Dr. Cosmas Ilechukwu</H3>
+                        <div className="nationalCenterContentTxtPara">
+                            <p>PFN National Secetary</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="nationalCenterContent" id="nationalCenterContent">
+                    <div className="nationalCenterContentImgBx">
+                        <img src={PresidentImg5} alt="" />
                     </div>
                     <div className="nationalCenterContentTxt">
                         <H3>Archbishop John A. Osa-Oni</H3>

@@ -7,7 +7,7 @@ import Img1 from "../../images/sec.png";
 import Img2 from "../../images/splash3.jpg";
 import Img3 from "../../images/bg2.jpg";
 import Img4 from "../../images/My-Post-15.png";
-import Img5 from "../../images/slider1.jpg";
+import Img5 from "../../images/slider1.png";
 import styled from "styled-components";
 import "./PfnExecutives.css";
 import Button2 from "../../components/Button/Button2";
@@ -37,7 +37,7 @@ const Container = styled.div`
       url(${Img5});
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: 0 -150px;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;

@@ -14,6 +14,10 @@ import { tab } from './../../responsive';
 import { landscapeTab } from './../../responsive';
 import MailchimpFormContainer from '../mailchimpFormContainer/MailchimpFormContainer'
 import Button2 from '../Button/Button2'
+import ProfileImg from '../../images/profile.png'
+
+import { useDispatch } from 'react-redux';
+import { LOGOUT } from '../../pages/blog/redux/constants/actionTypes';
 
 const Container = styled.div`
   width: 100%;
@@ -155,7 +159,16 @@ const Credits = styled.section`
     color: #b5b5b4;
     font-size: 1rem;
 `;
+
+const user = JSON.parse(localStorage.getItem('mern_crud3_copy_user'))
 const Footer = () => {
+
+  const dispatch = useDispatch()
+
+  const handleLogOut = () => {
+    dispatch({type: LOGOUT})
+    window.location.replace("/")
+}
   return (
     <Container>
         <div className="topFooter">
@@ -215,10 +228,33 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            {
+          user ?
+          <div className="eventTime">
+            <div className="authBx">
+              <Link to="/settings" id='links'>
+                <div className="authBxImg">
+                  <img src={ !user.user.profilePic ? ProfileImg : user.user.profilePic } alt="" className='profileImg' />
+                </div>
+                <div className="authBxName">
+                  <span>{user.user.username}</span>
+                </div>
+              </Link>
+            </div>
+            <h6 className="authBxLogout" onClick={handleLogOut}>Log out</h6>
+          </div>
+          :
+          <div className="eventTime">
+            <Link to="/admin_login" id='links'>
+            <h6 className="authBxLogout">{user ? "Log out" : "Log in"}</h6>
+            </Link>
+          </div>
+
+        }
         </div>
-        <div style={{textAlign: "center"}}>
+        {/* <div style={{textAlign: "center"}}>
         <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" height="35" style={{border: "none", overflow: "hidden"}} scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
-        </div>
+        </div> */}
         <div style={{display: "flex", justifyContent: "space-around"}}>
           <Credits>
               &copy; 2022 PFN Lagos. All Rights Reserved.

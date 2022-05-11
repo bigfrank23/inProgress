@@ -57,7 +57,7 @@ const Page13 = () => {
             </div>
             <div className="page13TopPara">
                 <PText>
-                Penticostal Fellowship of Nigeria, Lagos State provides tools, teams, and times to help individuals – and the church family as a whole – pray. Prayer is vitally important to your relationship with God. We would love to pray for you, a friend, or a family member.
+                Pentecostal Fellowship of Nigeria, Lagos State provides tools, teams, and times to help individuals – and the church family as a whole – pray. Prayer is vitally important to your relationship with God. We would love to pray for you, a friend, or a family member.
                 </PText>
             </div>
           </div>

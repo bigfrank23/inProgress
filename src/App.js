@@ -42,6 +42,7 @@ import AllPosts from './pages/blog/allPost/AllPosts';
 import FullDetail from './pages/blog/fullDetail/FullDetail';
 import Settings from './pages/blog/settings/Settings';
 import Login2 from './pages/blog/auth/login2/Login2';
+import Announcement from './pages/announcement/Announcement';
 
 const Container = styled.div`
   width: 100%;
@@ -97,6 +98,7 @@ function App() {
           <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/admin_login' component={Login2} />
+          <Route exact path='/announcement' component={Announcement} />
         </Switch>
       </Router>
       <GoUp />

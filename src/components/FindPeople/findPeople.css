@@ -11,7 +11,7 @@
 }
 .header .centerHeader{
     padding: 0 0 24px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 .header .bottomHeader{
     font-weight: 700;
@@ -23,7 +23,7 @@
 }
 .topHeader h2{
     color: #006633;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Tangerine', cursive;
     font-size: 3rem;
 }
 .content{

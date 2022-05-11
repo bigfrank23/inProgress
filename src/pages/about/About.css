@@ -5,6 +5,9 @@
     padding: 0 1rem;
     margin-bottom: 1rem;
 }
+.pageContentPara{
+    text-align: justify;
+}
 .reduce{
     padding: 0 7rem;
 }

@@ -7,7 +7,7 @@ import Header from '../Text/Header'
 import H2 from '../Text/H2'
 import { Grid } from '@mui/material'
 // import Img2 from '../../images/cwc3.png'
-import Img2 from '../../images/theCWC.png'
+import Img2 from '../../images/theCWC.jpg'
 // import Img3 from '../../images/dir2.png'
 import Img3 from '../../images/theDirectors.jpg'
 // import Img4 from '../../images/chiarman2.png'
@@ -46,7 +46,7 @@ const FindPeople = () => {
         {
             id: 3,
             img: Img4,
-            title: "The Provincial Chairmen",
+            title: "The Province Chairmen",
             desc: "Know More"
         },
     ]
@@ -55,7 +55,7 @@ const FindPeople = () => {
       <div className="header">
         <div className="topHeader">
           {/* <Header children="THE STATE EXECUTIVE COUNCIL" color={true} /> */}
-          <h2>THE STATE EXECUTIVE COUNCIL</h2>
+          <h2>The State Executive Council</h2>
         </div>
         <div className="centerHeader">
           <H2 children="Our Team is composed of" />
@@ -66,7 +66,7 @@ const FindPeople = () => {
                 strings={[
                 "The Central Working Commitee",
                 "The State Directors",
-                "The Provincial Chairmen",
+                "The Province Chairmen",
                 ]}
                 typeSpeed={40}
                 backSpeed={50}

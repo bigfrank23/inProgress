@@ -117,9 +117,9 @@ const About = () => {
         <div className="pageBanner">
             <div className="pageBannerText">
                 <div className="reduce">
-                    <Header fontStyle color>
+                    <H2>
                         "The national body which binds all Christian churches, organizations and believers"
-                    </Header>
+                    </H2>
                     <h1 className="changeText">
 
                     </h1>

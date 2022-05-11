@@ -83,19 +83,19 @@ const Navbar = () => {
             <div className="authBx">
               <Link to="/settings" id='links'>
                 <div className="authBxImg">
-                  <img src={ !user.user.profilePic ? ProfileImg : user.user.profilePic } alt="" className='profileImg' />
+                  {/* <img src={ !user.user.profilePic ? ProfileImg : user.user.profilePic } alt="" className='profileImg' /> */}
                 </div>
                 <div className="authBxName">
                   <span>{user.user.username}</span>
                 </div>
               </Link>
             </div>
-            <h6 className="authBxLogout" onClick={handleLogOut}>Log out</h6>
+            {/* <h6 className="authBxLogout" onClick={handleLogOut}>Log out</h6> */}
           </div>
           :
           <div className="eventTime">
             <Link to="/admin_login" id='links'>
-            <h6 className="authBxLogout">{user ? "Log out" : "Log in"}</h6>
+            {/* <h6 className="authBxLogout">{user ? "Log out" : "Log in"}</h6> */}
             </Link>
           </div>
 
@@ -131,7 +131,7 @@ const Navbar = () => {
                     <div className="mainListItemsCenterRight">
                       <div className="mainListItemsCenterRightTopTxt">
                         <Link to="/" id="links" onClick={()=> setOpenMain(false)}>
-                          <h2>Penticostal Fellowship of Nigeria</h2>
+                          <h2>Pentecostal Fellowship of Nigeria</h2>
                         </Link>
                         <div className="mainListItemsCenterRightTopPara" onClick={()=> setDropdownNav(!dropdownNav)}>
                           <p>Lagos State</p>
@@ -306,7 +306,7 @@ const Navbar = () => {
                     </Link>
                 </ul>
               </li>
-              <Link to="#" className="links">
+              {/* <Link to="#" className="links"> */}
                 <li className="navListItems">Get in Touch
                 <ul className="hover">
                     <Link to="/prayer" className="links">
@@ -317,7 +317,7 @@ const Navbar = () => {
                     </Link>
                 </ul>
                 </li>
-              </Link>
+              {/* </Link> */}
             </ul>
           </div>
           {showNav && (

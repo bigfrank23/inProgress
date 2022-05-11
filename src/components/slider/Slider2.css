@@ -1,0 +1,17 @@
+ h2.slideTitle{
+    font-size: 1.5rem !important;
+}
+#slideTitle{
+    text-align: center;
+}
+.sliderBoxImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.slideBox img{
+    width: 30%;
+}
+.slideBox p{
+    padding: 1rem 4rem;
+}

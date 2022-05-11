@@ -36,7 +36,7 @@ const ExtraTextContainer = styled.div`
 `
 const ExtraText = styled.h2`
   color: #006633;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Tangerine', cursive;
   font-size: 3rem;
   margin: 0 auto 20px auto;
   text-align: center;
@@ -114,7 +114,7 @@ const ExtraTextContainer2 = styled.div`
 `
 const ExtraText2 = styled.h2`
     color: #006633;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Tangerine', cursive;
     font-size: 3rem;
     margin: 0 0 30px;
     text-align: center;
@@ -199,21 +199,19 @@ const Extraordinay = () => {
           <ExtraText>Get to know us</ExtraText>
         </ExtraTextContainer>
         <ExtraContent>
-          <ExtraImg>
+          {/* <ExtraImg>
             <ExtraIconContainer>
               <i className="fa fa-play playIcon" aria-hidden="true" />
             </ExtraIconContainer>
-          </ExtraImg>
+          </ExtraImg> */}
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/T-ubYjO-b-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
           <ExtraContentText>
             <ExtraDesc>
-              "PFN is the umbrella Body which coordinates the activities of
-              Penticostal, Evangelical and Chrismatic Ministries, Churches and
-              Associations, for the purpose of unity as underlined by the prayer
-              of the Lord Jesus in John 17."
+              "PFN is the national body which binds all Christian churches, organizations and believes who believe, experience, practice and cherish the Pentecostal experience as found and described in Acts 2:4."
             </ExtraDesc>
-            <Link to="#">
+            <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow">
               <ExtraName>Know more</ExtraName>
-            </Link>
+            </a>
           </ExtraContentText>
         </ExtraContent>
       </ExtraContentContainer>

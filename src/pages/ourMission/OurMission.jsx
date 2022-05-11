@@ -65,7 +65,7 @@ const OurMission = () => {
       <div className="ourMissionContainerBody">
         <div className="ourMissionContainerTitle">
           <p>
-            Penticostal Fellowship of Nigeria is the coming together of the holy
+            Pentecostal Fellowship of Nigeria is the coming together of the holy
             spirit filled Christian Churches and Organization who believe and
             practice the full GOSPEL MESSAGE(ACT2), in an independence ad
             autonomous Christian Fellowship for the following objectives below <i className="fa fa-hand-o-down" />
