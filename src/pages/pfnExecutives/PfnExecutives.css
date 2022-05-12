@@ -15,8 +15,9 @@
 }
 .flip-box {
     background-color: transparent;
-    width: 300px;
-    height: 400px;
+    width: 500px;
+    /* height: 400px; */
+    height: 150px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     cursor: pointer;
@@ -33,9 +34,9 @@
   }
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-box:hover .flip-box-inner {
+  /* .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
-  }
+  } */
   
   /* Position the front and back side */
   .flip-box-front, .flip-box-back {
@@ -44,6 +45,7 @@
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    background: radial-gradient(circle, rgba(148,218,233,1) 0%, rgba(174,238,221,1) 100%);
   }
   
   /* Style the front side (fallback if image is missing) */
@@ -52,8 +54,9 @@
     color: black;
   }
   .flip-box-front img{
-    width: 100%;
-    height: 50%;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
   }
   
   /* Style the back side */

@@ -94,7 +94,6 @@ const LSES = () => {
                                builds pathways within the Advisory Leadership System by improving the lives of it's members and growing our state through it.
                                 The Advisory Council model allows the Chairman to access the wisdom and support of servants of God of influence and integrity in the State.
                                 The State Advisory Council comprises of twelve leaders from within the State
-
                             </PText>
                             </div>
                         </div>
@@ -105,7 +104,7 @@ const LSES = () => {
                             <H3>
                             	The State Executive Council
                             </H3>
-                            <PText>
+                            {/* <PText> */}
                             <ul className="page12TopContentBoxRightList">
                                 <li className="page12TopContentBoxRightListItem">
                                     The Central Working Committee (CWC)
@@ -123,7 +122,7 @@ const LSES = () => {
                                 which cover geographical areas carefully delineated to effectively cover the state.
 
                             </div>
-                            </PText>
+                            {/* </PText> */}
                         </div>
                         <Link to="/pfn-executives" id="page12KnowMoreBtn">
                             <Button BtnText="Know more" outline />
@@ -148,7 +147,7 @@ const LSES = () => {
 
                         </div>
                      <PText>Next in line to the State are the Provinces which cover geographical areas carefully delineated to effectively cover the state.
-                    There are at present 21 Provinces headed by Provincial Chairmen who lead a Provincial Executive Council, which like the State Executive is composed of selected and appointed officials and the various Chapter Chairmen.
+                        There are at present 21 Provinces headed by Provincial Chairmen who lead a Provincial Executive Council, which like the State Executive is composed of selected and appointed officials and the various Chapter Chairmen.
                     </PText>
                         <div className="page12ParaSpace">
 

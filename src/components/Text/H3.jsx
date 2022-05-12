@@ -15,9 +15,9 @@ const H3Styles = styled.div`
     padding: 0;
   }
 `;
-const H3 = ({children, color=false, transform=false}) => {
+const H3 = ({children}) => {
   return (
-    <H3Styles color={color} transform={transform}>
+    <H3Styles>
         <h3>{children}</h3>
     </H3Styles>
   )

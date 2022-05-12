@@ -17,9 +17,9 @@ const PStyle = styled.div`
   }
 `;
 
-function PText({ children , color = false, weight=false}) {
+function PText({ children}) {
   return (
-    <PStyle className="para" color={color} weight={weight}>
+    <PStyle className="para">
       <p>{children}</p>
     </PStyle>
   );

@@ -17,9 +17,9 @@ const H2Style = styled.div`
     padding: 0;
   }
 `;
-const H2 = ({children, color = false}) => {
+const H2 = ({children}) => {
   return (
-    <H2Style className="title" color={color}>
+    <H2Style className="title">
       <h2 style={{fontFamily: "FontAwesome"}}>{children}</h2>
     </H2Style>
   );

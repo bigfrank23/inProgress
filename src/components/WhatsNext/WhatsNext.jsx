@@ -5,7 +5,7 @@ import H2 from '../Text/H2'
 import PText from '../Text/PText'
 import './whatNext.css'
 import { Grid } from '@material-ui/core';
-import Img1 from '../../images/galleryIndex.jpg'
+import Img1 from '../../images/gallery1.png'
 import Img2 from '../../images/directorate/evangelism.png'
 import Img3 from '../../images/prayer.jpeg'
 import H3 from '../Text/H3'

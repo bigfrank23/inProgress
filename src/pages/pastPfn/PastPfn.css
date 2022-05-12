@@ -36,6 +36,14 @@
 .postPfnGridContentTxt{
     padding: 2rem;
     text-align: center;
+    color: #fff;
+}
+.postPfnGridContentTxt h3{
+    text-transform: uppercase;
+    font-style: normal;
+}
+.postPfnGridContentTxt p{
+    font-size: 1rem;
 }
 
 @media only screen and (max-width: 600px) {

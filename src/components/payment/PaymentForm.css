@@ -1,0 +1,53 @@
+.giveTopContainer{
+    padding: 4rem 7rem;
+}
+.giveTopContainer h2.title{
+    color: #006633;
+    font-family: 'Tangerine', cursive;
+    font-size: 3rem;
+    /* margin: 0 0 30px; */
+    text-align: center;
+}
+.giveTopContainer h2.title2{
+    color: #990000;
+    font-family: 'Fontawesome';
+    /* font-size: 1.5rem; */
+    text-align: center;
+}
+.giveTopContainer .giveTopContainerPara{
+    max-width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+/* Center */
+.giveCenterContainer{
+    background-color: #fff;
+}
+.giveCenterContainerTitle{
+    background-color: tan;
+    text-align: center;
+    padding: 2rem;
+    max-width: 60%;
+    margin: auto;
+}
+.giveArrow{
+    text-align: center;
+    color: #fff;
+}
+
+.giveNowForm{
+    max-width: 60%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.giveBottomContainer{
+    display: flex;
+    justify-content: center;
+}
+.giveBottomContainer img{
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+}

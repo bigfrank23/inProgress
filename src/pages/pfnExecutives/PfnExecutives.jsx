@@ -4,7 +4,7 @@ import { Modal, Box, Typography } from '@mui/material';
 import { makeStyles } from '@material-ui/core/styles';
 import PersonIcon from '@mui/icons-material/Person';
 import Img1 from "../../images/sec.png";
-import Img2 from "../../images/splash3.jpg";
+import Img2 from "../../images/PFN10.png";
 import Img3 from "../../images/bg2.jpg";
 import Img4 from "../../images/My-Post-15.png";
 import Img5 from "../../images/slider1.png";
@@ -20,6 +20,7 @@ import { chairmen, directors } from "../../teamMembers/team";
 import H3 from "../../components/Text/H3";
 import Header from "../../components/Text/Header";
 import flipImg from '../../images/flip.png'
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   user-select: none;
@@ -112,7 +113,7 @@ const PfnExecutives = () => {
                 <h2>APOSTLE ENYINNAYA OKWUONU</h2>
                 <h5>CHAIRMAN</h5>
               </div>
-              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
+              {/* <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} /> */}
             </div>
             <div className="flip-box-back">
               <div className="flip-box-back-content">
@@ -155,7 +156,7 @@ const PfnExecutives = () => {
                 <h5>DEPUTY CHAIRMAN</h5>
               </div>
               <div>
-              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
+              {/* <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} /> */}
               </div>
             </div>
             <div className="flip-box-back">
@@ -198,7 +199,7 @@ const PfnExecutives = () => {
                 <h2>APOSTLE AKINYELE AKINDEJOYE</h2>
                 <h5>SECRETARY</h5>
               </div>
-              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
+              {/* <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} /> */}
             </div>
             <div className="flip-box-back">
               <div className="flip-box-back-content">
@@ -243,7 +244,7 @@ const PfnExecutives = () => {
                 <h2>REV (DR) PEACE GOODEY</h2>
                 <h5>TREASURER</h5>
               </div>
-              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
+              {/* <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} /> */}
             </div>
             <div className="flip-box-back">
               <div className="flip-box-back-content">
@@ -287,7 +288,7 @@ const PfnExecutives = () => {
                 <h2>PASTOR BAYO OYEYEMI</h2>
                 <h5>Financial Secretary</h5>
               </div>
-              <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
+              {/* <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} /> */}
             </div>
             <div className="flip-box-back">
               <div className="flip-box-back-content">
@@ -296,22 +297,6 @@ const PfnExecutives = () => {
                   <FontAwesomeIcon className="fa5Icon" icon={faChurch} />
                   Deeper Christian Life Ministries
                 </p>
-                {/* <p className="pfn-back-para">
-                  <FontAwesomeIcon className="fa5Icon" icon={faAddressCard} />
-                  97c, Marine Road, Apapa GRA
-                </p> */}
-                {/* <p className="pfn-back-para">
-                  <FontAwesomeIcon className="fa5Icon" icon={faPhone} />
-                  08023213789, +234 815 090 1500
-                </p>
-                <p className="pfn-back-para">
-                  <FontAwesomeIcon className="fa5Icon" icon={faCalendar} />
-                  30th March
-                </p>
-                <p className="pfn-back-para">
-                  <FontAwesomeIcon className="fa5Icon" icon={faAt} />
-                  enyinnaya56@yahoo.com
-                </p> */}
                 <div className="pfnExecutivesIcons">
                   <i className="fa fa-facebook" aria-hidden="true" />
                   <i className="fa fa-twitter" aria-hidden="true" />
@@ -333,16 +318,16 @@ const PfnExecutives = () => {
       <div className="pfnExecutivesContainer">
         <Grid container spacing={2}>
           {directors.map((data) => (
-            <Grid key={data.id} item xs={12} sm={6} md={6} lg={3}>
+            <Grid key={data.id} item xs={12} sm={6} md={6} lg={4}>
               <div className="flip-box">
                 <div className="flip-box-inner">
                   <div className="flip-box-front">
-                    <img src={data.img} alt="" />
+                    <img src={Img2} alt="" />
                     <div className="pfnExecutivesTxt">
                       <h2>{data.name}</h2>
                       <h5>{data.title}</h5>
                     </div>
-                    <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
+                    {/* <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} /> */}
                   </div>
                   <div className="flip-box-back">
                     <div className="flip-box-back-content">
@@ -393,69 +378,52 @@ const PfnExecutives = () => {
         <div className="pfnExecutivesContainer">
           <Grid container spacing={2}>
             {chairmen.map((data) => (
-              <Grid key={data.id} item xs={12} sm={6} md={6} lg={3}>
-                <div className="flip-box">
-                  <div className="flip-box-inner">
-                    <div className="flip-box-front">
-                      <img src={data.img} alt="" />
-                      <div className="pfnExecutivesTxt">
-                        <h2>{data.name}</h2>
-                        <h5>{data.title}</h5>
+              <Grid key={data.id} item xs={12} sm={6} md={6} lg={4}>
+                <Link to={`/full_exec_detail:${data.id}`}>
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      <div className="flip-box-front">
+                        <img src={Img2} alt="" />
+                        <div className="pfnExecutivesTxt">
+                          <h2>{data.name}</h2>
+                          <h5>{data.title}</h5>
+                        </div>
+                        {/* <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} /> */}
                       </div>
-                      <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} />
-                    </div>
-                    <div className="flip-box-back" onClick={()=> {setOpen(true); setModalData(data)}}>
-                      <div className="flip-box-back-content">
-                        <H2>More Details</H2>
-                        <p className="pfn-back-para">
-                          <FontAwesomeIcon className="fa5Icon" icon={faChurch} />
-                          {data.church}
-                        </p>
-                        <p className="pfn-back-para">
-                          <FontAwesomeIcon
-                            className="fa5Icon"
-                            icon={faAddressCard}
-                          />
-                          {data.address}
-                        </p>
-                        <p className="pfn-back-para">
-                          <FontAwesomeIcon className="fa5Icon" icon={faPhone} />
-                          {data.tel}
-                        </p>
-                        <p className="pfn-back-para">
-                          <FontAwesomeIcon
-                            className="fa5Icon"
-                            icon={faCalendar}
-                          />
-                          {data.dOb}
-                        </p>
-                        <p className="pfn-back-para">
-                          <FontAwesomeIcon className="fa5Icon" icon={faAt} />
-                          {data.email}
-                        </p>
+                      <div className="flip-box-back" onClick={()=> {setOpen(true); setModalData(data)}}>
+                        <div className="flip-box-back-content">
+                          <H2>More Details</H2>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon className="fa5Icon" icon={faChurch} />
+                            {data.church}
+                          </p>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon
+                              className="fa5Icon"
+                              icon={faAddressCard}
+                            />
+                            {data.address}
+                          </p>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon className="fa5Icon" icon={faPhone} />
+                            {data.tel}
+                          </p>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon
+                              className="fa5Icon"
+                              icon={faCalendar}
+                            />
+                            {data.dOb}
+                          </p>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon className="fa5Icon" icon={faAt} />
+                            {data.email}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                  className={classes.modalStyle}
-                >
-                  <Box className={classes.boxStyle}>
-                    <div style={{padding: "2rem", textAlign: "center", color: "red"}}>
-                      <PersonIcon />
-                    </div>
-                    <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign: "center", fontFamily: "sans-serif", fontSize: "1rem", padding: "0 2rem 2rem 2rem"}}>
-                      {modalData.bio}
-                    </Typography>
-                    <div style={{padding: "2rem"}}>
-                        {/* {data.email} */}
-                    </div>
-                  </Box>
-                </Modal>
+                </Link>
               </Grid>
             ))}
           </Grid>

@@ -4,7 +4,7 @@ import Img from "../../images/federico-respini-sYffw0LNr7s-unsplash.jpg";
 import Img2 from "../../images/living-generously.jpg";
 import Img3 from "../../images/bg2.jpg";
 import Img4 from "../../images/My-Post-15.png";
-import Img5 from "../../images/pro9.jpg";
+import Img5 from "../../images/gallery2.png";
 import styled from "styled-components";
 import MyGallery from "../../components/myGallery/MyGallery";
 import './Gallery.css'
@@ -35,11 +35,11 @@ const Container = styled.div`
       0% 80%,
       0 0
     );
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #d2d2d2
       url(${Img5});
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;

@@ -207,7 +207,7 @@ const Extraordinay = () => {
           <iframe width="560" height="315" src="https://www.youtube.com/embed/T-ubYjO-b-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
           <ExtraContentText>
             <ExtraDesc>
-              "PFN is the national body which binds all Christian churches, organizations and believes who believe, experience, practice and cherish the Pentecostal experience as found and described in Acts 2:4."
+              "PFN is the National body which binds all Christian churches, Organizations and Believers who believe, experience, practice and cherish the Pentecostal experience as found and described in Acts 2:4."
             </ExtraDesc>
             <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow">
               <ExtraName>Know more</ExtraName>

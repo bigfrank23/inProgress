@@ -54,7 +54,6 @@ const FindPeople = () => {
     <Container>
       <div className="header">
         <div className="topHeader">
-          {/* <Header children="THE STATE EXECUTIVE COUNCIL" color={true} /> */}
           <h2>The State Executive Council</h2>
         </div>
         <div className="centerHeader">

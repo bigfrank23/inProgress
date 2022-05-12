@@ -1,0 +1,21 @@
+.fullExecDetailContainer{
+    display: flex;
+    gap: 2rem;
+    padding: 4rem 7rem;
+}
+.fullExecDetailContainerLeft{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.fullExecDetailContainerLeft img{
+    width: 100%;
+}
+.fullExecDetailContainerRight{
+    flex: 3;
+}
+.fullExecDetailContainerRightTitle h5{
+    font-family: 'Fontawesome';
+    font-weight: 900;
+    color: #990000;
+}

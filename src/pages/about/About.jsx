@@ -108,7 +108,6 @@ const About = () => {
   return (
     <Container>
         <div className="page1Wrapper">
-            {/* <Navbar /> */}
             <div className="page1Header">
                 <h1>ABOUT</h1>
                 <h1>PENTECOSTAL FELLOWSHIP OF NIGERIA</h1>
@@ -160,6 +159,7 @@ const About = () => {
                     <div className="pageContentPara">
                     <PText>
                         Among others, the fellowship's purpose includes:
+                    </PText>
                     <ol className="pageContentTopList">
                         <li className="pageContentTopListItems">
                             To unite all Pentecostal churches, bodies and believers for the purpose of fellowship, encouragement and inspiration
@@ -177,7 +177,6 @@ const About = () => {
                             To set up standard of faith and doctrines along with the code of ethic to guide and identify true Pentecostal believers and organizations.
                         </li>
                     </ol>
-                    </PText>
                     </div>
                     {/* <div className="pageBtn" style={{display: 'flex', gap: '2rem', marginTop: '2rem'}}>
                         <Button />
@@ -196,6 +195,7 @@ const About = () => {
                     <div className="pageContentPara">
                         <PText>
                         In practical terms, the PFN has as part of its objective.
+                        </PText>
                         <ol className="pageContentTopList">
                         <li className="pageContentTopListItems">
                             To help Pentecostal believers in maintaining unity of the Spirit in the bond of peace among themselves as well as with the other member of the Body of Christ in their various communities in the nation.
@@ -206,9 +206,7 @@ const About = () => {
                         <li className="pageContentTopListItems">
                             The PFN will crystalize the sterling quality of the Pentecostal faith in its various programs and ensure that its tenets and principles are correctly spelt out, translated into daily living of its members and proclaimed in true worship in our various churches in such a way as our Lord will do and at the same time to stir the relenting from relaxing into the stupor of cold formalism (2Timothy 3:5).
                         </li>
-                    </ol>
-                        </PText>
-                        
+                        </ol>
                     </div>
                     {/* <div className="pageBtn" style={{display: 'flex', justifyContent: 'center', marginTop: '2rem'}}>
                         <Button />

@@ -417,7 +417,9 @@ const Navbar = () => {
                   className={!scroll ? "links" : "leftBtn"}
                 >
                   {/* <h3>Give</h3> */}
-                  <Button BtnText="Give" />
+                  <Link to='/give' id='links'>
+                    <Button BtnText="Give" />
+                  </Link>
                   {/* <PaystackButton {...componentProps} /> */}
                 </Link>
               ) : (
