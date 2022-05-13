@@ -194,26 +194,26 @@ const Page9 = () => {
             <H3 color="true">Lorem, ipsum.</H3>
           </div> */}
           <div className="page9TopContentPara">
-            <PText color="true" weight>
+            <p>
             Supporting the work of the PFN executives at all levels are the various directorates that offer invaluable inputs on specialized subjects and issues ranging from security to inter-governmental matters, and a host of others.
-            </PText>
+            </p>
           </div>
           <div className="page9TopContentPara">
-            <PText color="true" weight>
+            <p>
             The Directorate is a department that is responsible for one particular thing.
-            </PText>
+            </p>
           </div>
           <div className="page9TopContentPara">
-            <PText color="true" weight>
+            <p>
             It's our way of connecting people to the things they love to do. We believe that if you are doing something you love (and something God has already prepared you for), you’ll experience a greater sense of connection and purpose!
-            </PText>
+            </p>
           </div>
           {/* <div className="page9TopContentTitle2">
             <H3 color="true">Lorem, ipsum.</H3>
           </div> */}
           <div className="page9TopContentTitle2">
             <Link to="/contact" id='links'>
-              <H3 color="true">Reach Out »</H3>
+              <h3>Reach Out »</h3>
             </Link>
           </div>
         </div>

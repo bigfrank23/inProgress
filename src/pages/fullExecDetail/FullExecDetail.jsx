@@ -3,6 +3,8 @@ import Img5 from "../../images/slider1.png";
 import styled from "styled-components";
 import "./FullExecDetail.css";
 import Footer from "../../components/Footer/Footer";
+import { faChurch, faAddressCard, faPhone, faAt, faCalendar, faUserCircle, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation } from "react-router-dom";
 
 const Container = styled.div`
@@ -42,36 +44,38 @@ const Container = styled.div`
 
 const FullExecDetail = () => {
     const location = useLocation()
-
-    useEffect(()=> {
-
-    }, [])
+    // const query = new URLSearchParams(location.search)
+    // console.log(location.state.name)
+    // console.log(query.get('id'))
   return (
     <Container>
       <div className="page1Wrapper">
         <div className="page1Header">
-          <h1>The PFN Lagos State Executives</h1>
+          <h1>{location.state.header}</h1>
         </div>
       </div>
       <div className="fullExecDetailContainer">
           <div className="fullExecDetailContainerLeft">
-              <img src={Img5} alt="" />
-              <span>Church Name</span>
-              <span>Church Location</span>
-              <span>08912345678, 08123456789</span>
-              <span>DOB</span>
-              <span>email@email.com</span>
+              <img src={location.state.img} alt="" />
           </div>
           <div className="fullExecDetailContainerRight">
               <div className="fullExecDetailContainerRightName">
-                  <h2>Mr John Doe</h2>
+                  <h2>{location.state.name}</h2>
               </div>
               <div className="fullExecDetailContainerRightTitle">
-                  <h5>Executive Chairman</h5>
+                  <h5>{location.state.title}</h5>
+              </div>
+              <div className="fullExecDetailContainerLeftContent">
+                <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faUser} /> {location.state.position}</span>
+                <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faChurch} /> {location.state.church}</span>
+                <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon" icon={faAddressCard} /> {location.state.address}</span>
+                <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon" icon={faPhone} /> {location.state.tel}</span>
+                <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faCalendar} /> {location.state.dOb}</span>
+                <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faAt} /> {location.state.email}</span>
               </div>
               <div className="fullExecDetailContainerRightBio">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum temporibus cumque debitis repellat ratione incidunt, architecto quis deleniti ab, reprehenderit atque itaque illo dolorem cupiditate ad libero corporis nemo odit!
+                  {location.state.bio}
                   </p>
               </div>
           </div>

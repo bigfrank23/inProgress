@@ -30,6 +30,15 @@
 .page9TopContentTitle, .page9TopContentTitle2, .page9TopContentPara{
     /* text-align: center; */
 }
+.page9TopContentPara{
+    color: #fff;
+    font-weight: 600;
+}
+.page9TopContentTitle2 a{
+    color: #f1f1eb;
+    font-family: 'fontawesome';
+    font-weight: 700;
+}
 .page9CenterContainer{
     background-color: antiquewhite;
     padding: 4rem;

@@ -40,10 +40,10 @@ const Banner = () => {
               <i className="fa fa-angle-right angleBanner" aria-hidden="true" />
             </div>
             <div className="desc">
-              <PText weight color>
+              <p>
                 <span>In-person between 8:00am -5:00pm</span><br />
                 <span>Mondays - Fridays </span>
-              </PText>
+              </p>
             </div>
             
             {/* <img src={mapImg} alt="" /> */}
@@ -61,10 +61,10 @@ const Banner = () => {
               <i className="fa fa-angle-right angleBanner" aria-hidden="true" />
             </div>
             <div className="desc">
-              <PText weight color>
+              <p>
                 <span>Online between 9:00am - 4:00pm</span><br />
                 <span>Mondays - Fridays </span>
-              </PText>
+              </p>
             </div>
             
             {/* <img src={mapImg} alt="" /> */}

@@ -319,51 +319,53 @@ const PfnExecutives = () => {
         <Grid container spacing={2}>
           {directors.map((data) => (
             <Grid key={data.id} item xs={12} sm={6} md={6} lg={4}>
-              <div className="flip-box">
-                <div className="flip-box-inner">
-                  <div className="flip-box-front">
-                    <img src={Img2} alt="" />
-                    <div className="pfnExecutivesTxt">
-                      <h2>{data.name}</h2>
-                      <h5>{data.title}</h5>
-                    </div>
-                    {/* <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} /> */}
-                  </div>
-                  <div className="flip-box-back">
-                    <div className="flip-box-back-content">
-                      <div className="flipBackTitle">
-                        <H2>More Details</H2>
+               <Link to={{pathname: `/full_exec_detail`, state: {header: `${data.header}`, img: `${data.img}`, name: `${data.name}`, title: `${data.title}`, position: `${data.position}`, church: `${data.church}`, address: `${data.address}`, tel: `${data.tel}`, dOb: `${data.dOb}`, email: `${data.email}`, province: `${data.province}`, bio: `${data.bio}` }}}>
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      <div className="flip-box-front">
+                        <img src={Img2} alt="" />
+                        <div className="pfnExecutivesTxt">
+                          <h2>{data.name}</h2>
+                          <h5>{data.title}</h5>
+                        </div>
+                        {/* <img src={flipImg} alt="" style={{width: '30px', height: '30px'}} /> */}
                       </div>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon className="fa5Icon" icon={faChurch} />
-                        {data.church}
-                      </p>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon
-                          className="fa5Icon"
-                          icon={faAddressCard}
-                        />
-                        {data.address}
-                      </p>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon className="fa5Icon" icon={faPhone} />
-                        {data.tel}
-                      </p>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon
-                          className="fa5Icon"
-                          icon={faCalendar}
-                        />
-                        {data.dOb}
-                      </p>
-                      <p className="pfn-back-para">
-                        <FontAwesomeIcon className="fa5Icon" icon={faAt} />
-                        {data.email}
-                      </p>
+                      <div className="flip-box-back">
+                        <div className="flip-box-back-content">
+                          <div className="flipBackTitle">
+                            <H2>More Details</H2>
+                          </div>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon className="fa5Icon" icon={faChurch} />
+                            {data.church}
+                          </p>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon
+                              className="fa5Icon"
+                              icon={faAddressCard}
+                            />
+                            {data.address}
+                          </p>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon className="fa5Icon" icon={faPhone} />
+                            {data.tel}
+                          </p>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon
+                              className="fa5Icon"
+                              icon={faCalendar}
+                            />
+                            {data.dOb}
+                          </p>
+                          <p className="pfn-back-para">
+                            <FontAwesomeIcon className="fa5Icon" icon={faAt} />
+                            {data.email}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+               </Link>
             </Grid>
           ))}
         </Grid>
@@ -379,7 +381,7 @@ const PfnExecutives = () => {
           <Grid container spacing={2}>
             {chairmen.map((data) => (
               <Grid key={data.id} item xs={12} sm={6} md={6} lg={4}>
-                <Link to={`/full_exec_detail:${data.id}`}>
+                <Link to={{pathname: `/full_exec_detail:${data.id}`, state: {header: `${data.header}`, img: `${data.img}`, name: `${data.name}`, title: `${data.title}`, position: `${data.position}`, church: `${data.church}`, address: `${data.address}`, tel: `${data.tel}`, dOb: `${data.dOb}`, email: `${data.email}`, province: `${data.province}`, bio: `${data.bio}` }}}>
                   <div className="flip-box">
                     <div className="flip-box-inner">
                       <div className="flip-box-front">

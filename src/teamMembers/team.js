@@ -52,7 +52,8 @@ export const cwc = [
     email: "enyinnaya56@yahoo.com",
     chapter: "Apapa",
     province: "Apapa/Surulere",
-    bio: "My name is Apostle Dr Enyinnaya Emeka Okwuonu, married to Pastor Mrs Treasure Uloma Okwuonu, have three children and a grandson."
+    bio: "My name is Apostle Dr Enyinnaya Emeka Okwuonu, married to Pastor Mrs Treasure Uloma Okwuonu, have three children and a grandson.",
+    header: "CWC"
   },
   {
     id: 2,
@@ -67,6 +68,7 @@ export const cwc = [
     email: "lekeakinola@yahoo.co.uk",
     chapter: "Ketu Central",
     province: "Kosofe",
+    header: "CWC"
   },
   {
     id: 3,
@@ -83,7 +85,8 @@ export const cwc = [
     chapter: "Papa-Epe",
     province: "EPE",
     associatePastorTel: "08034202048",
-    bio: "Apostle Akin Akindejoye formerly a Muslim who got converted to Christianity. Trained in accounting, Theology and English, he is called to be a teacher and preacher of the word of God which he does with power, passion, insight and addiction for heaven. Pastor Akin, as he is fondly called, previously lectured at Community Bible Institute CBI and Light Bible Institute LBI, both in Lagos Nigeria. Pastor Akin is an author of several books including Subsidy, Journey of a Dream, Journey to Berachah, One Talent Servant, among others. He is the Senior Pastor of GLA Global City Church Epe, Lagos. He is also the Founder and President of AMA World Outreach. The ministry is the sponsor of the annual Youth Conference, Pentecostal Groove as well as the Adventure Seminar Series and Talent Warehouse.. He is a member of the Nigerian Coalition of Apostolic Leaders NCAL as well as the International Coalition Of Apostolic Leaders ICAL. He has held several leadership positions in the Pentecostal Fellowship of Nigeria. Be was the pioneer Secretary of Lekki Region, pioneer province Chairman of Epe-Lekki Province and State Deputy Secretary. He currently serves as the State Secretary, Pentecostal Fellowship of Nigeria PFN, Lagos State. He is happily married and blessed with children. Phone : +234-8033212772 E-mail : dejoye@gmail.com . "
+    bio: "Apostle Akin Akindejoye formerly a Muslim who got converted to Christianity. Trained in accounting, Theology and English, he is called to be a teacher and preacher of the word of God which he does with power, passion, insight and addiction for heaven. Pastor Akin, as he is fondly called, previously lectured at Community Bible Institute CBI and Light Bible Institute LBI, both in Lagos Nigeria. Pastor Akin is an author of several books including Subsidy, Journey of a Dream, Journey to Berachah, One Talent Servant, among others. He is the Senior Pastor of GLA Global City Church Epe, Lagos. He is also the Founder and President of AMA World Outreach. The ministry is the sponsor of the annual Youth Conference, Pentecostal Groove as well as the Adventure Seminar Series and Talent Warehouse.. He is a member of the Nigerian Coalition of Apostolic Leaders NCAL as well as the International Coalition Of Apostolic Leaders ICAL. He has held several leadership positions in the Pentecostal Fellowship of Nigeria. Be was the pioneer Secretary of Lekki Region, pioneer province Chairman of Epe-Lekki Province and State Deputy Secretary. He currently serves as the State Secretary, Pentecostal Fellowship of Nigeria PFN, Lagos State. He is happily married and blessed with children. Phone : +234-8033212772 E-mail : dejoye@gmail.com . ",
+    header: "CWC"
   },
   {
     id: 4,
@@ -104,7 +107,8 @@ export const cwc = [
     associatePastorTel: "08035230642",
     associatePastorChapter: "Ajah",
     associatePastorProvince: "Eti/Osa",
-    bio: "My name is Dr Peace Goodey, I generally oversee to Parishes of Christ Believers Healing Ministry and I am also the founder of the Alabaster Jar Foundation For Teenage Mums. I have a degree in Optometry and a Post Graduate Diploma in Leadership and Theology from"
+    bio: "My name is Dr Peace Goodey, I generally oversee to Parishes of Christ Believers Healing Ministry and I am also the founder of the Alabaster Jar Foundation For Teenage Mums. I have a degree in Optometry and a Post Graduate Diploma in Leadership and Theology from",
+    header: "CWC"
   },
   {
     id: 5,
@@ -123,6 +127,7 @@ export const cwc = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "CWC"
   }
 ];
 
@@ -145,6 +150,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 2,
@@ -164,6 +170,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 3,
@@ -183,6 +190,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 4,
@@ -202,7 +210,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "Am an Evangelist by calling ,A theologian by training and a practicing Missionary . I am currently serving as Director of Evangelism &Missions in PFN Lagos .Also serving as Southwest Chairman of Nigeria Evangelical Missions Association.Lagos State coordinator of GO MOVEMENT. "
+    bio: "Am an Evangelist by calling ,A theologian by training and a practicing Missionary . I am currently serving as Director of Evangelism &Missions in PFN Lagos .Also serving as Southwest Chairman of Nigeria Evangelical Missions Association.Lagos State coordinator of GO MOVEMENT. ",
+    header: "State Director"
   },
   {
     id: 5,
@@ -222,7 +231,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "Born 8th January "
+    bio: "Born 8th January ",
+    header: "State Director"
   },
   {
     id: 6,
@@ -241,6 +251,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 7,
@@ -261,7 +272,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "Apostle Dr Ben Omoregie is apostle of faith. I have been in church ministry from 1990. Rector, Christ Ambassadors Theological Academy and a Missionary. "
+    bio: "Apostle Dr Ben Omoregie is apostle of faith. I have been in church ministry from 1990. Rector, Christ Ambassadors Theological Academy and a Missionary. ",
+    header: "State Director"
   },
   {
     id: 8,
@@ -281,6 +293,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 9,
@@ -300,7 +313,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "REV DR DAVID AUSTIN OSAYI, THE SENIOR PASTOR, THE REIGNING CHRISTIAN CHURCH, OJO LAGOS, THE PRESIDENT END TIME CHRISTIAN MISSION, LAGOS NIGERIA DIRECTOR OF PROTOCOL PFN LAGOS STATE, MARRIED TO PASTOR PATIENCE N.OSAYI AND BLESSED WITH CHILDREN "
+    bio: "REV DR DAVID AUSTIN OSAYI, THE SENIOR PASTOR, THE REIGNING CHRISTIAN CHURCH, OJO LAGOS, THE PRESIDENT END TIME CHRISTIAN MISSION, LAGOS NIGERIA DIRECTOR OF PROTOCOL PFN LAGOS STATE, MARRIED TO PASTOR PATIENCE N.OSAYI AND BLESSED WITH CHILDREN ",
+    header: "State Director"
   },
   {
     id: 10,
@@ -319,6 +333,7 @@ export const directors = [
     associatePastorTel: "08033185708",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 11,
@@ -338,7 +353,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "Senior and Lead Pastor of Christ Base Assembly. Our church has a mandate to raise leaders, win souls and impact our world "
+    bio: "Senior and Lead Pastor of Christ Base Assembly. Our church has a mandate to raise leaders, win souls and impact our world ",
+    header: "State Director"
   },
   {
     id: 12,
@@ -359,7 +375,8 @@ export const directors = [
     associatePastorTel: "08053077798",
     associatePastorChapter: "Gbagada",
     associatePastorProvince: "Mainland",
-    bio: "Born to a Muslim family and became born again in 1976. Graduated with Master degree in Agricultural Economics from University of Ibadan. Obtained doctorate degree in Theology and PhD in Christian Education. Chapter President Eko chapter of Full Gospel Business Men Fellowship International, Lagos. Superintendent of Sunday school department in Foursquare Gospel Hdqt Church, Yaba, Lagos . In 1997, started a church called International Christian Faith Mission at Gbagada, Lagos. 8 year Mainland Province Chairman. Currently Director of Business Development Directorate at Lagos State PFN. President, Commonwealth Coop & Multipurpose Society to provide financial support for PFN members. I love Lord Jesus Christ."
+    bio: "Born to a Muslim family and became born again in 1976. Graduated with Master degree in Agricultural Economics from University of Ibadan. Obtained doctorate degree in Theology and PhD in Christian Education. Chapter President Eko chapter of Full Gospel Business Men Fellowship International, Lagos. Superintendent of Sunday school department in Foursquare Gospel Hdqt Church, Yaba, Lagos . In 1997, started a church called International Christian Faith Mission at Gbagada, Lagos. 8 year Mainland Province Chairman. Currently Director of Business Development Directorate at Lagos State PFN. President, Commonwealth Coop & Multipurpose Society to provide financial support for PFN members. I love Lord Jesus Christ.",
+    header: "State Director"
   },
   {
     id: 13,
@@ -380,7 +397,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "PASTOR DR. BARNABAS AIHEBHO-ORIA OTOIBHI , was born to a heathen family on Dec. 15, 1958 . He got born again on June 23 , 1987 . He was a member of Nigerian Institute of Quantity Surveyors and Nigerian Institute of Building , before he received a Divine call into the preaching ministry with a Divine mandate to Rebuild the House (Temple) of God, on October 24 , 1994 and another mandate to be God's Spokesman on issues of governance , in January. 2009. He has served as Spokesman , Christian Association of Nigeria , Oshodi Local Government Chapter , Lagos . He has also served and Pentecostal Fellowship of Nigeria in various capacities as : Chapter Chairman, Oshodi ( 2007 to 2010) ; Province Deputy Chairman / Acting Province Chairman , Mushin Oshodi Isolo ( 2010 to 2012) ; Lagos State Deputy Director , Church Registration and Computerization (2012 to 2014) ; Lagos State Deputy Director, Inter Governmental Relations (2014 to 2018) ; Lagos State Deputy Director , Directorate of Politics and Governance (2018 to date ). He has also served in other organizations which are : Chairman, Parents Teachers Association, Rising Sun Group of Schools, Lagos State ( 1999 to 2010) ; Chairman , Parents Forum / Lagos State Schools Management Committee , Oshodi Comprehensive Senior High School, ( 2007 to 2015). He is a distinguished recipient of the Development In Nigeria Merit Award, by PSR Magazine, at Abuja, Nigeria. Pastor Dr. Barnabas Aihebho-oria Otoibhi is the National General Secretary, United Christian Ministerial Association (USA), Nigeria Chapter. He is the author of books such as 'Help For Cultists' , 'Memorandum of Understanding On Noise Pollution Control in Lagos State', 'Tonic For Relationships' and several articles. He is an Ambassador to Lagos State Government in Nigeria. He is happily married to Evangelist Tessy Otoibhi and they are blessed with godly children. "
+    bio: "PASTOR DR. BARNABAS AIHEBHO-ORIA OTOIBHI , was born to a heathen family on Dec. 15, 1958 . He got born again on June 23 , 1987 . He was a member of Nigerian Institute of Quantity Surveyors and Nigerian Institute of Building , before he received a Divine call into the preaching ministry with a Divine mandate to Rebuild the House (Temple) of God, on October 24 , 1994 and another mandate to be God's Spokesman on issues of governance , in January. 2009. He has served as Spokesman , Christian Association of Nigeria , Oshodi Local Government Chapter , Lagos . He has also served and Pentecostal Fellowship of Nigeria in various capacities as : Chapter Chairman, Oshodi ( 2007 to 2010) ; Province Deputy Chairman / Acting Province Chairman , Mushin Oshodi Isolo ( 2010 to 2012) ; Lagos State Deputy Director , Church Registration and Computerization (2012 to 2014) ; Lagos State Deputy Director, Inter Governmental Relations (2014 to 2018) ; Lagos State Deputy Director , Directorate of Politics and Governance (2018 to date ). He has also served in other organizations which are : Chairman, Parents Teachers Association, Rising Sun Group of Schools, Lagos State ( 1999 to 2010) ; Chairman , Parents Forum / Lagos State Schools Management Committee , Oshodi Comprehensive Senior High School, ( 2007 to 2015). He is a distinguished recipient of the Development In Nigeria Merit Award, by PSR Magazine, at Abuja, Nigeria. Pastor Dr. Barnabas Aihebho-oria Otoibhi is the National General Secretary, United Christian Ministerial Association (USA), Nigeria Chapter. He is the author of books such as 'Help For Cultists' , 'Memorandum of Understanding On Noise Pollution Control in Lagos State', 'Tonic For Relationships' and several articles. He is an Ambassador to Lagos State Government in Nigeria. He is happily married to Evangelist Tessy Otoibhi and they are blessed with godly children.",
+    header: "State Director"
   },
   {
     id: 14,
@@ -399,6 +417,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 15,
@@ -418,6 +437,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 16,
@@ -437,7 +457,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "I was born 18th December 1975, from Umuekele in Eziama, Ahiazu Mbaise local government of Imo state. I hold a diploma wkth Obfemi Awolowo University and a Dlctorate degree in thelogy from Restoration Bkble Institute Lagos. Am happily married and blessed wkth godly seeds. "
+    bio: "I was born 18th December 1975, from Umuekele in Eziama, Ahiazu Mbaise local government of Imo state. I hold a diploma wkth Obfemi Awolowo University and a Dlctorate degree in thelogy from Restoration Bkble Institute Lagos. Am happily married and blessed wkth godly seeds. ",
+    header: "State Director"
   },
   {
     id: 17,
@@ -457,6 +478,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 18,
@@ -476,7 +498,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "MY PROFILE Rev'd Dr Oladele Ajayi is an ordained and a full time minister of gospel with over 25years experience. A highly motivated and goal oriented individual with diverse experience in church and people management. A thespian turned Preacher. He is an alumnus of LIFE Theological Seminary, Ikorodu, Lagos. He holds D.Th, B.Th, M.Th, DMIN (Guidance and Counseling), D.D and PhD (Church Management). He has attended various leadership course like Word of Life Bible Institute (WOFBI), Daystar Leadership Academy, Church and Society, Peace and Conflict Resolution, University of Leadership and Sound Doctrine, Institute of National Transformation. An erudite scholar, lecturer, a prolific writer and Conference Speaker who has authored both theological and inspirational books. He is an experienced leader, church consultant and mentor in Pastoral ministry and leadership development. He is currently a state duputy director Interministerial of the Pentecostal Fellowship of Nigeria, Lagos State. He is the Executive Director of LivingRight Initiative, a moral and character development NGO targeted at Youths moral transformation. He is the chaplain of Chapel of Christ the Light Alausa, Ikeja. A Lagos state government established church. Dr Dele and his wife Pastor Mrs Folashade Ajayi with their children served the Lord together and live in Lagos. "
+    bio: "MY PROFILE Rev'd Dr Oladele Ajayi is an ordained and a full time minister of gospel with over 25years experience. A highly motivated and goal oriented individual with diverse experience in church and people management. A thespian turned Preacher. He is an alumnus of LIFE Theological Seminary, Ikorodu, Lagos. He holds D.Th, B.Th, M.Th, DMIN (Guidance and Counseling), D.D and PhD (Church Management). He has attended various leadership course like Word of Life Bible Institute (WOFBI), Daystar Leadership Academy, Church and Society, Peace and Conflict Resolution, University of Leadership and Sound Doctrine, Institute of National Transformation. An erudite scholar, lecturer, a prolific writer and Conference Speaker who has authored both theological and inspirational books. He is an experienced leader, church consultant and mentor in Pastoral ministry and leadership development. He is currently a state duputy director Interministerial of the Pentecostal Fellowship of Nigeria, Lagos State. He is the Executive Director of LivingRight Initiative, a moral and character development NGO targeted at Youths moral transformation. He is the chaplain of Chapel of Christ the Light Alausa, Ikeja. A Lagos state government established church. Dr Dele and his wife Pastor Mrs Folashade Ajayi with their children served the Lord together and live in Lagos.",
+    header: "State Director"
   },
   {
     id: 19,
@@ -496,6 +519,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 20,
@@ -515,7 +539,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "I'm the current Deputy strategy and planning director of Lagos State PFN"
+    bio: "I'm the current Deputy strategy and planning director of Lagos State PFN",
+    header: "State Director"
   },
   {
     id: 21,
@@ -535,7 +560,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "I am Helen Atebefia Karika, a Christian and National Children Evangelism Ministry Secretary of Upper Room Baptist Church. I am a trained and commissioned children minister. I also hold a post graduate diploma in Theology of the Upper Room Baptist Church Bible college. Studied biochemistry at the University of Benin, where I obtained a B.Sc degree. I articled with audit and accounting firms and qualified as a chartered accountant. I am also a chartered Tax practitioner. I am currently a business woman dealing in cement. I am married with children. "
+    bio: "I am Helen Atebefia Karika, a Christian and National Children Evangelism Ministry Secretary of Upper Room Baptist Church. I am a trained and commissioned children minister. I also hold a post graduate diploma in Theology of the Upper Room Baptist Church Bible college. Studied biochemistry at the University of Benin, where I obtained a B.Sc degree. I articled with audit and accounting firms and qualified as a chartered accountant. I am also a chartered Tax practitioner. I am currently a business woman dealing in cement. I am married with children.",
+    header: "State Director"
   },
   {
     id: 22,
@@ -555,7 +581,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "Dr Eric IGHALO is a Development Specialist, Financial Planner and committed Church leader with a passion for Youth and Community. Having served as National Supt. Of The Liberty Evangelical Church and National President of SCM of Nigeria, he is currently African Chair of the WSCF,Geneva, Chair of CRUDAN and an Elder at The Potters House of Lagos. Nigeria "
+    bio: "Dr Eric IGHALO is a Development Specialist, Financial Planner and committed Church leader with a passion for Youth and Community. Having served as National Supt. Of The Liberty Evangelical Church and National President of SCM of Nigeria, he is currently African Chair of the WSCF,Geneva, Chair of CRUDAN and an Elder at The Potters House of Lagos. Nigeria ",
+    header: "State Director"
   },
   {
     id: 23,
@@ -574,6 +601,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 24,
@@ -594,7 +622,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "I AM BISHOP JOY OBERIKO,G.O OF DIVINE SOULS FOR CHRIST CHURCH INTERNATIONAL "
+    bio: "I AM BISHOP JOY OBERIKO,G.O OF DIVINE SOULS FOR CHRIST CHURCH INTERNATIONAL ",
+    header: "State Director"
   },
   {
     id: 25,
@@ -614,7 +643,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "Emmanuel Olu Falodun is one of Africa’s best leadership development coaches. Highly devoted, disciplined and dedicated to training and building leaders for maximum productivity. He is consumed with the passion to see people fulfill their God given mandate. He travels in Africa, Europe, America encouraging excellence and godliness. The vision for the top achievers network was birthed after years of working with young people across many fronts in 2010. Through various mediums, lives are being positively affected. He is the General Overseer of CHRIST SALVATION VICTORY MISSION INT’L. He founded the Victory Leadership Institute where leaders are being sharpened for excellence. He presides over the Power For Exploits Ministries which organizes Conferences, Seminar and Summits for empowerment since 1997. A graduate of University of Lagos, with B.Sc. Business Administration. He has a honorary Doctorate degree on Leadership & Christian ministry from Global Christian University, Nigeria This anointed vessel has authored over thirty books on Leadership, Prayer, Youth Empowerment and Church Ministry. He coordinates the Nations Prayer And Fasting Network (NAPFAN) a global prayer network of Christian leaders and the million-plus intercessors (millionplusintercessors.org) Through the Faith Heroes Africa Project (www.faithheroesafrica.org) He supervises the documentation of the moves of God in Africa. He's been married for over twenty three years to Pastor Ruth Oluyemi an intercessor and partner in ministry. "
+    bio: "Emmanuel Olu Falodun is one of Africa’s best leadership development coaches. Highly devoted, disciplined and dedicated to training and building leaders for maximum productivity. He is consumed with the passion to see people fulfill their God given mandate. He travels in Africa, Europe, America encouraging excellence and godliness. The vision for the top achievers network was birthed after years of working with young people across many fronts in 2010. Through various mediums, lives are being positively affected. He is the General Overseer of CHRIST SALVATION VICTORY MISSION INT’L. He founded the Victory Leadership Institute where leaders are being sharpened for excellence. He presides over the Power For Exploits Ministries which organizes Conferences, Seminar and Summits for empowerment since 1997. A graduate of University of Lagos, with B.Sc. Business Administration. He has a honorary Doctorate degree on Leadership & Christian ministry from Global Christian University, Nigeria This anointed vessel has authored over thirty books on Leadership, Prayer, Youth Empowerment and Church Ministry. He coordinates the Nations Prayer And Fasting Network (NAPFAN) a global prayer network of Christian leaders and the million-plus intercessors (millionplusintercessors.org) Through the Faith Heroes Africa Project (www.faithheroesafrica.org) He supervises the documentation of the moves of God in Africa. He's been married for over twenty three years to Pastor Ruth Oluyemi an intercessor and partner in ministry. ",
+    header: "State Director"
   },
   {
     id: 26,
@@ -635,7 +665,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "I am Apostle Idongesit Ezekiel James,the General overseer of Alive Tabernacle Int'l Also the state Deputy director of Security and intelligence, lagos state pentecostal fellowship of Nigeria "
+    bio: "I am Apostle Idongesit Ezekiel James,the General overseer of Alive Tabernacle Int'l Also the state Deputy director of Security and intelligence, lagos state pentecostal fellowship of Nigeria ",
+    header: "State Director"
   },
   {
     id: 27,
@@ -654,6 +685,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 28,
@@ -673,6 +705,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 29,
@@ -691,6 +724,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 30,
@@ -709,6 +743,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 31,
@@ -728,7 +763,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "Rev. Juliet Binitie is a Social Entrepreneur, a Socio- Political commentator and consultant to Media houses like Channels and TVC, a Reformer with years of experience. Also, an Accredited Mediator in Nigeria. She currently serves as the Director for Programmes at the Institute for National Transformation. Also, as an Executive Director for Hiram Design Concept LTD. She is a CEO of newly founded Media organization known as Matters Arising Venture. She is an ordained Minister with a passion for National Transformation. She is a reformer and has a call to raise leadership for the Continent, including Women leadership. She serves in the Pentecostal Fellowship of Nigeria Lagos Chapter as the Asst. Secretary of Lagos State. She started in PFN almost 2 decade starting at the chapter level as Deputy treasurer. She served as Mainland Province secretary for 8 years. Juliet Binitie believes that the Transformation of Nigeria is possible and she has dedicated her life to this cause. She is a life Coach, an Interior designer and a facilitator on Nation Building principles and Social issues. She is a pioneer graduate of the Institute for National Transformation Nigeria and served as the Alumni Vice President for 5 years. She is a recent graduate of the Pioneer class of the school of Politics, Policy and Governance in Nigeria. She has authored books including 2 one year Devotionals. She is a Coach, an author, Facilitator and Mentor to many. Married for 27 years and a mother of two adults. "
+    bio: "Rev. Juliet Binitie is a Social Entrepreneur, a Socio- Political commentator and consultant to Media houses like Channels and TVC, a Reformer with years of experience. Also, an Accredited Mediator in Nigeria. She currently serves as the Director for Programmes at the Institute for National Transformation. Also, as an Executive Director for Hiram Design Concept LTD. She is a CEO of newly founded Media organization known as Matters Arising Venture. She is an ordained Minister with a passion for National Transformation. She is a reformer and has a call to raise leadership for the Continent, including Women leadership. She serves in the Pentecostal Fellowship of Nigeria Lagos Chapter as the Asst. Secretary of Lagos State. She started in PFN almost 2 decade starting at the chapter level as Deputy treasurer. She served as Mainland Province secretary for 8 years. Juliet Binitie believes that the Transformation of Nigeria is possible and she has dedicated her life to this cause. She is a life Coach, an Interior designer and a facilitator on Nation Building principles and Social issues. She is a pioneer graduate of the Institute for National Transformation Nigeria and served as the Alumni Vice President for 5 years. She is a recent graduate of the Pioneer class of the school of Politics, Policy and Governance in Nigeria. She has authored books including 2 one year Devotionals. She is a Coach, an author, Facilitator and Mentor to many. Married for 27 years and a mother of two adults.",
+    header: "State Director"
   },
   {
     id: 32,
@@ -748,7 +784,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "I'm born on 6th July 1962. Got born again 1976. CHURCH OF GOD. 1976-1986 FOUR-SQURE GOSPEL CHURCH 1986-1994 LIVING FAITH CHIRCH WINNERS CHAPEL 1995- Feb. 1999 SHEKINAH MINISTRY INT'L March 1999-Feb. 2001 Good Success Christian Centre April 2001-date. Ordained Into the ministry by BISHOP DAVID OYEDEPO March 1996. Served in living Faith from March 1996-December 1999. Moved to Shekinah ministry 2000 unser the leadership of LATE Apostle J M WILLIAMS. PFN JOURNEY: Area Coordinator, MAGBON. 2002-2004 Zonal Chairman MAGBON. 2005-March 2006 Regional Secretary. April 2006-June 2010 Province vice Chairman June 2010-2012 State Deputy Financial Secretary 2014-date. "
+    bio: "I'm born on 6th July 1962. Got born again 1976. CHURCH OF GOD. 1976-1986 FOUR-SQURE GOSPEL CHURCH 1986-1994 LIVING FAITH CHIRCH WINNERS CHAPEL 1995- Feb. 1999 SHEKINAH MINISTRY INT'L March 1999-Feb. 2001 Good Success Christian Centre April 2001-date. Ordained Into the ministry by BISHOP DAVID OYEDEPO March 1996. Served in living Faith from March 1996-December 1999. Moved to Shekinah ministry 2000 unser the leadership of LATE Apostle J M WILLIAMS. PFN JOURNEY: Area Coordinator, MAGBON. 2002-2004 Zonal Chairman MAGBON. 2005-March 2006 Regional Secretary. April 2006-June 2010 Province vice Chairman June 2010-2012 State Deputy Financial Secretary 2014-date. ",
+    header: "State Director"
   },
   {
     id: 33,
@@ -769,7 +806,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "Born 6th February 1959; from Odogbolu, Ogun State. Graduated from University of Ibadan with Bachelors and Masters degrees in Agricultural Economics and MBA in General Management from Olabisi Onabanjo University, Ago-Iwoye. A former Polytechnic Lecturer and Bank Executive. A former pioneer and only Province Chairman of Old Ikorodu Province. A Teacher and Pastor by call. Holds a Bachelors Degree in Christian Leadership from ULS,USA."
+    bio: "Born 6th February 1959; from Odogbolu, Ogun State. Graduated from University of Ibadan with Bachelors and Masters degrees in Agricultural Economics and MBA in General Management from Olabisi Onabanjo University, Ago-Iwoye. A former Polytechnic Lecturer and Bank Executive. A former pioneer and only Province Chairman of Old Ikorodu Province. A Teacher and Pastor by call. Holds a Bachelors Degree in Christian Leadership from ULS,USA.",
+    header: "State Director"
   },
   {
     id: 34,
@@ -789,7 +827,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: 'Pastor Tonye Oliver is married to Pastor (Mrs ) Bike Oliver, together they oversee Jesus Heals the Sick Ministries, an apostolic ministry based in Lagos Nigeria. With a mandate to take the healing power of Jesus to this generation, he travels, holding crusades, healing schools, apostolic ministers conferences. He is a publisher and author of a number of publications notably the ministry flagship Publication the Power that Heals the Sick Magazine. He hosts the popular Healing Where Are You program on the Supernatural Online TV platform which can be watched on various platforms online. www.sotv.online/HEALING-WHERE-YOU-ARE www.trimurl.co/healingwhereyouare www.jesushealsthesick.org '
+    bio: 'Pastor Tonye Oliver is married to Pastor (Mrs ) Bike Oliver, together they oversee Jesus Heals the Sick Ministries, an apostolic ministry based in Lagos Nigeria. With a mandate to take the healing power of Jesus to this generation, he travels, holding crusades, healing schools, apostolic ministers conferences. He is a publisher and author of a number of publications notably the ministry flagship Publication the Power that Heals the Sick Magazine. He hosts the popular Healing Where Are You program on the Supernatural Online TV platform which can be watched on various platforms online. www.sotv.online/HEALING-WHERE-YOU-ARE www.trimurl.co/healingwhereyouare www.jesushealsthesick.org',
+    header: "State Director"
   },
   {
     id: 35,
@@ -808,6 +847,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 36,
@@ -826,6 +866,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 37,
@@ -844,6 +885,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 38,
@@ -862,6 +904,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 39,
@@ -880,6 +923,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 40,
@@ -898,6 +942,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 41,
@@ -916,6 +961,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 42,
@@ -935,6 +981,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 43,
@@ -953,6 +1000,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
+    header: "State Director"
   },
   {
     id: 44,
@@ -972,7 +1020,8 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "Date of birth: 2 August 1970 Lead pastor CommunionHouse Married With a daughter "
+    bio: "Date of birth: 2 August 1970 Lead pastor CommunionHouse Married With a daughter ",
+    header: "State Director"
   },
 ];
 
@@ -994,7 +1043,8 @@ export const chairmen = [
         associatePastor: "Rev. Mrs. Temi -James Iyanda",
         associatePastorTel: "07064680302",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        header: "Province Chairman"
     },
     {
         id: 2,
@@ -1014,7 +1064,8 @@ export const chairmen = [
         associatePastorTel: "07064680302",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "I am Rev Ephraim Nnaemeka Ifionu the Senior Pastor of Glory Restoration Ministries Int'l and the provincial chairman man of PFN Surulere Province."
+        bio: "I am Rev Ephraim Nnaemeka Ifionu the Senior Pastor of Glory Restoration Ministries Int'l and the provincial chairman man of PFN Surulere Province.",
+        header: "Province Chairman"
     },
     {
         id: 3,
@@ -1032,7 +1083,8 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        header: "Province Chairman"
     },
     {
         id: 4,
@@ -1050,7 +1102,8 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        header: "Province Chairman"
     },
     {
         id: 5,
@@ -1069,7 +1122,8 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        header: "Province Chairman"
     },
     {
         id: 6,
@@ -1089,7 +1143,8 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "PROFILE OF DR J.O.S BENHOTONS Dr John Oyedeji Benhotons is the CEO of DIDASKO global mission. Didasko mandate is Enriching leadership and perfecting the saints. He got called into ministry 5th April 1987 under the ministry of Rev. Dr Tunde Joda of the Christ Chapel internatioal Churches. He holds an Advanced Diploma in Accounting/Finance and Bachelor’s degree in Business Administration. He also hold a PhD in Christian Ministry/Theology. He is also the president of the WORD IMPACT NETWORK a ministry based in Ghana with a national office in Nigeria. He runs leadership training program in different major towns across the WEST COAST of Africa. He is also the founder and president of the INTERNATIONAL NETWORK OF COVENANT MINISTERS. (INOCOM) and runs a monthly interactive ministers forum known as APOSTOLIC MENTORING. Founder of the IMPACT CHRISTIAN LEADERSHIP ACADEMY. An academy that has been graduating students from year 2001 Married to Rev. Dr Shallom Folashade, Their marriage is blessed with five wonderful children and grandchildren. "
+        bio: "PROFILE OF DR J.O.S BENHOTONS Dr John Oyedeji Benhotons is the CEO of DIDASKO global mission. Didasko mandate is Enriching leadership and perfecting the saints. He got called into ministry 5th April 1987 under the ministry of Rev. Dr Tunde Joda of the Christ Chapel internatioal Churches. He holds an Advanced Diploma in Accounting/Finance and Bachelor’s degree in Business Administration. He also hold a PhD in Christian Ministry/Theology. He is also the president of the WORD IMPACT NETWORK a ministry based in Ghana with a national office in Nigeria. He runs leadership training program in different major towns across the WEST COAST of Africa. He is also the founder and president of the INTERNATIONAL NETWORK OF COVENANT MINISTERS. (INOCOM) and runs a monthly interactive ministers forum known as APOSTOLIC MENTORING. Founder of the IMPACT CHRISTIAN LEADERSHIP ACADEMY. An academy that has been graduating students from year 2001 Married to Rev. Dr Shallom Folashade, Their marriage is blessed with five wonderful children and grandchildren.",
+        header: "Province Chairman"
     },
     {
         id: 7,
@@ -1109,7 +1164,8 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: " 'Tope Ilesanmi has a proven apostolic calling that involves sound teaching, family deliverance, community deliverance, and open-air crusades. He is a disciple of Rev. Joe Olaiya, the President and founder of Living Faith Foundation. An alumnus of Lagos State Polytechnic, he is also an associate member of Chartered Institute of Bankers, and of the Institute of Marketers. A Graduate several Leadership Institutes. He is currently running an Advance Diploma Course at School Of Politics, Policies and Governance under the leadership of Dr Oby Ezekwesili, former Minister of Education. He is a recipient of the Apostle Wole Oladiyun CLAM/PFN Award for Excellence in Evangelism/Outreach. Presently, he serves as the Chairman, Pentecostal Fellowship of Nigeria, Ikeja Province. He is a co-pioneer of Ido-Ekiti For Christ Ministry, and the founder of Revival Summit Ministries. He has authored 3 books till date. He is married to Tola Ilesanmi and they are blessed with children. "
+        bio: " 'Tope Ilesanmi has a proven apostolic calling that involves sound teaching, family deliverance, community deliverance, and open-air crusades. He is a disciple of Rev. Joe Olaiya, the President and founder of Living Faith Foundation. An alumnus of Lagos State Polytechnic, he is also an associate member of Chartered Institute of Bankers, and of the Institute of Marketers. A Graduate several Leadership Institutes. He is currently running an Advance Diploma Course at School Of Politics, Policies and Governance under the leadership of Dr Oby Ezekwesili, former Minister of Education. He is a recipient of the Apostle Wole Oladiyun CLAM/PFN Award for Excellence in Evangelism/Outreach. Presently, he serves as the Chairman, Pentecostal Fellowship of Nigeria, Ikeja Province. He is a co-pioneer of Ido-Ekiti For Christ Ministry, and the founder of Revival Summit Ministries. He has authored 3 books till date. He is married to Tola Ilesanmi and they are blessed with children.",
+        header: "Province Chairman"
     },
     {
         id: 8,
@@ -1129,7 +1185,8 @@ export const chairmen = [
         associatePastorTel: "08032288773",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "Chairman, PFN Ikorodu Province"
+        bio: "Chairman, PFN Ikorodu Province",
+        header: "Province Chairman"
     },
     {
         id: 9,
@@ -1149,7 +1206,8 @@ export const chairmen = [
         associatePastorTel: "08032288773",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "Bishop Femi Soneye holds an MBA in Marketing, a fellow Direct institute of Marketing, member institute of management. Chancellor Glowing light theological college, Married to Rev Dr Abidemi Soneye and blessed with two beautiful children."
+        bio: "Bishop Femi Soneye holds an MBA in Marketing, a fellow Direct institute of Marketing, member institute of management. Chancellor Glowing light theological college, Married to Rev Dr Abidemi Soneye and blessed with two beautiful children.",
+        header: "Province Chairman"
     },
     {
         id: 10,
@@ -1169,7 +1227,8 @@ export const chairmen = [
         associatePastorTel: "08032288773",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "Missionary Apostle, Trainer, Consultantant and humanitarian"
+        bio: "Missionary Apostle, Trainer, Consultantant and humanitarian",
+        header: "Province Chairman"
     },
     {
         id: 11,
@@ -1187,7 +1246,8 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        header: "Province Chairman"
     },
     {
         id: 12,
@@ -1207,7 +1267,8 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "Bishop Dr Praise Oliver Akhanamoya is a native of Afashio Uzairue, Etsako west LGA of Edo State. Ordained into the ministry in May 1988. A Graduate of Electrical Electronics Engineering (UNIPORT). A Graduate of All nation bible school And was commissioned by the late ArchBishop Benson Idahosa in 1990. A two times Doctorate degree holder in Theology with several other certificates and awards. A Prophet by calling with strong teaching Grace. Traveled extensively propagating the Gospel of Jesus Christ. Gifted with strong Deliverance Ministry. Lover of Jesus Christ. Former Chapter Chapter of PFN Agege South West. Now the Province chairman of PFN Agege Ogba Province. "
+        bio: "Bishop Dr Praise Oliver Akhanamoya is a native of Afashio Uzairue, Etsako west LGA of Edo State. Ordained into the ministry in May 1988. A Graduate of Electrical Electronics Engineering (UNIPORT). A Graduate of All nation bible school And was commissioned by the late ArchBishop Benson Idahosa in 1990. A two times Doctorate degree holder in Theology with several other certificates and awards. A Prophet by calling with strong teaching Grace. Traveled extensively propagating the Gospel of Jesus Christ. Gifted with strong Deliverance Ministry. Lover of Jesus Christ. Former Chapter Chapter of PFN Agege South West. Now the Province chairman of PFN Agege Ogba Province. ",
+        header: "Province Chairman"
     },
     {
         id: 13,
@@ -1227,7 +1288,8 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "AN APOSTLE OF OUR LORD JESUS CHRIST,SENT TO THE NATIONS, TO LIBERATE NATIONS & DESTINIES."
+        bio: "AN APOSTLE OF OUR LORD JESUS CHRIST,SENT TO THE NATIONS, TO LIBERATE NATIONS & DESTINIES.",
+        header: "Province Chairman"
     },
     {
         id: 14,
@@ -1247,7 +1309,8 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "Born on 5th December, 1964 at Ise-Ijesa via Ilesa in Atakumosa East Local Government Area of Osun State, Nigeria. Got born again on 13th August, 1986. Called into Ministry on 26th February, 1993. Tutored in the christian way of life under the leadership of his biological father- Late Prophet Michael Afilaka in Christ Apostolic Church and his spiritual father - Late Rev. David Idowu Obembe of Christian Faith World Outreach Center (Overcomers' Church). Ilesa. He is the set man at The Reconcilers' Bible Ministry, Agbelekale, Abule-Egba, Lagos State founded in October, 2000. "
+        bio: "Born on 5th December, 1964 at Ise-Ijesa via Ilesa in Atakumosa East Local Government Area of Osun State, Nigeria. Got born again on 13th August, 1986. Called into Ministry on 26th February, 1993. Tutored in the christian way of life under the leadership of his biological father- Late Prophet Michael Afilaka in Christ Apostolic Church and his spiritual father - Late Rev. David Idowu Obembe of Christian Faith World Outreach Center (Overcomers' Church). Ilesa. He is the set man at The Reconcilers' Bible Ministry, Agbelekale, Abule-Egba, Lagos State founded in October, 2000. ",
+        header: "Province Chairman"
     },
     {
         id: 15,
@@ -1267,7 +1330,8 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "Holds Higher Diploma in Accounting and other Professional Certificates from ICAN and Institute Of Administrative Accountants. Formerly Management Accountant with AG Leventis Nigeria. Married to Olabisi Shoyemi with children and grandchildren. "
+        bio: "Holds Higher Diploma in Accounting and other Professional Certificates from ICAN and Institute Of Administrative Accountants. Formerly Management Accountant with AG Leventis Nigeria. Married to Olabisi Shoyemi with children and grandchildren. ",
+        header: "Province Chairman"
     },
     {
         id: 16,
@@ -1287,7 +1351,8 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "Samuel Oludare Oladiti General Overseer of victory international faith mission Chairman of Ayobo/Okunola Province Born march 10 1967 Married and blessed with 4 kids "
+        bio: "Samuel Oludare Oladiti General Overseer of victory international faith mission Chairman of Ayobo/Okunola Province Born march 10 1967 Married and blessed with 4 kids ",
+        header: "Province Chairman"
     },
     {
         id: 17,
@@ -1307,7 +1372,8 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "Sheriif Tosin Israel was born 20th October, 1966, to a Muslim family. He got converted in 1979 and entered the ministry on 6th December, 1985. He was a missionary for 14 years to the middle belt and south west of Nigeria. He was the leader of Overcomes Crusade Team International, a youth forum in Lagos State. He founded a church in 1988 named the City of God Ressurection Assembly and joined PFN in 2002. He is currently the Chairman, Mainland province, Lagos State. He is happily married with four daughters."
+        bio: "Sheriif Tosin Israel was born 20th October, 1966, to a Muslim family. He got converted in 1979 and entered the ministry on 6th December, 1985. He was a missionary for 14 years to the middle belt and south west of Nigeria. He was the leader of Overcomes Crusade Team International, a youth forum in Lagos State. He founded a church in 1988 named the City of God Ressurection Assembly and joined PFN in 2002. He is currently the Chairman, Mainland province, Lagos State. He is happily married with four daughters.",
+        header: "Province Chairman"
     },
     {
         id: 18,
@@ -1327,7 +1393,8 @@ export const chairmen = [
         associatePastorChapter: "",
         associatePastorProvince: "",
         positon: "General Overseer",
-        bio: "My name is Reverend Victor Uzezi Aghraghra, General Overseer of The Transformed Christian Assembly Incorporated, and the PFN Chairman, Epe Province. "
+        bio: "My name is Reverend Victor Uzezi Aghraghra, General Overseer of The Transformed Christian Assembly Incorporated, and the PFN Chairman, Epe Province. ",
+        header: "Province Chairman"
     },
     {
         id: 19,
@@ -1345,7 +1412,8 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        header: "Province Chairman"
     },
     {
         id: 20,
@@ -1363,7 +1431,8 @@ export const chairmen = [
         associatePastor: "",
         associatePastorTel: "",
         associatePastorChapter: "",
-        associatePastorProvince: ""
+        associatePastorProvince: "",
+        header: "Province Chairman"
     },
     
     {
@@ -1382,6 +1451,7 @@ export const chairmen = [
       associatePastor: "",
       associatePastorTel: "",
       associatePastorChapter: "",
-      associatePastorProvince: ""
+      associatePastorProvince: "",
+      header: "Province Chairman"
   },
 ]

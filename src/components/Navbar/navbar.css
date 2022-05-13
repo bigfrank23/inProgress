@@ -366,6 +366,27 @@
     align-self: center;
 }
 
+#provincesLink{
+    display: flex;
+    position: absolute;
+    gap: 1rem;
+    right: 7%;
+    width: 0%;
+    opacity: 0;
+    display: none;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+#provincesLink a{
+    font-size: 13px !important;
+}
+.navListItems:hover #provincesLink{
+    display: flex;
+    width: 75%;
+    opacity: 1;
+}
+
 @media only screen and (max-width: 600px) {
     .top .nav .logo{
     display: block;

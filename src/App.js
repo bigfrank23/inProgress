@@ -45,6 +45,7 @@ import Login2 from './pages/blog/auth/login2/Login2';
 import Announcement from './pages/announcement/Announcement';
 import PaymentForm from './components/payment/PaymentForm';
 import FullExecDetail from './pages/fullExecDetail/FullExecDetail';
+import Chapters from './pages/chapters/Chapters';
 
 const Container = styled.div`
   width: 100%;
@@ -102,7 +103,8 @@ function App() {
           <Route exact path='/admin_login' component={Login2} />
           <Route exact path='/announcement' component={Announcement} />
           <Route exact path='/give' component={PaymentForm} />
-          <Route exact path='/full_exec_detail:id' component={FullExecDetail} />
+          <Route exact path='/full_exec_detail' component={FullExecDetail} />
+          <Route exact path='/chapter' component={Chapters} />
         </Switch>
       </Router>
       <GoUp />

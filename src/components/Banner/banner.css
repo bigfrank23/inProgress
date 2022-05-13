@@ -118,6 +118,10 @@ blockquote h2:before {
     text-align: center;
     margin-bottom: 1rem;
 }
+.navyblueContentLeft .desc, .navyblueContentRight .desc{
+    color: #fff;
+    font-weight: 700;
+}
 .divider{
     width: 4px;
     height: 80px;

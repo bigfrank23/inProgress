@@ -15,6 +15,7 @@ import { PaystackButton } from 'react-paystack';
 
 import { useDispatch } from 'react-redux';
 import { LOGOUT } from '../../pages/blog/redux/constants/actionTypes';
+import { provinces } from '../../teamMembers/provinces'
 
 const Container = styled.nav`
     /* ${mobile({display: 'none'})} */
@@ -272,15 +273,22 @@ const Navbar = () => {
               <li className="navListItems">
                 Get involved
                 <ul className="hover">
-                  <Link to="/provinces" className="links">
-                    <li className="hoverItems">The Provinces</li>
-                  </Link>
                   <Link to="/directorate" className="links">
                     <li className="hoverItems">Directorates</li>
                   </Link>
                   <Link to="#" className="links">
                     <li className="hoverItems">Outreach</li>
                   </Link>
+                </ul>
+              </li>
+              <li className="navListItems">
+                Provinces
+                <ul className="hover" id='provincesLink'>
+                  {provinces.map((data)=> (
+                    <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`}}} className="links">
+                      <li className="hoverItems">{data.province}</li>
+                    </Link>
+                  ))}
                 </ul>
               </li>
               <li className="navListItems">
@@ -301,7 +309,7 @@ const Navbar = () => {
                     <Link to='/blogs' className='links'>
                     <li className="hoverItems">Blogs</li>
                     </Link>
-                    <Link to='/news-feed' className='links'>
+                    <Link to='/announcement' className='links'>
                     <li className="hoverItems">News Feed</li>
                     </Link>
                 </ul>
