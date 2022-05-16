@@ -66,18 +66,40 @@
     margin: 0;
     padding: 0 40px;
     display: flex;
-    text-align: center;
+    justify-content: center;
+    gap: 30px;
 }
 .navListItems{
     color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     padding: 15px 0;
     cursor: pointer;
+    /* display: flex; */
+    display: inline-flex;
+    white-space: normal;
+    gap: 5px;
 }
+.hoverAngleIcon{
+    transition: transform .25s ease;
+    align-self: flex-start;
+}
+.navListItems:hover .hoverAngleIcon{
+    align-self: flex-start;
+    transform: rotate(180deg);
+}
+.navListItems:nth-child(4){
+    /* width: 100%; */
+}
+.navListItems:nth-child(5){
+    /* width: 100%; */
+}
+/* .navListItems:last-child{
+    width: 100%;
+} */
 .navLinks .navList .navListItems:not(:last-child){
-    margin-right: 20px;
+    /* margin-right: 10px; */
 }
 /* MainMenu nav */
 .notActiveMain{
@@ -276,9 +298,11 @@
 .hover{
     color: white;
     position: absolute;
-    margin-top: 1rem;
+    margin-top: 2rem;
     list-style: none;
-    background: #232e32;
+    /* background: #232e32; */
+    /* background: #052517; */
+    background: #041909;
     padding: 1rem 10px;
     /* padding: 0 10px; */
     line-height: 1.8;
@@ -297,11 +321,18 @@
     transition: all .5s ease;
     /* padding: 5px; */
 }
+.hover a:hover{
+    /* color: #990000; */
+    /* font-size: 1.2rem; */
+    color: #fff;
+    letter-spacing: 1px;
+}
 
 .navListItems:hover .hover{
     /* height: 100%; */
     /* height: 25vh; */
     opacity: 1;
+    background: linear-gradient(0deg, rgba(4, 25, 9, 0.90), rgba(4, 25, 9, 0.90));
 }
 
 .openLinkBtn{
@@ -380,11 +411,20 @@
 }
 #provincesLink a{
     font-size: 13px !important;
+    display: flex;
+    gap: 1rem;
+}
+#provincesLink a:hover{
+    letter-spacing: 1px;
 }
 .navListItems:hover #provincesLink{
     display: flex;
-    width: 75%;
+    width: 80%;
     opacity: 1;
+    justify-content: center;
+}
+#provincesLink a li .separator:not(:last-child){
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {

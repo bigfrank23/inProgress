@@ -223,6 +223,9 @@ const Navbar = () => {
               {/* </Link> */}
               <li className="navListItems">
                 About
+                  <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div>
                 <ul className="hover">
                   <Link to="/about" className="links" onClick={()=> setCloseNav(true)}>
                     <li className="hoverItems">About PFN</li>
@@ -243,6 +246,9 @@ const Navbar = () => {
               </li>
               <li className="navListItems">
                 Leadership
+                  <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div>
                 <ul className="hover">
                   <Link to="/the-national" className="links">
                     <li className="hoverItems">The national</li>
@@ -257,6 +263,9 @@ const Navbar = () => {
               </li>
               <li className="navListItems">
                 Lagos state structure
+                  <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div>
                 <ul className="hover">
                   <Link to="/lses" className="links">
                     <li className="hoverItems">
@@ -272,6 +281,9 @@ const Navbar = () => {
               </li>
               <li className="navListItems">
                 Get involved
+                  <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div>
                 <ul className="hover">
                   <Link to="/directorate" className="links">
                     <li className="hoverItems">Directorates</li>
@@ -283,16 +295,22 @@ const Navbar = () => {
               </li>
               <li className="navListItems">
                 Provinces
+                  <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div>
                 <ul className="hover" id='provincesLink'>
                   {provinces.map((data)=> (
-                    <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`}}} className="links">
-                      <li className="hoverItems">{data.province}</li>
+                    <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links">
+                      <li className="hoverItems">{data.province}</li> <div className="separator">|</div>
                     </Link>
                   ))}
                 </ul>
               </li>
               <li className="navListItems">
                 Events
+                  <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div>
                 <ul className="hover">
                     <Link to="/gallery" className="links">
                       <li className="hoverItems">Gallery</li>
@@ -316,6 +334,9 @@ const Navbar = () => {
               </li>
               {/* <Link to="#" className="links"> */}
                 <li className="navListItems">Get in Touch
+                  <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div>
                 <ul className="hover">
                     <Link to="/prayer" className="links">
                       <li className="hoverItems">Prayer</li>

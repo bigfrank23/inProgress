@@ -69,7 +69,7 @@ const Chapters = () => {
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
-          <h1 style={{textTransform: "capitalize"}}>{location.state.province} Province</h1>
+          <h1 style={{textTransform: "uppercase"}}>{location.state.province} Province</h1>
         </div>
       </div>
       <div className="page6Bx3">
