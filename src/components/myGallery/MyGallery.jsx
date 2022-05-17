@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { images } from './../../teamMembers/gallery';
 
-let PageSize = 10;
+let PageSize = 9;
 const MyGallery = () => {
   const [model, setModel] = useState(false);
   const [tempImg, setTempImg] = useState("");

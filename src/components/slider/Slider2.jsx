@@ -39,7 +39,7 @@ const Slider2 = () => {
             </div>
             <p>{slide.p}</p>
             <div className="slideBtn">
-              <Link to='/blogs'>
+              <Link to='/announcement'>
                 <Button2 BtnText='View All' />
               </Link>
             </div>

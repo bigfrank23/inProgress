@@ -24,6 +24,7 @@
     "react": "^18.0.0",
     "react-animated-slider": "^2.0.0",
     "react-background-slider": "^2.0.0",
+    "react-bootstrap": "^2.4.0",
     "react-collapsed": "^3.3.0",
     "react-collapsible": "^2.8.4",
     "react-dom": "^18.0.0",

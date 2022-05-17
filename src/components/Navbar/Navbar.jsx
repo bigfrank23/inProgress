@@ -262,7 +262,9 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="navListItems">
-                Lagos state structure
+                <div>
+                Lagos Structure
+                </div>
                   <div className="hoverAngleIcon">
                     <i className="fa fa-angle-down" aria-hidden="true" />
                   </div>

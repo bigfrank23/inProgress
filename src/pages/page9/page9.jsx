@@ -1,18 +1,10 @@
 import React, {useState} from 'react'
-import Img from "../../images/splash3.jpg";
-import Img1 from "../../images/splash3.jpg";
-import Img2 from "../../images/volunteer.jpg";
-import UpcomingImg from "../../images/announcement.jpeg";
 import Img3 from "../../images/bg2.jpg";
 import styled from 'styled-components'
-import Header from '../../components/Text/Header';
 import PText from '../../components/Text/PText';
 import H2 from '../../components/Text/H2';
-import H3 from '../../components/Text/H3';
-import H4 from '../../components/Text/H4';
 import Footer from '../../components/Footer/Footer';
 import './Page9.css'
-import Upcomin from '../../components/Upcoming/Upcomin';
 import Button from '../../components/Button/Button';
 import { directorate } from '../../teamMembers/directorate';
 import { Modal, Box, Typography } from '@mui/material';

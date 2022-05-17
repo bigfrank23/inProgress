@@ -20,6 +20,12 @@ const Btn = styled.button`
   background: ${(props) => (props.outline ? "transparent" : "#fff")};
   border: ${(props) => (props.outline ? "1px solid #fff" : "none")};
   cursor: pointer;
+  transition: background-color .5s ease;
+    &:hover{
+      background-color: transparent;
+      border: 2px solid #008753;
+      color: #990000;
+    }
   @media only screen and (max-width: 600px) {
     font-size: 0.8rem;
     font-weight: 500;

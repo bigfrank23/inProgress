@@ -11,6 +11,7 @@ import Button from '../Button/Button'
 import './heroSection.css'
 import { mobile } from '../../responsive'
 import TextLoop from "react-text-loop";
+import Button2 from '../Button/Button2'
 
 // const image3 = Img3
 const image1 = Img3
@@ -86,6 +87,14 @@ const HeroSection = () => {
                 <h1>do the extraordinary</h1>
               </div>
             </div>
+            <div className="d-flex justify-content-center gap-2">
+                <Link to='/our-mission' style={{textAlign: "center"}}>
+                  <Button BtnText='Know More' />
+                </Link>
+                <Link to='/our-mission' style={{textAlign: "center"}}>
+                  <Button2 BtnText='Watch Live' />
+                </Link>
+            </div>
           </div>
           <div className="div2">
             <div className="topText">
@@ -97,6 +106,14 @@ const HeroSection = () => {
               </div>
               <div className="centerText">
                 <h1>Brethren</h1>
+              </div>
+            </div>
+            <div className="d-flex justify-content-center gap-2">
+              <div style={{textAlign: "center"}}>
+                <Button BtnText='Messages' />
+              </div>
+              <div style={{textAlign: "center"}}>
+                <Button2 BtnText='Donate' />
               </div>
             </div>
           </div>
@@ -118,7 +135,10 @@ const HeroSection = () => {
                 <h4>Encouragement and inspiration</h4>
               </div>
             </div>
-          </div>
+            <Link to='/contact' style={{textAlign: "center"}}>
+              <Button BtnText='Contact Us' />
+            </Link>
+            </div>
         </TextLoop>
         <HeroButtonContainer>
           <Link to="#">

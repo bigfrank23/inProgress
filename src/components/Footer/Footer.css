@@ -1,0 +1,18 @@
+.sideBlock{
+    position: absolute;
+    left: 0;
+    height: 21%;
+    width: 50%;
+    border-radius: 10px;
+    background: #fff;
+}
+.none{
+    width: 0;
+}
+
+#textNone{
+    display: none;
+}
+#textBlock{
+    display: block;
+}

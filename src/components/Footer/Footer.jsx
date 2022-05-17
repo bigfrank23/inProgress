@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Img from '../../images/living-generously.jpg'
 import Img2 from '../../images/bg2.jpg'
 import PFN from '../../images/footerImg.png'
 import styled from 'styled-components'
 import Button from '../Button/Button'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Header from '../Text/Header'
 import PText from '../Text/PText'
 import { mobile } from '../../responsive'
@@ -15,9 +15,13 @@ import { landscapeTab } from './../../responsive';
 import MailchimpFormContainer from '../mailchimpFormContainer/MailchimpFormContainer'
 import Button2 from '../Button/Button2'
 import ProfileImg from '../../images/profile.png'
+import { Modal, Box, Typography } from '@mui/material';
+import { makeStyles } from '@material-ui/core/styles';
 
 import { useDispatch } from 'react-redux';
 import { LOGOUT } from '../../pages/blog/redux/constants/actionTypes';
+import { provinces } from '../../teamMembers/provinces'
+import "./Footer.css"
 
 const Container = styled.div`
   width: 100%;
@@ -160,15 +164,58 @@ const Credits = styled.section`
     font-size: 1rem;
 `;
 
+const useStyles = makeStyles((theme) => ({
+  /** Changed modalStyle */
+  modalStyle: { backgroundColor: "rgba(0, 0, 0, 0.1)", zIndex: "1" },
+  boxStyle: {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  backgroundColor: "#fff",
+  // border: "2px solid #000",
+  outline: 0,
+  boxShadow: 24,
+  p: 4,
+  }
+}));
+
 const user = JSON.parse(localStorage.getItem('mern_crud3_copy_user'))
 const Footer = () => {
 
   const dispatch = useDispatch()
+  const history = useHistory()
+  const [province, setProvince] = useState('')
+
+  const classes = useStyles()
+  const [open, setOpen] = useState(false);
+  const [modalData, setModalData] = useState("");
+  const handleClose = () => setOpen(false);
 
   const handleLogOut = () => {
     dispatch({type: LOGOUT})
     window.location.replace("/")
-}
+  }
+
+  const allProvinces = provinces.sort(function(a, b) {
+    const nameA = a.province.toUpperCase(); // ignore upper and lowercase
+    const nameB = b.province.toUpperCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+  
+    // names must be equal
+    return 0;
+  });
+
+  const handleChange = () => {
+    history.push(`/chapter`);
+  }
+
   return (
     <Container>
         <div className="topFooter">
@@ -176,6 +223,16 @@ const Footer = () => {
               <Link to="/provinces">
               <Button2 outline BtnText='Select a Province' />
               </Link>
+              {/* <button onClick={()=> {setOpen(!open)}}>open</button> */}
+              {allProvinces.map((data)=> (
+                <>
+                <div className={open ? "sideBlock" : "none"}>
+                  <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
+                      <div className="hoverItems">{data.province}</div>
+                  </Link>
+                </div>
+                </>
+              ))}
                 <div className="lineShape"></div>
                 <div className='mainText'> <Header color={true} children="Lorem, ipsum dolor sit."/> </div>
                 <div className="btnContent">
