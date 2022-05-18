@@ -1,15 +1,9 @@
 import React, { useState } from "react";
-import ImageGallery from "react-image-gallery";
-import Img from "../../images/federico-respini-sYffw0LNr7s-unsplash.jpg";
-import Img2 from "../../images/living-generously.jpg";
 import Img3 from "../../images/bg2.jpg";
-import Img4 from "../../images/My-Post-15.png";
 import Img5 from "../../images/gallery2.png";
 import styled from "styled-components";
 import MyGallery from "../../components/myGallery/MyGallery";
 import './Gallery.css'
-import Slick from "../../components/slickSlider/SlcikSlider";
-import Responsive from "../../components/reactSlick/ReactSlick";
 import PauseOnHover from "../../components/reactSlick/AutoScroll";
 import H2 from '../../components/Text/H2'
 import Footer from '../../components/Footer/Footer'

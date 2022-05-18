@@ -219,35 +219,20 @@ const Footer = () => {
   return (
     <Container>
         <div className="topFooter">
-            <div className="center">
-              <Link to="/provinces">
+              <button className='footerTopBtn' onClick={()=> {setOpen(!open)}}>{open ? "close" : "Select a Province"}</button>
+            <div className={open ? "center" : "centerNone"}>
+              {/* <Link to="/provinces">
               <Button2 outline BtnText='Select a Province' />
-              </Link>
-              {/* <button onClick={()=> {setOpen(!open)}}>open</button> */}
+              </Link> */}
               {allProvinces.map((data)=> (
                 <>
                 <div className={open ? "sideBlock" : "none"}>
                   <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
-                      <div className="hoverItems">{data.province}</div>
+                      <div className="footerHoverItems" onClick={handleClose}>{data.province}</div>
                   </Link>
                 </div>
                 </>
               ))}
-                <div className="lineShape"></div>
-                <div className='mainText'> <Header color={true} children="Lorem, ipsum dolor sit."/> </div>
-                <div className="btnContent">
-                    <div className="topTextBox">
-                    <PText children="Lorem, ipsum dolor." color={true}/>
-                    </div>
-                    <div className="topBtnBox">
-                        <Link to='#' className='links' style={{background: '#fff', borderRadius: '20px'}}>
-                            <Button outline/>
-                        </Link>
-                        <Link to='#' className='links'>
-                            <Button/>
-                        </Link>
-                    </div>
-                </div>
             </div>
         </div>
         <div className="bottomFooter">

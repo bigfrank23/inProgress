@@ -25,17 +25,6 @@ const More = () => {
                     <div className="blogIndexBx">
                         <Slider2 />
                     </div>
-                        {/* <div className="blogIndexTitle">
-                            <h3>News Feed</h3>
-                        </div>
-                        <div className="blogIndexImg">
-                            <img src={AnnouncementImg} alt="" />
-                        </div>
-                        <div className="blogIndexPara">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro dignissimos nesciunt fuga distinctio quasi reiciendis dolor, temporibus ipsam asperiores maiores.</p>
-                        </div>
-                    </div>
-                        <div className="blogIndexReadmore"><h6>read more</h6></div> */}
                 </div>
             </div>
         </div>

@@ -314,18 +314,15 @@ const Navbar = () => {
                     <i className="fa fa-angle-down" aria-hidden="true" />
                   </div>
                 <ul className="hover">
+                    <Link to="/all-events" className="links">
+                      <li className="hoverItems">All Events</li>
+                    </Link>
                     <Link to="/gallery" className="links">
                       <li className="hoverItems">Gallery</li>
                     </Link>
                     <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                     <li className="hoverItems">Watch Live</li>
                     </a>
-                    <Link to="#" className='links'>
-                    <li className="hoverItems">Past Events</li>
-                    </Link>
-                    <Link to="#" className='links'>
-                    <li className="hoverItems">Upcoming Events</li>
-                    </Link>
                     <Link to='/blogs' className='links'>
                     <li className="hoverItems">Blogs</li>
                     </Link>

@@ -1,10 +1,9 @@
 .sideBlock{
-    position: absolute;
+    position: relative;
     left: 0;
-    height: 21%;
     width: 50%;
     border-radius: 10px;
-    background: #fff;
+    /* background: #fff; */
 }
 .none{
     width: 0;
@@ -14,5 +13,51 @@
     display: none;
 }
 #textBlock{
-    display: block;
+    display: flex;
+}
+.center{
+    display: flex;
+    width: 40%;
+    flex-wrap: wrap;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(4, 25, 9, 0.90), rgba(4, 25, 9, 0.90));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 2rem;
+    transition: width .25s linear;
+}
+.centerNone{
+    width: 0%;
+}
+.footerHoverItems{
+    color: #fff;
+    font-weight: 600;
+}
+.footerHoverItems:hover{
+    color: #990000;
+    font-weight: 600;
+}
+.footerTopBtn{
+  border: 2px solid;
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-weight: 900;
+  min-width: 125px;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: border .5s ease;
+}
+.footerTopBtn:hover{
+    border: 1px solid #008753;
 }

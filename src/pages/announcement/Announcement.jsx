@@ -6,7 +6,7 @@ import GroupImg from '../../images/group.png'
 import SocialImg from '../../images/social.png'
 import BgImg from '../../images/splash1.jpg'
 import Footer from '../../components/Footer/Footer'
-import announcementImg from '../../images/announcement.jpeg'
+import announcementImg from '../../images/announcement1.jpeg'
 // import { Modal, Box, Typography } from '@mui/material';
 import { makeStyles } from '@material-ui/core/styles';
 import { Modal, Button } from "react-bootstrap";
@@ -80,7 +80,7 @@ const Announcement = () => {
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
-          <h1>Announcements</h1>
+          <h1>News Feeds</h1>
         </div>
       </div>
       <div className="container" id='announcementContainer'>
@@ -89,10 +89,11 @@ const Announcement = () => {
         <div className="col-md-6">
           <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-450 position-relative">
             <div className="col p-4 d-flex flex-column position-static">
-              <strong className="d-inline-block mb-2 text-warning">UPCOMING </strong>
-              <h3 className="mb-0">Pentecostal Fellowship Of Nigeria Lagos Chapter | Youth Wing</h3>
+              <strong className="d-inline-block mb-2 text-warning">ANNOUNCEMENT </strong>
+              <h3 className="mb-0">Pentecostal Fellowship Of Nigeria Lagos State | Directorate of Politics and Governance</h3>
               {/* <div className="mb-1 text-muted">April 12</div> */}
-              <p className="card-text mb-4">Campaign Against Drug Abuse & Cultism in Secondary School</p>
+              <p className="card-text mb-4 my-4"> <b>Get your #PVC now!</b> <br />
+              #pfnlagos #pfn #dpglagos #therighteousinauthority</p>
                 {/* <!-- Button to Open the Modal --> */}
               <button type="button" className="btn btn-success stretched-link" onClick={handleShow}>Show More</button>
             </div>
@@ -172,37 +173,76 @@ const Announcement = () => {
         <Modal.Body>
           <h6 className="modalTitle3">PFN LAGOS STATE OFFICIAL WEBSITE
           AND SOCIAL MEDIA ACCOUNTS</h6>
-        <p className="modalContent3">
+        <div className="modalContent3">
           Please be informed that this is the official website of the Pentecostal Fellowship of Nigeria, Lagos State. <b>www.pfnlagosstate.org</b>&nbsp;
            and the official social media handles are: 
-        </p>
-          <p className="modalContent3">
+        </div>
+          <div className="modalContent3">
           <b>Facebook</b>:
-          {/* Official Name: Pentecostal Fellowship of Nigeria - PFN Lagos State */}
-          Link: <a href="www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>Click here</a>
-          {/* Handle: @pfnlagostate */}
-          <p className="modalContent3">
+          <p>
+            <span className='text-danger'>Official Name</span>
+          : Pentecostal Fellowship of Nigeria - PFN Lagos State
+          </p>
+          <p>
+            <span className="text-danger">Link</span>
+          : <a href="www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>Click here</a>
+          </p>
+          <p>
+            <span className='text-danger'>Handle</span>
+          : @pfnlagostate
+          </p>
+          </div>
+
+          <div className="modalContent3">
           <b>Twitter</b>
-          :
-          {/* Official Name: Pentecostal Fellowship of Nigeria -PFN Lagos State */}
-          Link: <a href="www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>Click here</a>
-          {/* Handle: @pfnlagostate */}
+          <p>
+            <span className='text-danger'>Official Name</span>
+          : Pentecostal Fellowship of Nigeria - PFN Lagos State
           </p>
-          <p className="modalContent3">
+          <p>
+            <span className="text-danger">Link</span>
+          : <a href="www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>Click here</a>
+          </p>
+          <p>
+            <span className='text-danger'>Handle</span>
+          : @pfnlagostate
+          </p>
+          </div>
+          <div className="modalContent3">
             <b>Instagram</b>
-            :
-            {/* Official Name: Pentecostal Fellowship of Nigeria - PFN Lagos State */}
-           Link:  <a href="www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>Click here</a>
-          </p>
-          <p className="modalContent3">
+            <p>
+              <span className='text-danger'>Official Name</span>
+            : Pentecostal Fellowship of Nigeria - PFN Lagos State
+            </p>
+            <p>
+              <span className="text-danger">Link</span>
+            : <a href="www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>Click here</a>
+            </p>
+            <p>
+              <span className='text-danger'>Handle</span>
+            : @pfnlagostate
+            </p>
+          </div>
+          <div className="modalContent3">
             <b>YouTube Channel</b>
-            :
-            Link: <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>Click here</a>
-          </p>
-         <b><i>
+            <p>
+              <span className='text-danger'>Official Name</span>
+            : Pentecostal Fellowship of Nigeria - PFN Lagos State
+            </p>
+            <p>
+              <span className="text-danger">Link</span>
+            : <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>Click here</a>
+            </p>
+            <p>
+              <span className='text-danger'>Handle</span>
+            : @pfnlagostate
+            </p>
+          </div>
+            <b>
+           <i>
          It has come to our notice that some other websites or online platforms purported to be PFN Lagos State's, isn't official, so you are therefore advised to thread cautiously when accessing them.
-           </i></b> 
-        </p>
+           </i>
+           </b> 
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose3}>
@@ -210,12 +250,12 @@ const Announcement = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-      <main role="main" class="container">
+      {/* <main role="main" class="container">
       <div class="row">
 
       </div>
 
-    </main>
+    </main> */}
 
         </div>
       </div>

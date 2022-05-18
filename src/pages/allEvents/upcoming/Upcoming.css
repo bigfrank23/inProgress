@@ -1,0 +1,73 @@
+.page5{
+    /* margin-top: 50rem; */
+}
+.page5Bx{
+    display: flex;
+    padding: 2rem 4rem;
+}
+.page5Bx .page5BxImg{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page5Bx .page5BxImg img{
+    width: 70%;
+}
+.page5Bx .page5BxContent{
+    flex: 2;
+}
+.page5Title{
+    padding: 1rem 0;
+}
+.page5Date, .page5Time, .page5Location{
+    display: flex;
+}
+.page5Time{
+    padding: 3px 0;
+}
+.page5Para, .page5Btn{
+    padding: 1rem 0;
+}
+.Hr:not(:last-child){
+    width: 82%;
+    margin: auto;
+    border: 1px solid #222;
+}
+.Hr:last-child{
+    display: none;
+}
+#upcomingHr{
+    width: 82%;
+    margin: auto;
+    border: 1px solid #222;
+}
+#upcomingLocation{
+    padding: 0 !important;
+}
+/* #upcomingPara{
+    text-transform: lowercase;
+}
+#upcomingPara::first-letter{
+    text-transform: uppercase;
+} */
+
+@media only screen and (max-width: 600px) {
+    .page5 {
+        /* margin-top: 45rem; */
+    }
+    .page5Bx {
+        display: block;
+        padding: 2rem 2rem;
+    }
+    .page5Bx .page5BxContent {
+        text-align: center;
+    }
+    .page5Date, .page5Time, .page5Location {
+        display: flex;
+        justify-content: center;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    
+  }

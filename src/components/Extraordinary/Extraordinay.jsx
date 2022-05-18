@@ -11,7 +11,7 @@ import PText from '../Text/PText'
 import { Grid } from '@material-ui/core'
 import Img1 from '../../images/announcement.jpeg'
 import Img2 from '../../images/gallery/33.jpg'
-import Img3 from '../../images/gallery/58.jpg'
+import Img3 from '../../images/pastEvents/pastEvent1.jpeg'
 import H2 from '../Text/H2'
 
 
@@ -177,7 +177,8 @@ const Extraordinay = () => {
             id: 1,
             img: Img1,
             title: "Upcoming Events",
-            desc: "Know More"
+            desc: "Know More",
+            to: "/upcoming-events"
         },
         {
             id: 2,
@@ -223,37 +224,22 @@ const Extraordinay = () => {
         <Grid container spacing={3}>
           {cards.map((card) => (
             <Grid item xs={12} sm={6} md={4} key={card.id}>
-              <ExtraCard>
-                <ExtraCardImgContainer>
-                  <ExtraCardImg src={card.img} />
-                </ExtraCardImgContainer>
-                {/* <ExtraContentText2> */}
-                  {/* <ExtraTitle>
-                    {" "}
-                    <H3 children={card.title} color={true} />{" "}
-                  </ExtraTitle> */}
-                  {/* <div style={{display: 'flex', color: "white"}}> */}
-                  {/* <ExtraDate>
-                    {" "}
-                    <PText children="" color={true} />{" "}
-                  </ExtraDate> */}
-                  {/* </div> */}
-                  {/* <div style={{display: 'flex', color: "white"}}> */}
-                  {/* <ExtraLocation>
-                    <PText children="View Detail" color={true} />{" "}
-                  </ExtraLocation> */}
-                  {/* </div> */}
-                {/* </ExtraContentText2> */}
-              </ExtraCard>
-              <div style={{padding: '1rem'}}>
-                    {" "}
-                    <H2 children={card.title} />{" "}
-                  </div>
+              <Link to={card.to} className="links">
+                <ExtraCard>
+                  <ExtraCardImgContainer>
+                    <ExtraCardImg src={card.img} />
+                  </ExtraCardImgContainer>
+                </ExtraCard>
+                <div style={{padding: '1rem'}}>
+                  {" "}
+                  <H2 children={card.title} />{" "}
+                </div>
+              </Link>
             </Grid>
           ))}
         </Grid>
         {/* </div> */}
-        <Link to="#" className="extraLink">
+        <Link to="/all-events" className="extraLink">
           <Button BtnText="VIEW ALL EVENTS" />
         </Link>
       </ExtraContentContainer2>

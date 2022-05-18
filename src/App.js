@@ -33,7 +33,6 @@ import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import GoUp from "./components/goUp/GoUp";
 import OurMission from "./pages/ourMission/OurMission";
 import ExtraPage from "./pages/extraPage/ExtraPage";
-import Spinner from "react-spinkit";
 import ContactPage from './pages/contactPage/ContactPage';
 import Write from './pages/blog/write/Write';
 import Register from './pages/blog/auth/register/Register';
@@ -46,20 +45,14 @@ import Announcement from './pages/announcement/Announcement';
 import PaymentForm from './components/payment/PaymentForm';
 import FullExecDetail from './pages/fullExecDetail/FullExecDetail';
 import Chapters from './pages/chapters/Chapters';
+import AllEvents from './pages/allEvents/AllEvents';
+import Upcoming from './pages/allEvents/upcoming/Upcoming';
 
 const Container = styled.div`
   width: 100%;
 `
 
 function App() {
-  // const [isLoading, setIsloading] = useState(true)
-  // if (isLoading) return <Spinner name="circle" style={{ width: 100, height: 100 }} />
-  useEffect(()=>{
-    window.addEventListener("load", ()=> {
-      <Spinner name="circle" style={{ width: 100, height: 100 }} />
-    })
-    
-  })
 
   const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
   return (
@@ -105,6 +98,8 @@ function App() {
           <Route exact path='/give' component={PaymentForm} />
           <Route exact path='/full_exec_detail' component={FullExecDetail} />
           <Route exact path='/chapter' component={Chapters} />
+          <Route exact path='/all-events' component={AllEvents} />
+          <Route exact path='/upcoming-events' component={Upcoming} />
         </Switch>
       </Router>
       <GoUp />

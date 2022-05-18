@@ -1,17 +1,12 @@
 import React, { useState } from "react";
-import ImageGallery from "react-image-gallery";
 import Img3 from "../../../../images/bg2.jpg";
 import Img5 from "../../../../images/pro9.jpg";
 import UserImg from "../../../../images/user.png";
 import styled from "styled-components";
-import H2 from '../../../../components/Text/H2';
-// import Button from "../../../components/Button/Button";
 import './Post.css'
 import H3 from "../../../../components/Text/H3";
-// import { postData } from "../../data";
-import Footer from "../../../../components/Footer/Footer";
 import Button from '@mui/material/Button'
-import { Link, useNavigate} from "react-router-dom";
+import { Link} from "react-router-dom";
 import moment from "moment";
 
 const Container = styled.div`

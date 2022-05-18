@@ -32,7 +32,7 @@ const Btn = styled.button`
   }
 `;
 
-const Button2 = ({outline= false, BtnText= 'text', onClick=true}) => {
+const Button2 = ({outline= false, BtnText= 'text'}) => {
   return (
     <Container>
         <Btn outline={outline} >{BtnText}</Btn>
