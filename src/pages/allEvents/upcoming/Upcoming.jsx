@@ -62,17 +62,17 @@ const Upcoming = () => {
                     <H2>{data.title}</H2>
                     </div>
                     <div className="page5Date">
-                    <h5><b>Date</b></h5> : {data.date}
+                    {data.date ? <><h5><b>Date</b></h5> : {data.date} </> : null}
                     </div>
                     <div className="page5Time">
-                    <h5><b>Time</b></h5> : {data.time}
+                    {data.time ? <><h5><b>Time</b></h5> : {data.time} </> : null}
                     </div>
                     <div className="page5Location" id='upcomingLocation'>
-                        <h5><b>Location</b></h5> : {data.location}
+                      {data.location ? <><h5><b>Location</b></h5> : {data.location} </> : null}
                     </div>
                     <div className="page5Para">
                     <p id="upcomingPara">
-                    {data.desc}
+                      {data.desc ? <><b>{data.desc}</b></> : null}
                     </p>
                     <p>
                       <b>{data.theme}</b>

@@ -291,7 +291,6 @@ const Footer = () => {
             <h6 className="authBxLogout">{user ? "Log out" : "Log in"}</h6>
             </Link>
           </div>
-
         }
         </div>
         {/* <div style={{textAlign: "center"}}>

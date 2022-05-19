@@ -1,5 +1,6 @@
 import upcomingImg1 from "../../../images/upcomingEvents/upcoming1.jpeg";
 import upcomingImg2 from "../../../images/upcomingEvents/upcoming2.jpeg";
+import upcomingImg3 from "../../../images/upcomingEvents/upcoming3.jpg";
 export const upcoming = [
     {
         id: 1,
@@ -9,12 +10,22 @@ export const upcoming = [
         time: "11AM",
         location: "ZOOM",
         desc: "Our Eminent National President has approved the much awaited theme for the 2022 Penticost Day Service (PDS) rallies, Nationwide, among the 36 states PFN chapters, including Abuja FCT.",
-        theme: "Theme: Power Above Powers. (LUKE 10:19)",
-        date2: "Date: Pentecost Sunday, June 5TH, 2022.",
-        more: "Happy PDS celeberations ahead!"
+        
     },
     {
         id: 2,
+        img: upcomingImg3,
+        title: "Theme: Power Above Powers. (LUKE 10:19)",
+        date: "Pentecost Sunday, June 5TH, 2022.",
+        time: "",
+        location: "",
+        desc: "Happy PDS celeberations ahead!",
+        // theme: "Theme: Power Above Powers. (LUKE 10:19)",
+        // date2: "Date: Pentecost Sunday, June 5TH, 2022.",
+        // more: "Happy PDS celeberations ahead!"
+    },
+    {
+        id: 3,
         img: upcomingImg2,
         title: "Campaign against Drug Abuse & Cultism in Secondary Schools",
         date: "",

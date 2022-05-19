@@ -1,0 +1,45 @@
+.fullExecDetailContainer{
+    display: flex;
+    gap: 6rem;
+    padding: 4rem 7rem;
+}
+.fullExecDetailContainerLeft{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    /* font-size: 13px;
+    font-weight: 600; */
+}
+.fullExecDetailContainerLeft img{
+    width: 100%;
+}
+.fullExecDetailContainerLeftContent{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    font-weight: 600;
+    font-size: 13px;
+}
+.fullExecDetailContainerRight{
+    flex: 3;
+}
+.fullExecDetailContainerRightName h2{
+    text-transform: uppercase !important;
+}
+.fullExecDetailContainerRightTitle h5{
+    font-family: 'Fontawesome';
+    font-weight: 900;
+    color: #990000;
+}
+
+.fullExecDetailContainerRightBio{
+    max-width: 80%;
+    padding-top: 2rem;
+    text-align: justify;
+}
+#fa5Icon{
+    color: #990000;
+    margin-right: 5px;
+}

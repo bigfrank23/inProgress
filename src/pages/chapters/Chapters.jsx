@@ -74,8 +74,8 @@ const Chapters = () => {
       </div>
       <div className="page6Bx3">
           <div className="page6Bx3Content">
-              <div className="page6Img">
-                  <img src={Img2} alt="" />
+              <div className="page6Img" dangerouslySetInnerHTML={{__html: location.state.mapLink}}>
+                  {/* <img src={Img2} alt="" /> */}
               </div>
               <div className="page6Txt">
                   <h3>{location.state.province}</h3>

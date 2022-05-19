@@ -47,6 +47,11 @@ import FullExecDetail from './pages/fullExecDetail/FullExecDetail';
 import Chapters from './pages/chapters/Chapters';
 import AllEvents from './pages/allEvents/AllEvents';
 import Upcoming from './pages/allEvents/upcoming/Upcoming';
+import FullExecDetail2 from './pages/fullExecDetail/fullExecDetail2/FullExecDetail2';
+import FullExecDetail3 from './pages/fullExecDetail/fullExecDetail3/FullExecDetail3';
+import FullExecDetail4 from './pages/fullExecDetail/fullExecDetail4/FullExecDetail4';
+import FullExecDetail5 from './pages/fullExecDetail/fullExecDetail5/FullExecDetail5';
+import FullExecDetail6 from './pages/fullExecDetail/fullExecDetail6/fullExecDetail6';
 
 const Container = styled.div`
   width: 100%;
@@ -97,6 +102,11 @@ function App() {
           <Route exact path='/announcement' component={Announcement} />
           <Route exact path='/give' component={PaymentForm} />
           <Route exact path='/full_exec_detail' component={FullExecDetail} />
+          <Route exact path='/full_exec_detail_cwc' component={FullExecDetail2} />
+          <Route exact path='/full_exec_detail_cwc2' component={FullExecDetail3} />
+          <Route exact path='/full_exec_detail_cwc3' component={FullExecDetail4} />
+          <Route exact path='/full_exec_detail_cwc4' component={FullExecDetail5} />
+          <Route exact path='/full_exec_detail_cwc5' component={FullExecDetail6} />
           <Route exact path='/chapter' component={Chapters} />
           <Route exact path='/all-events' component={AllEvents} />
           <Route exact path='/upcoming-events' component={Upcoming} />

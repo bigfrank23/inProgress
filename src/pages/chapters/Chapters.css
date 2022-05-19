@@ -53,9 +53,14 @@
 }
 .page6Bx3 .page6Bx3Content{
     display: flex;
+    gap: 2rem;
 }
 .page6Bx3Content .page6Img{
     flex: 1;
+}
+.page6Bx3Content .page6Img iframe{
+    width: 100%;
+    height: 250px;
 }
 .page6Bx3Content .page6Img img{
     width: 80%;
