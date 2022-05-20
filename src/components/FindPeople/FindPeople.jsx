@@ -81,7 +81,7 @@ const FindPeople = () => {
       >
         {cards.map((item) => (
           <Grid item xs={12} sm={6} md={4} key={item.id}>
-            <Link to="/pfn-executives" className="links">
+            <Link to="/pfn-executives" id="links">
               <div className="card1">
                 <img src={item.img} alt="" />
                 <div className="contentTextWrapper">

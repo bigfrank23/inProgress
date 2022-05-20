@@ -4,7 +4,7 @@ import phyllisImg from '../../../images/team/phyllis.jpeg'
 import styled from "styled-components";
 // import "./FullExecDetail2.css";
 import Footer from "../../../components/Footer/Footer";
-import { faChurch, faAddressCard, faPhone, faAt, faCalendar, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faChurch, faAddressCard, faPhone, faAt, faCalendar, faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Container = styled.div`
@@ -60,6 +60,10 @@ const FullExecDetail5 = () => {
               </div>
               <div className="fullExecDetailContainerRightTitle">
                   <h5>TREASURER</h5>
+              </div>
+              <div className="fullExecDetailContainerRightProvince">
+              <FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faMapMarkerAlt} />
+                  <h6>Eti-Osa Province</h6>
               </div>
               <div className="fullExecDetailContainerLeftContent">
                 <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faUser} />Lead Pastor</span>

@@ -239,7 +239,7 @@ const ContactPage = () => {
                 <p className="text-white op-7"> <i className="fa fa-address-book" aria-hidden="true" /> 5-9 Bode Thomas Rd, Onipanu 100252,
                   <br /> Lagos</p>
                 <h5 className="text-white font-weight-light mb-3 mt-4">CALL US</h5>
-                <p className="text-white op-7"><i className="fa fa-phone" aria-hidden="true" /> 09014544520
+                <p className="text-white op-7"><i className="fa fa-phone" aria-hidden="true" /> 09153848219 09153848220
                   {/* <br /> <i className="fa fa-phone" aria-hidden="true" /> 630 446 8851 */}
                   </p>
                 <div className="round-social light d-flex gap-3">

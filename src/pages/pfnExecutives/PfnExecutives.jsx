@@ -1,25 +1,15 @@
 import React, {useState} from "react";
-import { directorate } from '../../teamMembers/directorate';
-import { Modal, Box, Typography } from '@mui/material';
 import { makeStyles } from '@material-ui/core/styles';
-import PersonIcon from '@mui/icons-material/Person';
-import Img1 from "../../images/sec.png";
 import Img2 from "../../images/PFN10.png";
-import Img3 from "../../images/bg2.jpg";
-import Img4 from "../../images/My-Post-15.png";
 import Img5 from "../../images/slider1.png";
 import styled from "styled-components";
 import "./PfnExecutives.css";
-import Button2 from "../../components/Button/Button2";
 import H2 from "../../components/Text/H2";
 import Footer from "../../components/Footer/Footer";
 import { faChurch, faAddressCard, faPhone, faAt, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Grid from '@mui/material/Grid'
 import { chairmen, directors } from "../../teamMembers/team";
-import H3 from "../../components/Text/H3";
-import Header from "../../components/Text/Header";
-import flipImg from '../../images/flip.png'
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -57,38 +47,7 @@ const Container = styled.div`
   }
 `;
 
-// Modal Style
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
-const useStyles = makeStyles((theme) => ({
-  /** Changed modalStyle */
-  modalStyle: { backgroundColor: "rgba(0, 0, 0, 0.1)", zIndex: "1" },
-  boxStyle: {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  backgroundColor: "#fff",
-  // border: "2px solid #000",
-  outline: 0,
-  boxShadow: 24,
-  p: 4,
-  }
-}));
-
 const PfnExecutives = () => {
-  const classes = useStyles()
   const [open, setOpen] = useState(false);
   const [modalData, setModalData] = useState("");
   const handleClose = () => setOpen(false);
@@ -321,7 +280,7 @@ const PfnExecutives = () => {
       </div>
       </div>
 
-        <div className="pfnExecTitle2">
+        <section className="pfnExecTitle2" id="section2">
         <div className="execTitle">
           {/* <Header color>The Directors</Header> */}
           <h2>The Directors</h2>
@@ -381,7 +340,7 @@ const PfnExecutives = () => {
           ))}
         </Grid>
       </div>
-      </div>
+      </section>
 
             <div className="pfnExecTitle3">
                 <div className="execTitle">

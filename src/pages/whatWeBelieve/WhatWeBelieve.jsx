@@ -1,17 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import Navbar from '../../components/Navbar/Navbar';
 // import Img from '../../images/splash2.jpg'
 import Img from '../../images/believe.png'
-import Img2 from '../../images/splash3.jpg'
 import Img3 from '../../images/bg2.jpg'
 import BgImg from '../../images/splash1.jpg'
-import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 
 // import './Page3.css'
 import './WhatWeBelieve.css'
-import Header from '../../components/Text/Header';
 import PText from './../../components/Text/PText';
 import H2 from './../../components/Text/H2';
 import H3 from '../../components/Text/H3';
@@ -85,12 +81,14 @@ const WhatWeBelieve = () => {
         </div>
         <div className="sectOnePara">
           {" "}
-          <H3 color>
+          <H3><span style={{color: "#fff"}}>
             "We believe in water baptism by immersion in the name of the
               Father, Son and Holy Spirit (Matthew 28:19-20). (B) we believe
               in the Lord’s Supper which is the regular partaking of bread,
               the fruit of the vine, symbolic of the body and the blood of
               Jesus Christ (1Cor. 11:23)"
+
+          </span>
           </H3>
         </div>
       </div>

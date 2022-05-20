@@ -138,6 +138,13 @@ blockquote h2:before {
     align-self: center;
     color: #fff;
 }
+.title a{
+    text-decoration: underline;
+    color: #990000;
+}
+#bannerLinks{
+    text-decoration: none;
+}
 
 @media only screen and (max-width: 600px) {
     .bannerCenter{

@@ -143,7 +143,7 @@ const Announcement = () => {
         <Modal.Header closeButton>
           <Modal.Title className='text-primary'>Monthly Meetings</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Lagos State Executive meets the last Tuesday of every month at The Secretariat, 5-9 Bode Thomas Road, Onipanu, Lagos.</Modal.Body>
+        <Modal.Body>Lagos State Executive meets the last Tuesday of every month at The Secretariat, 5-9 Bode Thomas Road, Onipanu, Lagos. <br /> This administration is all inclusive. Every Pentecostal Minister/Church in Lagos State is welcome to join hands with us to advance God’s Kingdom in our lovely State. <br /> We look forward to welcoming you in any of our State, Provincial or Chapter’s meetings/fellowship. <br /> <b>Thanks and God bless you.</b></Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose2}>
             Close

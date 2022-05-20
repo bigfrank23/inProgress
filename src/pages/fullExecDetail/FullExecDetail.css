@@ -25,6 +25,12 @@
 .fullExecDetailContainerRight{
     flex: 3;
 }
+.fullExecDetailContainerRightProvince{
+    display: flex;
+}
+.fullExecDetailContainerRightProvince h6{
+    margin: 0 !important;
+}
 .fullExecDetailContainerRightName h2{
     text-transform: uppercase !important;
 }

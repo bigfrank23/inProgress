@@ -105,9 +105,9 @@ const Page13 = () => {
                   <H2 color>Join the Prayer Team</H2>
               </div>
               <div className="page13BottomPara">
-                  <PText color>
+                  <p>
                   If you have a heart for people and prayer, we’d love to hear from you. You will be connected to a virtual prayer team, invited to pray weekly for our church prayer requests, and/or equip you to become a prayer minister for those that are in need after service. Contact us to express your interest in joining our prayer team. 
-                  </PText>
+                  </p>
               </div>
               <Link to="/directorate">
                 <div className="page13BottomBtn">

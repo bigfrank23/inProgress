@@ -1,10 +1,10 @@
 import React from "react";
 import Img5 from "../../../images/slider1.png";
-import cwcImg from "../../../images/pro8.jpg";
+import cwcImg from "../../../images/team/akinola.jpg";
 import styled from "styled-components";
 // import "./FullExecDetail2.css";
 import Footer from "../../../components/Footer/Footer";
-import { faChurch, faAddressCard, faPhone, faCalendar, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faChurch, faAddressCard, faPhone, faCalendar, faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation } from "react-router-dom";
 
@@ -66,6 +66,10 @@ const FullExecDetail3 = () => {
               <div className="fullExecDetailContainerRightTitle">
                   <h5>DEPUTY CHAIRMAN</h5>
               </div>
+              <div className="fullExecDetailContainerRightProvince">
+              <FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faMapMarkerAlt} />
+                  <h6>Kosofe Province</h6>
+              </div>
               <div className="fullExecDetailContainerLeftContent">
                 <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faUser} />General overseer</span>
                 <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faChurch} />Upper Room Baptist Church</span>
@@ -76,7 +80,7 @@ const FullExecDetail3 = () => {
               </div>
               <div className="fullExecDetailContainerRightBio">
                   <p>
-                  
+                  Born 2nd February 1959, a pastor called to raise and nurture men to be fulfilled in life and heaven focused.
                   </p>
               </div>
           </div>

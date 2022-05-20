@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from "../../images/splash3.jpg";
+import Img from "../../images/eventsBg.jpg";
 import Img2 from "../../images/splash3.jpg";
 import Img3 from "../../images/bg2.jpg";
 import styled from 'styled-components'
@@ -51,33 +51,40 @@ const AllEvents = () => {
       </div>
       <div className="page4Top">
           <div className="page4TopLeft" id='allEventsOverlay'>
-        <Link to="/upcoming-events" id="links">
+        <Link to="/upcoming-events">
             <div className="overlayTxt">
               <h5 className="txtGreen" id='allEventsTxt'>Upcoming <span className="txtWhite" id='allEventsTxt'>Events</span></h5>
             </div>
-            <div className="txtOne"><h6>Lorem, ipsum dolor.</h6></div>
+            <div className="txtOne">
+              <h6>All the prosperous of the earth will eat and worship...Psalm 22:29</h6>
+            </div>
             <div className="btnBx">
               <Button BtnText='View All' />
             </div>
         </Link>
           </div>
         <div className="page4TopCenter" id='allEventsOverlay'>
-          <div className="overlayTxt">
-            <h5 className="txtGreen" id='allEventsTxt'>Current <span className="txtWhite" id='allEventsTxt'>Events</span></h5>
-          </div>
-          <div className="txtOne"><h6>Lorem, ipsum dolor.</h6></div>
-          <div className="btnBx">
-            <Button BtnText='View All' />
-          </div>
+          <Link to="/current-events">
+            <div className="overlayTxt">
+              <h5 className="txtGreen" id='allEventsTxt'>Current <span className="txtWhite" id='allEventsTxt'>Events</span></h5>
+            </div>
+            <div className="txtOne"><h6>The kingdom of heaven may be compared to a king who gave a wedding feast for his son...Matthew 22:2</h6></div>
+            <div className="btnBx">
+              <Button BtnText='View All' />
+            </div>
+          </Link>
         </div>
         <div className="page4TopRight" id='allEventsOverlay'>
-          <div className="overlayTxt">
-            <h5 className="txtGreen" id='allEventsTxt'>Past <span className="txtWhite" id='allEventsTxt'>Events</span></h5>
-          </div>
-          <div className="txtOne"><h6>Lorem, ipsum dolor.</h6></div>
-          <div className="btnBx">
-            <Button BtnText='View All' />
-          </div>
+          <Link to="/past-events">
+            <div className="overlayTxt">
+              <h5 className="txtGreen" id='allEventsTxt'>Past <span className="txtWhite" id='allEventsTxt'>Events</span></h5>
+            </div>
+            <div className="txtOne"><h6>
+            After these events, the word of the Lord came to Abram in a vision...Genesis 15:1</h6></div>
+            <div className="btnBx">
+              <Button BtnText='View All' />
+            </div>
+          </Link>
         </div>
       </div>
       <div className="spacerBox d-flex justify-content-center">

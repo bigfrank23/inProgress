@@ -10,7 +10,7 @@ import H3 from '../Text/H3'
 import PText from '../Text/PText'
 import { Grid } from '@material-ui/core'
 import Img1 from '../../images/announcement.jpeg'
-import Img2 from '../../images/gallery/33.jpg'
+import Img2 from '../../images/currentEvents/current1.jpeg'
 import Img3 from '../../images/pastEvents/pastEvent1.jpeg'
 import H2 from '../Text/H2'
 
@@ -106,7 +106,7 @@ const ExtraContentContainer2 = styled.div`
     display: flex;
     justify-content: center;
     margin: 18px 0px;
-    text-decoration: none;
+    text-decoration: none !important;
     }
 `
 const ExtraTextContainer2 = styled.div`
@@ -184,13 +184,15 @@ const Extraordinay = () => {
             id: 2,
             img: Img2,
             title: "Current Events",
-            desc: "Know More"
+            desc: "Know More",
+            to: "/current-events"
         },
         {
             id: 3,
             img: Img3,
             title: "Past Events",
-            desc: "Know More"
+            desc: "Know More",
+            to: "/past-events"
         },
     ]
   return (
@@ -224,7 +226,7 @@ const Extraordinay = () => {
         <Grid container spacing={3}>
           {cards.map((card) => (
             <Grid item xs={12} sm={6} md={4} key={card.id}>
-              <Link to={card.to} className="links">
+              <Link to={card.to} id="bannerLinks">
                 <ExtraCard>
                   <ExtraCardImgContainer>
                     <ExtraCardImg src={card.img} />

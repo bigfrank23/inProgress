@@ -1,7 +1,5 @@
-// import Img from '../images/pro3.jpg'
 import Img from '../images/team/img1.jpg'
-import Img2 from '../images/team/leke.jpg'
-import Img3 from '../images/team/akin.jpg'
+import Img2 from '../images/team/akin.jpg'
 import oliverImg from '../images/team/oliver.jpg'
 import akinyeleImg from '../images/team/akinyele.jpg'
 import Img25 from '../images/team/fal.jpg'
@@ -17,7 +15,6 @@ import kenImg from '../images/team/ken.jpg'
 import obinnaImg from '../images/team/obinna.jpg'
 import benImg from '../images/team/ben.jpg'
 import helenImg from '../images/team/helen.jpg'
-import akinolaImg from '../images/team/akinola.jpg'
 import oladeleImg from '../images/team/oladele.jpg'
 import osayiImg from '../images/team/osayi.jpg'
 import phyllisImg from '../images/team/phyllis.jpeg'
@@ -548,27 +545,6 @@ export const directors = [
   },
   {
     id: 21,
-    img: akinolaImg,
-    name: "Oluleke Akinola",
-    title: "Deputy chairman",
-    position: "General overseer",
-    church: "Upper Room Baptist Church ",
-    address: "2a, Davies Street off Demurin Street, Alapere, Ketu",
-    headOffice: "",
-    tel: "",
-    email: "",
-    dOb: "",
-    chapter: "",
-    province: "Kosofe",
-    associatePastor: "",
-    associatePastorTel: "",
-    associatePastorChapter: "",
-    associatePastorProvince: "",
-    bio: "Born 2nd February 1959, a pastor called to raise and nurture men to be fulfilled in life and heaven focused. ",
-    header: "Chairman"
-  },
-  {
-    id: 22,
     img: ericImg,
     name: "Rev Dr Eric IGHALO",
     title: "STATE DIRECTOR- Community and People Development Directorate",
@@ -589,7 +565,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 23,
+    id: 22,
     img: Img,
     name: "Bishop Louis E. Henshaw",
     title: "Deputy Director of Projects and Infrastructure",
@@ -608,7 +584,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 24,
+    id: 23,
     img: joyImg,
     name: "BISHOP OBERIKO JOY",
     title: "DEPUTY DIRECTOR, DIGITAL MEDIA",
@@ -630,7 +606,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 25,
+    id: 24,
     img: Img25,
     name: "Pastor Emmanuel Oluwemimo Falodun",
     title: "Deputy Director - Directorate of Learning and Development ",
@@ -651,7 +627,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 26,
+    id: 25,
     img: idiongImg,
     name: "APOSTLE Idongesit Ezekiel James ",
     title: "DEPUTY DIRECTOR, SECURITY AND INTELLIGENCE",
@@ -673,7 +649,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 27,
+    id: 26,
     img: Img,
     name: "REV. DR. AKINLADE",
     title: "DIRECTOR, HEALTH AND MEDICAL SERVICES",
@@ -692,7 +668,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 28,
+    id: 27,
     img: Img,
     name: "Apostle Stephen Atolani Pius",
     title: "DEPUTY DIRECTOR, PRAYERS",
@@ -712,7 +688,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 29,
+    id: 28,
     img: Img,
     name: "BISHOP MATTHEW EGWUOWA",
     title: "EX OFFICIO, CGMI ",
@@ -731,7 +707,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 30,
+    id: 29,
     img: Img,
     name: "Barr. (Mrs.) Tina Oganiru",
     title: "Deputy Director, Legal ",
@@ -750,7 +726,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 31,
+    id: 30,
     img: ImgB31,
     name: "Rev. Juliet Biniti",
     title: "DEPUTY SECRETARY",
@@ -771,7 +747,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 32,
+    id: 31,
     img: ImgB32,
     name: "REV FRANK IGHO ERHABOR ",
     title: "DEPUTY FINANCIAL SECRETARY",
@@ -792,7 +768,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 33,
+    id: 32,
     img: folahanImg,
     name: "REV. OLUSANYA FOLAHAN OLUMUYIWA ",
     title: "State Deputy Treasurer ",
@@ -814,7 +790,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 34,
+    id: 33,
     img: tonyeImg,
     name: "Apostle Tonye Nengi Oliver ",
     position: "President",
@@ -835,7 +811,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 35,
+    id: 34,
     img: Img,
     name: "Rev. Mrs Roseline Odiete ",
     title: "WELFARE AND EMPOWERMENT OFFICER",
@@ -854,7 +830,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 36,
+    id: 35,
     img: Img,
     name: "REV (MRS) GLORY AKPABIO ",
     title: "CO-ORDINATOR WOMEN WING",
@@ -873,7 +849,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 37,
+    id: 36,
     img: Img,
     name: "PASTOR CLEM IWEGBU ",
     title: "EX-OFFICIO (TREM)",
@@ -893,7 +869,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 38,
+    id: 37,
     img: Img,
     name: "BARRISTER TOMI VINCENT ",
     title: "LEGAL ADVISER",
@@ -912,7 +888,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 39,
+    id: 38,
     img: Img,
     name: "Enushai Sylvester Success Ngozi  ",
     title: "EX-OFFICIO (MFM) ",
@@ -931,7 +907,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 40,
+    id: 39,
     img: Img,
     name: "BISHOP MATTHEW EGWUOWA  ",
     title: "EX OFFICIO, CGMI",
@@ -950,7 +926,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 41,
+    id: 40,
     img: Img,
     name: "Pastor S. A. Lebi ",
     title: "Ex Officio, Lord's Chosen",
@@ -969,7 +945,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 42,
+    id: 41,
     img: Img,
     name: "Evang. Chris Joseph",
     title: "Ex-officio, Lord's Chosen  ",
@@ -989,7 +965,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 43,
+    id: 42,
     img: Img,
     name: "BOSE OLASUPO ",
     title: "STATE ADMIN SEC.",
@@ -1008,7 +984,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 44,
+    id: 43,
     img: davidImg,
     name: "Pastor David Oluwatosin Oladipupo",
     title: "DEPUTY PROTOCOL DIRECTOR",
@@ -1029,7 +1005,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 45,
+    id: 44,
     img: helenImg,
     name: "Mrs Karika Helen Atebefia",
     title: "DEPUTY PROTOCOL DIRECTOR",

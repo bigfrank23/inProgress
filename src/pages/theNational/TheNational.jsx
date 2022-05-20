@@ -95,17 +95,6 @@ const TheNational = () => {
                         </div>
                     </div>
                 </div>
-                <div className="nationalCenterContent">
-                    <div className="nationalCenterContentImgBx">
-                        <img src={PresidentImg3} alt="" />
-                    </div>
-                    <div className="nationalCenterContentTxt">
-                        <H3>Archbishop John A. Osa-Oni</H3>
-                        <div className="nationalCenterContentTxtPara">
-                            <p>National Vice President (South-West), PFN</p>
-                        </div>
-                    </div>
-                </div>
                 <div className="nationalCenterContent" id="nationalCenterContent">
                     <div className="nationalCenterContentImgBx">
                         <img src={PresidentImg5} alt="" />
@@ -114,6 +103,17 @@ const TheNational = () => {
                         <H3>Rev. Dr. Cosmas Ilechukwu</H3>
                         <div className="nationalCenterContentTxtPara">
                             <p>PFN National Secetary</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="nationalCenterContent">
+                    <div className="nationalCenterContentImgBx">
+                        <img src={PresidentImg3} alt="" />
+                    </div>
+                    <div className="nationalCenterContentTxt">
+                        <H3>Archbishop John A. Osa-Oni</H3>
+                        <div className="nationalCenterContentTxtPara">
+                            <p>National Vice President (South-West), PFN</p>
                         </div>
                     </div>
                 </div>

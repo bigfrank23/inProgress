@@ -79,6 +79,9 @@ input[type="radio" i]{
 .page13BottomPara{
     padding: 2rem 0;
 }
+.page13BottomPara{
+    color: #fff;
+}
 
 @media only screen and (max-width: 600px) {
     .page13Top {

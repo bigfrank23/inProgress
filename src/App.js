@@ -52,6 +52,9 @@ import FullExecDetail3 from './pages/fullExecDetail/fullExecDetail3/FullExecDeta
 import FullExecDetail4 from './pages/fullExecDetail/fullExecDetail4/FullExecDetail4';
 import FullExecDetail5 from './pages/fullExecDetail/fullExecDetail5/FullExecDetail5';
 import FullExecDetail6 from './pages/fullExecDetail/fullExecDetail6/fullExecDetail6';
+import Current from './pages/allEvents/current/Current';
+import Past from './pages/allEvents/past/Past';
+import FullEventDetail from './pages/allEvents/fullDetail/FullEventDetail';
 
 const Container = styled.div`
   width: 100%;
@@ -110,6 +113,9 @@ function App() {
           <Route exact path='/chapter' component={Chapters} />
           <Route exact path='/all-events' component={AllEvents} />
           <Route exact path='/upcoming-events' component={Upcoming} />
+          <Route exact path='/current-events' component={Current} />
+          <Route exact path='/past-events' component={Past} />
+          <Route exact path='/full-event-detail' component={FullEventDetail} />
         </Switch>
       </Router>
       <GoUp />

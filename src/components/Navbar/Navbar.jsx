@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import Announcement from '../announcement/Announcement'
 import { Link } from 'react-router-dom'
 import './navbar.css'
 import LogoImg from '../../images/pfnLogo.png'
-import Img from '../../images/splash2.jpg'
+import Img from '../../images/currentEvents/current1.jpeg'
 import ProfileImg from '../../images/profile.png'
 import Img5 from '../../images/pfnLogo.png'
 import { mobile } from '../../responsive'
 import Button2 from '../Button/Button2'
 import moment from 'moment'
 import Button from '../Button/Button'
-import { PaystackButton } from 'react-paystack';
 
 import { useDispatch } from 'react-redux';
 import { LOGOUT } from '../../pages/blog/redux/constants/actionTypes';
@@ -36,6 +34,11 @@ const Navbar = () => {
     const [scroll, setScroll] = useState(false)
     const [openMain, setOpenMain] = useState('')
     const [dropdownNav, setDropdownNav] = useState(false)
+    const [open, setOpen] = useState(false);
+    const handleClose = () => {
+      setOpen(false);
+      setOpenMain(false)
+    } 
 
     const dispatch = useDispatch()
 
@@ -63,8 +66,6 @@ const Navbar = () => {
         window.location.replace("/")
     }
 
-    
-
     useEffect(()=>{
         window.addEventListener('scroll', ()=>{
             if (window.scrollY > 300) {
@@ -74,6 +75,22 @@ const Navbar = () => {
             }
         })
     })
+
+    const allProvinces = provinces.sort(function(a, b) {
+      const nameA = a.province.toUpperCase(); // ignore upper and lowercase
+      const nameB = b.province.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+    
+      // names must be equal
+      return 0;
+    });
+    
+
   return (
     <Container id="navbar" className={scroll && "activeNavbar"}>
       {/* <Announcement /> */}
@@ -122,26 +139,43 @@ const Navbar = () => {
                         <h3>Featured Events</h3>
                       </div>
                       <div className={openMain ? "mainListItemsCenterLeftImg" : 'notActiveMainImg'}>
+                      <Link to='/current-events' id='links' onClick={()=> setOpenMain(false)}>
                         {openMain ? <img src={Img} alt="" /> : <img src={Img5} alt="" />}
+                      </Link>
                       </div>
                       <div className="mainListItemsCenterLeftBottomTxt">
+                      <Link to='/upcoming-events' id='links' onClick={()=> setOpenMain(false)}>
                         <h4>Upcoming Events</h4>
+                      </Link>
+                      <Link to='/past-events' id='links' onClick={()=> setOpenMain(false)}>
                         <h4>Past Events</h4>
+                      </Link>
                       </div>
                     </div>
                     <div className="mainListItemsCenterRight">
                       <div className="mainListItemsCenterRightTopTxt">
                         <Link to="/" id="links" onClick={()=> setOpenMain(false)}>
-                          <h2>Pentecostal Fellowship of Nigeria</h2>
+                          <h2>Pentecostal Fellowship of Nigeria, Lagos State</h2>
                         </Link>
                         <div className="mainListItemsCenterRightTopPara" onClick={()=> setDropdownNav(!dropdownNav)}>
-                          <p>Lagos State</p>
+                          <p>Provinces</p>
+
                           <div>
                             {!dropdownNav ? <i className="fa fa-angle-down" aria-hidden="true" /> : <i className="fa fa-angle-up" aria-hidden="true" />}
                           <div className="mainListItemsCenterRightTopParaDropdownItem" style={dropdownNav ? {"opacity": "1", position: "absolute", transition: "0.8s"} : {opacity: "0", position: "absolute", transition: "0.8s"}}>
-                            <Link to="/provinces" id='links' onClick={()=> setOpenMain(false)}>
-                            <h6>Provinces</h6>
-                            </Link>
+                            
+                            <h6 onClick={()=> {setOpen(!open)}}>{open ? "" : "Select a Province"}</h6>
+                          </div>
+                          <div className={open ? "provinceNavCenter" : "provinceNavCenterNone"} style={dropdownNav ? {display: "flex"} : {display: "none"}}>
+                            {allProvinces.map((data)=> (
+                              <>
+                              <div className={open ? "sideBlock" : "none"} key={data.id}>
+                                <Link to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
+                                    <div className="footerHoverItems" id='footerHoverItems' onClick={handleClose}>{data.province}</div>
+                                </Link>
+                              </div>
+                              </>
+                            ))}
                           </div>
                           </div>
                         </div>
@@ -187,10 +221,10 @@ const Navbar = () => {
                             <Link to='/prayer' id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Prayer Line</li>
                             </Link>
-                            <Link to='/gallery' id='links' onClick={()=> setOpenMain(false)}>
+                            <Link to='/upcoming-events' id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Upcoming Events</li>
                             </Link>
-                            <Link to='/gallery' id='links' onClick={()=> setOpenMain(false)}>
+                            <Link to='/past-events' id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Past Events</li>
                             </Link>
                           </ul>

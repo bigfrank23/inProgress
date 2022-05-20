@@ -1,0 +1,12 @@
+.fullEventDetailContent{
+    padding: 4rem 7rem;
+}
+.fullEventDetailImg{
+    width: 30%;
+}
+.fullEventBanner{
+    background: url("../../../images/green-watercolor.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-top: 5rem !important;
+}

@@ -41,13 +41,15 @@ const MyGallery = () => {
           </div>
         ))}
       </div>
-      <Pagination
-        className="pagination-bar"
-        currentPage={currentPage}
-        totalCount={images.length}
-        pageSize={PageSize}
-        onPageChange={(page) => setCurrentPage(page)}
-      />
+      <div className="d-flex justify-content-center">
+          <Pagination
+            className="pagination-bar"
+            currentPage={currentPage}
+            totalCount={images.length}
+            pageSize={PageSize}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
+      </div>
     </>
   );
 }

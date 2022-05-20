@@ -91,9 +91,11 @@ const HeroSection = () => {
                 <Link to='/our-mission' style={{textAlign: "center"}}>
                   <Button BtnText='Know More' />
                 </Link>
-                <Link to='/our-mission' style={{textAlign: "center"}}>
+                {/* <Link to='/our-mission' style={{textAlign: "center"}}> */}
+                <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                   <Button2 BtnText='Watch Live' />
-                </Link>
+                </a>
+                {/* </Link> */}
             </div>
           </div>
           <div className="div2">
@@ -113,7 +115,9 @@ const HeroSection = () => {
                 <Button BtnText='Messages' />
               </div>
               <div style={{textAlign: "center"}}>
-                <Button2 BtnText='Donate' />
+                <Link to="/give">
+                  <Button2 BtnText='Donate' />
+                </Link>
               </div>
             </div>
           </div>

@@ -8,3 +8,11 @@
     font-family: 'Tangerine', cursive;
     font-size: 2.5rem;
 }
+.page4TopLeft a, .page4TopCenter a, .page4TopRight a{
+    text-decoration: none;
+    color: #111;
+}
+.page4TopLeft a:hover, .page4TopCenter a:hover, .page4TopRight a:hover{
+    text-decoration: none;
+    color: #111;
+}

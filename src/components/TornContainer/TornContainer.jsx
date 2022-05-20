@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { mobile } from '../../responsive'
 import Button from '../Button/Button'
 import H2 from '../Text/H2'
-import Header from '../Text/Header'
 import './tornContainer.css'
 
 const Container = styled.div`

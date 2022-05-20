@@ -212,22 +212,19 @@ const Footer = () => {
     return 0;
   });
 
-  const handleChange = () => {
-    history.push(`/chapter`);
-  }
 
   return (
     <Container>
         <div className="topFooter">
               <button className='footerTopBtn' onClick={()=> {setOpen(!open)}}>{open ? "close" : "Select a Province"}</button>
-            <div className={open ? "center" : "centerNone"}>
+            <div className={open ? "footerCenter" : "footerCenterNone"}>
               {/* <Link to="/provinces">
               <Button2 outline BtnText='Select a Province' />
               </Link> */}
               {allProvinces.map((data)=> (
                 <>
-                <div className={open ? "sideBlock" : "none"}>
-                  <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
+                <div className={open ? "sideBlock" : "none"} key={data.id}>
+                  <Link to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
                       <div className="footerHoverItems" onClick={handleClose}>{data.province}</div>
                   </Link>
                 </div>

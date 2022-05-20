@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Img1 from '../../images/gallery/104.jpg'
-import Img2 from '../../images/gallery/108.jpg'
-import Img3 from '../../images/gallery/107.jpg'
-import Img4 from '../../images/gallery/109.jpg'
-import Img5 from '../../images/gallery/17.jpg'
-import Img6 from '../../images/gallery/24.jpg'
+import Img1 from '../../images/gallery/g38.jpg'
+import Img2 from '../../images/gallery/g40.jpg'
+import Img3 from '../../images/gallery/g39.jpg'
+import Img4 from '../../images/gallery/g42.jpg'
+import Img5 from '../../images/gallery/g48.jpg'
+import Img6 from '../../images/gallery/g24.jpg'
+import Img7 from '../../images/gallery/g34.jpg'
 
 import './styles.css'
 
@@ -68,6 +69,9 @@ export default class PauseOnHover extends Component {
           </div>
           <div className="auto">
             <img src={Img6} alt="" />
+          </div>
+          <div className="auto">
+            <img src={Img7} alt="" />
           </div>
         </Slider>
       </div>

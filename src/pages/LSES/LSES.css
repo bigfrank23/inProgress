@@ -35,6 +35,11 @@
     padding: 1rem 0;
     text-align: center;
 }
+.page12Center2Para p{
+    color: #fff;
+    font-size: 1.2rem;
+    /* font-weight: bold; */
+}
 .page12Center2Btn{
     display: flex;
     justify-content: center;

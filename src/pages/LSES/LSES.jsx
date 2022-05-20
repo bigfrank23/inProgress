@@ -3,20 +3,14 @@ import Img from "../../images/sac.png";
 import Img1 from "../../images/sec.png";
 import Img2 from "../../images/lses.png";
 import Img3 from "../../images/bg2.jpg";
-import Img4 from "../../images/My-Post-15.png";
 import styled from "styled-components";
 import "./LSES.css";
 import Button from "../../components/Button/Button";
-import Header from "../../components/Text/Header";
-import H2 from "../../components/Text/H2";
 import PText from "../../components/Text/PText";
 import H3 from "../../components/Text/H3";
 import Button2 from "../../components/Button/Button2";
-import Collapse from "../../components/collapse/Collapse";
 import Footer from "../../components/Footer/Footer";
-import ControlledAccordions from "../../components/accordion/MUIaccordion";
 import { Link } from "react-router-dom";
-import { maxWidth } from "@mui/system";
 
 const Container = styled.div`
   user-select: none;
@@ -176,14 +170,16 @@ const LSES = () => {
                 <H2 color>Lorem, ipsum dolor.</H2>
             </div> */}
             <div className="page12Center2Para">
-                <PText color>
+                <p>
                    At PFN Lagos, we're not just looking for volunteers. We're looking
               to help people discover their purpose. If getting involved in a fellowship is your next step, Contact
               <div style={{color: "red"}}><i>info@pfnlagosstate.org </i></div> or check with one of the provinces or chapters
-                </PText>
+                </p>
             </div>
             <div className="page12Center2Btn">
+                <Link to="/contact" className="links">
                 <Button2 BtnText="Contact now"/>
+                </Link>
                 {/* <Button2/> */}
             </div>
         </div>

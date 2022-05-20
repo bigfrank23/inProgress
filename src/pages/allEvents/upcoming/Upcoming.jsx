@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from "../../../images/splash3.jpg";
+import Img from "../../../images/upcomingEvents/upcomingBg.jpg";
 import Img2 from "../../../images/splash3.jpg";
 import upcomingImg1 from "../../../images/upcomingEvents/upcoming1.jpeg";
 import Img3 from "../../../images/bg2.jpg";
@@ -11,6 +11,7 @@ import './Upcoming.css'
 import Button from '../../../components/Button/Button';
 import Footer from '../../../components/Footer/Footer';
 import { upcoming } from './upcomingData';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   width: 100%;
@@ -20,8 +21,8 @@ const Container = styled.div`
   align-content: center;
   justify-content: center; */
   .page1Wrapper {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${Img});
     background-size: cover;
@@ -74,18 +75,20 @@ const Upcoming = () => {
                     <p id="upcomingPara">
                       {data.desc ? <><b>{data.desc}</b></> : null}
                     </p>
+                    <p id="upcomingPara">
+                      {data.desc ? <><b>{data.more}</b></> : null}
+                    </p>
                     <p>
                       <b>{data.theme}</b>
                     </p>
                     <p>
                       <b>{data.date2}</b>
                     </p>
-                    <p>
-                      <b>{data.more}</b>
-                    </p>
                     </div>
                     <div className="page5Btn">
+                    <Link key={data.id} to={{pathname: `/full-event-detail`, state: {title: `${data.title}`, img: `${data.img}`,date: `${data.date}`, time: `${data.time}`, location: `${data.location}`, desc: `${data.desc}`, more: `${data.more}`}}}>
                     <Button BtnText='See Event' />
+                    </Link>
                     </div>
                 </div>
                 </div>

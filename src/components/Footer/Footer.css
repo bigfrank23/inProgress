@@ -15,7 +15,7 @@
 #textBlock{
     display: flex;
 }
-.center{
+.footerCenter{
     display: flex;
     width: 40%;
     flex-wrap: wrap;
@@ -30,7 +30,7 @@
     padding: 2rem;
     transition: width .25s linear;
 }
-.centerNone{
+.footerCenterNone{
     width: 0%;
 }
 .footerHoverItems{

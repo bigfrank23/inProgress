@@ -3,7 +3,7 @@ import Img5 from "../../images/slider1.png";
 import styled from "styled-components";
 import "./FullExecDetail.css";
 import Footer from "../../components/Footer/Footer";
-import { faChurch, faAddressCard, faPhone, faCalendar, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faChurch, faAddressCard, faPhone, faCalendar, faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation } from "react-router-dom";
 
@@ -62,6 +62,10 @@ const FullExecDetail = () => {
               </div>
               <div className="fullExecDetailContainerRightTitle">
                   <h5>{location.state.title}</h5>
+              </div>
+              <div className="fullExecDetailContainerRightProvince">
+              <FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faMapMarkerAlt} />
+                  <h6>{location.state.province}</h6>
               </div>
               <div className="fullExecDetailContainerLeftContent">
                 <span><FontAwesomeIcon className="fa5Icon" id="fa5Icon"  icon={faUser} /> {location.state.position}</span>

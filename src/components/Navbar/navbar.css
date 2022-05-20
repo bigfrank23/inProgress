@@ -162,7 +162,7 @@
 /* MainMenu nav center */
 .mainListItemsCenter{
     display: flex;
-    gap: 7rem;
+    gap: 6rem;
     padding: 0 7rem;
     color: #fff;
 }
@@ -180,7 +180,7 @@
     padding: 1rem 0;
 }
 .mainListItemsCenterLeftImg img{
-    width: 100%;
+    width: 90%;
 }
 .notActiveMainImg{
     width: 100%;
@@ -318,6 +318,7 @@
     font-weight: 300;
     text-transform: capitalize;
     font-size: 1rem;
+    text-decoration: none;
     transition: all .5s ease;
     /* padding: 5px; */
 }
@@ -424,6 +425,34 @@
     justify-content: flex-start;
 }
 #provincesLink a li .separator:not(:last-child){
+    display: none;
+}
+.provinceNavCenter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* gap: 1rem; */
+    position: absolute;
+    left: 85%;
+    background: linear-gradient(45deg, black, transparent);
+    width: 15%;
+}
+.provinceNavCenter .sideBlock{
+    align-self: center;
+    font-weight: 500
+}
+.provinceNavCenter a{
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+#footerHoverItems{
+    font-size: 12px;
+    font-weight: 500;
+}
+.provinceNavCenterNone{
+    width: 0%;
     display: none;
 }
 
