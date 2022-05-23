@@ -40,6 +40,9 @@
     max-width: 60%;
     margin: auto;
     padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .giveBottomContainer{
@@ -50,4 +53,7 @@
     width: 100px;
     height: 50px;
     object-fit: contain;
+}
+.Dropdown-root{
+    text-transform: uppercase;
 }

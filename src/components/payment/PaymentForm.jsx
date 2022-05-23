@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Img from '../../images/give.jpg'
 import Img3 from '../../images/bg2.jpg'
@@ -10,7 +10,12 @@ import { landscapeTab, mobile, tab } from '../../responsive';
 import './PaymentForm.css'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import Footer from '../Footer/Footer'
+import axios from 'axios';
+import Dropdown from 'react-dropdown';
+import { HiSwitchHorizontal } from 'react-icons/hi';
+import 'react-dropdown/style.css';
 import PaystackPop from '@paystack/inline-js'
+import { usePaystackPayment } from 'react-paystack';
 
 const Container = styled.div`
   user-select: none;
@@ -106,13 +111,58 @@ const PaymentForm = () => {
   const [purpose, setPurpose] = useState('')
   const [amount, setAmount] = useState('')
 
+    // Initializing all the state variables 
+    const [info, setInfo] = useState([]);
+    const [input, setInput] = useState(0);
+    const [from, setFrom] = useState("ngn");
+    const [to, setTo] = useState("ngn");
+    const [options, setOptions] = useState([]);
+    const [output, setOutput] = useState(0);
+    const [isChecked, setIsChecked] = useState(false);
+    
+    // Calling the api whenever the dependency changes
+    useEffect(() => {
+      axios.get(
+  `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`)
+     .then((res) => {
+        setInfo(res.data[from]);
+      })
+    }, [from]);
+    
+    // Calling the convert function whenever
+    // a user switches the currency
+    useEffect(() => {
+      setOptions(Object.keys(info));
+      convert();
+    }, [info])
+      
+    // Function to convert the currency
+    function convert() {
+      var rate = info[to];
+      setOutput(input * rate);
+    }
+    
+    // Function to switch between two currency
+    function flip() {
+      var temp = from;
+      setFrom(to);
+      setTo(temp);
+    }
+    
+    const handleCheck = () => {
+      setIsChecked(!isChecked)
+      !isChecked ? console.log("checked") : console.log("unchecked");
+    }
+    
+
   const paywithpaystack = (e) => {
+    convert()
     e.preventDefault()
     const paystack = new PaystackPop()
 
     paystack.newTransaction({
       key: "pk_test_991ef6cfc641dd4b948b2cac759d00d34d3ef116",
-      amount: amount * 100,
+      amount: output.toFixed(2) * 100,
       fullname,
       email,
       purpose,
@@ -130,11 +180,65 @@ const PaymentForm = () => {
     })
   }
 
+  const paywithpaystack2 = (e) => {
+    convert()
+    e.preventDefault()
+    const paystack = new PaystackPop()
+
+    paystack.newTransaction({
+      key: "pk_test_991ef6cfc641dd4b948b2cac759d00d34d3ef116",
+      amount: output.toFixed(2) * 100,
+      purpose,
+      email,
+      onSuccess(transaction){
+        let message = `Payment Completed! Transaction reference ${transaction.reference}`
+        alert(message)
+        setPurpose=""
+        setAmount=""
+        setEmail=""
+      },
+      onCancel(){
+        alert("Transaction Cancelled!")
+      }
+    })
+  }
+
+  const config = {
+    reference: (new Date()).getTime().toString(),
+    // email: "user@example.com",
+    amount: 20000,
+    publicKey: 'pk_test_991ef6cfc641dd4b948b2cac759d00d34d3ef116',
+};
+
+// you can call this function anything
+const onSuccess = (reference) => {
+  // Implementation for whatever you want to do with reference and after success call.
+  console.log(reference);
+};
+
+// you can call this function anything
+const onClose = () => {
+  // implementation for  whatever you want to do when the Paystack dialog closed.
+  console.log('closed')
+}
+
+const PaystackHookExample = () => {
+    const initializePayment = usePaystackPayment(config);
+    return (
+      <div>
+          <button onClick={() => {
+              initializePayment(onSuccess, onClose)
+          }}>Paystack Hooks Implementation</button>
+      </div>
+    );
+};
+
+
   return (
     <Container>
     <div className="page1Wrapper">
         <div className="page1Header">
-            <h1>Living Generously</h1>
+            <h1>Give Generously</h1>
         </div>
     </div>
     <div className="giveTopContainer">
@@ -150,26 +254,61 @@ const PaymentForm = () => {
       <div className="giveArrow"><KeyboardDoubleArrowDownIcon /></div>
         </div>
         <form className='giveNowForm' onSubmit={paywithpaystack}>
-          <div className="form-row d-flex gap-1">
-            <div className="form-group col-md-6">
-              <label for="inputEmail4">Full Name</label>
+          {/* geeks */}
+            <div className="form-group middle">
+            <label htmlFor="inputAddress">Currency</label>
+              <Dropdown options={options} 
+                onChange={(e) => { setFrom(e.value) }}
+              value={from} placeholder="From" />
+            </div>
+            <div className="right d-none">
+              <h3>To</h3>
+              <Dropdown options={options} 
+                onChange={(e) => {setTo(e.value)}} 
+              value={to} placeholder="To" />
+            </div>
+            <div className="form-group">
+            <label htmlFor="inputAddress">Purpose</label>
+            <input type="text" className="form-control" id="inputAddress" value={purpose} onChange={(e)=> setPurpose(e.target.value)}/>
+          {/* </div> */}
+          <div className="form-group">
+            <label htmlFor="inputAddress2">Amount</label>
+            {/* <input type="number" className="form-control" id="inputAddress2" placeholder="NGN" value={amount} onChange={(e)=> setAmount(e.target.value)}/> */}
+            <input type="number" className="form-control" id="inputAddress2" placeholder="Enter the amount" value={input} onChange={(e) => setInput(e.target.value)} />
+          </div>
+          </div>
+          <div className="form-check">
+            <input type="checkbox" className="form-check-input" id="exampleCheck1" checked={isChecked}
+            onChange={handleCheck} />
+            <label className="form-check-label" htmlFor="exampleCheck1">Give as anonymous</label>
+          </div>
+          <div className={"form-row d-flex gap-1"}>
+            <div className={!isChecked ? "form-group col-md-6" : " d-none"}>
+              <label htmlFor="inputEmail4">Full Name</label>
               <input type="text" className="form-control" id="" value={fullname} onChange={(e)=> setFullname(e.target.value)}/>
             </div>
             <div className="form-group col-md-6">
-              <label for="inputPassword4">Email</label>
-              <input type="email" className="form-control" id="inputPassword4" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+              <label htmlFor="inputPassword4">Email</label>
+              <input type="email" placeholder='Email is required!' className="form-control" id="inputPassword4" value={email} onChange={(e)=> setEmail(e.target.value)}/>
             </div>
           </div>
-          <div className="form-group">
-            <label for="inputAddress">Purpose</label>
-            <input type="text" className="form-control" id="inputAddress" value={purpose} onChange={(e)=> setPurpose(e.target.value)}/>
+          
+          <div className="result d-none">
+              <button onClick={()=>{convert()}}>Convert</button>
+              <h2>Converted Amount:</h2>
+              <p>{input+" "+from+" = "+output.toFixed(2) + " " + to}</p>
           </div>
-          <div className="form-group">
-            <label for="inputAddress2">Amount in Naira</label>
-            <input type="number" className="form-control" id="inputAddress2" placeholder="NGN" value={amount} onChange={(e)=> setAmount(e.target.value)}/>
-          </div>
+
+          {/* geeks end */}
           <div className="giveNowBtn text-center pt-3">
-          <button type="submit" className="btn btn-primary shadowed" onClick={paywithpaystack}>Give Now</button>
+            {
+              !isChecked ? 
+              <button type="submit" className="btn btn-primary shadowed" onClick={paywithpaystack}>Give Now</button>
+              :
+              <button type="submit" className="btn btn-primary shadowed" onClick={paywithpaystack2}>Give Now</button>
+              
+              // <PaystackHookExample />
+            }
           </div>
         </form>
     </div>

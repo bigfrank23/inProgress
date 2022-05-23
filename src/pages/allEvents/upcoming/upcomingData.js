@@ -19,7 +19,7 @@ export const upcoming = [
         date: "Pentecost Sunday, June 5TH, 2022.",
         time: "",
         location: "",
-        desc: `Our Eminent National President has approved the much awaited theme for the 2022 Penticost Day Service (PDS) rallies, Nationwide, among the 36 states PFN chapters, including Abuja FCT.`,
+        desc: `Our Eminent National President has approved the much awaited theme for the 2022 Pentecost Day Service (PDS) rallies, Nationwide, among the 36 states PFN chapters, including Abuja FCT.`,
         more: "Happy PDS celeberations ahead!"
         // theme: "Theme: Power Above Powers. (LUKE 10:19)",
         // date2: "Date: Pentecost Sunday, June 5TH, 2022.",

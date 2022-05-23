@@ -99,7 +99,7 @@ const TheNational = () => {
                     <div className="nationalCenterContentTxt">
                         <H3>Rev. Dr. Cosmas Ilechukwu</H3>
                         <div className="nationalCenterContentTxtPara">
-                            <p>National Secretary</p>
+                            <p>National Secretary, PFN</p>
                         </div>
                     </div>
                 </div>

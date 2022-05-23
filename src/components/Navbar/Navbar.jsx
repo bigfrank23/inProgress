@@ -42,23 +42,23 @@ const Navbar = () => {
     // const dispatch = useDispatch()
 
    // you can call this function anything
-   const handlePaystackSuccessAction = (reference) => {
-    // Implementation for whatever you want to do with reference and after success call.
-    console.log(reference);
-  };
+  //  const handlePaystackSuccessAction = (reference) => {
+  //   // Implementation for whatever you want to do with reference and after success call.
+  //   console.log(reference);
+  // };
 
   // you can call this function anything
-  const handlePaystackCloseAction = () => {
-    // implementation for  whatever you want to do when the Paystack dialog closed.
-    console.log('closed')
-  }
+  // const handlePaystackCloseAction = () => {
+  //   // implementation for  whatever you want to do when the Paystack dialog closed.
+  //   console.log('closed')
+  // }
 
-  const componentProps = {
-      ...config,
-      text: 'GIVE NOW',
-      onSuccess: (reference) => handlePaystackSuccessAction(reference),
-      onClose: handlePaystackCloseAction,
-  };
+  // const componentProps = {
+  //     ...config,
+  //     text: 'GIVE NOW',
+  //     onSuccess: (reference) => handlePaystackSuccessAction(reference),
+  //     onClose: handlePaystackCloseAction,
+  // };
     
     // const handleLogOut = () => {
     //     dispatch({type: LOGOUT})
@@ -484,7 +484,9 @@ const Navbar = () => {
                   {/* <PaystackButton {...componentProps} /> */}
                 </Link>
               ) : (
-                <Button2 BtnText="Give" />
+                <Link to='/give' id='links'>
+                  <Button2 BtnText="Give" />
+                </Link>
               )}
             </div>
 
