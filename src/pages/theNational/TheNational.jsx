@@ -4,14 +4,11 @@ import PresidentImg2 from "../../images/president2.png";
 import PresidentImg3 from "../../images/president3.png";
 import PresidentImg4 from "../../images/president4.jpg";
 import PresidentImg5 from "../../images/president5.png";
-import Img1 from "../../images/sec.png";
 import Img2 from "../../images/nationalBg.png";
 import Img3 from "../../images/bg2.jpg";
-import Img4 from "../../images/My-Post-15.png";
 import styled from "styled-components";
 import "./TheNational.css";
 import H3 from "../../components/Text/H3";
-import PText from "../../components/Text/PText";
 import Footer from "../../components/Footer/Footer";
 
 const Container = styled.div`
@@ -102,7 +99,7 @@ const TheNational = () => {
                     <div className="nationalCenterContentTxt">
                         <H3>Rev. Dr. Cosmas Ilechukwu</H3>
                         <div className="nationalCenterContentTxtPara">
-                            <p>PFN National Secetary</p>
+                            <p>National Secretary</p>
                         </div>
                     </div>
                 </div>

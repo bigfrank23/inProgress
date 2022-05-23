@@ -1,21 +1,15 @@
 import React, {useState} from 'react'
-import Img from '../../images/living-generously.jpg'
 import Img2 from '../../images/bg2.jpg'
 import PFN from '../../images/footerImg.png'
 import styled from 'styled-components'
 import Button from '../Button/Button'
-import { Link, useHistory } from 'react-router-dom';
-import Header from '../Text/Header'
-import PText from '../Text/PText'
+import { Link } from 'react-router-dom';
 import { mobile } from '../../responsive'
 import FooterImg from '../../images/footer.png'
-import H3 from '../Text/H3'
 import { tab } from './../../responsive';
 import { landscapeTab } from './../../responsive';
 import MailchimpFormContainer from '../mailchimpFormContainer/MailchimpFormContainer'
-import Button2 from '../Button/Button2'
 import ProfileImg from '../../images/profile.png'
-import { Modal, Box, Typography } from '@mui/material';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { useDispatch } from 'react-redux';
@@ -185,12 +179,8 @@ const user = JSON.parse(localStorage.getItem('mern_crud3_copy_user'))
 const Footer = () => {
 
   const dispatch = useDispatch()
-  const history = useHistory()
-  const [province, setProvince] = useState('')
 
-  const classes = useStyles()
   const [open, setOpen] = useState(false);
-  const [modalData, setModalData] = useState("");
   const handleClose = () => setOpen(false);
 
   const handleLogOut = () => {
@@ -224,7 +214,7 @@ const Footer = () => {
               {allProvinces.map((data)=> (
                 <>
                 <div className={open ? "sideBlock" : "none"} key={data.id}>
-                  <Link to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
+                  <Link  to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
                       <div className="footerHoverItems" onClick={handleClose}>{data.province}</div>
                   </Link>
                 </div>

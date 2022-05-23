@@ -34,35 +34,35 @@ const TopText = styled.h4`
     text-transform: uppercase;
     text-align: center;
 `
-const CenterTextContainer = styled.div`
-    margin-bottom: 50px;
-`
-const CenterText = styled.h1`
-    color: #fff;
-    line-height: 40px;
-    margin-top: 0;
-    text-transform: uppercase;
-    text-align: center;
-`
+// const CenterTextContainer = styled.div`
+//     margin-bottom: 50px;
+// `
+// const CenterText = styled.h1`
+//     color: #fff;
+//     line-height: 40px;
+//     margin-top: 0;
+//     text-transform: uppercase;
+//     text-align: center;
+// `
 const HeroButtonContainer = styled.div`
     align-self: center;
     display: none;
 `
-const HeroButton = styled.button`
-    border: 2px solid;
-    border-radius: 30px;
-    box-sizing: border-box;
-    color: #fff;
-    display: inline-block;
-    font-weight: 900;
-    min-width: 125px;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: green;
-    cursor: pointer;
-`
+// const HeroButton = styled.button`
+//     border: 2px solid;
+//     border-radius: 30px;
+//     box-sizing: border-box;
+//     color: #fff;
+//     display: inline-block;
+//     font-weight: 900;
+//     min-width: 125px;
+//     padding: 10px 25px;
+//     text-align: center;
+//     text-decoration: none;
+//     text-transform: uppercase;
+//     background-color: green;
+//     cursor: pointer;
+// `
 
 const HeroSection = () => {
   return (
@@ -127,16 +127,16 @@ const HeroSection = () => {
             </div>
             <div className="centerTextContainer">
               <div className="centerText">
-                <h1>all Pentecostal churches,</h1>
+                <h1>all Pentecostal Churches,</h1>
               </div>
               <div className="centerText">
-                <h1>bodies and believers</h1>
+                <h1>Bodies and Believers</h1>
               </div>
               <div className="topText">
-                <h4>for the fellowship,</h4>
+                <h4>For Fellowship,</h4>
               </div>
               <div className="topText">
-                <h4>Encouragement and inspiration</h4>
+                <h4>Encouragement and Inspiration</h4>
               </div>
             </div>
             <Link to='/contact' style={{textAlign: "center"}}>

@@ -1,6 +1,5 @@
 import React from 'react'
-import Img from '../../images/splash2.jpg'
-import Img2 from '../../images/splash3.jpg'
+import Img from '../../images/provincesBg.png'
 import Img3 from '../../images/bg2.jpg'
 import BgImg from '../../images/splash1.jpg'
 import styled from 'styled-components'
@@ -8,12 +7,8 @@ import Header from '../../components/Text/Header'
 import H2 from '../../components/Text/H2'
 import PText from '../../components/Text/PText'
 import './Chapters.css'
-import H3 from '../../components/Text/H3'
-import { Link, useLocation } from 'react-router-dom'
-import Upcomin from '../../components/Upcoming/Upcomin'
+import { useLocation } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
-import { faChurch, faAddressCard, faPhone, faAt, faCalendar, faUserCircle, faUser, faClock, faAddressBook, faMapMarker } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Container = styled.div`
   width: 100%;
@@ -23,8 +18,8 @@ const Container = styled.div`
   align-content: center;
   justify-content: center; */
   .page1Wrapper {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+    /* -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 49%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 49%, 75% 100%, 0% 100%); */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${Img});
     background-size: cover;
@@ -100,16 +95,19 @@ const Chapters = () => {
               <H2 children='Interested in more information?' />
             </div>
             <div className="page6Bx5Title" style={{paddingTop: '1rem'}}>
-              <PText children='Contact the province chairman' />
+              <PText><b>Contact the Province Chairman</b></PText>
             </div>
             <div className="page6Bx5Img">
-              <img src={Img2} alt="" />
+              <img src={location.state.img} alt="" />
             </div>
             <div className="page6Bx5Title" style={{paddingTop: '1.5rem'}}>
-              <PText children='John Doe' />
+              <PText>{location.state.chairman}</PText>
             </div>
             <div className="page6Bx5Title">
-              <PText children='johndoe@gmail.com' />
+              <PText>{location.state.email}</PText>
+            </div>
+            <div className="page6Bx5Title">
+              <PText>{location.state.tel}</PText>
             </div>
           </div>
       </div>

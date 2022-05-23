@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import './navbar.css'
 import LogoImg from '../../images/pfnLogo.png'
 import Img from '../../images/currentEvents/current1.jpeg'
-import ProfileImg from '../../images/profile.png'
 import Img5 from '../../images/pfnLogo.png'
 import { mobile } from '../../responsive'
 import Button2 from '../Button/Button2'
@@ -40,7 +39,7 @@ const Navbar = () => {
       setOpenMain(false)
     } 
 
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
    // you can call this function anything
    const handlePaystackSuccessAction = (reference) => {
@@ -61,10 +60,10 @@ const Navbar = () => {
       onClose: handlePaystackCloseAction,
   };
     
-    const handleLogOut = () => {
-        dispatch({type: LOGOUT})
-        window.location.replace("/")
-    }
+    // const handleLogOut = () => {
+    //     dispatch({type: LOGOUT})
+    //     window.location.replace("/")
+    // }
 
     useEffect(()=>{
         window.addEventListener('scroll', ()=>{
@@ -170,7 +169,7 @@ const Navbar = () => {
                             {allProvinces.map((data)=> (
                               <>
                               <div className={open ? "sideBlock" : "none"} key={data.id}>
-                                <Link to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
+                                <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
                                     <div className="footerHoverItems" id='footerHoverItems' onClick={handleClose}>{data.province}</div>
                                 </Link>
                               </div>
@@ -336,7 +335,7 @@ const Navbar = () => {
                   </div>
                 <ul className="hover" id='provincesLink'>
                   {provinces.map((data)=> (
-                    <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links">
+                    <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`, email: `${data.email}`, tel: `${data.tel}`, img: `${data.img}`}}} className="links">
                       <li className="hoverItems">{data.province}</li> <div className="separator">|</div>
                     </Link>
                   ))}

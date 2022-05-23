@@ -1,21 +1,9 @@
 import React from "react";
-import Img from "../../images/sac.png";
-import Img1 from "../../images/sec.png";
 import Img2 from "../../images/mission4.png";
 import Img3 from "../../images/bg2.jpg";
-import Img4 from "../../images/My-Post-15.png";
 import styled from "styled-components";
 import "./OurMission.css";
-import Button from "../../components/Button/Button";
-import Header from "../../components/Text/Header";
-import H2 from "../../components/Text/H2";
-import PText from "../../components/Text/PText";
-import H3 from "../../components/Text/H3";
-import Button2 from "../../components/Button/Button2";
-import Collapse from "../../components/collapse/Collapse";
 import Footer from "../../components/Footer/Footer";
-import ControlledAccordions from "../../components/accordion/MUIaccordion";
-import { Link } from "react-router-dom";
 
 const Container = styled.div`
   user-select: none;
@@ -65,10 +53,10 @@ const OurMission = () => {
       <div className="ourMissionContainerBody">
         <div className="ourMissionContainerTitle">
           <p>
-            Pentecostal Fellowship of Nigeria is the coming together of the holy
-            spirit filled Christian Churches and Organization who believe and
-            practice the full GOSPEL MESSAGE(ACT2), in an independence ad
-            autonomous Christian Fellowship for the following objectives below <i className="fa fa-hand-o-down" />
+          Pentecostal Fellowship of Nigeria is the coming together of the holy
+          spirit filled Christian Churches and Organizations who believe and
+          practice the full GOSPEL MESSAGE (Acts 2), in an independence and
+          autonomous Christian Fellowship for the following objectives below. <i className="fa fa-hand-o-down" />
           </p>
         </div>
         <div className="ourMissionBxCard">
@@ -80,7 +68,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />{" "}
               </h3>
               <p>
-              To maintain close relationship among member Churches Organizations, and other approved Christian or Religious Organizations, both in and outside Nigeria, for the purpose of undertaking joint programs for the furtherance of the Gospel.
+              To maintain close relationship among member Churches, Organizations, and other approved Christian or Religious Organizations, both in and outside Nigeria, for the purpose of undertaking joint programs for the furtherance of the Gospel
               </p>
             </div>
           </div>
@@ -171,7 +159,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-              To appoint representatives to the National Executive Committee of the Christian Association of Nigeria (CAN), of whom, one shall be alternative representative.
+              To appoint representatives to the National Executive Committee of the Christian Association of Nigeria (CAN), of whom, one shall be an alternate representative.
               </p>
             </div>
           </div>
@@ -197,7 +185,7 @@ const OurMission = () => {
                 <i className="fa fa-check-square-o" />
               </h3>
               <p>
-              To set up standards of Faith, Doctrine and code of Ethics, to which members must subscribe.
+              To set up standards of Faith, Doctrine and code of Ethics, to which members must subscribe to.
               </p>
             </div>
           </div>
