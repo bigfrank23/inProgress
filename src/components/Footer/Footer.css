@@ -125,11 +125,11 @@
     display: flex;
     justify-content: flex-start;
     /* text-align: center; */
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
     padding: .9rem;
 }
 .footerQuickLinkListTitle{
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .footerQuickLinkList{
     margin: 0;

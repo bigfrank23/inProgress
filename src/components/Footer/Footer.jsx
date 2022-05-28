@@ -216,7 +216,7 @@ const Footer = () => {
                             <h2>Lagos State</h2>
                         </div> */}
                     </div>
-                     <h5 className='footerAddress'>5-9 Bode Thomas Rd, <br /> Onipanu 100252,</h5>
+                     <h5 className='footerAddress'>5-9 Bode Thomas Road, <br /> Onipanu </h5>
                       <div className="socialBox">
                           <div className="social" style={{cursor: "pointer"}}>
                               <a href="https://www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>

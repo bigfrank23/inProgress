@@ -25,12 +25,12 @@ const More = () => {
             <h2>News Feeds</h2></> }
         </div>
         <div className="row" id='moreRow'>
-            <div className="col-md-6 col-md-12 bg-light p-3 shadow rounded">
+            <div className="col-md-6 col-sm-12 bg-light p-3 shadow rounded">
                 <div className="blogIndex">
                    <Slider />
                 </div>
             </div>
-            <div className="col-md-6 col-md-12 bg-light p-3 shadow rounded" id="moreGap">
+            <div className="col-md-6 col-sm-12 bg-light p-3 shadow rounded" id="moreGap">
                 <div className="blogIndex">
                     <div className="blogIndexBx">
                         <Slider2 />

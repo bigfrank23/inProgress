@@ -5,7 +5,8 @@
 #moreRow{
     display: flex;
     flex-wrap: nowrap;
-    gap: 1rem;
+    gap: 2rem;
+    padding: 0 7rem;
 }
 
 .blogIndexTitle, .announcementIndexTitle, .newsfeedIndexTitle{
