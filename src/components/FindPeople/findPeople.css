@@ -82,4 +82,23 @@
        grid-template-columns: 1fr;
        padding: 0;
    }
+   .header {
+    margin-top: 2rem;
+    padding: 0 2rem;
+   }
+   .topHeader h2 {
+    font-size: 2.2rem;
+    }
+    .centerHeader{
+        padding: 0 !important;
+    }
+    .centerHeader h2{
+        font-size: 1.2rem;
+    }
+    .card1{
+        margin-top: 2rem;
+    }
+    .bottomHeader span{
+        font-size: .8rem !important;
+    }
 }

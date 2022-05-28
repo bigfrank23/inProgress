@@ -255,6 +255,9 @@ const ContactPage = () => {
                     <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                       <div className="text-decoration-none text-white"><i className="fa fa-youtube" aria-hidden="true" /></div>
                     </a>
+                    <a href="https://api.whatsapp.com/send?phone=+2349153848219" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                      <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
+                    </a>
                 </div>
               </div>
             </div>

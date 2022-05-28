@@ -15,3 +15,20 @@
 .slideBox p{
     padding: 1rem 4rem;
 }
+
+@media only screen and (max-width: 600px) {
+    h2.slideTitle{
+        font-size: 1.2rem !important;
+    }
+    .slider a svg{
+        width: 10px;
+    }
+    .slideBx p {
+        font-size: .8rem;
+        color: white;
+    }
+    .slideBox p {
+        padding: 1rem 2rem;
+        font-size: .8rem;
+    }
+}

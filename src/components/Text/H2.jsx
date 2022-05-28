@@ -13,7 +13,7 @@ const H2Style = styled.div`
   color: ${props => props.color ? '#fff' : '#990000'};
   /* color: #fff; */
   @media only screen and (max-width: 600px) {
-    font-size: .9rem;
+    font-size: 1.2rem !important;
     padding: 0;
   }
 `;

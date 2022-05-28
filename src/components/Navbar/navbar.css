@@ -447,10 +447,13 @@
     .top .nav .logo{
     display: block;
     }
+    .top .nav .logo img {
+        width: 150px;
+    }
     .top .nav {
     display: flex;
-    /* justify-content: space-between; */
-    gap: 1rem;
+    justify-content: space-between;
+    /* gap: 1rem; */
     padding: 0 1rem !important;
     }
     .logoText h1{
@@ -464,6 +467,10 @@
     }
     .mobileNav .navList .navListItems:hover .hover {
         line-height: 8vh;
+    }
+    .openLinkBtn {
+        text-align: center;
+        z-index: 1;
     }
 }
 @media only screen and (min-width: 600px) {

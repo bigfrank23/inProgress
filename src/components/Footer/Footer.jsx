@@ -68,7 +68,7 @@ const Container = styled.div`
     }
   }
   .bottomFooter {
-    padding: 4rem;
+    padding: 4rem 7rem;
     ${mobile({ padding: "2rem" })}
     .bottomFooterContent {
       display: flex;
@@ -116,10 +116,11 @@ const Container = styled.div`
           outline: 0;
           padding: 10px;
           /* border-radius: 30px; */
+          width: 130px;
         }
       }
       .footerButton {
-        ${mobile({ margin: "3rem 0" })}
+        ${mobile({ margin: "3rem 0", display: "none" })}
         .buttonBox {
           display: flex;
           gap: 1rem;
@@ -154,6 +155,7 @@ const Credits = styled.section`
     text-align: center;
     color: #b5b5b4;
     font-size: 1rem;
+    ${mobile({ fontSize: ".8rem" })}
 `;
 
 
@@ -230,6 +232,9 @@ const Footer = () => {
                               <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                                   <i className="fa fa-youtube footerSocialIcon" aria-hidden="true" />
                               </a>
+                              <a href="https://api.whatsapp.com/send?phone=+2349153848219" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                                <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
+                              </a>
                           </div>
                       </div>
                 </div>
@@ -249,14 +254,14 @@ const Footer = () => {
                     
                   </ul>
                 </div>
-                <div className="align-self-start d-flex flex-column gap-5">
+                <div className="align-self-start d-flex flex-column gap-3">
                   <div className="newsLetterInputContainer">
                       <MailchimpFormContainer />
                   </div>
                   <div className="footerButton">
-                      <div className="buttonBox justify-content-center">
-                          <Button BtnText='Give' />
-                          <Button outline BtnText='Messages' />
+                      <div className="buttonBox">
+                          <button id='btn1'>Give</button>
+                          <button id='btn2'>Messages</button>
                       </div>
                   </div>
                 </div>
@@ -266,9 +271,9 @@ const Footer = () => {
                         <Button outline BtnText='Give' />
                     </div>
                 </div> */}
-                <div style={{textAlign: "center"}} className="align-self-start">
-                <div className="fb-page" data-href="https://www.facebook.com/pfnlagostate/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/pfnlagostate/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pfnlagostate/">Pentecostal Fellowship of Nigeria - PFN Lagos State</a></blockquote></div>
-                {/* <iframe title="pfn lagos facebook page" aria-hidden="true" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate%2F&tabs=none&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style={{border: "none", overflow: "hidden", width: "340px"}} scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> */}
+                <div style={{textAlign: "center"}} className="align-self-start" id='footerIframe'>
+                {/* <div className="fb-page" data-href="https://www.facebook.com/pfnlagostate/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/pfnlagostate/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pfnlagostate/">Pentecostal Fellowship of Nigeria - PFN Lagos State</a></blockquote></div> */}
+                <iframe title="pfn lagos facebook page" aria-hidden="true" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate%2F&tabs=none&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style={{border: "none", overflow: "hidden", width: "340px"}} scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                   {/* <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" style={{border: "none", overflow: "hidden", width: "100%"}} scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share;" /> */}
                 </div>
             </div>
@@ -295,7 +300,7 @@ const Footer = () => {
         {/* <div style={{textAlign: "center"}}>
         <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" height="35" style={{border: "none", overflow: "hidden"}} scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
         </div> */}
-        <div style={{display: "flex", justifyContent: "space-around"}}>
+        <div className='footerCredits'>
           <Credits>
               &copy; 2022 PFN Lagos. All Rights Reserved.
           </Credits>

@@ -41,7 +41,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           <h3 className="mc__title">
             {status === "success" 
                 ? <h3 style={{color: "lightseagreen"}}>Subscribed!</h3> 
-                : "Subscribe to our newsletter"
+                : <h3>Subscribe to our newsletter</h3>
             }
           </h3>
 

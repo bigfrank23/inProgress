@@ -29,7 +29,7 @@ const Container = styled.div`
 const ExtraContentContainer = styled.div`
     /* text-align: center; */
     padding: 4rem 7rem;
-    ${mobile({padding: "2rem" })}
+    ${mobile({padding: "0" })}
 `
 const ExtraTextContainer = styled.div`
     text-align: center;
@@ -40,7 +40,7 @@ const ExtraText = styled.h2`
   font-size: 3rem;
   margin: 0 auto 20px auto;
   text-align: center;
-  ${mobile({ padding: "1rem 0", fontSize: "1.7rem" })}
+  ${mobile({ fontSize: "2.2rem", margin: 0 })}
 `;
 const ExtraContent = styled.div`
     display: flex;
@@ -89,24 +89,25 @@ const ExtraDesc = styled.p`
     font-weight: 900;
     line-height: 25px;
     margin: 18px 0;
-    ${mobile({fontSize: '1rem', fontWeight: 700, textAlign: 'center'})}
+    ${mobile({fontSize: '.8rem', fontWeight: 600, textAlign: 'center'})}
 `
 const ExtraName = styled.p`
     color: #232e32;
     margin: 18px 0 40px;
-    ${mobile({textAlign: 'center'})}
+    ${mobile({textAlign: 'center', margin: 0})}
 `
 //Second section
 const ExtraContentContainer2 = styled.div`
     align-self: flex-start;
     width: 100%;
     padding: 0 7rem 4rem 7rem;
-    ${mobile({padding: "0", width: "unset", alignSelf: "unset"})}
+    ${mobile({padding: 0, marginTop: "2rem", width: "unset", alignSelf: "unset"})}
     .extraLink{
     display: flex;
     justify-content: center;
     margin: 18px 0px;
     text-decoration: none !important;
+    ${mobile({margin: 0})}
     }
 `
 const ExtraTextContainer2 = styled.div`
@@ -115,8 +116,8 @@ const ExtraTextContainer2 = styled.div`
 const ExtraText2 = styled.h2`
     color: #006633;
     font-family: 'Tangerine', cursive;
-    font-size: 3rem;
-    margin: 0 0 30px;
+    font-size: 2.2rem;
+    margin: 0;
     text-align: center;
 `
 const ExtraCard = styled.div`
@@ -144,6 +145,7 @@ const ExtraCardImg = styled.img`
     height: 400px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    ${mobile({width: "100%"})}
 `
 const ExtraContentText2 = styled.div`
     background-color: #008753;
@@ -207,7 +209,7 @@ const Extraordinay = () => {
               <i className="fa fa-play playIcon" aria-hidden="true" />
             </ExtraIconContainer>
           </ExtraImg> */}
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/T-ubYjO-b-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+          <iframe width="560" height="315" id='extraIframe' src="https://www.youtube.com/embed/T-ubYjO-b-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
           <ExtraContentText>
             <ExtraDesc>
               "PFN is the National body which binds all Christian churches, Organizations and Believers who believe, experience, practice and cherish the Pentecostal experience as found and described in Acts 2:4."

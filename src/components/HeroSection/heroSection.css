@@ -87,6 +87,7 @@
     .content{
         position: relative;
         top: 15%;
+        width: 100%;
     }
     .topText h4{
         color: #fff;
@@ -103,5 +104,12 @@
         margin-top: 0;
         text-transform: uppercase;
         text-align: center;
+    }
+    .div1 .topText h4, .div2 .topText h4, .div3 .topText h4{
+        font-size: .8rem;
+    }
+    
+    .centerTextContainer .centerText h1{
+        font-size: 1rem;
     }
 }

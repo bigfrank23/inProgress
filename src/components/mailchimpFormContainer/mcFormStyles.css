@@ -1,7 +1,8 @@
  /* Styles the h3 */
-.mc__title {
+.mc__title h3{
   /* max-width: 235px;
   text-align: center; */
+  font-size: 1.3rem !important;
 
   /* Replace with your brand's main text color */
   /* color: #000;
@@ -47,9 +48,9 @@
     border-radius: 30px; */
     color: #fff;
     display: inline-block;
-    font-weight: 900;
-    min-width: 125px;
-    padding: 11px 25px;
+    font-weight: 500;
+    /* min-width: 125px; */
+    padding: 11px 11px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -89,6 +90,10 @@
 
 @media only screen and (max-width: 600px) {
     .mc__title {
-          margin: 0 auto 30px;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .mc__field-container{
+      text-align: center;
     }
 }

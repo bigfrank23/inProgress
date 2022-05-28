@@ -220,6 +220,9 @@ const Navbar = () => {
                             <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" id='links'>
                                 <i className="fa fa-youtube" aria-hidden="true" />
                             </a>
+                            <a href="https://api.whatsapp.com/send?phone=+2349153848219" target='_blank' rel="noopener noreferrer nofollow" id='links'>
+                                <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
+                            </a>
                         </div>
                       </div>
                     </div>

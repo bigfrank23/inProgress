@@ -123,13 +123,13 @@
     margin-top: 1rem;
     font-size: .9rem;
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    /* text-align: center; */
     background-color: gainsboro;
     padding: .9rem;
 }
 .footerQuickLinkListTitle{
-    font-size: 1.75rem;
+    font-size: 1.3rem;
 }
 .footerQuickLinkList{
     margin: 0;
@@ -171,4 +171,69 @@ td._51m- _2pir _51mw{
 ._89n_ {
     background: gray;
     border: 0;
+}
+
+.buttonBox #btn1{
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    min-width: 85px;
+    padding: 11px 11px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #008753;
+    border-radius: 30px;
+    border: none;
+}
+.buttonBox #btn2{
+    color: #232e32;
+    display: inline-block;
+    font-weight: 500;
+    /* min-width: 125px; */
+    padding: 11px 11px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    border-radius: 30px;
+    border: 1px solid #232e32;
+}
+.footerCredits{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+    .fSgrdA .topFooter {
+        padding: 4rem 4rem 0 4rem !important;
+    }
+    .footerTopBtn {
+        font-weight: 500;
+        min-width: 100%;
+        padding: 0;
+    }
+    .fSgrdA .bottomFooter .bottomFooterContent .logoBox {
+        padding: 0 !important;
+    }
+    .fSgrdA .bottomFooter .bottomFooterContent .logoBox img{
+        width: 50% !important;
+    }
+    .footerAddress {
+        justify-content: center;
+    }
+    .footerQuickLinkList {
+        text-align: center;
+        font-size: .8rem;
+    }
+    .footerQuickLinkListTitle {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    #footerIframe{
+        margin-top: 2rem;
+    }
+    .footerCredits{
+        display: block;
+    }
 }

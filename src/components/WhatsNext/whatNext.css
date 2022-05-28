@@ -53,4 +53,10 @@
     .contentText{
         padding: 1rem 0;
     }
+    .nextHeader{
+        margin: 0;
+    }
+    .nextHeader .nextTitle h2 {
+        font-size: 2.2rem;
+    }
 }

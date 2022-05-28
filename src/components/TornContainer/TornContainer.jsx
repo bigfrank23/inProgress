@@ -20,7 +20,7 @@ const TornContainer = () => {
     <Container id='tornContainer'>
         <div className="tornContent">
             <div className="contentHeader"><h2>Join us Today</h2> </div>
-            <div className="tornContentTitle"><H2 children="Find meaningful connection and purpose" color /></div>
+            <div className="tornContentTitle"><H2 children="Find meaningful connection and purpose"  /></div>
             <div className="tornContentDesc"><p>At PFN Lagos, we're not just looking for volunteers. We're looking
               to help people discover their purpose. If getting involved in a fellowship is your next step, Contact
               <i>info@pfnlagosstate.org </i> or check with one of the provinces or chapters.</p></div>

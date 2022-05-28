@@ -43,6 +43,15 @@
         width: 100%;
         padding: 0 2rem;
     }
+    .tornContent .contentHeader h2 {
+        font-size: 2.2rem;
+    }
+    .tornContentTitle h2{
+        font-size: 1.2rem;
+    }
+    .tornContentDesc p{
+        font-size: .8rem;
+    }
   }
   @media only screen and (min-width: 600px) {
     
