@@ -8,7 +8,7 @@ import BgImg from '../../images/splash1.jpg'
 // import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 // import Collapsible from "react-collapsible";
-import useCollapse from "react-collapsed";
+// import useCollapse from "react-collapsed";
 
 import './Page2.css'
 import Header from '../../components/Text/Header';
@@ -79,24 +79,24 @@ const Container = styled.div`
       padding: 4rem;
   }
 `;
-const Collapsible = ({children}) => {
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
-  return (
-    <div className="collapsible">
-      <div {...getCollapseProps()}>
-        <div className="con">
-          {children}
-        </div>
-      </div>
-      <div className="he" {...getToggleProps()}>
+// const Collapsible = ({children}) => {
+//   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+//   return (
+//     <div className="collapsible">
+//       <div {...getCollapseProps()}>
+//         <div className="con">
+//           {children}
+//         </div>
+//       </div>
+//       <div className="he" {...getToggleProps()}>
         
-        {/* {isExpanded ? 	<i className= "fa fa-angle-double-up readMoreIcon" /> : <i className= "fa fa-angle-double-down readMoreIcon" />} */}
-        <div style={{padding: "1rem 0"}}>
-          </div>
-      </div>
-    </div>
-  );
-}
+//         {/* {isExpanded ? 	<i className= "fa fa-angle-double-up readMoreIcon" /> : <i className= "fa fa-angle-double-down readMoreIcon" />} */}
+//         <div style={{padding: "1rem 0"}}>
+//           </div>
+//       </div>
+//     </div>
+//   );
+// }
 const Page2 = () => {
   const [itemsToShow, setItemsToShow] = useState(6)
   const showMore = () => {
@@ -228,7 +228,7 @@ const Page2 = () => {
                   </div>
                   <div className="centerContentText">
                     <h3>{data.name}</h3>
-                    <Collapsible>
+                    {/* <Collapsible>
                     <p>{data.church}</p>
                       <p>{data.address}</p>
                       <p>{data.headOffice}</p>
@@ -241,7 +241,7 @@ const Page2 = () => {
                       <p>{data.associatePastorChapter}</p>
                       <p>{data.associatePastorProvince}</p>
                       <p>{data.associatePastorTel}</p>
-                    </Collapsible>
+                    </Collapsible> */}
                   </div>
                 </div>
               ))}

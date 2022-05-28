@@ -94,29 +94,6 @@ const Navbar = () => {
     <Container id="navbar" className={scroll && "activeNavbar"}>
       {/* <Announcement /> */}
       <div className="top">
-        {
-          user ?
-          <div className="eventTime">
-            <div className="authBx">
-              <Link to="/settings" id='links'>
-                <div className="authBxImg">
-                  {/* <img src={ !user.user.profilePic ? ProfileImg : user.user.profilePic } alt="" className='profileImg' /> */}
-                </div>
-                <div className="authBxName">
-                  <span>{user.user.username}</span>
-                </div>
-              </Link>
-            </div>
-            {/* <h6 className="authBxLogout" onClick={handleLogOut}>Log out</h6> */}
-          </div>
-          :
-          <div className="eventTime">
-            <Link to="/admin_login" id='links'>
-            {/* <h6 className="authBxLogout">{user ? "Log out" : "Log in"}</h6> */}
-            </Link>
-          </div>
-
-        }
         <div className="nav">
           <Link to="/">
             <div className="logo">
@@ -231,13 +208,13 @@ const Navbar = () => {
                       </div>
                       <div className="mainListItemsCenterRightBottom">
                         <div className="mainListItemsCenterRightSocials">
-                        <a href="www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
+                        <a href="https://www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
                                 <i className="fa fa-facebook" aria-hidden="true" />
                             </a>
-                            <a href="www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
+                            <a href="https://www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
                                 <i className="fa fa-twitter" aria-hidden="true" />
                             </a>
-                            <a href="www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
+                            <a href="https://www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
                                 <i className="fa fa-instagram" aria-hidden="true" />
                             </a>
                             <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" id='links'>

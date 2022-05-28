@@ -85,11 +85,13 @@ const Post = ({postData}) => {
                   <div className="postsAuthorImg">
                     <img src={!postData.profilePic ? UserImg : postData.profilePic} alt="" />
                   </div>
-                  <div className="postsAuthor">
+                  <div className="postsAuthor d-flex gap-1">
+                    <i className="fa fa-user align-self-center" aria-hidden="true" />
                     <span>{postData.username}</span>
                   </div>
                 </div>
-                <div className="postsDate">
+                <div className="postsDate d-flex gap-1">
+                  <i className="fa fa-clock-o align-self-center" aria-hidden="true" />
                   <span>{moment(postData.createdAt).fromNow()}</span>
                 </div>
               </div>

@@ -2,12 +2,11 @@ import React, {useState, useEffect} from 'react'
 import DetailImg from '../../../images/user.png'
 import moment from 'moment'
 import { useDispatch} from 'react-redux'
-import { useParams, withRouter } from 'react-router-dom'
+import { Link, useParams, withRouter } from 'react-router-dom'
 import { deletePost, getPost, getSinglePost } from '../../blog/redux/actions/post'
 import Img3 from "../../../images/bg2.jpg";
 import Img5 from "../../../images/pro9.jpg";
 import styled from "styled-components";
-
 
 import './FullDetail.css'
 // import '../Pages/FullDetail/FullDetailSports/FullDetailSports.css'
@@ -16,6 +15,8 @@ import axios from 'axios'
 import { LIKE } from '../../blog/redux/constants/actionTypes'
 import Footer from '../../../components/Footer/Footer'
 // import SideBar from '../SideBar/SideBar'
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share"
+import {  FacebookIcon, LinkedinIcon, TwitterIcon } from "react-share";
 
 
 const Container = styled.div`
@@ -141,9 +142,13 @@ const FullDetail = (props) => {
                     <div className="detail_info d-flex">
                         <div className="detail_author d-flex flex-column">
                             <img src={!post.profilePic ? DetailImg : post.profilePic} alt="" />
-                            <span>{post.username}</span>
+                            <div className="d-flex gap-1">
+                                <i className="fa fa-user align-self-center" aria-hidden="true" />
+                                <span>{post.username}</span>
+                            </div>
                         </div>
-                        <div className="detail_time">
+                        <div className="detail_time d-flex gap-1">
+                            <i className="fa fa-clock-o align-self-center" aria-hidden="true" />
                             <span>{moment(post.createdAt).fromNow()}</span>
                         </div>
                     </div>
@@ -185,23 +190,59 @@ const FullDetail = (props) => {
                             </div>
                             :
                             <div className="detail_reactions d-flex">
-                                <div className="like">
-                                    {post?.likes?.includes(user?.user?._id) ?
-                                    <i className="fa fa-heart" aria-hidden="true" style={{color: "red"}} />
-                                    :
-                                    <i className="fa fa-heart-o" aria-hidden="true" />
-                                    }
-                                    <span> &nbsp;{post.likes?.length > 2 ? `You and ${post.likes?.length - 1} others` : `${post.likes?.length} like${post.likes?.length > 1 ? 's' : ''}` } </span> 
-                                </div>
-                                <div className="comments" style={{marginLeft: "7px"}}>
-                                    <i className="detail_reaction_icon fa fa-commenting" aria-hidden="true" />
-                                    {post?.comments?.length}
-                                </div>
+                                <Link to="/register" className='d-flex gap-1 text-dark'>
+                                    <div className="like">
+                                        {post?.likes?.includes(user?.user?._id) ?
+                                        <i className="fa fa-heart" aria-hidden="true" style={{color: "red"}} />
+                                        :
+                                        <i className="fa fa-heart-o" aria-hidden="true" />
+                                        }
+                                        <span> &nbsp;{post.likes?.length > 2 ? `You and ${post.likes?.length - 1} others` : `${post.likes?.length} like${post.likes?.length > 1 ? 's' : ''}` } </span> 
+                                    </div>
+                                    <div className="comments" style={{marginLeft: "7px"}}>
+                                        <i className="detail_reaction_icon fa fa-commenting" aria-hidden="true" />
+                                        {post?.comments?.length}
+                                    </div>
+                                </Link>
                             </div>
 
                         }
-                    <div className="detail_share d-flex" onClick={()=> dispatch(deletePost(post._id))}>
-                        <i className="fa fa-trash deletePostIcon" aria-hidden="true" />
+                        {post.username === user?.user?.username &&
+                            <div className="delete d-flex align-self-center">
+                                <i className="fa fa-trash" aria-hidden="true" style={{color: "#f96332", fontSize: "2rem", cursor: 'pointer'}} onClick={()=> dispatch(deletePost(post._id))} />
+                            </div>
+                        }
+                    <div className="detail_share d-flex">
+                    <FacebookShareButton
+                        url={"https://pfn-lagos-state.netlify.app"}
+                        quote={post.title}
+                        hashtag={"#newpost"}
+                        description={post.desc}
+                        className="Demo__some-network__share-button"
+                    >
+                        <FacebookIcon size={32} round />
+                    </FacebookShareButton>
+                    <TwitterShareButton
+                        url={"https://pfn-lagos-state.netlify.app"}
+                        quote={post.title}
+                        hashtag={"#newpost"}
+                        description={post.desc}
+                        className="Demo__some-network__share-button"
+                    >
+                        <TwitterIcon size={32} round />
+                    </TwitterShareButton>
+                    <LinkedinShareButton
+                        url={"https://pfn-lagos-state.netlify.app"}
+                        quote={post.title}
+                        hashtag={"#newpost"}
+                        description={post.desc}
+                        className="Demo__some-network__share-button"
+                    >
+                        <LinkedinIcon size={32} round />
+                    </LinkedinShareButton>
+                    {/* <FacebookShareCount url={"https://pfn-lagos-state.netlify.app"}>
+                    {shareCount => <span className="myShareCountWrapper">{shareCount}</span>}
+                    </FacebookShareCount> */}
                     </div>
                 </div>
                 {

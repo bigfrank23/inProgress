@@ -1,9 +1,5 @@
-import React from "react";
-import Img1 from "../../images/splash3.jpg";
-import Img5 from "../../images/federico-respini-sYffw0LNr7s-unsplash.jpg";
-import Img2 from "../../images/splash1.jpg";
+import React, { useState } from "react";
 import Img3 from "../../images/bg2.jpg";
-import Img4 from "../../images/splash2.jpg";
 import styled from "styled-components";
 import "./Page13.css";
 import H2 from "../../components/Text/H2";
@@ -12,7 +8,9 @@ import Button2 from "../../components/Button/Button2";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import PrayerImg from '../../images/prayer.png'
+import PrayerImg2 from '../../images/prayer.jpeg'
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Container = styled.div`
   width: 100%;
@@ -43,6 +41,58 @@ const Container = styled.div`
   }
 `;
 const Page13 = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [request, setRequest] = useState("")
+  const [address, setAddress] = useState("")
+
+  const[loading, setLoading] = useState(false)
+
+  const handleRequest = async (e) => {
+    if(email && name && request !== ""){
+      if(request !== ""){
+      e.preventDefault()
+    setLoading(true)
+    // console.log({email, message, name, subject, company})
+
+    const body = {
+      email,
+      name,
+      request,
+      address
+    }
+
+   await axios.post('http://localhost:5000/prayer-request/', body, {
+      headers: {
+        'Content-type': 'application/json'
+      }
+    }).then((res) => {
+      alert('Email Sent Successfully')
+      // console.log('Email Sent Successfully')
+      setLoading(false)
+      console.log(res)
+      // window.location.reload()
+      if (res.data.status === 'success') {
+        alert("Message Sent.");
+        // console.log("Message Sent.");
+        setEmail("")
+        setName("")
+        setRequest("")
+        setAddress("")
+      }
+    }).catch((err) => {
+      console.log(err)
+      setLoading(false)
+    })
+      } else {
+        alert('Compose Request')
+      }
+      
+    } else {
+      alert('Please fill all required form')
+    }
+  }
+
   return (
     <Container>
       <div className="page1Wrapper">
@@ -50,7 +100,7 @@ const Page13 = () => {
           <h1>Prayer</h1>
         </div>
       </div>
-      <div className="page13Top">
+      <div className="page13Top" id="prayerTopBx">
           <div className="page13TopContent">
             <div className="page13TopTitle">
                 <H2>God is listening</H2>
@@ -61,20 +111,27 @@ const Page13 = () => {
                 </PText>
             </div>
           </div>
+          <div className="prayerImg">
+            <img src={PrayerImg2} alt="" />
+          </div>
       </div>
       <div className="page13Center">
           <div className="page13CenterContent">
               <div className="page13CenterTitle">
                   <H2>How can we be Praying for you?</H2>
               </div>
-              <form>
+              <form onSubmit={handleRequest}>
                   <div className="inputName">
                     <label htmlFor="name"><PText>Name*</PText></label>
-                    <input type="text" placeholder="Full Name" />
+                    <input type="text" placeholder="Full Name" value={name} onChange={(e)=> setName(e.target.value)} />
                   </div>
                   <div className="inputEmail">
                     <label htmlFor="name"><PText>Email*</PText></label>
-                    <input type="text" placeholder="Email" />
+                    <input type="text" placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+                  </div>
+                  <div className="inputAddress">
+                    <label htmlFor="name"><PText>Address*</PText></label>
+                    <input type="text" placeholder="Your Address" value={address} onChange={(e)=> setAddress(e.target.value)}/>
                   </div>
                   {/* <div className="radioBx">
                     <PText>Which Province do you belong?*</PText>
@@ -93,11 +150,14 @@ const Page13 = () => {
                   </div> */}
                   <div className="textArea">
                       <PText>Prayer Request*</PText>
-                      <textarea name="" id=""/>
+                      <textarea name="" id="" value={request} onChange={(e)=> setRequest(e.target.value)}/>
                   </div>
-                  <Button BtnText="SUBMIT" />
+                  <Button BtnText="SUBMIT" disabled = {loading} onClick={handleRequest} />
               </form>
           </div>
+              <div className="text-center">
+              * All Fields are required
+              </div>
       </div>
       <div className="page13Bottom">
           <div className="page13BottomContent">

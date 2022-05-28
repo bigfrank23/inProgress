@@ -243,18 +243,18 @@ const ContactPage = () => {
                   {/* <br /> <i className="fa fa-phone" aria-hidden="true" /> 630 446 8851 */}
                   </p>
                 <div className="round-social light d-flex gap-3">
-                    <Link to="#">
-                  <div className="ml-0 text-decoration-none text-white"><i className="fa fa-facebook" aria-hidden="true" /></div>
-                    </Link>
-                    <Link to="#">
-                  <div className="text-decoration-none text-white"><i className="fa fa-twitter" aria-hidden="true" /></div>
-                    </Link>
-                    <Link to="#">
-                  <div className="text-decoration-none text-white"><i className="fa fa-instagram" aria-hidden="true" /></div>
-                    </Link>
-                    <Link to="#">
-                  <div className="text-decoration-none text-white"><i className="fa fa-youtube" aria-hidden="true" /></div>
-                    </Link>
+                    <a href="https://www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                      <div className="ml-0 text-decoration-none text-white"><i className="fa fa-facebook" aria-hidden="true" /></div>
+                    </a>
+                    <a href="https://www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                        <div className="text-decoration-none text-white"><i className="fa fa-twitter" aria-hidden="true" /></div>
+                    </a>
+                    <a href="https://www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                      <div className="text-decoration-none text-white"><i className="fa fa-instagram" aria-hidden="true" /></div>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                      <div className="text-decoration-none text-white"><i className="fa fa-youtube" aria-hidden="true" /></div>
+                    </a>
                 </div>
               </div>
             </div>

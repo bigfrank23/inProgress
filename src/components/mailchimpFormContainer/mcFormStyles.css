@@ -43,13 +43,13 @@
 }
 
 .mc__btn{
-  border: 2px solid;
-    border-radius: 30px;
+  /* border: 2px solid;
+    border-radius: 30px; */
     color: #fff;
     display: inline-block;
     font-weight: 900;
     min-width: 125px;
-    padding: 10px 25px;
+    padding: 11px 25px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;

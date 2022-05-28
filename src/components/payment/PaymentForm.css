@@ -57,3 +57,6 @@
 .Dropdown-root{
     text-transform: uppercase;
 }
+.form-check-input{
+    cursor: pointer;
+}

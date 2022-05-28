@@ -9,8 +9,6 @@ import FooterImg from '../../images/footer.png'
 import { tab } from './../../responsive';
 import { landscapeTab } from './../../responsive';
 import MailchimpFormContainer from '../mailchimpFormContainer/MailchimpFormContainer'
-import ProfileImg from '../../images/profile.png'
-import { makeStyles } from '@material-ui/core/styles';
 
 import { useDispatch } from 'react-redux';
 import { LOGOUT } from '../../pages/blog/redux/constants/actionTypes';
@@ -117,7 +115,7 @@ const Container = styled.div`
           border: 1px solid green;
           outline: 0;
           padding: 10px;
-          border-radius: 30px;
+          /* border-radius: 30px; */
         }
       }
       .footerButton {
@@ -158,22 +156,6 @@ const Credits = styled.section`
     font-size: 1rem;
 `;
 
-const useStyles = makeStyles((theme) => ({
-  /** Changed modalStyle */
-  modalStyle: { backgroundColor: "rgba(0, 0, 0, 0.1)", zIndex: "1" },
-  boxStyle: {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  backgroundColor: "#fff",
-  // border: "2px solid #000",
-  outline: 0,
-  boxShadow: 24,
-  p: 4,
-  }
-}));
 
 const user = JSON.parse(localStorage.getItem('mern_crud3_copy_user'))
 const Footer = () => {
@@ -224,61 +206,91 @@ const Footer = () => {
         </div>
         <div className="bottomFooter">
             <div className="bottomFooterContent">
-                <div className="logoBox">
-                    <img src={PFN} width={200} alt="" />
-                    {/* <div className="logoText">
-                        <h1>PFN</h1>
-                        <h2>Lagos State</h2>
-                    </div> */}
+                <div className="align-self-start">
+                    <div className="logoBox">
+                        <img src={PFN} width={200} alt="" />
+                        {/* <div className="logoText">
+                            <h1>PFN</h1>
+                            <h2>Lagos State</h2>
+                        </div> */}
+                    </div>
+                     <h5 className='footerAddress'>5-9 Bode Thomas Rd, <br /> Onipanu 100252,</h5>
+                      <div className="socialBox">
+                          <div className="social" style={{cursor: "pointer"}}>
+                              <a href="https://www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                                  <i className="fa fa-facebook footerSocialIcon" aria-hidden="true" />
+                              </a>
+                              {/* <a href="https://google.com" target="_blank" rel="noreferrer"></a> */}
+                              <a href="https://www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                                  <i className="fa fa-twitter footerSocialIcon" aria-hidden="true" />
+                              </a>
+                              <a href="https://www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
+                                  <i className="fa fa-instagram footerSocialIcon" aria-hidden="true" />
+                              </a>
+                              <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                                  <i className="fa fa-youtube footerSocialIcon" aria-hidden="true" />
+                              </a>
+                          </div>
+                      </div>
                 </div>
-                <div className="newsLetterInputContainer">
-                    <MailchimpFormContainer />
+                <div className="align-self-start">
+                  <h6 className='footerQuickLinkListTitle'>Quick Links</h6>
+                  <ul className="footerQuickLinkList">
+                    <Link to="/what-we-believe"><li className="footerQuickLinksListItems">what we believe</li></Link>
+                    <Link to="/our-mission"><li className="footerQuickLinksListItems">our mission</li></Link>
+                    <Link to="/past-pfn-chairmen"><li className="footerQuickLinksListItems">past lagos state pfn chairman</li></Link>
+                    <Link to="/pfn-executives"><li className="footerQuickLinksListItems">pfn lagos state executives</li></Link>
+                    <Link to="/lses"><li className="footerQuickLinksListItems">the executive structure</li></Link>
+                    <Link to="/directorate"><li className="footerQuickLinksListItems">directorates</li></Link>
+                    <Link to="/prayer"><li className="footerQuickLinksListItems">request for prayer</li></Link>
+                    
+                    
+                    {/* <li className="footerQuickLinksListItems">provinces</li> */}
+                    
+                  </ul>
                 </div>
-                <div className="footerButton">
+                <div className="align-self-start d-flex flex-column gap-5">
+                  <div className="newsLetterInputContainer">
+                      <MailchimpFormContainer />
+                  </div>
+                  <div className="footerButton">
+                      <div className="buttonBox justify-content-center">
+                          <Button BtnText='Give' />
+                          <Button outline BtnText='Messages' />
+                      </div>
+                  </div>
+                </div>
+                {/* <div className="footerButton">
                     <div className="buttonBox">
                         <Button BtnText='Messages' />
                         <Button outline BtnText='Give' />
                     </div>
-                    <div className="socialBox">
-                        <div className="social" style={{cursor: "pointer"}}>
-                            <a href="www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
-                                <i className="fa fa-facebook footerSocialIcon" aria-hidden="true" />
-                            </a>
-                            <a href="www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
-                                <i className="fa fa-twitter footerSocialIcon" aria-hidden="true" />
-                            </a>
-                            <a href="www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
-                                <i className="fa fa-instagram footerSocialIcon" aria-hidden="true" />
-                            </a>
-                            <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
-                                <i className="fa fa-youtube footerSocialIcon" aria-hidden="true" />
-                            </a>
-                        </div>
-                    </div>
+                </div> */}
+                <div style={{textAlign: "center"}} className="align-self-start">
+                <div className="fb-page" data-href="https://www.facebook.com/pfnlagostate/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/pfnlagostate/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pfnlagostate/">Pentecostal Fellowship of Nigeria - PFN Lagos State</a></blockquote></div>
+                {/* <iframe title="pfn lagos facebook page" aria-hidden="true" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate%2F&tabs=none&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style={{border: "none", overflow: "hidden", width: "340px"}} scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> */}
+                  {/* <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" style={{border: "none", overflow: "hidden", width: "100%"}} scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share;" /> */}
                 </div>
             </div>
             {
-          user ?
-          <div className="eventTime">
-            <div className="authBx">
-              <Link to="/settings" id='links'>
-                <div className="authBxImg">
-                  <img src={ !user.user.profilePic ? ProfileImg : user.user.profilePic } alt="" className='profileImg' />
+              user ?
+              <div className="eventTime mt-4">
+                <div className="authBx">
+                  <Link to="/settings" id='links'>
+                    <div className="authBxName">
+                      <span>{user.user.username}</span>
+                    </div>
+                  </Link>
                 </div>
-                <div className="authBxName">
-                  <span>{user.user.username}</span>
-                </div>
-              </Link>
-            </div>
-            <h6 className="authBxLogout" onClick={handleLogOut}>Log out</h6>
-          </div>
-          :
-          <div className="eventTime">
-            <Link to="/admin_login" id='links'>
-            <h6 className="authBxLogout">{user ? "Log out" : "Log in"}</h6>
-            </Link>
-          </div>
-        }
+                <h6 className="authBxLogout" onClick={handleLogOut}>Log out</h6>
+              </div>
+              :
+              <div className="eventTime">
+                <Link to="/admin_login" id='links'>
+                <h6 className="authBxLogout">{user ? "Log out" : <i className="fa fa-lock" aria-hidden="true" />}</h6>
+                </Link>
+              </div>
+            }
         </div>
         {/* <div style={{textAlign: "center"}}>
         <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfnlagostate&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" height="35" style={{border: "none", overflow: "hidden"}} scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />

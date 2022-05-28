@@ -27,6 +27,9 @@
     /* height: 300px; */
     object-fit: cover;
 }
+.detail_reactions a{
+    text-decoration: none;
+}
 
 .detail_time{
     align-self: center;

@@ -16,6 +16,26 @@
     background: #fff;
     border-radius: 5px;
 }
+#prayerTopBx{
+    display: flex;
+}
+.prayerImg{
+    width: 500px;
+    transform: scale(1);
+    animation: scalePrayerImg 2s ease-in-out infinite;
+}
+.prayerImg img{
+    width: 100%;
+}
+
+@keyframes scalePrayerImg{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
 
 /* Center */
 .page13Center{

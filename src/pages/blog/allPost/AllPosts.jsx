@@ -116,17 +116,17 @@ const Allposts = () => {
     <div className="postsMainTitle">
           <H2>All Posts</H2>
           {
-            user ?
+            user?.user?.email ==="ezeyimf@gmail.com" &&
             <Link to='/write' id='links'>
               <Button variant="contained">Create a post</Button>
             </Link>
-            :
-            <Link to='/login' id='links'>
-              <Button variant="contained">Create a post</Button>
-            </Link>
+            // :
+            // <Link to='/login' id='links'>
+            //   <Button variant="contained">Create a post</Button>
+            // </Link>
           }
         </div>
-      {currentPosts.reverse().map((val, index )=> (
+      {[...currentPosts].reverse().map((val, index )=> (
           <Post postData={val} key={index} />
           ))}
     </div>
