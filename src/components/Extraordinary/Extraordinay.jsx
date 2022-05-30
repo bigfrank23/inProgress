@@ -234,7 +234,7 @@ const Extraordinay = () => {
                     <ExtraCardImg src={card.img} />
                   </ExtraCardImgContainer>
                 </ExtraCard>
-                <div style={{padding: '1rem'}}>
+                <div style={{padding: '1rem'}} className="extraCardTitle">
                   {" "}
                   <H2 children={card.title} />{" "}
                 </div>

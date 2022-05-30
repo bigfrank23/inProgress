@@ -442,8 +442,15 @@
     width: 0%;
     display: none;
 }
+.mobileNavFlexBtn{
+    display: none;
+}
 
 @media only screen and (max-width: 600px) {
+    #navbar{
+        height: 20%;
+        background-color: #041909;
+    }
     .top .nav .logo{
     display: block;
     }
@@ -466,11 +473,50 @@
         display: none;
     }
     .mobileNav .navList .navListItems:hover .hover {
-        line-height: 8vh;
+        line-height: 4vh;
+        margin: 0;
     }
     .openLinkBtn {
         text-align: center;
         z-index: 1;
+        font-size: 30px;
+    }
+    .mobileNavFlexBtn{
+        display: flex;
+        position: absolute;
+        bottom: 1rem;
+        left: 16%;
+        justify-content: center;
+    }
+    .mobileNavFlexBtnLinks a button{
+        font-weight: 900;
+    }
+
+    .activeNavbar {
+        height: 13% !important;
+      }
+      .mobileNav {
+        z-index: 1;
+    }
+    .mobileNav .navList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navListItems{
+        display: block;
+    }
+    .navListItems:hover #provincesLink {
+        display: block;
+        width: 50%;
+        opacity: 1;
+        height: auto;
+        /* justify-content: flex-start; */
+    }
+    #provincesLink a {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
     }
 }
 @media only screen and (min-width: 600px) {

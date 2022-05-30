@@ -112,8 +112,17 @@
     width: 100%;
   }
   .flip-box-front img {
-    width: 50%;
-    height: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  .css-mhc70k-MuiGrid-root>.MuiGrid-item {
+    padding: 0;
+  }
+  .pfnExecutivesTxt h2 {
+    font-size: 1.2rem;
+  }
+  .execTitle h2{
+    font-size: 2.2rem;
   }
   }
   @media only screen and (min-width: 600px) {
@@ -124,7 +133,7 @@
   .pfnExecutivesContainer {
     gap: 1rem;
     padding: 2rem 2rem;
-}
+  }
   }
   @media only screen and (min-width: 992px) {
   }

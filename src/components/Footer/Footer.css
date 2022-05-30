@@ -236,4 +236,19 @@ td._51m- _2pir _51mw{
     .footerCredits{
         display: block;
     }
+    .footerCenter{
+        width: 100%;
+        padding: 1rem;
+    }
+    .footerHoverItems {
+        color: #fff;
+        font-weight: 500;
+        font-size: .8rem;
+    }
+    .footerCenterCloseIcon{
+        position: absolute;
+        right: 2rem;
+        bottom: 1rem;
+        cursor: pointer;
+    }
 }

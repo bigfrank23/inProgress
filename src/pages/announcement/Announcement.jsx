@@ -80,7 +80,7 @@ const Announcement = () => {
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
-          <h1>News Feeds</h1>
+          <h1>News Feed</h1>
         </div>
       </div>
       <div className="container" id='announcementContainer'>

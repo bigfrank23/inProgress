@@ -12,7 +12,7 @@ const PStyle = styled.div`
   /* text-align: center; */
   color: ${(props) => (props.color ? "#fff" : "#111")};
   @media only screen and (max-width: 600px) {
-    font-size: .8rem;
+    font-size: 1rem;
     padding: 0;
   }
 `;

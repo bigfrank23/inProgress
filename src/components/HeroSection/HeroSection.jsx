@@ -87,7 +87,7 @@ const HeroSection = () => {
                 <h1>do the extraordinary</h1>
               </div>
             </div>
-            <div className="d-flex justify-content-center gap-2">
+            <div className="d-none d-md-flex justify-content-center gap-2">
                 <Link to='/our-mission' style={{textAlign: "center"}}>
                   <Button BtnText='Know More' />
                 </Link>
@@ -110,7 +110,7 @@ const HeroSection = () => {
                 <h1>Brethren</h1>
               </div>
             </div>
-            <div className="d-flex justify-content-center gap-2">
+            <div className="d-none d-md-flex justify-content-center gap-2">
               <div style={{textAlign: "center"}}>
                 <Button BtnText='Messages' />
               </div>
@@ -139,9 +139,11 @@ const HeroSection = () => {
                 <h4>Encouragement and Inspiration</h4>
               </div>
             </div>
-            <Link to='/contact' style={{textAlign: "center"}}>
-              <Button BtnText='Contact Us' />
-            </Link>
+            <div className='d-none d-md-flex'>
+              <Link to='/contact' style={{textAlign: "center"}}>
+                <Button BtnText='Contact Us' />
+              </Link>
+            </div>
             </div>
         </TextLoop>
         <HeroButtonContainer>

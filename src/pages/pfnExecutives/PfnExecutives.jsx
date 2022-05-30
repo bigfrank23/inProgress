@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Grid from '@mui/material/Grid'
 import { chairmen, directors } from "../../teamMembers/team";
 import { Link } from "react-router-dom";
+import { mobile } from "../../responsive";
 
 const Container = styled.div`
   user-select: none;
@@ -37,9 +38,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({ height: "40vh", backgroundPosition: '0 25%', backgroundSize: "contain", clipPath: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
       .giveNowBtn{
           margin-top: 2rem;
       }

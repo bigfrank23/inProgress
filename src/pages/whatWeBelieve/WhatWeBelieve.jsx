@@ -12,6 +12,7 @@ import PText from './../../components/Text/PText';
 import H2 from './../../components/Text/H2';
 import H3 from '../../components/Text/H3';
 import Header2 from '../../components/Text/Header2';
+import { mobile } from '../../responsive'
 
 const Container = styled.div`
   user-select: none;
@@ -37,9 +38,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 80vh;
+    ${mobile({height: "40vh", backgroundSize: "115%", backgroundPosition: "0 100%", backgroundAttachment: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({position: "relative", top: "25%"})}
     }
   }
   .pageBanner {

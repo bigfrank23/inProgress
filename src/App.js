@@ -45,6 +45,7 @@ import FullExecDetail6 from './pages/fullExecDetail/fullExecDetail6/fullExecDeta
 import Current from './pages/allEvents/current/Current';
 import Past from './pages/allEvents/past/Past';
 import FullEventDetail from './pages/allEvents/fullDetail/FullEventDetail';
+import PaymentForm2 from './components/payment/PaymentForm2';
 
 const Container = styled.div`
   width: 100%;
@@ -92,7 +93,8 @@ function App() {
           <Route exact path='/login' component={Login} />
           <Route exact path='/admin_login' component={Login2} />
           <Route exact path='/announcement' component={Announcement} />
-          <Route exact path='/give' component={PaymentForm} />
+          <Route exact path='/give2' component={PaymentForm} />
+          <Route exact path='/give' component={PaymentForm2} />
           <Route exact path='/full_exec_detail' component={FullExecDetail} />
           <Route exact path='/full_exec_detail_cwc' component={FullExecDetail2} />
           <Route exact path='/full_exec_detail_cwc2' component={FullExecDetail3} />

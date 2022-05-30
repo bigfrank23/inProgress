@@ -43,10 +43,12 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({ height: "40vh", backgroundPosition: '0 25%'})}
     .page1Header {
       color: #fff;
       text-align: center;
       text-shadow: 0 4px brown;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
     }
   }
   .pageBanner {

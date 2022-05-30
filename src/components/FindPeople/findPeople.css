@@ -101,4 +101,7 @@
     .bottomHeader span{
         font-size: .8rem !important;
     }
+    .contentText h2{
+        font-size: 1.2rem !important;
+    }
 }

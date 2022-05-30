@@ -84,10 +84,35 @@
 } */
 
 @media only screen and (max-width: 600px) {
+    #hero{
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        padding: 0 2rem;
+    }
+    #ReactBackgroundSlider > figure {
+        height: 40% !important;
+        width: 100%;
+        position: absolute;
+        top: 20% !important;
+        left: 0px;
+        color: transparent;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        z-index: -1000;
+        margin: 0;
+        backface-visibility: hidden;
+        animation: imageAnimation 36s linear infinite -0.5s;
+    }
     .content{
         position: relative;
-        top: 15%;
+        top: 30%;
         width: 100%;
+        align-items: center;
     }
     .topText h4{
         color: #fff;

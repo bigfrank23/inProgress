@@ -363,89 +363,150 @@ const Navbar = () => {
           </div>
           {showNav && (
             <div className="mobileNav">
-              <ul className="navList">
-                <Link to="/" className="links" onClick={()=> setShowNav(false)}>
-                  <li className="navListItems">Menu</li>
-                </Link>
-                <li className="navListItems">
-                  About
-                  <ul className="hover">
-                    <Link to="/about" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">About PFN</li>
-                    </Link>
-                    <Link to="/history2" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">History of PFN</li>
-                    </Link>
-                    <Link to="/what-we-believe" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">What we believe</li>
-                    </Link>
-                    <Link to="#" className="links" >
-                      <li className="hoverItems">Our mission</li>
-                    </Link>
-                  </ul>
+              <ul className="navList" >
+              <Link to="/" className="links" onClick={()=> setShowNav(false)}>
+              <li className="navListItems">
+                  Menu
                 </li>
-                <li className="navListItems">
-                  Leadership
-                  <ul className="hover">
-                    <Link to="/the-national" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">The national president</li>
+              </Link>
+              <li className="navListItems">
+                About
+                  {/* <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div> */}
+                <ul className="hover" id='provincesLink'>
+                  <Link to="/about" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">About PFN</li>
+                  </Link>
+                  <Link to="/history2" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">History of PFN</li>
+                  </Link>
+                  <Link to="/what-we-believe" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">What we believe</li>
+                  </Link>
+                  <Link to="/our-mission" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">Our mission</li>
+                  </Link>
+                  {/* <Link to="/page2" className="links">
+                    <li className="hoverItems">Our team</li>
+                  </Link> */}
+                </ul>
+              </li>
+              <li className="navListItems">
+                Leadership
+                  {/* <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div> */}
+                <ul className="hover" id='provincesLink'>
+                  <Link to="/the-national" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">The national</li>
+                  </Link>
+                  <Link to="/past-pfn-chairmen" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">Past Lagos State PFN chairmen</li>
+                  </Link>
+                  <Link to="/pfn-executives" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">PFN lagos state executives</li>
+                  </Link>
+                </ul>
+              </li>
+              <li className="navListItems">
+                <div>
+                Lagos Structure
+                </div>
+                  {/* <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div> */}
+                <ul className="hover" id='provincesLink'>
+                  <Link to="/lses" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">
+                      The executive structure
+                    </li>
+                  </Link>
+                  <Link to="#" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">
+                      Chairman Messages
+                    </li>
+                  </Link>
+                </ul>
+              </li>
+              <li className="navListItems">
+                Get involved
+                  {/* <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div> */}
+                <ul className="hover" id='provincesLink'>
+                  <Link to="/directorate" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">Directorates</li>
+                  </Link>
+                  <Link to="#" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">Outreach</li>
+                  </Link>
+                </ul>
+              </li>
+              <li className="navListItems">
+                Provinces
+                  {/* <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div> */}
+                <ul className="hover" id='provincesLink'>
+                  {provinces.map((data)=> (
+                    <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`, email: `${data.email}`, tel: `${data.tel}`, img: `${data.img}`}}} className="links">
+                      <li className="hoverItems">{data.province}</li>
                     </Link>
-                    <Link to="/past-pfn-chairmen" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">Past PFN chairmen</li>
+                  ))}
+                </ul>
+              </li>
+              <li className="navListItems">
+                Events
+                  {/* <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div> */}
+                <ul className="hover" id='provincesLink'>
+                    <Link to="/all-events" className="links" onClick={()=> setShowNav(false)}>
+                      <li className="hoverItems">All Events</li>
                     </Link>
-                    <Link to="/pfn-executives" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">PFN lagos state executives</li>
+                    <Link to="/gallery" className="links" onClick={()=> setShowNav(false)}>
+                      <li className="hoverItems">Gallery</li>
                     </Link>
-                  </ul>
+                    <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                    <li className="hoverItems">Watch Live</li>
+                    </a>
+                    <Link to='/blogs' className='links' onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">Blogs</li>
+                    </Link>
+                    <Link to='/announcement' className='links' onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">News Feed</li>
+                    </Link>
+                </ul>
+              </li>
+              {/* <Link to="#" className="links"> */}
+                <li className="navListItems">Get in Touch
+                  {/* <div className="hoverAngleIcon">
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </div> */}
+                <ul className="hover" id='provincesLink'>
+                    <Link to="/prayer" className="links" onClick={()=> setShowNav(false)}>
+                      <li className="hoverItems">Prayer</li>
+                    </Link>
+                    <Link to='/contact' className='links' onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">Contact us</li>
+                    </Link>
+                </ul>
                 </li>
-                <li className="navListItems">
-                  PFN lagos state structure
-                  <ul className="hover">
-                    <Link to="/lses" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">
-                        The Executive structure
-                      </li>
-                    </Link>
-                    <Link to="#" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">
-                        Chairman Messages
-                      </li>
-                    </Link>
-                  </ul>
-                </li>
-                <li className="navListItems">
-                  Get involved
-                  <ul className="hover">
-                    <Link to="/extra" className="links">
-                      <li className="hoverItems">The Provinces</li>
-                    </Link>
-                    <Link to="#" className="links">
-                      <li className="hoverItems">Volunteers</li>
-                    </Link>
-                    <Link to="#" className="links">
-                      <li className="hoverItems">Outreach</li>
-                    </Link>
-                  </ul>
-                </li>
-                <li className="navListItems">
-                  Events
-                  <ul className="hover">
-                    <Link to="#" className="links">
-                      <Link to="/gallery" className='links' onClick={()=> setShowNav(false)}>
-                        <li className="hoverItems">Gallery</li>
-                      </Link>
-                      <li className="hoverItems">Watch Live</li>
-                      <li className="hoverItems">Past Events</li>
-                      <li className="hoverItems">Upcoming Events</li>
-                    </Link>
-                  </ul>
-                </li>
-                <Link to="/blogs" className="links" onClick={()=> setShowNav(false)}>
-                  <li className="navListItems">Blogs</li>
-                </Link>
-              </ul>
+              {/* </Link> */}
+            </ul>
             </div>
           )}
+          <div className='mobileNavFlexBtn text-center'>
+            <div className={!scroll ? "mobileNavFlexBtnLinks d-flex gap-2" : "mobileNavFlexBtnLinks d-none"}>
+                <Link to='/give' id='links' style={{fontWeight: '900 !important'}}>
+                  <Button2 BtnText="Give" />
+                </Link>
+                <Link to='#' id='links' style={{fontWeight: '900 !important'}}>
+                  <Button2 BtnText="Messages" />
+                </Link>
+            </div>
+          </div>
           <div className="openLinkBtn" onClick={() => setShowNav(!showNav)}>
             {showNav ? <>&#10005;</> : <>&#8801;</>}
           </div>

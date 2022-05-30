@@ -1,5 +1,8 @@
 import Img from '../images/profile.png'
+import enyinnayaImg from '../images/team/Enyinnaya Okwuonu Chairman.jpg'
 import Img2 from '../images/team/akin.jpg'
+import akpabioImg from '../images/team/Akpabio.jpg'
+import boseImg from '../images/team/Bose Olasupo.jpeg'
 import oliverImg from '../images/team/oliver.jpg'
 import akinyeleImg from '../images/team/akinyele.jpg'
 import Img25 from '../images/team/fal.jpg'
@@ -41,7 +44,7 @@ import ericImg from '../images/team/eric.jpg'
 export const cwc = [
   {
     id: 1,
-    img: Img,
+    img: enyinnayaImg,
     name: "APOSTLE Enyinnaya Emeka Okwuonu",
     title: "CHAIRMAN ",
     position: "Lead Pastor",
@@ -563,7 +566,7 @@ export const directors = [
     associatePastorTel: "",
     associatePastorChapter: "",
     associatePastorProvince: "",
-    bio: "MY PROFILE Rev'd Dr Oladele Ajayi is an ordained and a full time minister of gospel with over 25years experience. A highly motivated and goal oriented individual with diverse experience in church and people management. A thespian turned Preacher. He is an alumnus of LIFE Theological Seminary, Ikorodu, Lagos. He holds D.Th, B.Th, M.Th, DMIN (Guidance and Counseling), D.D and PhD (Church Management). He has attended various leadership course like Word of Life Bible Institute (WOFBI), Daystar Leadership Academy, Church and Society, Peace and Conflict Resolution, University of Leadership and Sound Doctrine, Institute of National Transformation. An erudite scholar, lecturer, a prolific writer and Conference Speaker who has authored both theological and inspirational books. He is an experienced leader, church consultant and mentor in Pastoral ministry and leadership development. He is currently a state duputy director Interministerial of the Pentecostal Fellowship of Nigeria, Lagos State. He is the Executive Director of LivingRight Initiative, a moral and character development NGO targeted at Youths moral transformation. He is the chaplain of Chapel of Christ the Light Alausa, Ikeja. A Lagos state government established church. Dr Dele and his wife Pastor Mrs Folashade Ajayi with their children served the Lord together and live in Lagos.",
+    bio: "Rev'd Dr Oladele Ajayi is an ordained and a full time minister of gospel with over 25years experience. A highly motivated and goal oriented individual with diverse experience in church and people management. A thespian turned Preacher. He is an alumnus of LIFE Theological Seminary, Ikorodu, Lagos. He holds D.Th, B.Th, M.Th, DMIN (Guidance and Counseling), D.D and PhD (Church Management). He has attended various leadership course like Word of Life Bible Institute (WOFBI), Daystar Leadership Academy, Church and Society, Peace and Conflict Resolution, University of Leadership and Sound Doctrine, Institute of National Transformation. An erudite scholar, lecturer, a prolific writer and Conference Speaker who has authored both theological and inspirational books. He is an experienced leader, church consultant and mentor in Pastoral ministry and leadership development. He is currently a state duputy director Interministerial of the Pentecostal Fellowship of Nigeria, Lagos State. He is the Executive Director of LivingRight Initiative, a moral and character development NGO targeted at Youths moral transformation. He is the chaplain of Chapel of Christ the Light Alausa, Ikeja. A Lagos state government established church. Dr Dele and his wife Pastor Mrs Folashade Ajayi with their children served the Lord together and live in Lagos.",
     header: "State Director"
   },
   {
@@ -834,7 +837,7 @@ export const directors = [
   },
   {
     id: 35,
-    img: Img,
+    img: akpabioImg,
     name: "REV (MRS) GLORY AKPABIO ",
     title: "CO-ORDINATOR WOMEN WING",
     church: "Christ Chapel International Church, Surulere",
@@ -844,7 +847,7 @@ export const directors = [
     dOb: "  23rd February ",
     email: "glakia@yahoo.com ",
     chapter: "Kilo/Ikate",
-    province: "Apapa/Suruler",
+    province: "Apapa/Surulere",
     associatePastor: "",
     associatePastorTel: "",
     associatePastorChapter: "",
@@ -969,7 +972,7 @@ export const directors = [
   },
   {
     id: 42,
-    img: Img,
+    img: boseImg,
     name: "BOSE OLASUPO ",
     title: "STATE ADMIN SEC.",
     church: "Guiding Light Assembly",
@@ -1361,7 +1364,7 @@ export const chairmen = [
         id: 17,
         img: ImgB17,
         name: "REV Sheriff Tosin Israel",
-        title: "Vice Chairman, Iwaya/onike/makoko, Chairman, Iwaya/Onike/makoko, Vice Chairman, Mainland Province, currently Chairman, Mainland province.",
+        title: "Chairman, Mainland Province",
         position: "Senior Pastor",
         church: "CITY OF GOD RESURRECTION ASSEMBLY",
         address: "4A ADARAMAJA ST, IWAYA YABA LAGOS",
@@ -1375,7 +1378,7 @@ export const chairmen = [
         associatePastorTel: "",
         associatePastorChapter: "",
         associatePastorProvince: "",
-        bio: "Sheriif Tosin Israel was born 20th October, 1966, to a Muslim family. He got converted in 1979 and entered the ministry on 6th December, 1985. He was a missionary for 14 years to the middle belt and south west of Nigeria. He was the leader of Overcomes Crusade Team International, a youth forum in Lagos State. He founded a church in 1988 named the City of God Ressurection Assembly and joined PFN in 2002. He is currently the Chairman, Mainland province, Lagos State. He is happily married with four daughters.",
+        bio: "Sheriif Tosin Israel was Vice Chairman, Iwaya/onike/makoko, Chairman, Iwaya/Onike/makoko, Vice Chairman, Mainland Province, currently. He was born 20th October, 1966, to a Muslim family. He got converted in 1979 and entered the ministry on 6th December, 1985. He was a missionary for 14 years to the middle belt and south west of Nigeria. He was the leader of Overcomes Crusade Team International, a youth forum in Lagos State. He founded a church in 1988 named the City of God Ressurection Assembly and joined PFN in 2002. He is currently the Chairman, Mainland province, Lagos State. He is happily married with four daughters.",
         header: "Province Chairman"
     },
     {

@@ -195,6 +195,9 @@ const Footer = () => {
               {/* <Link to="/provinces">
               <Button2 outline BtnText='Select a Province' />
               </Link> */}
+              <div className={open ? "footerCenterCloseIcon text-danger" : 'd-none'} onClick={handleClose}>
+              <i className="fa fa-close" />
+              </div>
               {allProvinces.map((data)=> (
                 <>
                 <div className={open ? "sideBlock" : "none"} key={data.id}>

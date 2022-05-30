@@ -1,25 +1,18 @@
 import React from 'react'
-import Img from "../../images/splash3.jpg";
 import Img2 from "../../images/splash3.jpg";
 import HistoryImg1 from "../../images/history.png";
 import HistoryImg2 from "../../images/history2.png";
 // import HistoryImg2 from "../../images/history2.jpg";
 import HistoryImg3 from "../../images/history3.png";
-import HistoryImg4 from "../../images/history4.png";
 import HistoryImg5 from "../../images/history5.jpeg";
 import Img3 from "../../images/bg2.jpg";
-import Img4 from "../../images/bg2.jpg";
 import styled from 'styled-components'
 import './History2.css'
-import Header from '../../components/Text/Header';
-import H2 from '../../components/Text/H2';
 import PText from '../../components/Text/PText';
-import H3 from '../../components/Text/H3';
-import { Link } from 'react-router-dom';
-import Upcomin from '../../components/Upcoming/Upcomin';
 import Footer from '../../components/Footer/Footer';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { mobile } from '../../responsive';
 
 const Container = styled.div`
   user-select: none;
@@ -47,9 +40,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({height: "40vh"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({position: "relative", top: "25%"})}
     }
   }
 `

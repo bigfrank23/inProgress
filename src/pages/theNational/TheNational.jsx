@@ -10,6 +10,7 @@ import styled from "styled-components";
 import "./TheNational.css";
 import H3 from "../../components/Text/H3";
 import Footer from "../../components/Footer/Footer";
+import { mobile } from "../../responsive";
 
 const Container = styled.div`
   user-select: none;
@@ -35,9 +36,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({height: "40vh"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({position: "relative", top: "25%"})}
       .giveNowBtn{
           margin-top: 2rem;
       }

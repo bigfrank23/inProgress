@@ -41,6 +41,7 @@
     }
     #moreRow {
         display: block;
+        padding: 0;
     }
     #moreGap{
         margin-top: 1rem;
