@@ -99,17 +99,14 @@ const History2 = () => {
             <div className="historyMainTxt">
               <PText color>
                 <p id='large'>
-                Yet, the Pentecostal movement in Nigeria is less than 100
+                Yet, the Pentecostal movement in Nigeria is less than 100 years old.
                 <div className={scroll2 ? "animate3" : "historyFloatImgBx"}>
                   <img src={HistoryImg5} width={200} alt="" /> 
                   </div>
-                launched an indigenous
-                years old. It started in early 1900s when Anglican
-                prophetic movement that later became the Christ Army Church
-                following an outbreak of influenza epidemic in 1918. Other
-                groups soon emerged such as Eternal Sacred Order of the Cherubim
-                and Seraphim society in 1925 and the Church of the Lord Aladura
-                in 1930.
+                  It started in early 1900s when Anglican launched an indigenous prophetic
+                  movement that later became the Christ Army Church following an outbreak
+                   of influenza epidemic in 1918. Other groups soon emerged such as Eternal
+                    Sacred Order of the Cherubim and Seraphim society in 1925 and the Church of the Lord Aladura in 1930.
                 </p>
                 <PText color>
                   {" "}

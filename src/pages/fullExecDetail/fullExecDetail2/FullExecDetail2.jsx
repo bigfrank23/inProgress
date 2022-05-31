@@ -1,12 +1,12 @@
 import React from "react";
 import Img5 from "../../../images/slider1.png";
-import cwcImg from "../../../images/pro8.jpg";
+import cwcImg from "../../../images/team/enyinnaya.jpg";
 import styled from "styled-components";
 import "./FullExecDetail2.css";
 import Footer from "../../../components/Footer/Footer";
 import { faChurch, faAddressCard, faPhone, faCalendar, faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 const Container = styled.div`
   user-select: none;
@@ -44,7 +44,7 @@ const Container = styled.div`
 `;
 
 const FullExecDetail2 = () => {
-    const location = useLocation()
+    // const location = useLocation()
     // const query = new URLSearchParams(location.search)
     // console.log(location.state.name)
     // console.log(query.get('id'))

@@ -1,5 +1,5 @@
 import Img from '../images/profile.png'
-import enyinnayaImg from '../images/team/Enyinnaya Okwuonu Chairman.jpg'
+// import enyinnayaImg from '../images/team/Enyinnaya Okwuonu Chairman.jpg'
 import Img2 from '../images/team/akin.jpg'
 import akpabioImg from '../images/team/Akpabio.jpg'
 import boseImg from '../images/team/Bose Olasupo.jpeg'
@@ -19,7 +19,7 @@ import obinnaImg from '../images/team/obinna.jpg'
 import benImg from '../images/team/ben.jpg'
 import helenImg from '../images/team/helen.jpg'
 import oladeleImg from '../images/team/oladele.jpg'
-import osayiImg from '../images/team/osayi.jpg'
+import osayiImg from '../images/team/osayi.png'
 import phyllisImg from '../images/team/phyllis.jpeg'
 import tonyImg from '../images/team/tony.jpg'
 import idiongImg from '../images/team/idiong.jpg'
@@ -44,7 +44,7 @@ import ericImg from '../images/team/eric.jpg'
 export const cwc = [
   {
     id: 1,
-    img: enyinnayaImg,
+    img: Img,
     name: "APOSTLE Enyinnaya Emeka Okwuonu",
     title: "CHAIRMAN ",
     position: "Lead Pastor",

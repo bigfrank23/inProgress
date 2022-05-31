@@ -484,7 +484,7 @@
     .mobileNavFlexBtn{
         display: flex;
         position: absolute;
-        bottom: 1rem;
+        bottom: 5px;
         left: 16%;
         justify-content: center;
     }
@@ -493,7 +493,7 @@
     }
 
     .activeNavbar {
-        height: 13% !important;
+        height: 15% !important;
       }
       .mobileNav {
         z-index: 1;

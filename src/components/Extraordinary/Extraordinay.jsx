@@ -2,12 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import BgImg from '../../images/bg2.jpg'
-import PlayImg from '../../images/splash1.jpg'
 import Button from '../Button/Button'
 import './Extraordinary.css'
 import { landscapeTab, mobile, tab } from '../../responsive'
-import H3 from '../Text/H3'
-import PText from '../Text/PText'
 import { Grid } from '@material-ui/core'
 import Img1 from '../../images/announcement.jpeg'
 import Img2 from '../../images/currentEvents/current1.jpeg'
@@ -49,37 +46,37 @@ const ExtraContent = styled.div`
     ${tab({display: 'block'})}
     ${landscapeTab({display: 'flex'})}
 `
-const ExtraImg = styled.div`
-    /* flex: 1; */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${PlayImg});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 450px;
-    width: 450px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    ${mobile({height: '300px', width: '300px'})}
-    ${tab({height: '600px', width: "100%"})}
-    ${landscapeTab({height: "450px", width: "450px"})}
-`
-const ExtraIconContainer = styled.div`
-    background: linear-gradient(#7bff7b, #7bff7b);
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    ${mobile({height: '50px', width: '50px'})}
-    .playIcon{
-        color: #000;
-        font-size: 2rem;
-        ${mobile({fontSize: '1rem'})}
-    }
-`
+// const ExtraImg = styled.div`
+//     /* flex: 1; */
+//     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${PlayImg});
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     height: 450px;
+//     width: 450px;
+//     border-radius: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     ${mobile({height: '300px', width: '300px'})}
+//     ${tab({height: '600px', width: "100%"})}
+//     ${landscapeTab({height: "450px", width: "450px"})}
+// `
+// const ExtraIconContainer = styled.div`
+//     background: linear-gradient(#7bff7b, #7bff7b);
+//     height: 100px;
+//     width: 100px;
+//     border-radius: 50%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     ${mobile({height: '50px', width: '50px'})}
+//     .playIcon{
+//         color: #000;
+//         font-size: 2rem;
+//         ${mobile({fontSize: '1rem'})}
+//     }
+// `
 const ExtraContentText = styled.div`
     flex: 1;
     align-self: center;
@@ -147,32 +144,32 @@ const ExtraCardImg = styled.img`
     border-top-right-radius: 10px;
     ${mobile({width: "100%"})}
 `
-const ExtraContentText2 = styled.div`
-    background-color: #008753;
-    padding: 2rem;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-`
-const ExtraTitle = styled.div`
-    color: #fff;
-    font-weight: 900;
-    text-align: center;
-    text-transform: uppercase;
-`
-const ExtraDate = styled.div`
-    color: #fff;
-    font-weight: 900;
-    text-align: center;
-    text-transform: uppercase;
-    /* margin-right: 5px; */
-`
-const ExtraLocation = styled.div`
-    color: #fff;
-    font-weight: 900;
-    text-align: center;
-    text-transform: uppercase;
-      /* margin-right: 5px; */
-`
+// const ExtraContentText2 = styled.div`
+//     background-color: #008753;
+//     padding: 2rem;
+//     border-bottom-left-radius: 10px;
+//     border-bottom-right-radius: 10px;
+// `
+// const ExtraTitle = styled.div`
+//     color: #fff;
+//     font-weight: 900;
+//     text-align: center;
+//     text-transform: uppercase;
+// `
+// const ExtraDate = styled.div`
+//     color: #fff;
+//     font-weight: 900;
+//     text-align: center;
+//     text-transform: uppercase;
+//     /* margin-right: 5px; */
+// `
+// const ExtraLocation = styled.div`
+//     color: #fff;
+//     font-weight: 900;
+//     text-align: center;
+//     text-transform: uppercase;
+//       /* margin-right: 5px; */
+// `
 const Extraordinay = () => {
     const cards = [
         {

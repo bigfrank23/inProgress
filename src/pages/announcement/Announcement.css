@@ -1,3 +1,10 @@
 #announcementContainer{
     padding: 4rem 2rem;
+    user-select: none !important;
+}
+.modalContent3{
+    margin: 1rem 0;
+}
+.modalContent3 p{
+    margin: 0;
 }

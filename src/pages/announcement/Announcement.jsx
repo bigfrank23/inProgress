@@ -240,7 +240,9 @@ const Announcement = () => {
           </div>
             <b>
            <i>
-         It has come to our notice that some other websites or online platforms purported to be PFN Lagos State's, isn't official, so you are therefore advised to thread cautiously when accessing them.
+           It has come to our notice that some other websites or online platforms purported to be PFN Lagos State's 
+           has been flying around the internet space, they aren't official, so you are therefore advised to thread 
+           cautiously when accessing them.
            </i>
            </b> 
         </Modal.Body>

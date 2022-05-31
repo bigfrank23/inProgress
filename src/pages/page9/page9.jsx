@@ -18,6 +18,7 @@ import { Link } from 'react-router-dom';
 
 
 const Container = styled.div`
+user-select: none;
   width: 100%;
   height: 100%;
   background: url(${Img3});

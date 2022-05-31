@@ -11,6 +11,7 @@ import { useLocation } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
 
 const Container = styled.div`
+user-select: none;
   width: 100%;
   height: 100%;
   background: url(${Img3});

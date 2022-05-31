@@ -139,7 +139,7 @@ const HeroSection = () => {
                 <h4>Encouragement and Inspiration</h4>
               </div>
             </div>
-            <div className='d-none d-md-flex'>
+            <div className='d-none d-md-flex justify-content-center'>
               <Link to='/contact' style={{textAlign: "center"}}>
                 <Button BtnText='Contact Us' />
               </Link>
