@@ -1,24 +1,11 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import Navbar from '../../components/Navbar/Navbar';
-// import Img from '../../images/splash2.jpg'
-import Img from '../../images/believe.png'
-import Img2 from '../../images/splash3.jpg'
-import Img3 from '../../images/bg2.jpg'
 import Img4 from '../../images/contactBg.jpg'
 import Img5 from '../../images/contactBg2.jpg'
 import BgImg from '../../images/splash1.jpg'
-import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
-import Header from '../../components/Text/Header';
-import PText from './../../components/Text/PText';
-import H2 from './../../components/Text/H2';
-import H3 from '../../components/Text/H3';
-import Header2 from '../../components/Text/Header2';
-import { Link } from 'react-router-dom';
 import BannerImg from '../../images/web3.jpg'
 import SendIcon from '@mui/icons-material/Send';
-import sending from '../../images/sending.gif'
 import axios from 'axios'
 // import './ContactPage.css'
 
@@ -233,7 +220,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="col-lg-4 bg-image" style={{background: "#263948"}}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253664.50294512132!2d3.2922873848851304!3d6.583612394604272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8de2d6dc2833%3A0x6b683e00c6393bd7!2sPentecostal%20Fellowship%20of%20Nigeria%2C%20Lagos%20State!5e0!3m2!1sen!2sng!4v1651050624529!5m2!1sen!2sng" width="100%" height="300" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title='PFN Lagos contact' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253664.50294512132!2d3.2922873848851304!3d6.583612394604272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8de2d6dc2833%3A0x6b683e00c6393bd7!2sPentecostal%20Fellowship%20of%20Nigeria%2C%20Lagos%20State!5e0!3m2!1sen!2sng!4v1651050624529!5m2!1sen!2sng" width="100%" height="300" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               <div className="detail-box p-4">
                 <h5 className="text-white font-weight-light mb-3">ADDRESS</h5>
                 <p className="text-white op-7"> <i className="fa fa-address-book" aria-hidden="true" /> 5-9 Bode Thomas Rd, Onipanu 100252,
@@ -255,7 +242,7 @@ const ContactPage = () => {
                     <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                       <div className="text-decoration-none text-white"><i className="fa fa-youtube" aria-hidden="true" /></div>
                     </a>
-                    <a href="https://api.whatsapp.com/send?phone=+2349153848219" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                    <a href="https://wa.link/ez9fic" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                       <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
                     </a>
                 </div>

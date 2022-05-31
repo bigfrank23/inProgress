@@ -103,7 +103,7 @@ const History2 = () => {
                 <div className={scroll2 ? "animate3" : "historyFloatImgBx"}>
                   <img src={HistoryImg5} width={200} alt="" /> 
                   </div>
-                  It started in early 1900s when Anglican launched an indigenous prophetic
+                  &nbsp; It started in early 1900s when an Anglican launched an indigenous prophetic
                   movement that later became the Christ Army Church following an outbreak
                    of influenza epidemic in 1918. Other groups soon emerged such as Eternal
                     Sacred Order of the Cherubim and Seraphim society in 1925 and the Church of the Lord Aladura in 1930.

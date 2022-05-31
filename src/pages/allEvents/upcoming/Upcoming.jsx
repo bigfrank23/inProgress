@@ -62,6 +62,10 @@ const Upcoming = () => {
                     <div className="page5Title">
                     <H2>{data.title}</H2>
                     </div>
+                    
+                    <p>
+                      <b>{data.theme}</b>
+                    </p>
                     <div className="page5Date">
                     {data.date ? <><h5><b>Date</b></h5> : {data.date} </> : null}
                     </div>
@@ -77,9 +81,6 @@ const Upcoming = () => {
                     </p>
                     <p id="upcomingPara">
                       {data.desc ? <><b>{data.more}</b></> : null}
-                    </p>
-                    <p>
-                      <b>{data.theme}</b>
                     </p>
                     <p>
                       <b>{data.date2}</b>

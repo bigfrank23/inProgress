@@ -220,7 +220,7 @@ const Navbar = () => {
                             <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" id='links'>
                                 <i className="fa fa-youtube" aria-hidden="true" />
                             </a>
-                            <a href="https://api.whatsapp.com/send?phone=+2349153848219" target='_blank' rel="noopener noreferrer nofollow" id='links'>
+                            <a href="https://wa.link/ez9fic" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                                 <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
                             </a>
                         </div>
@@ -498,7 +498,7 @@ const Navbar = () => {
             </div>
           )}
           <div className='mobileNavFlexBtn text-center'>
-            <div className={!scroll ? "mobileNavFlexBtnLinks d-flex gap-2" : "mobileNavFlexBtnLinks d-none"}>
+            <div className={!scroll ? "mobileNavFlexBtnLinks d-flex gap-2 d-flex gap-2" : "mobileNavFlexBtnLinks d-none"}>
                 <Link to='/give' id='links' style={{fontWeight: '900 !important'}}>
                   <Button2 BtnText="Give" />
                 </Link>

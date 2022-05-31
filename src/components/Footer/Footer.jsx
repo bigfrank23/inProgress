@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Img2 from '../../images/bg2.jpg'
 import PFN from '../../images/footerImg.png'
 import styled from 'styled-components'
-import Button from '../Button/Button'
+// import Button from '../Button/Button'
 import { Link } from 'react-router-dom';
 import { mobile } from '../../responsive'
 import FooterImg from '../../images/footer.png'
@@ -16,6 +16,7 @@ import { provinces } from '../../teamMembers/provinces'
 import "./Footer.css"
 
 const Container = styled.div`
+  user-select: none;
   width: 100%;
   margin-top: 2rem;
   background: url(${Img2});
@@ -195,7 +196,7 @@ const Footer = () => {
               {/* <Link to="/provinces">
               <Button2 outline BtnText='Select a Province' />
               </Link> */}
-              <div className={open ? "footerCenterCloseIcon text-danger" : 'd-none'} onClick={handleClose}>
+              <div className={open ? "footerCenterCloseIcon text-danger d-block d-sm-none" : 'd-none'} onClick={handleClose}>
               <i className="fa fa-close" />
               </div>
               {allProvinces.map((data)=> (
@@ -235,7 +236,7 @@ const Footer = () => {
                               <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                                   <i className="fa fa-youtube footerSocialIcon" aria-hidden="true" />
                               </a>
-                              <a href="https://api.whatsapp.com/send?phone=+2349153848219" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                              <a href="https://wa.link/ez9fic" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                                 <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
                               </a>
                           </div>

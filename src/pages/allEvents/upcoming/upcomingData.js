@@ -15,7 +15,8 @@ export const upcoming = [
     {
         id: 1,
         img: upcomingImg3,
-        title: "Theme: Power Above Powers. (LUKE 10:19)",
+        title: "Nationwide Pentecost Day Service (PDS) Rally",
+        theme: "Theme: Power Above Powers. (LUKE 10:19)",
         date: "Pentecost Sunday, June 5TH, 2022.",
         time: "",
         location: "",
