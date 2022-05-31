@@ -502,9 +502,6 @@ const Navbar = () => {
                 <Link to='/give' id='links' style={{fontWeight: '900 !important'}}>
                   <Button2 BtnText="Give" />
                 </Link>
-                <Link to='#' id='links' style={{fontWeight: '900 !important'}}>
-                  <Button2 BtnText="Messages" />
-                </Link>
             </div>
           </div>
           <div className="openLinkBtn" onClick={() => setShowNav(!showNav)}>

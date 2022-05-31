@@ -85,7 +85,7 @@
 
 @media only screen and (max-width: 600px) {
     #hero{
-        height: 60vh;
+        height: 50vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -93,7 +93,7 @@
         padding: 0 2rem;
     }
     #ReactBackgroundSlider > figure {
-        height: 40% !important;
+        height: 35% !important;
         width: 100%;
         position: absolute;
         top: 20% !important;
@@ -110,7 +110,7 @@
     }
     .content{
         position: relative;
-        top: 30%;
+        top: 10%;
         width: 100%;
         align-items: center;
     }

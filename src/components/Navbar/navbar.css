@@ -485,7 +485,7 @@
         display: flex;
         position: absolute;
         bottom: 5px;
-        left: 25%;
+        right: 10%;
         justify-content: center;
     }
     .mobileNavFlexBtnLinks a button{
