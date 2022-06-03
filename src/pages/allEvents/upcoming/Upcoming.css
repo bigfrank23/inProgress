@@ -67,6 +67,19 @@
         display: flex;
         justify-content: center;
     }
+    .page5Para{
+        text-align: justify;
+    }
+    #upcomingPara{
+        font-size: 13px;
+    }
+    .page5Bx .page5BxImg img {
+        width: 90%;
+    }
+    .page5Date, .page5Time, .page5Location {
+        display: flex;
+        justify-content: flex-start;
+    }
   }
   @media only screen and (min-width: 600px) {
     

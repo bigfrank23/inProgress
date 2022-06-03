@@ -11,6 +11,7 @@ import PrayerImg from '../../images/prayer.png'
 import PrayerImg2 from '../../images/prayer.jpeg'
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { mobile } from "../../responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -25,8 +26,9 @@ const Container = styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${PrayerImg});
     background-size: cover;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,9 +36,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundAttachment: "unset", backgroundPosition: "100% 170px", backgroundSize: "500px 50%"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
     }
   }
 `;
@@ -155,7 +159,7 @@ const Page13 = () => {
                   <Button BtnText="SUBMIT" disabled = {loading} onClick={handleRequest} />
               </form>
           </div>
-              <div className="text-center">
+              <div className="text-center mt-2">
               * All Fields are required
               </div>
       </div>

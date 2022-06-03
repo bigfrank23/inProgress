@@ -7,6 +7,7 @@ import './Gallery.css'
 import PauseOnHover from "../../components/reactSlick/AutoScroll";
 import H2 from '../../components/Text/H2'
 import Footer from '../../components/Footer/Footer'
+import { mobile } from "../../responsive";
 
 const Container = styled.div`
   user-select: none;
@@ -42,9 +43,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundSize: "700px 35%", backgroundPosition: "-25px 100px"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
       .giveNowBtn {
         margin-top: 2rem;
       }

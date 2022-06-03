@@ -169,6 +169,21 @@
         text-align: center;
         padding: 2rem;
     }
+    .page12TopContentBox {
+        display: block;
+    }
+    .page12TopContentBoxLeft img, .page12TopContentBoxRight img {
+        width: 50%;
+        align-self: center;
+    }
+    .page12TopContentBoxLeftPara {
+        padding: 0;
+        margin: 2rem 0;
+    }
+    #page12KnowMoreBtn {
+        text-align: center;
+        padding: 0;
+    }
   }
   @media only screen and (min-width: 600px) {
     .page12TopContent {

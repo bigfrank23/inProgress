@@ -34,6 +34,7 @@ const Navbar = () => {
     const [openMain, setOpenMain] = useState('')
     const [dropdownNav, setDropdownNav] = useState(false)
     const [open, setOpen] = useState(false);
+    const [mobDropdown, setMobDropdown] = useState(false);
     const handleClose = () => {
       setOpen(false);
       setOpenMain(false)
@@ -100,6 +101,7 @@ const Navbar = () => {
               <img src={LogoImg} width={100} alt="logo" />
             </div>
           </Link>
+          <span className='text-white align-self-center'>{moment().format("ddd, h:mmA")}</span>
           <div className="navLinks">
           <div className={openMain ? "mainListItems" : "notActiveMain"}>
                   <div className={openMain ? "mainListItemsTop" : "notActiveMain"}>
@@ -143,10 +145,10 @@ const Navbar = () => {
                             <h6 onClick={()=> {setOpen(!open)}}>{open ? "" : "Select a Province"}</h6>
                           </div>
                           <div className={open ? "provinceNavCenter" : "provinceNavCenterNone"} style={dropdownNav ? {display: "flex"} : {display: "none"}}>
-                            {allProvinces.map((data)=> (
+                            {allProvinces.map((data, i)=> (
                               <>
                               <div className={open ? "sideBlock" : "none"} key={data.id}>
-                                <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
+                                <Link key={i} to={{pathname: `/province/${data.id}`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
                                     <div className="footerHoverItems" id='footerHoverItems' onClick={handleClose}>{data.province}</div>
                                 </Link>
                               </div>
@@ -220,7 +222,7 @@ const Navbar = () => {
                             <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" id='links'>
                                 <i className="fa fa-youtube" aria-hidden="true" />
                             </a>
-                            <a href="https://wa.link/ez9fic" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                            <a href="https://wa.link/hd88ub" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                                 <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
                             </a>
                         </div>
@@ -314,8 +316,8 @@ const Navbar = () => {
                     <i className="fa fa-angle-down" aria-hidden="true" />
                   </div>
                 <ul className="hover" id='provincesLink'>
-                  {provinces.map((data)=> (
-                    <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`, email: `${data.email}`, tel: `${data.tel}`, img: `${data.img}`}}} className="links">
+                  {provinces.map((data, i)=> (
+                    <Link key={i} to={{pathname: `/province/${data.id}`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`, email: `${data.email}`, tel: `${data.tel}`, img: `${data.img}`}}} className="links">
                       <li className="hoverItems">{data.province}</li> <div className="separator">|</div>
                     </Link>
                   ))}
@@ -444,19 +446,6 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="navListItems">
-                Provinces
-                  {/* <div className="hoverAngleIcon">
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </div> */}
-                <ul className="hover" id='provincesLink'>
-                  {provinces.map((data)=> (
-                    <Link key={data.id} to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`, email: `${data.email}`, tel: `${data.tel}`, img: `${data.img}`}}} className="links">
-                      <li className="hoverItems">{data.province}</li>
-                    </Link>
-                  ))}
-                </ul>
-              </li>
-              <li className="navListItems">
                 Events
                   {/* <div className="hoverAngleIcon">
                     <i className="fa fa-angle-down" aria-hidden="true" />
@@ -504,8 +493,30 @@ const Navbar = () => {
                 </Link>
             </div>
           </div>
-          <div className="openLinkBtn" onClick={() => setShowNav(!showNav)}>
-            {showNav ? <>&#10005;</> : <>&#8801;</>}
+          <div className="openLinkBtn" >
+            {showNav ? 
+              <ul className='mobProvinceList'>
+                <li className="mobProvinceListItem" onClick={()=> setMobDropdown(!mobDropdown)}>
+                    Provinces
+                      {/* <div className="hoverAngleIcon">
+                        <i className="fa fa-angle-down" aria-hidden="true" />
+                      </div> */}
+                    <ul className={mobDropdown ? "mobProvinceListDropdown" : "hideMobProvinceListItem"}>
+                      {provinces.map((data, i)=> (
+                        <Link onClick={()=> setShowNav(false)} key={i} to={{pathname: `/province/${data.id}`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`, email: `${data.email}`, tel: `${data.tel}`, img: `${data.img}`}}}>
+                          <li className="mobProvinceListDropdownItems">{data.province}</li>
+                        </Link>
+                      ))}
+                    </ul>
+                </li>
+              </ul>
+            : <div></div>
+            }
+            
+            <div onClick={() => setShowNav(!showNav)}>
+              <div></div>
+              {showNav ? <div className='s'>&#10005;</div> : <div className='t'>&#8801;</div>}
+            </div>
           </div>
           <div className="navButtons">
             <div className="leftBtn">

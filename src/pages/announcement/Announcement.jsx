@@ -11,6 +11,7 @@ import announcementImg from '../../images/announcement1.jpeg'
 import { makeStyles } from '@material-ui/core/styles';
 import { Modal, Button } from "react-bootstrap";
 import './Announcement.css'
+import { mobile } from '../../responsive'
 
 const Container = styled.div`
   user-select: none;
@@ -38,9 +39,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundPositionY: "25%"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
       /* text-shadow: 0 5px green; */
     }
   }

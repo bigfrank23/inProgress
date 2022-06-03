@@ -110,6 +110,7 @@ input[type="radio" i]{
     .page13TopContent {
         padding: 0rem;
         text-align: center;
+        max-width: 100%;
     }
     .page13TopPara {
         padding: 1rem;
@@ -119,6 +120,7 @@ input[type="radio" i]{
     }
     .page13CenterContent {
         padding: 0rem;
+        max-width: 90%;
         /* text-align: center; */
     }
     /* .jtZqMD {
@@ -132,6 +134,22 @@ input[type="radio" i]{
     .page13BottomContent {
         padding: 0 0rem;
         text-align: center;
+    }
+    #prayerTopBx {
+        display: block;
+    }
+    .prayerImg {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        animation: unset;
+    }
+    .prayerImg img{
+        width: 70%;
+    }
+    .textArea textarea{
+        height: 200px;
     }
   }
   @media only screen and (min-width: 600px) {

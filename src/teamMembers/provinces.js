@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import samuelImg from '../images/team/samuel.jpg'
 import oliverImg from '../images/team/oliver.jpg'
 import ephriamImg from '../images/team/ephriam.jpg'
@@ -16,7 +17,7 @@ import Img from '../images/user.png'
 
 export const provinces = [
     {
-        id: 1,
+        id: uuidv4(),
         img: Img,
         province: "ALIMOSHO",
         chairman: "Apostle Dr James Olulaja Iyanda",
@@ -28,7 +29,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.289206370586!2d3.299218314771161!3d6.610942495219252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b91318161a977%3A0x87267b06b2ce54cd!2sGoye%20Pentecostal%20Mission%20International%20Headquarter!5e0!3m2!1sen!2sng!4v1652958669862!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 2,
+        id: uuidv4(),
         img: ephriamImg,
         province: "SURULERE",
         chairman: "Rev Ephraim Ifionu",
@@ -40,7 +41,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.33551566598!2d3.3317531147063195!3d6.479121225475347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b895478b240bd%3A0x9f33ea3480b190cf!2sGlory%20Restoration%20Ministries%20Intl!5e0!3m2!1sen!2sng!4v1652958937421!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 3,
+        id: uuidv4(),
         img: Img,
         province: "APAPA",
         chairman: "Apostle Nelson Chukwudi Eke Okpara",
@@ -52,7 +53,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7929.099444082446!2d3.324956873935285!3d6.451803342243597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b897d5f94fbaf%3A0x930f22a517dd009c!2sSowers%20International%20Ministries!5e0!3m2!1sen!2sng!4v1652959355601!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 4,
+        id: uuidv4(),
         img: Img,
         province: "OJO",
         chairman: "Rev Adeleke Mike Aderinto",
@@ -64,7 +65,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.2301300561517!2d3.170223558005442!3d6.463226463994533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8149b8bbb48f%3A0x7fc891fa19c40758!2s166%20Ojo%20Igbede%20Rd%2C%20Ojo%20102111%2C%20Lagos!5e0!3m2!1sen!2sng!4v1652959699624!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 5,
+        id: uuidv4(),
         img: tonyImg,
         province: "LAGOS ISLAND",
         chairman: "Rev. Tony Samson",
@@ -76,7 +77,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126871.91469212966!2d3.3979524582031355!3d6.426499200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5a50daa802f%3A0x3bc7a78a69d67fcd!2sTREM%20V.I%20Branch!5e0!3m2!1sen!2sng!4v1652961033505!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 6,
+        id: uuidv4(),
         img: ImgC6,
         province: "BADAGRY",
         chairman: "Bishop John Oyedeji Seton Benhotons",
@@ -88,7 +89,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.626605388542!2d2.9294290147062516!3d6.441970225893156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b6329f01bbb4b%3A0xb9c84ee93e64cd6!2sOmi-Eye%20Rd%2C%20103242%2C%20Ilado!5e0!3m2!1sen!2sng!4v1652962540502!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 7,
+        id: uuidv4(),
         img: Img,
         province: "IBEJU/LEKKI",
         chairman: "Rev Dr Andrew Isiaka Oladepo",
@@ -101,7 +102,7 @@ export const provinces = [
         mapLink: '<div style="width: 200px; height: 200px"><iframe src="www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.318109369026!2d3.6996339147063293!3d6.481336025450411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bfd10cf0a8179%3A0x7ff35fca1c286407!2sScripture%20Life%20Christian%20Center!5e0!3m2!1sen!2sng!4v1652716271269!5m2!1sen!2sng" width="200" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>'
     },
     {
-        id: 8,
+        id: uuidv4(),
         img: babatopeImg,
         province: "IKEJA",
         chairman: "Pastor Tope ILESANMI",
@@ -114,7 +115,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63408.72366541461!2d3.3311982791015615!3d6.641305899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93866ded4315%3A0x9752c99e332b95e1!2sCHRIST%20FELLOWSHIP%20MISSION!5e0!3m2!1sen!2sng!4v1652960995406!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 9,
+        id: uuidv4(),
         img: peterImg,
         province: "IKORODU",
         chairman: "Commander Peter Olabode",
@@ -127,7 +128,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.5169607575353!2d3.52305601470652!3d6.582472224301327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bee3eae8eb537%3A0xd1a6d4e3d1fc9907!2s1%20Selewu%20Rd%2C%20Ikorodu%20104102%2C%20Ikorodu!5e0!3m2!1sen!2sng!4v1652962236956!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 10,
+        id: uuidv4(),
         img: femiImg,
         province: "ETI OSA",
         chairman: "BISHOP FEMI SONEYE",
@@ -139,7 +140,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253665.65156940243!2d3.2169453348844543!3d6.581364086353748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf97c687a6377%3A0x5a3ec912515d9b8!2sMiraclebreed%20Assembly!5e0!3m2!1sen!2sng!4v1652961357063!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 11,
+        id: uuidv4(),
         img: patrickImg,
         province: "AMUWO ODOFIN/ORIADE ",
         chairman: "APOSTLE PATRICK UTULU ",
@@ -150,7 +151,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.730483950444!2d3.2537022147062022!3d6.428660726042279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b876f283f115b%3A0x1175f782b5918f32!2sDominion%20Gate%20Ministries%20Intl%20Inc.!5e0!3m2!1sen!2sng!4v1652961474908!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 12,
+        id: uuidv4(),
         img: Img,
         province: "ITAMAGA",
         chairman: "Apostle M. A. Olugbaro",
@@ -162,7 +163,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.036177534891!2d3.510934114706575!3d6.642429723612293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103beeb0f53d481f%3A0x1a30afed6047d361!2s2%20Babs%20Sheriff%20St%2C%20Ikorodu%20104101%2C%20Ikorodu!5e0!3m2!1sen!2sng!4v1652962298359!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 13,
+        id: uuidv4(),
         img: oliverImg,
         province: "AGEGE",
         chairman: "Bishop Dr Praise Oliver",
@@ -174,7 +175,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.288221253206!2d3.3183200147066003!3d6.6110653739734575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b91a5805a8f95%3A0xc61e2855dff52d8!2sDestiny%20Revival%20Church!5e0!3m2!1sen!2sng!4v1652961788203!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 14,
+        id: uuidv4(),
         img: olaoyeImg,
         province: "KOSOFE",
         chairman: "Apostle Dr. Joshua Olaoye ",
@@ -186,7 +187,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3862440406806!2d3.3946020147065528!3d6.598827324113963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b92e8801790c1%3A0xa3a2705e7dd02c4d!2sUpper%20Room%20Baptist%20Church%20Headquarters!5e0!3m2!1sen!2sng!4v1652961836642!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 15,
+        id: uuidv4(),
         img: samuelImg,
         province: "AGBADO / OKE-ODO",
         chairman: "Pastor (Barr.) Samuel O. Afilaka ",
@@ -198,7 +199,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.0798352071183!2d3.2786641147066633!3d6.637007523674882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9139cc34ba5b%3A0x37fd5b88407c70e8!2sFaithful%20Reconcilers&#39;%20Bible%20Ministry%20(Faith%20Cathedral)!5e0!3m2!1sen!2sng!4v1652961906609!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 16,
+        id: uuidv4(),
         img: tundeImg,
         province: "IFAKO IJAIYE",
         chairman: "Rev Alfred Olatunde Shoyemi",
@@ -210,7 +211,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.473974050682!2d3.353233414706515!3d6.587855124239713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b92158d787701%3A0x669aaad605f15748!2sThe%20Truth%20Christian%20Missio%20Inc!5e0!3m2!1sen!2sng!4v1652961958097!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 17,
+        id: uuidv4(),
         img: oladitiImg,
         province: "AYOBO/OKUNOLA",
         chairman: "Bishop Samuel Oludare Oladiti",
@@ -222,7 +223,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.386449699037!2d3.2628013147065538!3d6.598801624114261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9070914ef0d9%3A0x5bbdbc6b9b32c4d1!2sVictory%20International%20Faith%20Mission!5e0!3m2!1sen!2sng!4v1652961993905!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 18,
+        id: uuidv4(),
         img: ImgB17,
         province: "MAINLAND",
         chairman: "Rev S.T Israel",
@@ -234,7 +235,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.1575900901257!2d3.3773518174438517!3d6.501725299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c8a989f1523%3A0x3b0b0f6a0960b972!2sFoursquare%20Gospel%20Church%20Nigeria%20Headquarters!5e0!3m2!1sen!2sng!4v1652962099162!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 19,
+        id: uuidv4(),
         img: ImgC18,
         province: "EPE ",
         chairman: "Rev Aghraghra Victor Uzezi",
@@ -246,7 +247,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4724960577846!2d3.9639334147065353!3d6.5880401242375655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103945bf14bff8cf%3A0x18efecaef1d327ac!2s54%20Kasali%20Oluwo%20St!5e0!3m2!1sen!2sng!4v1652962153442!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 20,
+        id: uuidv4(),
         img: Img,
         province: "ISOLO EJIGBO ",
         chairman: "Apostle George Anselem ",
@@ -257,7 +258,7 @@ export const provinces = [
         mapLink: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.771016473573!2d3.3295831147064745!3d6.550568824665592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e0c31cdf0e3%3A0x631491b610157c81!2sVineyard%20Christian%20Ministries!5e0!3m2!1sen!2sng!4v1652962360316!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     {
-        id: 21,
+        id: uuidv4(),
         img: Img,
         province: "MUSHIN / OSHODI ",
         chairman: "Apostle Okechukwu Etiaka",

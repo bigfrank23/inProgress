@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "https://pfnlagosstate.org",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
@@ -45,6 +46,7 @@
     "redux-thunk": "^2.4.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
+    "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -9,6 +9,7 @@ import H3 from '../../../components/Text/H3';
 import { Link, useLocation } from 'react-router-dom'
 import './FullEventDetail.css'
 import Button2 from '../../../components/Button/Button2'
+import { mobile } from '../../../responsive'
 
 const Container = styled.div`
   user-select: none;
@@ -34,9 +35,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 62vh;
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundPosition: "0 15%"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
     }
   }
   .pageBanner {
@@ -73,7 +76,7 @@ const FullEventDetail = () => {
           <div className="fullEventDetailImg m-auto">
             {location.state.img ? <><img src={location.state.img} alt="" style={{width: "100%"}} /></> : null}
           </div>
-          <div className="sectThree">
+          <div className="sectThree" id='fullEventDetailSectThree'>
             <div className="sectThreeTitle text-center">
               <H3>{location.state.title}</H3>
             </div>

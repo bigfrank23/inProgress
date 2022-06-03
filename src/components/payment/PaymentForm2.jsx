@@ -43,10 +43,12 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundPosition: "10px -85px", backgroundSize: "400px 100%"})}
     .page1Header {
       color: #fff;
       text-align: center;
       /* text-shadow: 0 4px brown; */
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
     }
   }
   .pageBanner {
@@ -106,133 +108,6 @@ const Container = styled.div`
 `;
 
 const PaymentForm2 = () => {
-  const [fullname, setFullname] = useState('')
-  const [email, setEmail] = useState('')
-  const [purpose, setPurpose] = useState('')
-  const [amount, setAmount] = useState('')
-
-    // Initializing all the state variables 
-    const [info, setInfo] = useState([]);
-    const [input, setInput] = useState(0);
-    const [from, setFrom] = useState("ngn");
-    const [to, setTo] = useState("ngn");
-    const [options, setOptions] = useState([]);
-    const [output, setOutput] = useState(0);
-    const [isChecked, setIsChecked] = useState(false);
-    
-    // Calling the api whenever the dependency changes
-    useEffect(() => {
-      axios.get(
-  `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`)
-     .then((res) => {
-        setInfo(res.data[from]);
-      })
-    }, [from]);
-    
-    // Calling the convert function whenever
-    // a user switches the currency
-    useEffect(() => {
-      setOptions(Object.keys(info));
-      convert();
-    }, [info])
-      
-    // Function to convert the currency
-    function convert() {
-      var rate = info[to];
-      setOutput(input * rate);
-    }
-    
-    // Function to switch between two currency
-    function flip() {
-      var temp = from;
-      setFrom(to);
-      setTo(temp);
-    }
-    
-    const handleCheck = () => {
-      setIsChecked(!isChecked)
-      !isChecked ? console.log("checked") : console.log("unchecked");
-    }
-    
-
-  const paywithpaystack = (e) => {
-    convert()
-    e.preventDefault()
-    const paystack = new PaystackPop()
-
-    paystack.newTransaction({
-      key: "pk_test_991ef6cfc641dd4b948b2cac759d00d34d3ef116",
-      amount: output.toFixed(2) * 100,
-      fullname,
-      email,
-      purpose,
-      onSuccess(transaction){
-        let message = `Payment Completed! Transaction reference ${transaction.reference}`
-        alert(message)
-        setFullname= ""
-        setEmail= ""
-        setPurpose=""
-        setAmount=""
-      },
-      onCancel(){
-        alert("Transaction Cancelled!")
-      }
-    })
-  }
-
-  const paywithpaystack2 = (e) => {
-    convert()
-    e.preventDefault()
-    const paystack = new PaystackPop()
-
-    paystack.newTransaction({
-      key: "pk_test_991ef6cfc641dd4b948b2cac759d00d34d3ef116",
-      amount: output.toFixed(2) * 100,
-      purpose,
-      email,
-      onSuccess(transaction){
-        let message = `Payment Completed! Transaction reference ${transaction.reference}`
-        alert(message)
-        setPurpose=""
-        setAmount=""
-        setEmail=""
-      },
-      onCancel(){
-        alert("Transaction Cancelled!")
-      }
-    })
-  }
-
-  const config = {
-    reference: (new Date()).getTime().toString(),
-    // email: "user@example.com",
-    amount: 20000,
-    publicKey: 'pk_test_991ef6cfc641dd4b948b2cac759d00d34d3ef116',
-};
-
-// you can call this function anything
-const onSuccess = (reference) => {
-  // Implementation for whatever you want to do with reference and after success call.
-  console.log(reference);
-};
-
-// you can call this function anything
-const onClose = () => {
-  // implementation for  whatever you want to do when the Paystack dialog closed.
-  console.log('closed')
-}
-
-const PaystackHookExample = () => {
-    const initializePayment = usePaystackPayment(config);
-    return (
-      <div>
-          <button onClick={() => {
-              initializePayment(onSuccess, onClose)
-          }}>Paystack Hooks Implementation</button>
-      </div>
-    );
-};
-
 
   return (
     <Container>
@@ -249,7 +124,7 @@ const PaystackHookExample = () => {
       </div>
     </div> */}
     <>
-    <iframe loading="lazy" src="https://my.churchplus.co/iframe/bd70cedf-e3c1-4192-ee40-08da4224da26" style={{border: "0px #F4F4F4 dashed", width: "100%", height: "1190px"}} name="online-giving" scrolling="no" frameBorder="1" marginHeight="0px" marginWidth="0px" allowFullScreen></iframe>
+    <iframe loading="lazy" src="https://my.churchplus.co/iframe/bd70cedf-e3c1-4192-ee40-08da4224da26" style={{border: "0px #F4F4F4 dashed", width: "100%", height: "960px"}} name="online-giving" scrolling="no" frameBorder="1" marginHeight="0px" marginWidth="0px" allowFullScreen></iframe>
     </>
     <Footer />
     </Container>

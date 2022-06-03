@@ -10,7 +10,7 @@ import Page9 from "./pages/page9/Page9";
 // import Page12 from "./pages/page12/Page12";
 import LSES from "./pages/LSES/LSES";
 import Page13 from "./pages/page13/Page13";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, HashRouter, Switch, Route} from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import styled from "styled-components";
 import WhatWeBelieve from "./pages/whatWeBelieve/WhatWeBelieve";
@@ -56,7 +56,7 @@ function App() {
   // const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
   return (
     <Container>
-      <Router>
+      <HashRouter>
         <Navbar />
         <ScrollToTop />
         <Switch>
@@ -95,20 +95,20 @@ function App() {
           <Route exact path='/announcement' component={Announcement} />
           <Route exact path='/give2' component={PaymentForm} />
           <Route exact path='/give' component={PaymentForm2} />
-          <Route exact path='/full_exec_detail' component={FullExecDetail} />
+          <Route exact path='/full_exec_detail/:id' component={FullExecDetail} />
           <Route exact path='/full_exec_detail_cwc' component={FullExecDetail2} />
           <Route exact path='/full_exec_detail_cwc2' component={FullExecDetail3} />
           <Route exact path='/full_exec_detail_cwc3' component={FullExecDetail4} />
           <Route exact path='/full_exec_detail_cwc4' component={FullExecDetail5} />
           <Route exact path='/full_exec_detail_cwc5' component={FullExecDetail6} />
-          <Route exact path='/chapter' component={Chapters} />
+          <Route exact path="/province/:id" component={Chapters} />
           <Route exact path='/all-events' component={AllEvents} />
           <Route exact path='/upcoming-events' component={Upcoming} />
           <Route exact path='/current-events' component={Current} />
           <Route exact path='/past-events' component={Past} />
           <Route exact path='/full-event-detail' component={FullEventDetail} />
         </Switch>
-      </Router>
+      </HashRouter>
       <GoUp />
     </Container>
   );

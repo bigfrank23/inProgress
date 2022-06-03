@@ -49,3 +49,38 @@
     color: #990000;
     margin-right: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+    .fullExecDetailContainer {
+        display: block !important;
+        /* gap: 6rem; */
+        padding: 2rem !important;
+    }
+    .fullExecDetailContainerLeft {
+        width: 70%;
+        margin: auto;
+    }
+    .fullExecDetailContainerRight {
+        margin-top: 1.2rem;
+    }
+    .fullExecDetailContainerRightName{
+        text-align: center;
+    }
+    .fullExecDetailContainerRightName h2{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .fullExecDetailContainerRightTitle{
+        text-align: center;
+    }
+    .fullExecDetailContainerRightProvince {
+        display: flex;
+        justify-content: center;
+    }
+    .fullExecDetailContainerLeftContent {
+        padding-top: 3rem !important;
+    }
+    .fullExecDetailContainerRightBio {
+        max-width: 100% !important;
+    }
+}

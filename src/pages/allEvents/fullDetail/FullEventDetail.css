@@ -10,3 +10,15 @@
     background-size: cover;
     margin-top: 5rem !important;
 }
+
+@media only screen and (max-width: 600px) {
+    .fullEventDetailContent {
+        padding: 2rem 2rem;
+    }
+    .fullEventDetailImg {
+        width: 75% !important;
+    }
+    #fullEventDetailSectThree{
+        padding: 0 !important;
+    }
+}

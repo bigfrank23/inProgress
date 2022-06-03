@@ -100,6 +100,7 @@
     -webkit-column-width: 100%;
     -moz-column-width: 100%;
     column-width: 100%;
+    display: block;
 }
 }
 @media only screen and (min-width: 600px) {

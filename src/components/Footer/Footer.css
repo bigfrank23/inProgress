@@ -232,6 +232,8 @@ td._51m- _2pir _51mw{
     }
     #footerIframe{
         margin-top: 2rem;
+        display: flex;
+        justify-content: center;
     }
     .footerCredits{
         display: block;

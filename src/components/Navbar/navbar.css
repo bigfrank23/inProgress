@@ -480,6 +480,10 @@
         text-align: center;
         z-index: 1;
         font-size: 30px;
+        position: absolute;
+        display: flex;
+        /* justify-content: space-between; */
+        gap: 13rem;
     }
     .mobileNavFlexBtn{
         display: flex;
@@ -505,6 +509,7 @@
     }
     .navListItems{
         display: block;
+        padding: 5px 0;
     }
     .navListItems:hover #provincesLink {
         display: block;
@@ -517,10 +522,75 @@
         display: flex;
         gap: 1rem;
         justify-content: center;
+        font-size: 10px !important;
     }
     .mobileNavFlexBtnLinks button{
         min-width: 65px;
         padding: 5px 5px;
+    }
+    .hoverProvinces{
+        height: auto;
+        width: 50% !important;
+        display: block !important;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: unset !important;
+        z-index: 0 !important;
+    }
+    .mobProvinceList{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-self: center;
+    }
+    .mobProvinceListItem{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .mobProvinceListDropdown{
+        height: auto;
+        display: flex !important;
+        flex-direction: column;
+        gap: 7px;
+        position: absolute;
+        top: 35vh;
+        left: 100%;
+        /* background: linear-gradient(45deg, #232e32, transparent); */
+        background-color: #232e32;
+        padding: 1rem 4rem;
+        /* width: !important; */
+        border-radius: 5px;
+        transform: translate(-50%, -50%);
+        transition: left .5s linear;
+        z-index: 0 !important;
+        list-style: none;
+    }
+    .mobProvinceListDropdown a, .hideMobProvinceListItem a{
+        text-decoration: none !important;
+    }
+    .mobProvinceListDropdownItems{
+        font-size: 10px;
+        color: #fff;
+    }
+    .hideMobProvinceListItem{
+        height: auto;
+        display: flex !important;
+        flex-direction: column;
+        gap: 7px;
+        position: absolute;
+        top: 35vh;
+        left: -500%;
+        /* background: linear-gradient(45deg, #232e32, transparent); */
+        background-color: #232e32;
+        padding: 1rem 4rem;
+        /* width: !important; */
+        border-radius: 5px;
+        transform: translate(-50%, -50%);
+        transition: left .5s linear;
+        z-index: 0 !important;
+        list-style: none;
     }
 }
 @media only screen and (min-width: 600px) {

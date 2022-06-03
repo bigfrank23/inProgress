@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import Img from '../images/profile.png'
 // import enyinnayaImg from '../images/team/Enyinnaya Okwuonu Chairman.jpg'
 import Img2 from '../images/team/akin.jpg'
@@ -43,7 +44,7 @@ import ericImg from '../images/team/eric.jpg'
 
 export const cwc = [
   {
-    id: 1,
+    id: uuidv4(),
     img: Img,
     name: "APOSTLE Enyinnaya Emeka Okwuonu",
     title: "CHAIRMAN ",
@@ -59,7 +60,7 @@ export const cwc = [
     header: "CWC"
   },
   {
-    id: 2,
+    id: uuidv4(),
     img: Img2,
     name: "PASTOR LEKE AKINOLA",
     title: "DEPUTY CHAIRMAN ",
@@ -74,7 +75,7 @@ export const cwc = [
     header: "CWC"
   },
   {
-    id: 3,
+    id: uuidv4(),
     img: akinyeleImg,
     name: "APOSTLE Mehmood Akinyele Akindejoye",
     title: "SECRETARY ",
@@ -92,7 +93,7 @@ export const cwc = [
     header: "CWC"
   },
   {
-    id: 4,
+    id: uuidv4(),
     img: phyllisImg,
     name: "REV (DR) Phyllis Peace Goodey",
     title: "TREASURER ",
@@ -114,7 +115,7 @@ export const cwc = [
     header: "CWC"
   },
   {
-    id: 5,
+    id: uuidv4(),
     img: Img,
     name: "PASTOR BAYO OYEYEMI",
     title: "Financial Secretary ",
@@ -137,7 +138,7 @@ export const cwc = [
 // The Directors
 export const directors = [
   {
-    id: 1,
+    id: uuidv4(),
     img: ImgB31,
     name: "Rev. Juliet Binitie",
     title: "DEPUTY SECRETARY",
@@ -158,7 +159,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 2,
+    id: uuidv4(),
     img: folahanImg,
     name: "REV. OLUSANYA FOLAHAN OLUMUYIWA ",
     title: "State Deputy Treasurer ",
@@ -180,7 +181,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 3,
+    id: uuidv4(),
     img: ImgB32,
     name: "REV FRANK IGHO ERHABOR ",
     title: "DEPUTY FINANCIAL SECRETARY",
@@ -201,7 +202,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 4,
+    id: uuidv4(),
     img: tonyeImg,
     name: "Apostle Tonye Nengi Oliver ",
     position: "President",
@@ -222,7 +223,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 5,
+    id: uuidv4(),
     img: Img,
     name: "APOSTLE MIKE HONOUR AKINYOADE",
     title: "DIRECTOR , DIGITAL MEDIA",
@@ -241,7 +242,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 6,
+    id: uuidv4(),
     img: helenImg,
     name: "Mrs Karika Helen Atebefia",
     title: "DIRECTOR, CHILDREN AND TEENS",
@@ -262,7 +263,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 7,
+    id: uuidv4(),
     img: ericImg,
     name: "Rev Dr Eric IGHALO",
     title: "STATE DIRECTOR- Community and People Development Directorate",
@@ -283,7 +284,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 8,
+    id: uuidv4(),
     img: Img,
     name: "PASTOR OLUMIDE OLUGBENLE",
     title: "DIRECTOR, TRAINING",
@@ -302,7 +303,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 9,
+    id: uuidv4(),
     img: Img,
     name: "Bishop Dr. Theophilus Taiwo Ajose.",
     title: "Director, Politics and Governance",
@@ -322,7 +323,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 10,
+    id: uuidv4(),
     img: Img,
     name: "PASTOR CHIGOZIE ANYANWU",
     title: "MUSIC DIRECTOR",
@@ -342,7 +343,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 11,
+    id: uuidv4(),
     img: amusanImg,
     name: "Evangelist Olalekan Babatunde Amusan",
     title: " DIRECTOR EVANGELISM AND MISSIONS",
@@ -363,7 +364,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 12,
+    id: uuidv4(),
     img: obinnaImg,
     name: "Pastor Obinna Paul Egbuonu",
     title: "DIRECTOR PLANNING AND STRATEGY",
@@ -384,7 +385,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 13,
+    id: uuidv4(),
     img: ImgB8,
     name: "BISHOP MOSES ALABI IDRIS ",
     title: "STATE PRAYER DIRECTOR",
@@ -405,7 +406,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 14,
+    id: uuidv4(),
     img: osayiImg,
     name: "REV DAVID AUSTIN OSAYI ",
     title: "PROTOCOL DIRECTOR",
@@ -426,7 +427,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 15,
+    id: uuidv4(),
     img: Img,
     name: "PASTOR (DR) OLUMUYIWA ADEDOYIN OLULANA",
     title: "DIRECTOR - INTERMINISTERIAL",
@@ -445,7 +446,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 16,
+    id: uuidv4(),
     img: ImgB11,
     name: "REV. Oladele Olasunkanmi Afolabi ",
     title: "State Director, Project and Infrastructure ",
@@ -466,7 +467,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 17,
+    id: uuidv4(),
     img: elebuteImg,
     name: "REV DR MOSES BABATUNDE ELEBUTE",
     title: "DIRECTOR - BUSINESS DEVELOPMENT ",
@@ -488,7 +489,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 18,
+    id: uuidv4(),
     img: Img,
     name: "BISHOP ANDY OGBU",
     title: "DIRECTOR, SECURITY AND INTELLIGENCE",
@@ -508,7 +509,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 19,
+    id: uuidv4(),
     img: kenImg,
     name: "Kennedy Chukwukadibia Chidubem ",
     position: "Lead Pastor ",
@@ -529,7 +530,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 20,
+    id: uuidv4(),
     img: Img,
     name: "Apostle Dr Ameh Joseph Sunday.",
     title: "DEPUTY WELFARE AND EMPOWERMENT OFFICER",
@@ -549,7 +550,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 21,
+    id: uuidv4(),
     img: oladeleImg,
     name: "Rev Dr Oladele Rufus Ajayi ",
     title: "DEPUTY DIRECTOR INTERMINISTERIAL",
@@ -570,7 +571,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 22,
+    id: uuidv4(),
     img: clemsImg,
     name: "APOSTLE CLEMS PREACHER AKIBOR",
     title: "DEPUTY DIRECTOR, STRATEGY AND PLANNING ",
@@ -591,7 +592,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 23,
+    id: uuidv4(),
     img: Img,
     name: "Bishop Louis E. Henshaw",
     title: "Deputy Director of Projects and Infrastructure",
@@ -610,7 +611,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 24,
+    id: uuidv4(),
     img: joyImg,
     name: "BISHOP OBERIKO JOY",
     title: "DEPUTY DIRECTOR, DIGITAL MEDIA",
@@ -632,7 +633,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 25,
+    id: uuidv4(),
     img: Img25,
     name: "Pastor Emmanuel Oluwemimo Falodun",
     title: "Deputy Director - Directorate of Learning and Development ",
@@ -653,7 +654,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 26,
+    id: uuidv4(),
     img: idiongImg,
     name: "APOSTLE Idongesit Ezekiel James ",
     title: "DEPUTY DIRECTOR, SECURITY AND INTELLIGENCE",
@@ -675,7 +676,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 27,
+    id: uuidv4(),
     img: Img,
     name: "REV. DR. AKINLADE",
     title: "DIRECTOR, HEALTH AND MEDICAL SERVICES",
@@ -694,7 +695,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 28,
+    id: uuidv4(),
     img: Img,
     name: "Apostle Stephen Atolani Pius",
     title: "DEPUTY DIRECTOR, PRAYERS",
@@ -714,7 +715,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 29,
+    id: uuidv4(),
     img: Img,
     name: "Barr. (Mrs.) Tina Oganiru",
     title: "Deputy Director, Legal ",
@@ -733,7 +734,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 30,
+    id: uuidv4(),
     img: davidImg,
     name: "Pastor David Oluwatosin Oladipupo",
     title: "DEPUTY PROTOCOL DIRECTOR",
@@ -754,7 +755,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 31,
+    id: uuidv4(),
     img: benImg,
     name: "Apostle Dr Benjamin Omoregie Osagie",
     position: "General Overseer",
@@ -776,7 +777,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 32,
+    id: uuidv4(),
     img: joshuaImg,
     name: "PASTOR DR. Barnabas Aihebho-oria Otoibhi ",
     title: "DEPUTY DIRECTOR, POLITICS AND GOVERNANCE",
@@ -798,7 +799,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 33,
+    id: uuidv4(),
     img: Img,
     name: "Rev. Ngozi Nwaogu",
     title: "EX-OFFICIO (CPM)",
@@ -817,7 +818,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 34,
+    id: uuidv4(),
     img: Img,
     name: "Rev. Mrs Roseline Odiete ",
     title: "WELFARE AND EMPOWERMENT OFFICER",
@@ -836,7 +837,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 35,
+    id: uuidv4(),
     img: akpabioImg,
     name: "REV (MRS) GLORY AKPABIO ",
     title: "CO-ORDINATOR WOMEN WING",
@@ -855,7 +856,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 36,
+    id: uuidv4(),
     img: Img,
     name: "PASTOR CLEM IWEGBU ",
     title: "EX-OFFICIO (TREM)",
@@ -875,7 +876,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 37,
+    id: uuidv4(),
     img: Img,
     name: "BARRISTER TOMI VINCENT ",
     title: "LEGAL ADVISER",
@@ -894,7 +895,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 38,
+    id: uuidv4(),
     img: Img,
     name: "Enushai Sylvester Success Ngozi  ",
     title: "EX-OFFICIO (MFM) ",
@@ -913,7 +914,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 39,
+    id: uuidv4(),
     img: Img,
     name: "BISHOP MATTHEW EGWUOWA  ",
     title: "EX OFFICIO, CGMI",
@@ -932,7 +933,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 40,
+    id: uuidv4(),
     img: Img,
     name: "Pastor S. A. Lebi ",
     title: "Ex Officio, Lord's Chosen",
@@ -951,7 +952,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 41,
+    id: uuidv4(),
     img: Img,
     name: "Evang. Chris Joseph",
     title: "Ex-officio, Lord's Chosen  ",
@@ -971,7 +972,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 42,
+    id: uuidv4(),
     img: boseImg,
     name: "BOSE OLASUPO ",
     title: "STATE ADMIN SEC.",
@@ -990,7 +991,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 43,
+    id: uuidv4(),
     img: Img,
     name: "BISHOP MATTHEW EGWUOWA",
     title: "EX OFFICIO, CGMI ",
@@ -1009,7 +1010,7 @@ export const directors = [
     header: "State Director"
   },
   {
-    id: 44,
+    id: uuidv4(),
     img: Img,
     name: "Bishop Samuel Oniekoro",
     title: "Ex-officio, Gospel Church of Christ Rep.",
@@ -1033,7 +1034,7 @@ export const directors = [
 //The Chairmen
 export const chairmen = [
     {
-        id: 1,
+      id: uuidv4(),
         img: Img,
         name: "Apostle Dr James Olulaja Iyanda",
         title: "CHAIRMAN - ALIMOSHO PROVINCE",
@@ -1052,7 +1053,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 2,
+      id: uuidv4(),
         img: ephriamImg,
         name: "REV Ephraim Nnaemeka Ifionu",
         position: "Senior Pastor",
@@ -1073,7 +1074,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 3,
+      id: uuidv4(),
         img: Img,
         name: "APOSTLE NELSON CHUKWUDI EKE OKPARA",
         title: "CHAIRMAN, APAPA PROVINCE",
@@ -1092,7 +1093,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 4,
+      id: uuidv4(),
         img: Img,
         name: "Rev Adeleke Mike Aderinto",
         title: "CHAIRMAN, OJO PROVINCE",
@@ -1111,7 +1112,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 5,
+      id: uuidv4(),
         img: tonyImg,
         name: "Rev. Tony Emuoruona Samson",
         title: "CHAIRMAN, LAGOS ISLAND PROVINCE",
@@ -1132,7 +1133,7 @@ export const chairmen = [
         bio: "Tony Samson is the Senior Pastor of TREM, Victoria Island, Lagos. I am married to Pastor Mrs Pat Samson"
     },
     {
-        id: 6,
+      id: uuidv4(),
         img: ImgC6,
         name: "Bishop John Oyedeji Seton Benhotons",
         title: "CHAIRMAN, BADAGRY PROVINCE ",
@@ -1153,7 +1154,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 7,
+      id: uuidv4(),
         img: babatopeImg,
         name: "Pastor Babatope Rufus ILESANMI ",
         position: "Senior Pastor ",
@@ -1174,7 +1175,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 8,
+      id: uuidv4(),
         img: peterImg,
         name: "Commander Peter O. Olabode",
         position:"President ",
@@ -1195,7 +1196,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 9,
+      id: uuidv4(),
         img: femiImg,
         name: "BISHOP FEMI EMMANUEL SONEYE",
         title: "CHAIRMAN - ETIOSA PROVINCE",
@@ -1216,7 +1217,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 10,
+      id: uuidv4(),
         img: patrickImg,
         name: "Apostle Dr. Patrick Utulu",
         title: "CHAIRMAN - AMUWO ODOFIN/ORIADE PROVINCE",
@@ -1237,7 +1238,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 11,
+      id: uuidv4(),
         img: Img,
         name: "APOSTLE M. A. OLUGBARO",
         title: "CHAIRMAN, ITAMAGA PROVINCE",
@@ -1256,7 +1257,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 12,
+      id: uuidv4(),
         img: oliverImg,
         name: "GENERAL OLIVER PRAISE",
         title: "CHAIRMAN, AGEGE PROVINCE ",
@@ -1277,7 +1278,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 13,
+      id: uuidv4(),
         img: olaoyeImg,
         name: "Apostle JOSHUA OLUWAGBEMIGA OLAOYE",
         position: "GENERAL OVERSEER",
@@ -1298,7 +1299,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 14,
+      id: uuidv4(),
         img: samuelImg,
         name: "Pastor (Barr.) Samuel Olanrewaju Afilaka",
         title: "CHAIRMAN, AGBADO OKE ODO PROVINCE",
@@ -1319,7 +1320,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 15,
+      id: uuidv4(),
         img: tundeImg,
         name: "Rev Alfred Olatunde Shoyemi",
         title: "CHAIRMAN, IFAKO IJAIYE PROVINCE",
@@ -1340,7 +1341,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 16,
+      id: uuidv4(),
         img: oladitiImg,
         name: "BISHOP SAMUEL OLUDARE OLADITI",
         position: "General Overseer",
@@ -1361,7 +1362,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 17,
+      id: uuidv4(),
         img: ImgB17,
         name: "REV Sheriff Tosin Israel",
         title: "Chairman, Mainland Province",
@@ -1382,7 +1383,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 18,
+      id: uuidv4(),
         img: ImgC18,
         name: "Rev Aghraghra Victor Uzezi",
         title: 'CHAIRMAN, EPE PROVINCE ',
@@ -1403,7 +1404,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 19,
+      id: uuidv4(),
         img: Img,
         name: "APOSTLE GEORGE ANSELEM",
         title: "CHAIRMAN, ISOLO EJIGBO PROVINCE",
@@ -1422,7 +1423,7 @@ export const chairmen = [
         header: "Province Chairman"
     },
     {
-        id: 20,
+      id: uuidv4(),
         img: Img,
         name: "APOSTLE OKECHUKWU ETIAKA.",
         title: "CHAIRMAN, MUSHIN OSHODI ",
@@ -1442,7 +1443,7 @@ export const chairmen = [
     },
     
     {
-      id: 21,
+      id: uuidv4(),
       img: Img,
       name: "REV DR ANDREW ISIAKA OLADEPO",
       title: "CHAIRMAN - IBEJU/LEKKI PROVINCE ",

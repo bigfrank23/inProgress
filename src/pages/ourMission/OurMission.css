@@ -114,6 +114,7 @@
     }
     .ourMissionBxContent p {
         font-size: 1rem;
+        padding: 0;
     }
     .ourMissionBxContent h2 {
         top: 0px;

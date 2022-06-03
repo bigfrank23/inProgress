@@ -32,7 +32,7 @@ export const directorate = [
     {
         id: 3,
         img: Img3,
-        directorate: 'Directorate of Training'
+        directorate: 'Directorate of Learning & Development'
     },
     {
         id: 4,

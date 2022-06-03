@@ -7,14 +7,15 @@ import Footer from '../../components/Footer/Footer';
 import './Page9.css'
 import Button from '../../components/Button/Button';
 import { directorate } from '../../teamMembers/directorate';
-import { Modal, Box, Typography } from '@mui/material';
-import { makeStyles } from '@material-ui/core/styles';
-import { faChurch, faAddressCard, faPhone, faAt, faCalendar, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+// import { Modal, Box, Typography } from '@mui/material';
+import { Modal} from "react-bootstrap";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { provinces } from '../../teamMembers/provinces';
 import DirectorateImg from '../../images/directorate.png'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { mobile } from '../../responsive';
 
 
 const Container = styled.div`
@@ -42,46 +43,24 @@ user-select: none;
     position: relative;
     top: 0;
     height: 53vh;
+    ${mobile({ height: "40vh", clipPath: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
     }
   }
 `
-// Modal Style
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-const useStyles = makeStyles((theme) => ({
-  /** Changed modalStyle */
-  modalStyle: { backgroundColor: "rgba(0, 0, 0, 0.1)", zIndex: "1" },
-  boxStyle: {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  backgroundColor: "#fff",
-  // border: "2px solid #000",
-  outline: 0,
-  boxShadow: 24,
-  p: 4,
-  }
-}));
 
 const Page9 = () => {
-  const classes = useStyles()
-  const [open, setOpen] = useState(false);
+  const [show, setShow] = useState(false);
   const [modalData, setModalData] = useState("");
-  const handleClose = () => setOpen(false);
+
+  const handleShow = (data) => {
+    setShow(true)
+    setModalData(data)
+  };
+  const handleClose = () => setShow(false);
 
   const allProvinces = provinces.sort(function(a, b) {
     const nameA = a.province.toUpperCase(); // ignore upper and lowercase
@@ -216,9 +195,9 @@ const Page9 = () => {
           <h2>Join A Team</h2>
         </div>
         <div className="page9HoverCard">
-          {directorate.map((data)=> (
+          {directorate.map((data, i)=> (
             <>
-              <div className="page9Card" onClick={()=> {setOpen(true); setModalData(data)}}>
+              <div key={i} className="page9Card" onClick={()=>handleShow(data)}>
                 <div className="page9CardImgBx">
                   <img src={data.img} alt="" />
                 </div>
@@ -235,38 +214,35 @@ const Page9 = () => {
                 </div>
                   <FontAwesomeIcon className="fa5Icon page9Icon" icon={faArrowUpRightFromSquare} />
               </div>
-              <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                  className={classes.modalStyle}
-                >
-                  <Box className={classes.boxStyle}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign: "center", fontFamily: "cursive"}}>
-                      {modalData.directorate}
-                    </Typography>
-                    <div style={{padding: "2rem"}}>
+              
+            </>
+          ))}
+          <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title className='text-danger text-center'>{modalData.directorate}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <div style={{padding: "2rem"}}>
                     <form onSubmit = {handleRequest} method = "post">
-                      <div class="form-group">
-                        <label for="name">Full name</label>
+                      <div className="form-group">
+                        <label htmlFor="name">Full name</label>
                         <input type="text" className="form-control" id="name" value = {fullname} onChange = {(e) => setFullname(e.target.value)}  />
                       </div>
-                      <div class="form-group">
-                        <label for="inputAddress">Address</label>
+                      <div className="form-group">
+                        <label htmlFor="inputAddress">Address</label>
                         <input type="text" className="form-control" id="inputAddress" value = {address} onChange = {(e) => setAddress(e.target.value)}  />
                       </div>
-                      <div class="form-group">
-                        <label for="email">Email</label>
+                      <div className="form-group">
+                        <label htmlFor="email">Email</label>
                         <input type="email" className="form-control" id="email" value = {email} onChange = {(e) => setEmail(e.target.value)}  />
                       </div>
                       <div class="form-group my-3">
-                        <label for="phone">Phone Number</label>
+                        <label htmlFor="phone">Phone Number</label>
                         <input type="number" className="form-control" id="phone" value = {phone} onChange = {(e) => setPhone(e.target.value)}  />
                       </div>
                       <div className="form-row">
                         <div className="form-group col-md-6">
-                          <label for="inputState">Select your province</label>
+                          <label htmlFor="inputState">Select your province</label>
                           <select id="inputState" class="form-control" value = {province} onChange = {(e) => setProvince(e.target.value)}>
                             <option selected>Select</option>
                               {allProvinces.map((data)=> (
@@ -277,17 +253,20 @@ const Page9 = () => {
                           </select>
                         </div>
                       </div>
-                        <div class="form-group my-3">
-                        <label for="exampleFormControlTextarea1">Your Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value = {message} onChange = {(e) => setMessage(e.target.value)} />
+                        <div className="form-group my-3">
+                        <label htmlFor="exampleFormControlTextarea1">Your Message</label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value = {message} onChange = {(e) => setMessage(e.target.value)} />
                       </div>
                         <button type="submit" className="btn btn-primary" disabled = {loading} onClick = {handleRequest}>Submit</button>
                     </form>
                     </div>
-                  </Box>
-                </Modal>
-            </>
-          ))}
+                </Modal.Body>
+                <Modal.Footer>
+                  <button type="button" className="btn btn-success stretched-link" onClick={handleClose}>
+                    Close
+                  </button>
+                </Modal.Footer>
+              </Modal>
         </div>
       </div>
      

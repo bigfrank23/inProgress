@@ -7,7 +7,8 @@ import Footer from '../../components/Footer/Footer';
 import BannerImg from '../../images/web3.jpg'
 import SendIcon from '@mui/icons-material/Send';
 import axios from 'axios'
-// import './ContactPage.css'
+import { mobile } from '../../responsive'
+import './ContactPage.css'
 
 const Container = styled.div`
   user-select: none;
@@ -38,10 +39,12 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundSize: "100%", backgroundPosition: "0 25%"})}
     .page1Header {
       color: #fff;
       text-align: center;
       text-shadow: 0 5px green;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
     }
   }
   .pageBanner {
@@ -133,7 +136,7 @@ const ContactPage = () => {
         </div>
       </div>
       <div className="contactPageGetinTouchContainer d-flex" style={{padding: "0rem 7rem 2rem 7rem"}}>
-        <div style={{clipPath: "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)", background: "gray", color: '#fff', padding: '4rem'}}>
+        <div className='contactPageGetinTouchContainerSvg' style={{clipPath: "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)", background: "gray", color: '#fff', padding: '4rem'}}>
           <h2>Get in touch with us today</h2>
           <h4>We’d love to hear from you</h4>
           <p>Send us a message and we’ll respond as soon as possible</p>
@@ -220,7 +223,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="col-lg-4 bg-image" style={{background: "#263948"}}>
-            <iframe title='PFN Lagos contact' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253664.50294512132!2d3.2922873848851304!3d6.583612394604272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8de2d6dc2833%3A0x6b683e00c6393bd7!2sPentecostal%20Fellowship%20of%20Nigeria%2C%20Lagos%20State!5e0!3m2!1sen!2sng!4v1651050624529!5m2!1sen!2sng" width="100%" height="300" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id='contactPageIframe' title='PFN Lagos contact' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253664.50294512132!2d3.2922873848851304!3d6.583612394604272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8de2d6dc2833%3A0x6b683e00c6393bd7!2sPentecostal%20Fellowship%20of%20Nigeria%2C%20Lagos%20State!5e0!3m2!1sen!2sng!4v1651050624529!5m2!1sen!2sng" width="100%" height="300" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               <div className="detail-box p-4">
                 <h5 className="text-white font-weight-light mb-3">ADDRESS</h5>
                 <p className="text-white op-7"> <i className="fa fa-address-book" aria-hidden="true" /> 5-9 Bode Thomas Rd, Onipanu 100252,
@@ -242,8 +245,8 @@ const ContactPage = () => {
                     <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                       <div className="text-decoration-none text-white"><i className="fa fa-youtube" aria-hidden="true" /></div>
                     </a>
-                    <a href="https://wa.link/ez9fic" target='_blank' rel="noopener noreferrer nofollow" className='links'>
-                      <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
+                    <a href="https://wa.link/hd88ub" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                      <i className="fa fa-whatsapp footerSocialIcon text-decoration-none text-white" aria-hidden="true" />
                     </a>
                 </div>
               </div>

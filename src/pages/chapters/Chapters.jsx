@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Img from '../../images/provincesBg.png'
 import Img3 from '../../images/bg2.jpg'
 import BgImg from '../../images/splash1.jpg'
@@ -7,8 +7,9 @@ import Header from '../../components/Text/Header'
 import H2 from '../../components/Text/H2'
 import PText from '../../components/Text/PText'
 import './Chapters.css'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
+import { mobile } from '../../responsive'
 
 const Container = styled.div`
 user-select: none;
@@ -33,10 +34,12 @@ user-select: none;
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({ height: "40vh", clipPath: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;
       text-transform: capitalize !important;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
     }
   }
   .pageBanner {
@@ -57,9 +60,30 @@ user-select: none;
 `
 const Chapters = () => {
     const location = useLocation()
+    // const {hash} = useLocation()
+    const id = useParams()
+    const params = new URLSearchParams(location.hash)
+    // console.log(JSON.stringify([...params.entries()]));
+
+    useEffect(()=> {
+      console.log(id);
+      console.log(location.hash);
+      console.log(location.key);
+      console.log(location?.state?.province);
+
+    }, [])
+    // console.log(params);
     // const query = new URLSearchParams(location.search)
-    console.log(location.state)
+    // console.log(location.state)
     // console.log(query.get('id'))
+
+    // const Foo = () => {
+    //   const location = useLocation();
+    //   const params = new URLSearchParams(location.hash);
+    
+    //   return <div>foo {JSON.stringify([...params.entries()])}</div>;
+    // };
+
   return (
     <Container>
       <div className="page1Wrapper">

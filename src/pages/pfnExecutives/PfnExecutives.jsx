@@ -56,7 +56,7 @@ const PfnExecutives = () => {
   const handleClose = () => setOpen(false);
   return (
     <Container>
-      <div className="page1Wrapper">
+      <div className="page1Wrapper" loading="lazy">
         <div className="page1Header">
           <h1>The PFN Lagos State Executives</h1>
         </div>
@@ -250,7 +250,7 @@ const PfnExecutives = () => {
                 </div>
               </div>
         </Link>
-        <Link to="/full_exec_detail_cwc5">
+        <Link to="/full_exec_detail_cwc5/">
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
@@ -290,9 +290,9 @@ const PfnExecutives = () => {
       </div>
       <div className="pfnExecutivesContainer">
         <Grid container spacing={2}>
-          {directors.map((data) => (
-            <Grid key={data.id} item xs={12} sm={6} md={6} lg={4}>
-               <Link to={{pathname: `/full_exec_detail`, state: {header: `${data.header}`, img: `${data.img}`, name: `${data.name}`, title: `${data.title}`, position: `${data.position}`, church: `${data.church}`, address: `${data.address}`, tel: `${data.tel}`, dOb: `${data.dOb}`, email: `${data.email}`, province: `${data.province}`, bio: `${data.bio}` }}}>
+          {directors.map((data, i) => (
+            <Grid key={i} item xs={12} sm={6} md={6} lg={4}>
+               <Link to={{pathname: `/full_exec_detail/${data.id}`, state: {header: `${data.header}`, img: `${data.img}`, name: `${data.name}`, title: `${data.title}`, position: `${data.position}`, church: `${data.church}`, address: `${data.address}`, tel: `${data.tel}`, dOb: `${data.dOb}`, email: `${data.email}`, province: `${data.province}`, bio: `${data.bio}` }}}>
                   <div className="flip-box">
                     <div className="flip-box-inner">
                       <div className="flip-box-front">

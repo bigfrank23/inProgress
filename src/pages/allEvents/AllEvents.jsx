@@ -10,6 +10,7 @@ import './AllEvents.css'
 import H2 from '../../components/Text/H2';
 import Footer from '../../components/Footer/Footer';
 import Upcomin from '../../components/Upcoming/Upcomin';
+import { mobile } from '../../responsive';
 
 const Container = styled.div`
 user-select: none;
@@ -27,6 +28,7 @@ user-select: none;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,9 +36,11 @@ user-select: none;
     position: relative;
     top: 0;
     height: 62vh;
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundPosition: "bottom"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
     }
   }
 `

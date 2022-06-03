@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import PlaceholderImg from '../../images/placeholder.png'
-import AnnouncementImg from '../../images/announcement1.jpeg'
-import MoreImg from '../../images/web.jpg'
+// import PlaceholderImg from '../../images/placeholder.png'
+// import AnnouncementImg from '../../images/announcement1.jpeg'
+// import MoreImg from '../../images/web.jpg'
 
 import './More.css'
 import Slider from '../slider/Slider'

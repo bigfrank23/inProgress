@@ -1,20 +1,19 @@
-@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+/* @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
 
 .contactPageGetinTouchContainer{
   clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-}
+} */
 
 
-.contact2 {
+/* .contact2 {
   font-family: "Montserrat", sans-serif;
   color: #8d97ad;
   font-weight: 300;
 	padding: 60px 0;
   margin-bottom: 170px;
-  /* background-color: red !important; */
   background-position: center top;
-}
-.contact2 h1,
+} */
+/* .contact2 h1,
 .contact2 h2,
 .contact2 h3,
 .contact2 h4,
@@ -85,7 +84,22 @@
 #message{
   height: 300px !important;
   resize: none !important;
-}
+} */
 /* .contactPageBannerContainer{
   background: url('../../images/web3.jpg') !important;
 } */
+
+@media only screen and (max-width: 600px) {
+    .contactPageGetinTouchContainer{
+      padding: 2rem !important;
+    }
+    .contactPageGetinTouchContainerSvg{
+      padding: 2rem !important;
+    }
+    #contactPageIframe{
+      margin-top: 1rem;
+    }
+    .round-social a{
+      font-size: 1.5rem;
+    }
+}

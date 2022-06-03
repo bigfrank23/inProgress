@@ -15,8 +15,7 @@ const Banner = () => {
           <div className="bannerTitle">
             <blockquote>
               <h2>
-                To unite all Pentecostal churches, bodies and believers for the
-                fellowship, encouragement and inspiration
+              To unite all Pentecostal Churches, Bodies and Believers For Fellowship, Encouragement and Inspiration
               </h2>
             </blockquote>
           </div>

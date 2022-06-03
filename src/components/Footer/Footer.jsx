@@ -199,10 +199,10 @@ const Footer = () => {
               <div className={open ? "footerCenterCloseIcon text-danger d-block d-sm-none" : 'd-none'} onClick={handleClose}>
               <i className="fa fa-close" />
               </div>
-              {allProvinces.map((data)=> (
+              {allProvinces.map((data, i)=> (
                 <>
-                <div className={open ? "sideBlock" : "none"} key={data.id}>
-                  <Link  to={{pathname: `/chapter`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
+                <div key={i} className={open ? "sideBlock" : "none"}>
+                  <Link  to={{pathname: `/province`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
                       <div className="footerHoverItems" onClick={handleClose}>{data.province}</div>
                   </Link>
                 </div>
@@ -236,7 +236,7 @@ const Footer = () => {
                               <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                                   <i className="fa fa-youtube footerSocialIcon" aria-hidden="true" />
                               </a>
-                              <a href="https://wa.link/ez9fic" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                              <a href="https://wa.link/hd88ub" target='_blank' rel="noopener noreferrer nofollow" className='links'>
                                 <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
                               </a>
                           </div>
@@ -309,7 +309,8 @@ const Footer = () => {
               &copy; 2022 PFN Lagos. All Rights Reserved.
           </Credits>
           <Credits>
-              Designed & Developed by Elonatech Nigeria Limited
+              Designed & Developed by
+              &#160;<a href="https://elonatech.com.ng/" target='_blank' rel="noopener noreferrer nofollow" className='links' style={{color: "#990000"}}>Elonatech Nigeria Limited</a>
           </Credits>
         </div>
     </Container>

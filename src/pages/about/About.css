@@ -23,4 +23,7 @@
     .reduce{
         padding: 0;
     }
+    .pageContentTopListItems {
+        padding: 0rem 0.5rem;
+    }
 }

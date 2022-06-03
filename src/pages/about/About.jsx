@@ -82,7 +82,7 @@ const Container = styled.div`
         }
         .pageContentPara{
             padding-top: 1rem;
-            ${mobile({textAlign: "center"})}
+            ${mobile({textAlign: "justify"})}
         }
       }
       .right{
