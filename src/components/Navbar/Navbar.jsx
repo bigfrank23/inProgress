@@ -101,7 +101,7 @@ const Navbar = () => {
               <img src={LogoImg} width={100} alt="logo" />
             </div>
           </Link>
-          <span className='text-white align-self-center'>{moment().format("ddd, h:mmA")}</span>
+          <span className='text-white align-self-center mobTime'>{moment().format("ddd, h:mmA")}</span>
           <div className="navLinks">
           <div className={openMain ? "mainListItems" : "notActiveMain"}>
                   <div className={openMain ? "mainListItemsTop" : "notActiveMain"}>

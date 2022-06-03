@@ -445,6 +445,9 @@
 .mobileNavFlexBtn{
     display: none;
 }
+.mobTime{
+    display: none;
+}
 
 @media only screen and (max-width: 600px) {
     #navbar{
@@ -591,6 +594,9 @@
         transition: left .5s linear;
         z-index: 0 !important;
         list-style: none;
+    }
+    .mobTime{
+        display: block;
     }
 }
 @media only screen and (min-width: 600px) {
