@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Footer from "../../../components/Footer/Footer";
 import { faChurch, faAddressCard, faPhone,faCalendar,faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { mobile } from "../../../responsive";
 // import { useLocation } from "react-router-dom";
 
 const Container = styled.div`
@@ -27,9 +28,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({height: "40vh", backgroundSize: "100%", backgroundPosition: "0 25%",  clipPath: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
       .giveNowBtn{
           margin-top: 2rem;
       }

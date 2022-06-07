@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import Img2 from "../../images/PFN10.png";
 import Img5 from "../../images/slider1.png";
 import styled from "styled-components";
@@ -12,6 +12,7 @@ import Grid from '@mui/material/Grid'
 import { chairmen, directors } from "../../teamMembers/team";
 import { Link } from "react-router-dom";
 import { mobile } from "../../responsive";
+// import FullExecDetail from "../fullExecDetail/FullExecDetail";
 
 const Container = styled.div`
   user-select: none;

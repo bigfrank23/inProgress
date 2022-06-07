@@ -1,0 +1,12 @@
+.adminTopBar{
+    position: sticky;
+    width: 100%;
+    height: 3rem;
+}
+.adminMainBx{
+    display: flex;
+    margin: 1rem;
+}
+.adminMainContentBox{
+    flex: 4;
+}

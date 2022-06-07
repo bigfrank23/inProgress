@@ -1,22 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import Navbar from '../../components/Navbar/Navbar';
 // import Img from '../../images/splash2.jpg'
 import Img from '../../images/believe.png'
-import Img2 from '../../images/splash3.jpg'
 import Img3 from '../../images/bg2.jpg'
 import BgImg from '../../images/splash1.jpg'
-import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 
 import './ExtraPage.css'
-import Header from '../../components/Text/Header';
-import PText from './../../components/Text/PText';
-import H2 from './../../components/Text/H2';
-import H3 from '../../components/Text/H3';
-import Header2 from '../../components/Text/Header2';
 import { provinces } from '../../teamMembers/provinces';
-import { Grid } from '@material-ui/core';
+// import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material'
 
 const Container = styled.div`
   user-select: none;

@@ -46,6 +46,21 @@ import Current from './pages/allEvents/current/Current';
 import Past from './pages/allEvents/past/Past';
 import FullEventDetail from './pages/allEvents/fullDetail/FullEventDetail';
 import PaymentForm2 from './components/payment/PaymentForm2';
+import AdminApp from './pages/admin/AdminApp';
+import Sidebar from "./pages/admin/adminComponents/sidebar/Sidebar";
+import Topbar from "./pages/admin/adminComponents/topbar/Topbar";
+// import "./AdminApp.css";
+import Admin from "./pages/admin/adminPages/home/AdminHome";
+import UserList from "./pages/admin/adminPages/userList/UserList";
+import User from "./pages/admin/adminPages/user/User";
+import NewUser from "./pages/admin/adminPages/newUser/NewUser";
+import ProductList from "./pages/admin/adminPages/productList/ProductList";
+import Product from "./pages/admin/adminPages/product/Product";
+import NewProduct from "./pages/admin/adminPages/newProduct/NewProduct";
+import Directors from "./pages/admin/adminPages/userList/directors/Directors";
+import Chairmen from "./pages/admin/adminPages/userList/chairmen/Chairmen";
+import AdminHeroSection from './pages/admin/adminPages/adminHeroSection/AdminHeroSection';
+import AdminHome from './pages/admin/adminPages/home/AdminHome';
 
 const Container = styled.div`
   width: 100%;
@@ -56,7 +71,7 @@ function App() {
   // const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
   return (
     <Container>
-      <HashRouter>
+      <Router>
         <Navbar />
         <ScrollToTop />
         <Switch>
@@ -107,8 +122,12 @@ function App() {
           <Route exact path='/current-events' component={Current} />
           <Route exact path='/past-events' component={Past} />
           <Route exact path='/full-event-detail' component={FullEventDetail} />
+          <Route exact path='/admin' component={AdminHome} />
+          <Route exact path="pfnlagos-directors" component={Directors} />
+          <Route exact path="pfnlagos-cwc" component={UserList} />
+          <Route exact path="pfnlagos-chairmen" component={Chairmen} />
         </Switch>
-      </HashRouter>
+      </Router>
       <GoUp />
     </Container>
   );

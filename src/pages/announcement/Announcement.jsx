@@ -8,7 +8,7 @@ import BgImg from '../../images/splash1.jpg'
 import Footer from '../../components/Footer/Footer'
 import announcementImg from '../../images/announcement1.jpeg'
 // import { Modal, Box, Typography } from '@mui/material';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import { Modal, Button } from "react-bootstrap";
 import './Announcement.css'
 import { mobile } from '../../responsive'
