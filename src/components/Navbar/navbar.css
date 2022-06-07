@@ -304,14 +304,16 @@
     /* background: #232e32; */
     /* background: #052517; */
     background: #041909;
-    padding: 1rem 10px;
+    /* padding: 1rem 10px; */
+    padding: 0;
     /* padding: 0 10px; */
     line-height: 1.8;
     border-radius: 5px;
     /* height: 0px; */
-    opacity: 0;
+    /* opacity: 0; */
+    height: 0;
     overflow: hidden;
-    transition: all .8s ease;
+    transition: all .25s ease;
 }
 
 .hover a{
@@ -333,7 +335,10 @@
 .navListItems:hover .hover{
     /* height: 100%; */
     /* height: 25vh; */
-    opacity: 1;
+    /* opacity: 1; */
+    /* max-height: 1000px; */
+    height: auto;
+    padding: 1rem 10px;
     background: linear-gradient(0deg, rgba(4, 25, 9, 0.90), rgba(4, 25, 9, 0.90));
 }
 
@@ -347,18 +352,30 @@
     z-index: 1;
 }
 .mobileNav{
-    background: black;
-    width: 100%;
-    height: 100vh;
+    background: linear-gradient(0deg, rgba(4, 25, 9, 0.90), rgba(4, 25, 9, 0.90));
+    width: 90%;
+    height: auto;
     padding: 2rem;
     position: absolute;
     top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    right: 0px;
+    /* display: flex; */
     text-align: center;
+    transition: width 5s linear;
 }
+.mobileNavActive{
+    background: linear-gradient(0deg, rgba(4, 25, 9, 0.90), rgba(4, 25, 9, 0.90));
+    width: 0;
+    height: auto;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    display: flex;
+    text-align: center;
+    transition: width 5s linear;
+}
+
 .mobileNav .navList{
     list-style: none;
     padding: 0;
@@ -448,6 +465,24 @@
 .mobTime{
     display: none;
 }
+.mobAccordionList{
+    background: linear-gradient(45deg, black, transparent);
+}
+.mobAccordionList.pro{
+    background: linear-gradient(45deg, black, transparent);
+    overflow: auto;
+    height: 300px;
+}
+
+
+.mobAccordionList a{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 3;
+}
 
 @media only screen and (max-width: 600px) {
     #navbar{
@@ -484,9 +519,10 @@
         z-index: 1;
         font-size: 30px;
         position: absolute;
-        display: flex;
+        right: 0;
+        /* display: flex; */
         /* justify-content: space-between; */
-        gap: 13rem;
+        /* gap: 13rem; */
     }
     .mobileNavFlexBtn{
         display: flex;
@@ -506,13 +542,21 @@
         z-index: 1;
     }
     .mobileNav .navList {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        text-align: left;
+        margin-top: 5rem;
     }
     .navListItems{
         display: block;
         padding: 5px 0;
+        font-family: 'Montserrat';
+        border-bottom: thin solid #ccc;
+        margin-bottom: 1rem;
+    }
+    .navList a{
+        text-decoration: none;
+    }
+    .navListItems:first-child{
+        color: #990000;
     }
     .navListItems:hover #provincesLink {
         display: block;
@@ -598,6 +642,32 @@
     .mobTime{
         display: block;
     }
+    .mobOrdList{
+        background: linear-gradient(45deg, black, transparent);
+        max-height: 500px;
+        overflow: unset;
+        transition: max-height .5s linear;
+    }
+    .mobOrdList a{
+        list-style: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 3;
+    }
+    .hideMobList{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s linear;
+    }
+    .hideMobList a{
+        display: none;
+    }
+    #mobSocial{
+        margin-top: 2rem;
+    }
+    
 }
 @media only screen and (min-width: 600px) {
     .openLinkBtn{

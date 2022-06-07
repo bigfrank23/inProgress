@@ -220,7 +220,7 @@ const Footer = () => {
                             <h2>Lagos State</h2>
                         </div> */}
                     </div>
-                     <h5 className='footerAddress'>5-9 Bode Thomas Road, <br /> Onipanu </h5>
+                     <h5 className='footerAddress'>5-9 Bode Thomas Road, <br /> Onipanu, Lagos Nigeria </h5>
                       <div className="socialBox">
                           <div className="social" style={{cursor: "pointer"}}>
                               <a href="https://www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" className='links'>
@@ -252,10 +252,6 @@ const Footer = () => {
                     <Link to="/lses"><li className="footerQuickLinksListItems">the executive structure</li></Link>
                     <Link to="/directorate"><li className="footerQuickLinksListItems">directorates</li></Link>
                     <Link to="/prayer"><li className="footerQuickLinksListItems">request for prayer</li></Link>
-                    
-                    
-                    {/* <li className="footerQuickLinksListItems">provinces</li> */}
-                    
                   </ul>
                 </div>
                 <div className="align-self-start d-flex flex-column gap-3">

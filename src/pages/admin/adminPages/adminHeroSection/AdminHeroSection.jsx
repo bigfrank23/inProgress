@@ -9,6 +9,7 @@ import './AdminHeroSection.css'
 import BgImg from '../../../../images/light-texture-bg.jpg'
 import Img from '../../../../images/splash2.jpg'
 import { mobile } from '../../../../responsive'
+import Footer from '../../../../components/Footer/Footer'
 
 
 const Container = styled.div`
@@ -68,6 +69,7 @@ const AdminHeroSection = () => {
             </div>
         </div>
       </div>
+      <Footer />
     </Container>
   )
 }

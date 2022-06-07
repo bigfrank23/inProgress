@@ -287,7 +287,7 @@ export const directors = [
     id: uuidv4(),
     img: Img,
     name: "PASTOR OLUMIDE OLUGBENLE",
-    title: "DIRECTOR, TRAINING",
+    title: "Directorate of Learning & Development",
     church: "The Father's House, Rehoboth International Christian Centre",
     address: "62, Bamidele Eletu Avenue, Osapa-London, Lekki.",
     headOffice: "",

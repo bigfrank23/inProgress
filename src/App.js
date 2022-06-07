@@ -71,7 +71,7 @@ function App() {
   // const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
   return (
     <Container>
-      <Router>
+      <HashRouter>
         <Navbar />
         <ScrollToTop />
         <Switch>
@@ -127,7 +127,7 @@ function App() {
           <Route exact path="pfnlagos-cwc" component={UserList} />
           <Route exact path="pfnlagos-chairmen" component={Chairmen} />
         </Switch>
-      </Router>
+      </HashRouter>
       <GoUp />
     </Container>
   );

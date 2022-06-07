@@ -10,23 +10,39 @@ import Button2 from '../Button/Button2'
 import moment from 'moment'
 import Button from '../Button/Button'
 
-import { useDispatch } from 'react-redux';
-import { LOGOUT } from '../../pages/blog/redux/constants/actionTypes';
 import { provinces } from '../../teamMembers/provinces'
+import { Accordion, Card } from "react-bootstrap";
+import useCollapse from 'react-collapsed'
 
 const Container = styled.nav`
     /* ${mobile({display: 'none'})} */
     user-select: none;
 `
 
-const config = {
-  reference: (new Date()).getTime().toString(),
-  email: "user@example.com",
-  amount: 20000,
-  publicKey: 'pk_test_dsdfghuytfd2345678gvxxxxxxxxxx',
-};
+function Section(props) {
+  const config = {
+    defaultExpanded: props.defaultExpanded || true,
+    collapsedHeight: props.collapsedHeight || 0,
+  };
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse(config);
+  return (
+    <div className="collapsible">
+      <div className="main" {...getToggleProps()}>
+          {/* <H3 children={props.title} /> */}
+        <div className="title">{props.title}</div>
+        <div className="icon">
+          <i
+            className={"chevIcon fa fa-chevron-" + (isExpanded ? "up" : "down")}
+          ></i>
+        </div>
+      </div>
+      <div {...getCollapseProps()}>
+        <div className="colContent">{props.children}</div>
+      </div>
+    </div>
+  );
+}
 
-const user = JSON.parse(localStorage.getItem('mern_crud3_copy_user'))
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
     const [closeNav, setCloseNav] = useState(false)
@@ -34,37 +50,20 @@ const Navbar = () => {
     const [openMain, setOpenMain] = useState('')
     const [dropdownNav, setDropdownNav] = useState(false)
     const [open, setOpen] = useState(false);
-    const [mobDropdown, setMobDropdown] = useState(false);
+    const [ordList, setOrdList] = useState(false)
+    const [ordList2, setOrdList2] = useState(false)
+    const [ordList3, setOrdList3] = useState(false)
+    const [ordList4, setOrdList4] = useState(false)
+    const [ordList5, setOrdList5] = useState(false)
+    const [ordList6, setOrdList6] = useState(false)
     const handleClose = () => {
       setOpen(false);
       setOpenMain(false)
     } 
 
-    // const dispatch = useDispatch()
 
-   // you can call this function anything
-  //  const handlePaystackSuccessAction = (reference) => {
-  //   // Implementation for whatever you want to do with reference and after success call.
-  //   console.log(reference);
-  // };
-
-  // you can call this function anything
-  // const handlePaystackCloseAction = () => {
-  //   // implementation for  whatever you want to do when the Paystack dialog closed.
-  //   console.log('closed')
-  // }
-
-  // const componentProps = {
-  //     ...config,
-  //     text: 'GIVE NOW',
-  //     onSuccess: (reference) => handlePaystackSuccessAction(reference),
-  //     onClose: handlePaystackCloseAction,
-  // };
-    
-    // const handleLogOut = () => {
-    //     dispatch({type: LOGOUT})
-    //     window.location.replace("/")
-    // }
+    const [isExpanded, setExpanded] = useState(false)
+    const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
 
     useEffect(()=>{
         window.addEventListener('scroll', ()=>{
@@ -101,7 +100,7 @@ const Navbar = () => {
               <img src={LogoImg} width={100} alt="logo" />
             </div>
           </Link>
-          <span className='text-white align-self-center mobTime'>{moment().format("ddd, h:mmA")}</span>
+          {/* <span className='text-white align-self-center mobTime'>{moment().format("ddd, h:mmA")}</span> */}
           <div className="navLinks">
           <div className={openMain ? "mainListItems" : "notActiveMain"}>
                   <div className={openMain ? "mainListItemsTop" : "notActiveMain"}>
@@ -364,19 +363,26 @@ const Navbar = () => {
             </ul>
           </div>
           {showNav && (
-            <div className="mobileNav">
+            <div className={showNav ? "mobileNav" : "mobileNavActive"}>
               <ul className="navList" >
               <Link to="/" className="links" onClick={()=> setShowNav(false)}>
               <li className="navListItems">
                   Menu
                 </li>
               </Link>
-              <li className="navListItems">
-                About
-                  {/* <div className="hoverAngleIcon">
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </div> */}
-                <ul className="hover" id='provincesLink'>
+              <li className="navListItems"
+                onClick={()=> setOrdList6(!ordList6)}
+                >
+                  <div className="d-flex justify-content-between">
+                  <div className="navListItemsTxt" style={ordList6 ? {color: "#990000"} : {color: "#fff"}}>
+                  About
+                  </div>
+                    <div className="hoverAngleIcon" style={ordList6 ? {color: "#990000"} : {color: "#fff"}}>
+                      <i className={ordList6 ? "fa fa-minus" : "fa fa-plus"} aria-hidden="true" />
+                    </div>
+                  </div>
+                </li>
+              <ul className={ordList6 ? 'mobOrdList' : 'hideMobList'} >
                   <Link to="/about" className="links" onClick={()=> setShowNav(false)}>
                     <li className="hoverItems">About PFN</li>
                   </Link>
@@ -389,17 +395,41 @@ const Navbar = () => {
                   <Link to="/our-mission" className="links" onClick={()=> setShowNav(false)}>
                     <li className="hoverItems">Our mission</li>
                   </Link>
-                  {/* <Link to="/page2" className="links">
-                    <li className="hoverItems">Our team</li>
-                  </Link> */}
-                </ul>
-              </li>
-              <li className="navListItems">
-                Leadership
-                  {/* <div className="hoverAngleIcon">
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </div> */}
-                <ul className="hover" id='provincesLink'>
+              </ul>
+              <li className="navListItems"
+                {...getToggleProps({
+                  onClick: () => setExpanded((prevExpanded) => !prevExpanded),
+                })} 
+                >
+                  <div className="d-flex justify-content-between">
+                  <div className="navListItemsTxt" style={isExpanded ? {color: "#990000"} : {color: "#fff"}}>
+                    Provinces
+                  </div>
+                    <div className="hoverAngleIcon" style={isExpanded ? {color: "#990000"} : {color: "#fff"}}>
+                      <i className={isExpanded ? "fa fa-minus" : "fa fa-plus"} aria-hidden="true" />
+                    </div>
+                  </div>
+                </li>
+              <ul className='mobAccordionList pro' {...getCollapseProps()}>
+                  {provinces.map((data, i)=> (
+                    <Link onClick={()=> setShowNav(false)} key={i} to={{pathname: `/province/${data.id}`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`, email: `${data.email}`, tel: `${data.tel}`, img: `${data.img}`}}}>
+                      <li className="hoverItems">{data.province}</li>
+                    </Link>
+                  ))}
+              </ul>
+              <li className="navListItems"
+                onClick={()=> setOrdList5(!ordList5)}
+                >
+                  <div className="d-flex justify-content-between">
+                  <div className="navListItemsTxt" style={ordList5 ? {color: "#990000"} : {color: "#fff"}}>
+                  Leadership
+                  </div>
+                    <div className="hoverAngleIcon" style={ordList5 ? {color: "#990000"} : {color: "#fff"}}>
+                      <i className={ordList5 ? "fa fa-minus" : "fa fa-plus"} aria-hidden="true" />
+                    </div>
+                  </div>
+                </li>
+              <ul className={ordList5 ? 'mobOrdList' : 'hideMobList'} >
                   <Link to="/the-national" className="links" onClick={()=> setShowNav(false)}>
                     <li className="hoverItems">The national</li>
                   </Link>
@@ -409,81 +439,122 @@ const Navbar = () => {
                   <Link to="/pfn-executives" className="links" onClick={()=> setShowNav(false)}>
                     <li className="hoverItems">PFN lagos state executives</li>
                   </Link>
-                </ul>
-              </li>
-              <li className="navListItems">
-                <div>
-                Lagos Structure
-                </div>
-                  {/* <div className="hoverAngleIcon">
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </div> */}
-                <ul className="hover" id='provincesLink'>
-                  <Link to="/lses" className="links" onClick={()=> setShowNav(false)}>
-                    <li className="hoverItems">
-                      The executive structure
-                    </li>
-                  </Link>
-                  <Link to="#" className="links" onClick={()=> setShowNav(false)}>
-                    <li className="hoverItems">
-                      Chairman Messages
-                    </li>
-                  </Link>
-                </ul>
-              </li>
-              <li className="navListItems">
-                Get involved
-                  {/* <div className="hoverAngleIcon">
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </div> */}
-                <ul className="hover" id='provincesLink'>
+              </ul>
+              <li className="navListItems"
+                onClick={()=> setOrdList4(!ordList4)}
+                >
+                  <div className="d-flex justify-content-between">
+                  <div className="navListItemsTxt" style={ordList4 ? {color: "#990000"} : {color: "#fff"}}>
+                  Lagos Structure
+                  </div>
+                    <div className="hoverAngleIcon" style={ordList4 ? {color: "#990000"} : {color: "#fff"}}>
+                      <i className={ordList4 ? "fa fa-minus" : "fa fa-plus"} aria-hidden="true" />
+                    </div>
+                  </div>
+                </li>
+              <ul className={ordList4 ? 'mobOrdList' : 'hideMobList'} >
+              <Link to="/lses" className="links" onClick={()=> setShowNav(false)}>
+                <li className="hoverItems">
+                  The executive structure
+                </li>
+              </Link>
+              <Link to="#" className="links" onClick={()=> setShowNav(false)}>
+                <li className="hoverItems">
+                  Chairman Messages
+                </li>
+              </Link>
+              </ul>
+              <li className="navListItems"
+                onClick={()=> setOrdList3(!ordList3)}
+                >
+                  <div className="d-flex justify-content-between">
+                  <div className="navListItemsTxt" style={ordList3 ? {color: "#990000"} : {color: "#fff"}}>
+                  Get involved
+                  </div>
+                    <div className="hoverAngleIcon" style={ordList3 ? {color: "#990000"} : {color: "#fff"}}>
+                      <i className={ordList3 ? "fa fa-minus" : "fa fa-plus"} aria-hidden="true" />
+                    </div>
+                  </div>
+                </li>
+              <ul className={ordList3 ? 'mobOrdList' : 'hideMobList'} >
                   <Link to="/directorate" className="links" onClick={()=> setShowNav(false)}>
                     <li className="hoverItems">Directorates</li>
                   </Link>
                   <Link to="#" className="links" onClick={()=> setShowNav(false)}>
                     <li className="hoverItems">Outreach</li>
                   </Link>
-                </ul>
-              </li>
-              <li className="navListItems">
-                Events
-                  {/* <div className="hoverAngleIcon">
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </div> */}
-                <ul className="hover" id='provincesLink'>
-                    <Link to="/all-events" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">All Events</li>
-                    </Link>
-                    <Link to="/gallery" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">Gallery</li>
-                    </Link>
-                    <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
-                    <li className="hoverItems">Watch Live</li>
-                    </a>
-                    <Link to='/blogs' className='links' onClick={()=> setShowNav(false)}>
-                    <li className="hoverItems">Blogs</li>
-                    </Link>
-                    <Link to='/announcement' className='links' onClick={()=> setShowNav(false)}>
-                    <li className="hoverItems">News Feed</li>
-                    </Link>
-                </ul>
-              </li>
-              {/* <Link to="#" className="links"> */}
-                <li className="navListItems">Get in Touch
-                  {/* <div className="hoverAngleIcon">
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </div> */}
-                <ul className="hover" id='provincesLink'>
-                    <Link to="/prayer" className="links" onClick={()=> setShowNav(false)}>
-                      <li className="hoverItems">Prayer</li>
-                    </Link>
-                    <Link to='/contact' className='links' onClick={()=> setShowNav(false)}>
-                    <li className="hoverItems">Contact us</li>
-                    </Link>
-                </ul>
+              </ul>
+                <li className="navListItems"
+                onClick={()=> setOrdList2(!ordList2)}
+                >
+                  <div className="d-flex justify-content-between">
+                  <div className="navListItemsTxt" style={ordList2 ? {color: "#990000"} : {color: "#fff"}}>
+                    Events
+                  </div>
+                    <div className="hoverAngleIcon" style={ordList2 ? {color: "#990000"} : {color: "#fff"}}>
+                      <i className={ordList2 ? "fa fa-minus" : "fa fa-plus"} aria-hidden="true" />
+                    </div>
+                  </div>
                 </li>
+              <ul className={ordList2 ? 'mobOrdList' : 'hideMobList'} >
+              <Link to="/all-events" className="links" onClick={()=> setShowNav(false)}>
+                  <li className="hoverItems">All Events</li>
+                </Link>
+                <Link to="/gallery" className="links" onClick={()=> setShowNav(false)}>
+                  <li className="hoverItems">Gallery</li>
+                </Link>
+                <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                <li className="hoverItems">Watch Live</li>
+                </a>
+                <Link to='/blogs' className='links' onClick={()=> setShowNav(false)}>
+                <li className="hoverItems">Blogs</li>
+                </Link>
+                <Link to='/announcement' className='links' onClick={()=> setShowNav(false)}>
+                <li className="hoverItems">News Feed</li>
+                </Link>
+              </ul>
+                <li className="navListItems"
+                onClick={()=> setOrdList(!ordList)}
+                >
+                  <div className="d-flex justify-content-between">
+                  <div className="navListItemsTxt" style={isExpanded ? {color: "#990000"} : {color: "#fff"}}>
+                    Get in Touch
+                  </div>
+                    <div className="hoverAngleIcon" style={isExpanded ? {color: "#990000"} : {color: "#fff"}}>
+                      <i className={ordList ? "fa fa-minus" : "fa fa-plus"} aria-hidden="true" />
+                    </div>
+                  </div>
+                </li>
+              <ul className={ordList ? 'mobOrdList' : 'hideMobList'} >
+                  <Link to="/prayer" className="links" onClick={()=> setShowNav(false)}>
+                    <li className="hoverItems">Prayer</li>
+                  </Link>
+                  <Link to='/contact' className='links' onClick={()=> setShowNav(false)}>
+                  <li className="hoverItems">Contact us</li>
+                  </Link>
+              </ul>
+                
               {/* </Link> */}
             </ul>
+            <div className="mainListItemsCenterRightBottom" id='mobSocial'>
+                <div className="mainListItemsCenterRightSocials">
+                <a href="https://www.facebook.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
+                        <i className="fa fa-facebook" aria-hidden="true" />
+                    </a>
+                    <a href="https://www.twitter.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
+                        <i className="fa fa-twitter" aria-hidden="true" />
+                    </a>
+                    <a href="https://www.instagram.com/pfnlagostate" target="_blank" rel="noopener noreferrer nofollow" id='links'>
+                        <i className="fa fa-instagram" aria-hidden="true" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UChZXqT3Wg8buJkykYI99vCQ" target='_blank' rel="noopener noreferrer nofollow" id='links'>
+                        <i className="fa fa-youtube" aria-hidden="true" />
+                    </a>
+                    <a href="https://wa.link/hd88ub" target='_blank' rel="noopener noreferrer nofollow" className='links'>
+                        <i className="fa fa-whatsapp footerSocialIcon" aria-hidden="true" />
+                    </a>
+                </div>
+              </div>
             </div>
           )}
           <div className='mobileNavFlexBtn text-center'>
@@ -493,30 +564,9 @@ const Navbar = () => {
                 </Link>
             </div>
           </div>
-          <div className="openLinkBtn" >
-            {showNav ? 
-              <ul className='mobProvinceList'>
-                <li className="mobProvinceListItem" onClick={()=> setMobDropdown(!mobDropdown)}>
-                    Provinces
-                      {/* <div className="hoverAngleIcon">
-                        <i className="fa fa-angle-down" aria-hidden="true" />
-                      </div> */}
-                    <ul className={mobDropdown ? "mobProvinceListDropdown" : "hideMobProvinceListItem"}>
-                      {provinces.map((data, i)=> (
-                        <Link onClick={()=> setShowNav(false)} key={i} to={{pathname: `/province/${data.id}`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`, email: `${data.email}`, tel: `${data.tel}`, img: `${data.img}`}}}>
-                          <li className="mobProvinceListDropdownItems">{data.province}</li>
-                        </Link>
-                      ))}
-                    </ul>
-                </li>
-              </ul>
-            : <div></div>
-            }
-            
-            <div onClick={() => setShowNav(!showNav)}>
-              <div></div>
-              {showNav ? <div className='s'>&#10005;</div> : <div className='t'>&#8801;</div>}
-            </div>
+          <div className="openLinkBtn" onClick={() => setShowNav(!showNav)}>
+            {/* <div onClick={() => setShowNav(!showNav)}> */}
+              {showNav ? <>&#10005;</> : <>&#8801;</>}
           </div>
           <div className="navButtons">
             <div className="leftBtn">
