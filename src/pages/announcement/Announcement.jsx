@@ -1,17 +1,19 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import Img4 from '../../images/contactBg.jpg'
 import Img5 from '../../images/announcementBg.jpg'
-import GroupImg from '../../images/group.png'
+// import GroupImg from '../../images/group.png'
 import SocialImg from '../../images/social.png'
 import BgImg from '../../images/splash1.jpg'
 import Footer from '../../components/Footer/Footer'
-import announcementImg from '../../images/announcement1.jpeg'
+// import announcementImg from '../../images/announcement1.jpeg'
 // import { Modal, Box, Typography } from '@mui/material';
 // import { makeStyles } from '@material-ui/core/styles';
 import { Modal, Button } from "react-bootstrap";
 import './Announcement.css'
 import { mobile } from '../../responsive'
+import axios from 'axios'
+import moment from 'moment'
 
 const Container = styled.div`
   user-select: none;
@@ -78,6 +80,19 @@ const Announcement = () => {
   const handleShow2 = () => setShow2(true);
   const handleShow3 = () => setShow3(true);
 
+
+  const [announcentData, setAnnouncentData] = useState([])
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+   const [modalData, setModalData] = useState({});
+
+  useEffect(()=> {
+    const getAnnouncentData = async() => {
+      const res = await axios.get('https://pfn-lagos.herokuapp.com/cloudUser')
+      setAnnouncentData(res.data)
+    }
+    getAnnouncentData()
+  }, [])
+
   return (
     <Container>
       <div className="page1Wrapper">
@@ -88,72 +103,55 @@ const Announcement = () => {
       </div>
       <div className="container" id='announcementContainer'>
         <div className="row">
-          <div className="row mb-2">
-        <div className="col-md-6">
-          <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-450 position-relative">
-            <div className="col p-4 d-flex flex-column position-static">
-              <strong className="d-inline-block mb-2 text-warning">ANNOUNCEMENT </strong>
-              <h3 className="mb-0">Pentecostal Fellowship Of Nigeria Lagos State | Directorate of Politics and Governance</h3>
-              {/* <div className="mb-1 text-muted">April 12</div> */}
-              <p className="card-text mb-4 my-4"> <b>Get your #PVC now!</b> <br />
-              #pfnlagos #pfn #dpglagos #therighteousinauthority</p>
-                {/* <!-- Button to Open the Modal --> */}
-              <button type="button" className="btn btn-success stretched-link" onClick={handleShow}>Show More</button>
-            </div>
-            <div className="col-auto d-none d-lg-block">
-              <img src={announcementImg} alt="img-bg" className="float-right" height="" width="300" />
-              
-              {/* <!-- <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> --> */}
-            </div>
-          </div>
-        </div>
+          {/* <div className="row mb-2"> */}
+            <div className="announcementCol">
+              {announcentData.map((data)=> (
+                  <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-450 position-relative">
+                    <div className="col p-4 d-flex flex-column position-static">
+                      <strong className="d-inline-block mb-2 text-warning">{data.name}</strong>
+                      <h3 className="mb-0">{data.title}</h3>
+                      <div className="mb-1 text-muted">{moment(data.createdAt).format('LLLL')}</div>
+                      <p className="mapAnnouncementPara card-text mb-4 my-4 text-bold">
+                        {data.desc}
+                      </p>
+                      <button type="button" className="btn btn-success stretched-link" onClick={()=> {setModalData(data); setModalIsOpen(true);}}>Show More</button>
+                    </div>
+                    {/* <div className="col-auto d-none d-lg-block">
+                      <img src={data.avatar} alt="img-bg" className="float-right" height="" width="300" />
+                    </div> */}
+                  </div>
 
-        {/* Modal */}
-        <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title className='text-warning'>Upcoming</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <div className="modalImgBx d-flex justify-content-center">
-            <img src={announcementImg} alt="" style={{width: "80%", height: "500px"}} />
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
-        
-        <div className="col-md-6">
-          <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-450 position-relative">
-            <div className="col p-4 d-flex flex-column position-static">
-              <strong className="d-inline-block mb-2 text-primary">OFFICIAL MEETING DAYS </strong>
-              <h3 className="mb-0">Monthly Meetings</h3>
-              <div className="mb-1 text-muted">April 12</div>
-              <p className="card-text mb-4">Lagos State Executive meets the last Tuesday of every month at The Secretariat, 5-9 Bode Thomas Road, Onipanu, Lagos. </p>
-                {/* <!-- Button to Open the Modal --> */}
-              <button type="button" className="btn btn-success stretched-link" onClick={handleShow2}>Show More</button>
+                  
+              ))}
             </div>
-            <div className="col-auto d-none d-lg-block">
-              <img src={GroupImg} alt="img-bg" className="float-right" height="" width="300" />
-              
-              {/* <!-- <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> --> */}
-            </div>
-          </div>
-        </div>
-        <Modal show={show2} onHide={handleClose2}>
-        <Modal.Header closeButton>
-          <Modal.Title className='text-primary'>Monthly Meetings</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Lagos State Executive meets the last Tuesday of every month at The Secretariat, 5-9 Bode Thomas Road, Onipanu, Lagos. <br /> This administration is all inclusive. Every Pentecostal Minister/Church in Lagos State is welcome to join hands with us to advance God’s Kingdom in our lovely State. <br /> We look forward to welcoming you in any of our State, Provincial or Chapter’s meetings/fellowship. <br /> <b>Thanks and God bless you.</b></Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose2}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
 
+            <Modal show={modalIsOpen} onHide={()=>setModalIsOpen(false)}>
+              <Modal.Header closeButton>
+                <Modal.Title className='text-warning'>{modalData.title}</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                {
+                  modalData.avatar ? 
+                  <div className="modalImgBx d-flex justify-content-center">
+                    <img src={modalData.avatar} alt="" style={{width: "80%", height: "500px"}} />
+                  </div> : ""
+                }
+                {
+                  modalData.desc ? 
+                  <p className="card-text mb-4 my-4 text-center"> <br />
+                        {modalData.desc}
+                      </p> : ""
+                }
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={() => setModalIsOpen(false)}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+        {/* </div> */}
+        </div>
+        <>
         <div className="col-md-6">
           <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-450 position-relative">
             <div className="col p-4 d-flex flex-column position-static">
@@ -168,7 +166,6 @@ const Announcement = () => {
             </div>
           </div>
         </div>
-      </div>
       <Modal show={show3} onHide={handleClose3}>
         <Modal.Header closeButton>
           <Modal.Title className='text-success'>Social</Modal.Title>
@@ -255,15 +252,8 @@ const Announcement = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-      {/* <main role="main" class="container">
-      <div class="row">
-
-      </div>
-
-    </main> */}
-
+        </>
         </div>
-      </div>
 
       <Footer />
     </Container>

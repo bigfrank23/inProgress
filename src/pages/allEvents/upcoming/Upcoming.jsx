@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Img from "../../../images/upcomingEvents/upcomingBg.jpg";
 import Img2 from "../../../images/splash3.jpg";
 import upcomingImg1 from "../../../images/upcomingEvents/upcoming1.jpeg";
@@ -13,6 +13,7 @@ import Footer from '../../../components/Footer/Footer';
 import { upcoming } from './upcomingData';
 import { Link } from 'react-router-dom';
 import { mobile } from '../../../responsive';
+import axios from 'axios';
 
 const Container = styled.div`
   width: 100%;
@@ -46,6 +47,32 @@ const Container = styled.div`
 `;
 
 const Upcoming = () => {
+  const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
+  const [currentEventData, setCurrentEventData] = useState([])
+
+  useEffect(()=> {
+    const getCurrentEvents = async() => {
+      const res = await axios.get('https://pfn-lagos.herokuapp.com/upcomingEvent')
+      setCurrentEventData(res.data)
+    }
+    getCurrentEvents()
+  }, [])
+
+  const handleDelete = async(id) => {
+    try {
+      const res = await axios.delete(`https://pfn-lagos.herokuapp.com/upcomingEvent/${id}`)
+      
+        const updated = currentEventData.filter((r)=> r._id !== id)
+        setCurrentEventData(updated)
+        console.log(res.data);
+        alert("Removed!")
+        // window.location.replace("/past-events")
+      
+    } catch (error) {
+      alert(error);
+    }
+  }
+
   return (
     <Container>
       <div className="page1Wrapper">
@@ -54,52 +81,60 @@ const Upcoming = () => {
           <h1>Upcoming Events</h1>
         </div>
       </div>
-      <div className="page5">
-            {upcoming.map((data)=> (
-              <>
-                <div className="page5Bx" key={data.id}>
-                <div className="page5BxImg">
-                    <img src={data.img} alt="" />
-                </div>
-                <div className="page5BxContent">
-                    <div className="page5Title">
-                    <H2>{data.title}</H2>
-                    </div>
-                    
-                    <p>
-                      <b>{data.theme}</b>
-                    </p>
-                    <div className="page5Date">
-                    {data.date ? <><h5><b>Date</b></h5> : {data.date} </> : null}
-                    </div>
-                    <div className="page5Time">
-                    {data.time ? <><h5><b>Time</b></h5> : {data.time} </> : null}
-                    </div>
-                    <div className="page5Location" id='upcomingLocation'>
-                      {data.location ? <><h5><b>Location</b></h5> : {data.location} </> : null}
-                    </div>
-                    <div className="page5Para">
-                    <p id="upcomingPara">
-                      {data.desc ? <><b>{data.desc}</b></> : null}
-                    </p>
-                    <p id="upcomingPara">
-                      {data.desc ? <><b>{data.more}</b></> : null}
-                    </p>
-                    <p>
-                      <b>{data.date2}</b>
-                    </p>
-                    </div>
-                    <div className="page5Btn">
-                    <Link key={data.id} to={{pathname: `/full-event-detail`, state: {title: `${data.title}`, img: `${data.img}`,date: `${data.date}`, time: `${data.time}`, location: `${data.location}`, desc: `${data.desc}`, more: `${data.more}`}}}>
-                    <Button BtnText='See Event' />
-                    </Link>
-                    </div>
-                </div>
-                </div>
-                <hr className='Hr' id='upcomingHr' />
-                </>
-            ))}
-      </div>
+      {currentEventData.length === 0 ? " No Event yet" : 
+        <div className="page5">
+              {currentEventData.reverse().map((data)=> (
+                <>
+                  <div className="page5Bx" key={data.id}>
+                  <div className="page5BxImg">
+                      <img src={data.avatar} alt="" />
+                  </div>
+                  <div className="page5BxContent">
+                      <div className="page5Title">
+                      <H2>{data.title}</H2>
+                      </div>
+                      
+                      <p>
+                        <b>{data.theme}</b>
+                      </p>
+                      <div className="page5Date">
+                      {data.date ? <><h5><b>Date</b></h5> : {data.date} </> : null}
+                      </div>
+                      <div className="page5Time">
+                      {data.time ? <><h5><b>Time</b></h5> : {data.time} </> : null}
+                      </div>
+                      <div className="page5Location" id='upcomingLocation'>
+                        {data.location ? <><h5><b>Location</b></h5> : {data.location} </> : null}
+                      </div>
+                      <div className="page5Para">
+                      <p id="upcomingPara">
+                        {data.desc ? <><b>{data.desc}</b></> : null}
+                      </p>
+                      <p id="upcomingPara">
+                        {data.desc ? <><b>{data.more}</b></> : null}
+                      </p>
+                      <p>
+                        <b>{data.date2}</b>
+                      </p>
+                      </div>
+                      <div className="page5Btn">
+                      <Link to={`/upcoming-event-full-detail/${data._id}`}>
+                      <Button BtnText='See Event' />
+                      </Link>
+                      {
+                        user?.user?.email ==="admin@pfnlagosstate.org" &&
+                        <div className='mt-3' onClick={()=> handleDelete(data._id)}>
+                        <button type="button" className="btn btn-danger">Remove this event</button>
+                        </div>
+                      }
+                      </div>
+                  </div>
+                  </div>
+                  <hr className='Hr' id='upcomingHr' />
+                  </>
+              ))}
+        </div>
+      }
       <Footer />
     </Container>
   )

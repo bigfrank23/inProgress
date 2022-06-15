@@ -90,7 +90,7 @@ const pastPfnMembers = [{
 {
     id: 3,
     img: PImg3,
-    name: "Rev. Dr. Olawole A. Ogunmola",
+    name: "Pastor M.K Ogunbola",
     date: "1992 - 1995",
 },
 {

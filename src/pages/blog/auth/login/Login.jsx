@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import FileBase from 'react-file-base64'
 import Img3 from '../../../../images/bg2.jpg'
-import Img from '../../../../images/dark1.jpeg'
+import Img from '../../../../images/bg5.jpg'
 
 
 import styled from 'styled-components';
@@ -14,6 +14,7 @@ import {useDispatch} from 'react-redux'
 import { login } from '../../redux/actions/auth';
 
 import './Login.css'
+import { mobile } from '../../../../responsive';
 
 const Container = styled.div`
   user-select: none;
@@ -26,8 +27,8 @@ const Container = styled.div`
     clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), black
       url(${Img});
-    background-size: contain;
-    background-position: 0 125px;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     /* background-position-x: 7%; */
     background-attachment: fixed;
@@ -38,10 +39,12 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({ height: "40vh", clipPath: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;
       text-shadow: 0 4px brown;
+      ${mobile({ position: "relative", top: "25%", fontSize: "1.2rem"})}
     }
   }
 `

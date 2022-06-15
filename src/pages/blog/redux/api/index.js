@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create({baseURL: "https://pfn-lagos3.herokuapp.com/"});
+const API = axios.create({baseURL: "https://pfn-lagos.herokuapp.com/api"});
 
 //Route
 // export const getAll = () => API.get("/allPosts/")

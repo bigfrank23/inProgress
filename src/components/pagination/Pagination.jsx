@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 
 const Pagination = (props) => {
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight, });
-      console.log(dimensions);
+      // console.log(dimensions);
       const handleResize = () => {
         setDimensions({ width: window.innerWidth, height: window.innerHeight, });
       }

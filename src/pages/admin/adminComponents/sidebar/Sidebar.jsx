@@ -21,7 +21,7 @@ export default function Sidebar() {
             </Link>
           </ul>
         </div>
-        <div className="sidebarMenu">
+        {/* <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Actions</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
@@ -36,13 +36,15 @@ export default function Sidebar() {
               <EventIcon className="sidebarIcon" />
               Events
             </li>
-            <li className="sidebarListItem">
-              <CreateIcon className="sidebarIcon" />
-              Blogs
-            </li>
+            <Link to={"/blogs"} className="links">
+              <li className="sidebarListItem">
+                <CreateIcon className="sidebarIcon" />
+                Blogs
+              </li>
+            </Link>
           </ul> 
-        </div>
-        <div className="sidebarMenu">
+        </div> */}
+        {/* <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
@@ -50,8 +52,8 @@ export default function Sidebar() {
               Messages
             </li>
           </ul>
-        </div>
-        <div className="sidebarMenu">
+        </div> */}
+        {/* <div className="sidebarMenu">
           <h3 className="sidebarTitle">Executives</h3>
           <ul className="sidebarList">
             <Link to="/pfnlagos-cwc" className="link">
@@ -72,18 +74,12 @@ export default function Sidebar() {
                   Chairmen
                 </li>
               </Link>
-              {/* <Link to="/products" className="link">
-                <li className="sidebarListItem">
-                  <Storefront className="sidebarIcon" />
-                  Products
-                </li>
-              </Link> */}
             <li className="sidebarListItem">
               <Report className="sidebarIcon" />
               Reports
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slide from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import Img from '../../images/splash1.jpg'
@@ -8,6 +8,7 @@ import './Slider.css'
 import Button2 from './../Button/Button2';
 import { Link } from 'react-router-dom';
 import './Slider2.css'
+import axios from 'axios';
 
 const slides = [
   {
@@ -25,19 +26,30 @@ const slides = [
   },
 ];
 
+
 const Slider2 = () => {
+  const [announcement, setAnnouncement] = useState([])
+  useEffect(()=> {
+    const getAnnouncement = async () => {
+      const res = await axios.get("https://pfn-lagos.herokuapp.com/cloudUser")
+      setAnnouncement(res.data)
+      
+    }
+    getAnnouncement()
+  }, [])
+  
+  // console.log(announcement.slice(Math.max(announcement.length - 3, 1)).reverse());
   return (
       <>
         <Slide>
-        {slides.map((slide, index) => (
+        {announcement.slice(0, 3).reverse().map((slide, index) => (
             <div className='slideBox' key={index}>
             <h2 className='slideTitle' id='slideTitle'>{slide.title}</h2>
-            <div>{slide.description}</div>
+            <div className='text-center'>{slide.desc}</div>
             <div className="sliderBoxImg">
-            <img src={slide.img} alt="" width={100} />
-
+            <img src={slide.avatar} alt="" width={100} />
             </div>
-            <p>{slide.p}</p>
+            <p className='text-center'>{slide.name}</p>
             <div className="slideBtn">
               <Link to='/announcement'>
                 <Button2 BtnText='View All' />

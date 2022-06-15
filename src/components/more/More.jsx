@@ -10,7 +10,7 @@ import Slider2 from '../slider/Slider2'
 const More = () => {
     const [title, setTitle] = useState(false)
     const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight, });
-      console.log(dimensions);
+      // console.log(dimensions);
       const handleResize = () => {
         setDimensions({ width: window.innerWidth, height: window.innerHeight, });
       }

@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slide from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import Img from '../../images/splash1.jpg'
 import Img2 from '../../images/user.png'
+import PFNImg from '../../images/PFN10.png'
 import './Slider.css'
 import Button2 from './../Button/Button2';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import moment from 'moment';
 
 const slides = [
   {
@@ -35,18 +38,30 @@ const slides = [
 ];
 
 const Slider = () => {
+  const [announcement, setAnnouncement] = useState([])
+  useEffect(()=> {
+    const getAnnouncement = async () => {
+      const res = await axios.get("https://pfn-lagos.herokuapp.com/post")
+      setAnnouncement(res.data)
+      
+    }
+    getAnnouncement()
+  }, [])
   return (
       <>
         <Slide>
-        {slides.map((slide, index) => (
+        {announcement.slice(0, 3).map((slide, index) => (
             <div className='slideBx' key={index}>
             <h2 className='slideTitle'>{slide.title}</h2>
             <div>{slide.description}</div>
             <div className="slideBxAuthor">
-              <img src={slide.img} alt="" style={{width: "10%"}} />
-              <p>{slide.author}</p>
+              <img src={PFNImg} alt="" style={{width: "15%"}} />
+            {/* <div className="d-flex gap-2 mt-2"> */}
+              <p style={{fontSize: "10px", margin: 0}}>Admin</p>
+              <p style={{fontSize: "10px"}}>{moment(slide.createdAt).fromNow()}</p>
+            {/* </div> */}
             </div>
-            <p>{slide.p}</p>
+            <p>{slide.desc}</p>
             <div className="slideBtn">
               <Link to='/blogs'>
                 <Button2 BtnText='View All' />

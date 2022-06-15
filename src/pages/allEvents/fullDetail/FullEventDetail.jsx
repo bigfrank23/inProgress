@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 // import Img from '../../images/splash2.jpg'
 import Img from '../../../images/eventsBg.jpg'
@@ -6,10 +6,11 @@ import Img3 from '../../../images/bg2.jpg'
 import BgImg from '../../../images/splash1.jpg'
 import Footer from '../../../components/Footer/Footer';
 import H3 from '../../../components/Text/H3';
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import './FullEventDetail.css'
 import Button2 from '../../../components/Button/Button2'
 import { mobile } from '../../../responsive'
+import axios from 'axios'
 
 const Container = styled.div`
   user-select: none;
@@ -62,43 +63,62 @@ const Container = styled.div`
   }
 `;
 const FullEventDetail = () => {
+  const [fullEventData, setFullEventData] = useState([])
   const location = useLocation()
-  console.log(location.state);
+  let { id } = useParams();
+
+  // const path = location.pathname.split("/")[2];
+
+  // console.log(path);
+  // console.log(id);
+  
+  useEffect(()=> {
+    const getFullEvents = async() => {
+      const res = await axios.get(`https://pfn-lagos.herokuapp.com/currentEvent/` + id)
+      setFullEventData(res.data)
+    }
+    getFullEvents()
+  }, [])
+
+  // console.log(fullEventData);
   return (
     <Container>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header text-uppercase">
-          <h1>{location.state.title}</h1>
+          <h1>{fullEventData.title}</h1>
         </div>
       </div>
       <div className="fullEventDetailContent">
           <div className="fullEventDetailImg m-auto">
-            {location.state.img ? <><img src={location.state.img} alt="" style={{width: "100%"}} /></> : null}
+            {fullEventData.avatar ? <><img src={fullEventData.avatar} alt="" style={{width: "100%"}} /></> : null}
           </div>
           <div className="sectThree" id='fullEventDetailSectThree'>
             <div className="sectThreeTitle text-center">
-              <H3>{location.state.title}</H3>
+              <H3>{fullEventData.name}</H3>
+            </div>
+            <div className="sectThreeTitle text-center">
+              <h4>{fullEventData.title}</h4>
             </div>
             <div className="sectThreePara text-center">
-              {location.state.date ? <><h5><b>Date: </b>{location.state.date}</h5></> : null}
+              {fullEventData.date ? <><h5><b>Date: </b>{fullEventData.date}</h5></> : null}
             </div>
             <div className="sectThreePara text-center">
-              {location.state.time ? <><h5><b>Time: </b>{location.state.time}</h5></> : null}
+              {fullEventData.time ? <><h5><b>Time: </b>{fullEventData.time}</h5></> : null}
             </div>
             <div className="sectThreePara text-center">
-              {location.state.location ? <><h5><b>Location: </b>{location.state.location}</h5></> : null}
+              {fullEventData.location ? <><h5><b>Location: </b>{fullEventData.location}</h5></> : null}
             </div>
             <div className="sectThreePara text-center">
-              {location.state.desc ? <><h5><b>{location.state.desc}</b></h5></> : null}
+              {fullEventData.desc ? <><h5><b>{fullEventData.desc}</b></h5></> : null}
             </div>
             <div className="sectThreePara text-center">
-              {location.state.more ? <><h5><b>{location.state.more}</b></h5></> : null}
+              {fullEventData.more ? <><h5><b>{fullEventData.more}</b></h5></> : null}
             </div>
           </div>
       </div>
       <div className="fullEventBanner">
-        <h4 className='text-center text-white py-3'>Have any questions to ask?</h4>
+        <h4 className='text-center text-white py-3'>Have any question to ask?</h4>
         <div className="sectTwoBtn p-5">
           <Link to="/contact">
           <Button2 BtnText="Contact now" />

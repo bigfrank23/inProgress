@@ -5,11 +5,11 @@ export const register = (formData, history) => async(dispatch) => {
     try {
         const {data} = await api.register(formData)
         dispatch({type: AUTH, payload: data})
-        history.push('/login')
+        history.push('/blogs')
         // console.log(data);
     } catch (error) {
         console.log(error);
-        alert(error)
+        alert(error.message)
     }
 }
 
@@ -20,7 +20,7 @@ export const login = (loginData, history) => async(dispatch) => {
         // console.log(data);
     } catch (error) {
         console.log(error);
-        alert(error)
+        alert(error.message)
     }
 }
 

@@ -66,7 +66,7 @@ const Page13 = () => {
       address
     }
 
-   await axios.post('http://localhost:5000/prayer-request/', body, {
+   await axios.post('https://pfn-lagos.herokuapp.com/prayer-request/', body, {
       headers: {
         'Content-type': 'application/json'
       }

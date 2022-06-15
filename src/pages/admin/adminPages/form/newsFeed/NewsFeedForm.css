@@ -1,0 +1,7 @@
+.adminFormBoxContent{
+    display: flex;
+}
+.adminFormBoxContentRight{
+    flex: 4;
+    padding-right: 5rem;
+}

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import DetailImg from '../../../images/user.png'
+import ProfileImg from '../../../images/PFN10.png'
 import moment from 'moment'
 import { useDispatch} from 'react-redux'
 import { Link, useParams, withRouter } from 'react-router-dom'
@@ -17,6 +17,7 @@ import Footer from '../../../components/Footer/Footer'
 // import SideBar from '../SideBar/SideBar'
 import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share"
 import {  FacebookIcon, LinkedinIcon, TwitterIcon } from "react-share";
+import { mobile } from '../../../responsive'
 
 
 const Container = styled.div`
@@ -63,9 +64,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({height: "40vh", backgroundSize: "115%", backgroundPosition: "0 100%", backgroundAttachment: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({position: "relative", top: "25%"})}
       .giveNowBtn {
         margin-top: 2rem;
       }
@@ -111,17 +114,17 @@ const FullDetail = (props) => {
     const handleLikes = async (userId, postId) => {
         if (!post.likes.includes(userId)) {
             try {
-                const res = await axios.put("http://localhost:5000/api/post/likePost", {userId, postId})
+                const res = await axios.put("https://pfn-lagos.herokuapp.com/api/post/likePost", {userId, postId})
                 dispatch({type: LIKE, payload: res.data}) 
-                // console.log(res.data);
+                console.log(res.data);
             } catch (error) {
                 console.log(error);
             }
         }else{
             try {
-                const res = await axios.put("http://localhost:5000/api/post/unLikePost", {userId, postId})
+                const res = await axios.put("https://pfn-lagos.herokuapp.com/api/post/unLikePost", {userId, postId})
                 dispatch({type: LIKE, payload: res.data}) 
-                // console.log(res.data);
+                console.log(res.data);
             } catch (error) {
                 console.log(error);
             }
@@ -141,10 +144,10 @@ const FullDetail = (props) => {
                 <div className="detail_top d-flex justify-content-between py-2">
                     <div className="detail_info d-flex">
                         <div className="detail_author d-flex flex-column">
-                            <img src={!post.profilePic ? DetailImg : post.profilePic} alt="" />
+                            <img src={ProfileImg} alt="" />
                             <div className="d-flex gap-1">
-                                <i className="fa fa-user align-self-center" aria-hidden="true" />
-                                <span>{post.username}</span>
+                                {/* <i className="fa fa-user align-self-center" aria-hidden="true" /> */}
+                                <span>Admin</span>
                             </div>
                         </div>
                         <div className="detail_time d-flex gap-1">
@@ -158,8 +161,8 @@ const FullDetail = (props) => {
                 </div>
                 <div className="detail_center">
                     <div className="detail_img_box">
-                        {post.selectedFile ?
-                        <img className='detail_img2' src={post.selectedFile} alt="Dt2Img" />
+                        {post.avatar ?
+                        <img className='detail_img2' src={post.avatar} alt="Dt2Img" />
                         :
                         ""
                         }
@@ -205,16 +208,18 @@ const FullDetail = (props) => {
                                     </div>
                                 </Link>
                             </div>
-
                         }
-                        {post.username === user?.user?.username &&
+                        {/* {post.username === user?.user?.username &&
+                        } */}
+                        {
+                            user?.user?.email ==="admin@pfnlagosstate.org" && 
                             <div className="delete d-flex align-self-center">
                                 <i className="fa fa-trash" aria-hidden="true" style={{color: "#f96332", fontSize: "2rem", cursor: 'pointer'}} onClick={()=> dispatch(deletePost(post._id))} />
                             </div>
                         }
                     <div className="detail_share d-flex">
                     <FacebookShareButton
-                        url={"https://pfn-lagos-state.netlify.app"}
+                        url={"https://www.pfnlagosstate.org"}
                         quote={post.title}
                         hashtag={"#newpost"}
                         description={post.desc}
@@ -223,7 +228,7 @@ const FullDetail = (props) => {
                         <FacebookIcon size={32} round />
                     </FacebookShareButton>
                     <TwitterShareButton
-                        url={"https://pfn-lagos-state.netlify.app"}
+                        url={"https://www.pfnlagosstate.org"}
                         quote={post.title}
                         hashtag={"#newpost"}
                         description={post.desc}
@@ -232,7 +237,7 @@ const FullDetail = (props) => {
                         <TwitterIcon size={32} round />
                     </TwitterShareButton>
                     <LinkedinShareButton
-                        url={"https://pfn-lagos-state.netlify.app"}
+                        url={"https://www.pfnlagosstate.org"}
                         quote={post.title}
                         hashtag={"#newpost"}
                         description={post.desc}
@@ -250,32 +255,33 @@ const FullDetail = (props) => {
                 <CommentSection post={post} />
                 }
             </div>
-        <div className="recommended bg-white" style={{marginTop: "3rem", borderBottom: "1px solid #ddd"}}>
-            <h1 style={{marginBottom: "5px"}}>You may also like</h1>
-            <div className="content3">
-                {recommendedPost.reverse().slice(0, 3).map(({selectedFile, title, desc, likes, comments, _id})=> (
-                    <div style={{cursor: "pointer"}} onClick={()=> openPost(_id)} key={_id}>
-                        <div className="contentContent">
-                            <div className="title23 d-flex flex-column p-2">
-                                <h3 className='rec_text' style={{textAlign: "center"}}>{title}</h3>
-                                <p style={{height: "60px", lineHeight: "20px", overflow: "hidden"}}>{desc}</p>
-                                <img src={selectedFile} alt="#" style={{borderRadius: "5px"}}/>
-                            </div>
-                            <div className="reactions d-flex" style={{marginLeft: "5px"}}>
-                                <div className="like">
-                                    <i className="fa fa-heart" aria-hidden="true"/>
-                                    <span> &nbsp;{likes.length} </span> 
+            
+                <div className="recommended bg-white" style={{marginTop: "3rem", borderBottom: "1px solid #ddd"}}>
+                    <h1 style={{marginBottom: "5px"}}>You may also like</h1>
+                    <div className="content3">
+                        {recommendedPost.reverse().slice(0, 3).map(({selectedFile, title, desc, likes, comments, _id})=> (
+                            <div style={{cursor: "pointer"}} onClick={()=> openPost(_id)} key={_id}>
+                                <div className="contentContent">
+                                    <div className="title23 d-flex flex-column p-2">
+                                        <h3 className='rec_text' style={{textAlign: "center"}}>{title}</h3>
+                                        <p style={{height: "60px", lineHeight: "20px", overflow: "hidden"}}>{desc}</p>
+                                        <img src={selectedFile} alt="#" style={{borderRadius: "5px"}}/>
+                                    </div>
+                                    <div className="reactions d-flex" style={{marginLeft: "5px"}}>
+                                        <div className="like">
+                                            <i className="fa fa-heart" aria-hidden="true"/>
+                                            <span> &nbsp;{likes.length} </span> 
+                                        </div>
+                                        <div className="comments" style={{marginLeft: "7px"}}>
+                                            <i className="detail_reaction_icon fa fa-commenting" aria-hidden="true" />
+                                            <span> &nbsp;{comments.length} </span> 
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="comments" style={{marginLeft: "7px"}}>
-                                    <i className="detail_reaction_icon fa fa-commenting" aria-hidden="true" />
-                                    <span> &nbsp;{comments.length} </span> 
-                                </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
-                ))}
-            </div>
-        </div>
+                </div>
         </div>
     </div>
     <Footer />

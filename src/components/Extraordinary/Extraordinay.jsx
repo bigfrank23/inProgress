@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import BgImg from '../../images/bg2.jpg'
@@ -9,8 +9,9 @@ import { landscapeTab, mobile, tab } from '../../responsive'
 import { Grid } from '@mui/material'
 import Img1 from '../../images/announcement.jpeg'
 import Img2 from '../../images/currentEvents/current1.jpeg'
-import Img3 from '../../images/pastEvents/pastEvent1.jpeg'
+import Img3 from '../../images/upcomingEvents/upcomingBg.jpg'
 import H2 from '../Text/H2'
+import axios from 'axios'
 
 
 const Container = styled.div`
@@ -172,24 +173,58 @@ const ExtraCardImg = styled.img`
 //       /* margin-right: 5px; */
 // `
 const Extraordinay = () => {
+  const [pastEventData, setPastEventData] = useState([])
+  const [currentEventData, setCurrentEventData] = useState([])
+  const [upcomingEventData, setUpcomingEventData] = useState([])
+
+  useEffect(()=> {
+    const getPastEvents = async() => {
+      const res = await axios.get('https://pfn-lagos.herokuapp.com/pastEvent')
+      setPastEventData(res.data)
+    }
+    getPastEvents()
+  }, [])
+
+  useEffect(()=> {
+    const getCurrentEvents = async() => {
+      const res = await axios.get('https://pfn-lagos.herokuapp.com/currentEvent')
+      setCurrentEventData(res.data)
+    }
+    getCurrentEvents()
+  }, [])
+
+  useEffect(()=> {
+    const getCurrentEvents = async() => {
+      const res = await axios.get('https://pfn-lagos.herokuapp.com/upcomingEvent')
+      setUpcomingEventData(res.data)
+    }
+    getCurrentEvents()
+  }, [])
+
+  const current = currentEventData.reverse().pop()
+  const upcoming = upcomingEventData.reverse().pop()
+  const past = pastEventData.reverse().pop()
+
+  console.log(current?.avatar);
+
     const cards = [
         {
             id: 1,
-            img: Img1,
+            img: upcoming?.avatar || Img3,
             title: "Upcoming Events",
             desc: "Know More",
             to: "/upcoming-events"
         },
         {
             id: 2,
-            img: Img2,
+            img: current?.avatar || Img3,
             title: "Current Events",
             desc: "Know More",
             to: "/current-events"
         },
         {
             id: 3,
-            img: Img3,
+            img: past?.avatar || Img3,
             title: "Past Events",
             desc: "Know More",
             to: "/past-events"

@@ -45,6 +45,11 @@
 .postsTitle{
     text-align: center;
     padding: 1rem;
+    overflow: auto;
+}
+.postsTitle h3{
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 /* center */
@@ -57,7 +62,7 @@
 .postsContentCenterActive{
     display: flex;
     flex-direction: column;
-    background: url('../../../../images/bg.jpg');
+    /* background: url('../../../../images/bg.jpg'); */
     /* height: 500px;
     transition: height 1s ease; */
 }
@@ -93,7 +98,7 @@
 .reactions{
     display: flex;
     gap: 5px;
-    font-size: 1.5rem;
+    font-size: .9rem;
     justify-content: end;
     padding: 0 1rem 1rem 0;
 }
@@ -158,6 +163,8 @@
 @media only screen and (min-width: 992px) {
     .postsContainer {
     padding: 2rem 7rem;
+    width: 70%;
+    margin: auto;
 }
   }
 @media only screen and (min-width: 1200px) {

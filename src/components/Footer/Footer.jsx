@@ -202,7 +202,7 @@ const Footer = () => {
               {allProvinces.map((data, i)=> (
                 <>
                 <div key={i} className={open ? "sideBlock" : "none"}>
-                  <Link  to={{pathname: `/province`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
+                  <Link  to={{pathname: `/province/${data.id}`, state: {province: `${data.province}`, chairman: `${data.chairman}`,Secretariat: `${data.Secretariat}`, MeetingDays: `${data.MeetingDays}`, time: `${data.time}`, mapLink: `${data.mapLink}`}}} className="links" id={open ? 'textBlock' : 'textNone'}>
                       <div className="footerHoverItems" onClick={handleClose}>{data.province}</div>
                   </Link>
                 </div>
@@ -260,8 +260,12 @@ const Footer = () => {
                   </div>
                   <div className="footerButton">
                       <div className="buttonBox">
+                        <Link to="/give">
                           <button id='btn1'>Give</button>
+                        </Link>
+                        <Link to="/chairman-messages">
                           <button id='btn2'>Messages</button>
+                        </Link>
                       </div>
                   </div>
                 </div>
@@ -279,19 +283,19 @@ const Footer = () => {
             </div>
             {
               user ?
-              <div className="eventTime mt-4">
+              <div className="eventTime">
                 <div className="authBx">
-                  <Link to="/settings" id='links'>
+                  {/* <Link to="/settings" id='links'> */}
                     <div className="authBxName">
                       <span>{user.user.username}</span>
                     </div>
-                  </Link>
+                  {/* </Link> */}
                 </div>
                 <h6 className="authBxLogout" onClick={handleLogOut}>Log out</h6>
               </div>
               :
               <div className="eventTime">
-                <Link to="/admin_login" id='links'>
+                <Link to="/login" id='links'>
                 <h6 className="authBxLogout">{user ? "Log out" : <i className="fa fa-lock" aria-hidden="true" />}</h6>
                 </Link>
               </div>

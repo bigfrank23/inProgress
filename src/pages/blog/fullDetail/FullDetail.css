@@ -13,13 +13,15 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
     /* align-self: center; */
 }
 
 .detail_img_box{
     /* width: 500px;
     height: 500px; */
+    width: 500px;
+    margin: auto;
 }
 
 .detail_img2{
@@ -29,6 +31,10 @@
 }
 .detail_reactions a{
     text-decoration: none;
+}
+
+.detail_desc, .detail_title{
+    padding: 0 2rem;
 }
 
 .detail_time{
@@ -73,3 +79,16 @@
     cursor: pointer;
     margin-right: 2rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .detail_img_box {
+        width: 100%;
+        margin: auto;
+    }
+    .content3{
+        display: block;
+    }
+    .recommended{
+        padding: 0 2rem !important;
+    }
+  }

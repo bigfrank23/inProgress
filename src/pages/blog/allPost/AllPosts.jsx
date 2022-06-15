@@ -10,8 +10,10 @@ import Footer from '../../../components/Footer/Footer';
 import { Button } from '@mui/material';
 import H2 from '../../../components/Text/H2';
 import Pagination from '../pagination/Pagination'
+import axios from 'axios';
+import { mobile } from '../../../responsive';
 
-// import './Posts.css'
+// import './AllPost.css'
 
 
 const Container = styled.div`
@@ -58,9 +60,11 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({height: "40vh", backgroundSize: "115%", backgroundPosition: "0 100%", backgroundAttachment: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;
+      ${mobile({position: "relative", top: "25%"})}
       .giveNowBtn {
         margin-top: 2rem;
       }
@@ -73,37 +77,34 @@ const Container = styled.div`
 const Allposts = () => {
   const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
   const dispatch = useDispatch()
-  const [searchData, setSearchData] = useState('')
-  const [postData, setPostData] = useState([])
 
-  // const [data, setData] = useState([])
-    const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage] = useState(3);
+  const [post, setPost] = useState([])
 
-    useEffect(()=> {
-        dispatch(getPost(setPostData))
-        // setColor(Math.random().toString(16).substr(-6));
-    }, [dispatch])
-  
-  const filterData = postData.filter((data)=> {
-      if (
-        searchData === "" ||
-        data.title.toLowerCase().includes(searchData.toLowerCase()) ||
-        data.desc.toLowerCase().includes(searchData.toLowerCase())
-      ) {
-        return data;
+  // const perPage = 3;
+  // const [totalPages, setTotalPages] = useState(1);
+  // const [page, setPage] = useState(1)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const [noOfElement, setNoOfElement] = useState(3)
+
+  const slice = post.slice(0, noOfElement)
+
+  useEffect(()=> {
+    const getPosts = async() => {
+      setIsLoading(true)
+      try {
+        const res = await axios.get('https://pfn-lagos.herokuapp.com/post')
+        setPost(res.data)
+      } catch (error) {
+        
       }
-    })
-
-    //Get current posts
-    const indexOfLastPost = currentPage * postPerPage
-    const indexOfFirstPost = indexOfLastPost - postPerPage
-    const currentPosts = postData.slice(indexOfFirstPost, indexOfLastPost)
-
-    const paginate = (pageNumber) => {
-        setCurrentPage(pageNumber)
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
     }
+    getPosts()
+  }, [])
+
+  const loadMore = () => {
+    setNoOfElement(noOfElement + noOfElement)
+  }
 
   return (
     <Container>
@@ -116,23 +117,25 @@ const Allposts = () => {
     <div className="postsMainTitle">
           <H2>All Posts</H2>
           {
-            user?.user?.email ==="ezeyimf@gmail.com" &&
+            user?.user?.email ==="admin@pfnlagosstate.org" &&
             <Link to='/write' id='links'>
               <Button variant="contained">Create a post</Button>
             </Link>
-            // :
-            // <Link to='/login' id='links'>
-            //   <Button variant="contained">Create a post</Button>
-            // </Link>
           }
         </div>
-      {[...currentPosts].reverse().map((val, index )=> (
-          <Post postData={val} key={index} />
-          ))}
+        <div className="allPostRow row">
+          {slice.map((val, index )=> (
+              <Post post={val} key={index} />
+              ))}
+        </div>
     </div>
-    <Pagination postsPerPage={postPerPage}
-          totalPosts={postData.length}
-          paginate={paginate} />
+    {
+      slice.length > 2 ? 
+        <div className='text-center' onClick={loadMore}>
+        <Button variant="outlined">Load More</Button>
+        </div>
+        : ""
+    }
     <Footer />
     </Container>
   );

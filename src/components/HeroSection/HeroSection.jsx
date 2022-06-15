@@ -112,7 +112,9 @@ const HeroSection = () => {
             </div>
             <div className="d-none d-md-flex justify-content-center gap-2">
               <div style={{textAlign: "center"}}>
+              <Link to="/chairman-messages">
                 <Button BtnText='Messages' />
+              </Link>
               </div>
               <div style={{textAlign: "center"}}>
                 <Link to="/give">

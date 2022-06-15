@@ -13,6 +13,7 @@ import Button from '../Button/Button'
 import { provinces } from '../../teamMembers/provinces'
 import { Accordion, Card } from "react-bootstrap";
 import useCollapse from 'react-collapsed'
+import axios from 'axios'
 
 const Container = styled.nav`
     /* ${mobile({display: 'none'})} */
@@ -43,6 +44,7 @@ function Section(props) {
   );
 }
 
+const user = JSON.parse(localStorage.getItem('mern_crud3_copy_user'))
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false)
     const [closeNav, setCloseNav] = useState(false)
@@ -56,6 +58,7 @@ const Navbar = () => {
     const [ordList4, setOrdList4] = useState(false)
     const [ordList5, setOrdList5] = useState(false)
     const [ordList6, setOrdList6] = useState(false)
+    const [featured, setFeatured] = useState([])
     const handleClose = () => {
       setOpen(false);
       setOpenMain(false)
@@ -75,6 +78,24 @@ const Navbar = () => {
         })
     })
 
+    useEffect(()=> {
+      const getFeatured = async () => {
+        const res = await axios.get("https://pfn-lagos.herokuapp.com/currentEvent")
+        setFeatured(res.data)
+        
+      }
+      getFeatured()
+    }, [])
+
+    // console.log(featured);
+    let featuredImg = featured.pop()
+    console.log(featuredImg?.avatar)
+
+    if (featuredImg?.avatar !== undefined) {
+      localStorage.setItem("storeFeatured", featuredImg.avatar)
+    }
+
+
     const allProvinces = provinces.sort(function(a, b) {
       const nameA = a.province.toUpperCase(); // ignore upper and lowercase
       const nameB = b.province.toUpperCase(); // ignore upper and lowercase
@@ -93,6 +114,14 @@ const Navbar = () => {
   return (
     <Container id="navbar" className={scroll && "activeNavbar"}>
       {/* <Announcement /> */}
+      {user?.user?.email === "admin@pfnlagosstate.org" ? 
+        <div className='adminLink text-center'>
+          <Link to="/admin">
+          Go To Dashboard
+          </Link> 
+        </div>
+        : ""
+      }
       <div className="top">
         <div className="nav">
           <Link to="/">
@@ -117,7 +146,7 @@ const Navbar = () => {
                       </div>
                       <div className={openMain ? "mainListItemsCenterLeftImg" : 'notActiveMainImg'}>
                       <Link to='/current-events' id='links' onClick={()=> setOpenMain(false)}>
-                        {openMain ? <img src={Img} alt="" /> : <img src={Img5} alt="" />}
+                        {openMain ? <img src={localStorage.getItem("storeFeatured")} alt="" /> : <img src={Img5} alt="" />}
                       </Link>
                       </div>
                       <div className="mainListItemsCenterLeftBottomTxt">
@@ -171,7 +200,7 @@ const Navbar = () => {
                             <Link to="/our-mission"id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Mission</li>
                             </Link>
-                            <Link to="#"id='links' onClick={()=> setOpenMain(false)}>
+                            <Link to="/chairman-messages"id='links' onClick={()=> setOpenMain(false)}>
                             <li className="mainListItemsCenterRightListItems">Messages</li>
                             </Link>
                           </ul>
@@ -288,7 +317,7 @@ const Navbar = () => {
                       The executive structure
                     </li>
                   </Link>
-                  <Link to="#" className="links">
+                  <Link to="/chairman-messages" className="links">
                     <li className="hoverItems">
                       Chairman Messages
                     </li>
@@ -458,7 +487,7 @@ const Navbar = () => {
                   The executive structure
                 </li>
               </Link>
-              <Link to="#" className="links" onClick={()=> setShowNav(false)}>
+              <Link to="/chairman-messages" className="links" onClick={()=> setShowNav(false)}>
                 <li className="hoverItems">
                   Chairman Messages
                 </li>

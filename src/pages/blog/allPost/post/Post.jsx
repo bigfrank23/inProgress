@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Img3 from "../../../../images/bg2.jpg";
 import Img5 from "../../../../images/pro9.jpg";
-import UserImg from "../../../../images/user.png";
+// import UserImg from "../../../../images/user.png";
+import  UserImg from '../../../../images/PFN10.png'
 import styled from "styled-components";
 import './Post.css'
 import H3 from "../../../../components/Text/H3";
@@ -63,7 +64,7 @@ const Container = styled.div`
   }
 `;
 
-const Post = ({postData}) => {
+const Post = ({post}) => {
   // let navigate = useNavigate()
   const [show, setShow] = useState(true)
 
@@ -77,26 +78,26 @@ const Post = ({postData}) => {
   return (
      <Container>
       <div className="postsContainer">
-        {/* {postData.map((data) => ( */}
+        {/* {post.map((data) => ( */}
           <div className="postContents">
             <div className="postsContentTop">
               <div className="postsAuthorInfo">
                 <div className="postsProfile">
                   <div className="postsAuthorImg">
-                    <img src={!postData.profilePic ? UserImg : postData.profilePic} alt="" />
+                    <img src={!post?.profilePic ? UserImg : post?.profilePic} alt="" />
                   </div>
                   <div className="postsAuthor d-flex gap-1">
-                    <i className="fa fa-user align-self-center" aria-hidden="true" />
-                    <span>{postData.username}</span>
+                    {/* <i className="fa fa-user align-self-center" aria-hidden="true" /> */}
+                    <span>Admin</span>
                   </div>
                 </div>
                 <div className="postsDate d-flex gap-1">
                   <i className="fa fa-clock-o align-self-center" aria-hidden="true" />
-                  <span>{moment(postData.createdAt).fromNow()}</span>
+                  <span>{moment(post?.createdAt).fromNow()}</span>
                 </div>
               </div>
               <div className="postsTitle">
-                <H3>{postData.title}</H3>
+                <h3>{post.title}</h3>
               </div>
             </div>
             <div
@@ -105,21 +106,24 @@ const Post = ({postData}) => {
               }
             >
               <div className="postsImg">
-                <img src={postData.selectedFile} alt="" />
+              {
+                post.avatar ? <img src={post?.avatar} alt="" /> : null
+              }
+                
               </div>
               <div className="postsTxtActive">
                 <div className="reactions">
                   <i className="fa fa-heart" aria-hidden="true" />
-                  &nbsp;{postData.likes?.length > 2 ? `You and ${postData.likes?.length - 1} others` : `${postData.likes?.length} like${postData.likes?.length > 1 ? 's' : ''}` } 
+                 {post.likes?.length > 2 ? `You and ${post.likes?.length - 1} others` : `${post.likes?.length} like${post.likes?.length > 1 ? 's' : ''}` } 
                   <i className="fa fa-comment" aria-hidden="true" />
-                  {postData.comments.length}
+                  {post.comments.length}
                 </div>
                 <p>
-                  {postData.desc}
+                  {post.desc}
                 </p>
               </div>
               <div className="postsBtn">
-              <Link to={`/full_detail/${postData._id}`} id="links">
+              <Link to={`/full_detail/${post._id}`} id="links">
                 <Button variant="contained" color="secondary">Full Details</Button>
               </Link>
               </div>

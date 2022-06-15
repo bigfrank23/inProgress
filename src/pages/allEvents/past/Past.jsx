@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Img from "../../../images/upcomingEvents/upcomingBg.jpg";
 import Img3 from "../../../images/bg2.jpg";
 import styled from "styled-components";
@@ -8,6 +8,8 @@ import Footer from '../../../components/Footer/Footer';
 import { past } from './pastData';
 import { Link } from 'react-router-dom';
 import { mobile } from '../../../responsive';
+import axios from 'axios';
+import Button2 from '../../../components/Button/Button2';
 
 const Container = styled.div`
 user-select: none;
@@ -42,6 +44,31 @@ user-select: none;
 `;
 
 const Past = () => {
+  const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
+  const [pastEventData, setPastEventData] = useState([])
+
+  useEffect(()=> {
+    const getPastEvents = async() => {
+      const res = await axios.get('https://pfn-lagos.herokuapp.com/pastEvent')
+      setPastEventData(res.data)
+    }
+    getPastEvents()
+  }, [])
+
+  const handleDelete = async(id) => {
+    try {
+      const res = await axios.delete(`https://pfn-lagos.herokuapp.com/pastEvent/${id}`)
+      
+        const updated = pastEventData.filter((r)=> r._id !== id)
+        setPastEventData(updated)
+        console.log(res.data);
+        alert("Removed!")
+        // window.location.replace("/past-events")
+      
+    } catch (error) {
+      alert(error);
+    }
+  }
   return (
     <Container>
       <div className="page1Wrapper">
@@ -50,51 +77,62 @@ const Past = () => {
           <h1>Past Events</h1>
         </div>
       </div>
-      <div className="page5">
-            {past.map((data)=> (
-              <>
-                <div className="page5Bx" key={data.id}>
-                <div className="page5BxImg">
-                    <img src={data.img} alt="" />
-                </div>
-                <div className="page5BxContent">
-                    <div className="page5Title">
-                    <H2>{data.title}</H2>
-                    </div>
-                    <div className="page5Date">
-                    {data.date ? <><h5><b>Date</b></h5> : {data.date} </> : null}
-                    </div>
-                    <div className="page5Time">
-                    {data.time ? <><h5><b>Time</b></h5> : {data.time} </> : null}
-                    </div>
-                    <div className="page5Location" id='upcomingLocation'>
-                      {data.location ? <><h5><b>Location</b></h5> : {data.location} </> : null}
-                    </div>
-                    <div className="page5Para">
-                    <p id="upcomingPara" style={{textTransform: "uppercase"}}>
-                      {data.desc ? <><b>{data.desc}</b></> : null}
-                    </p>
-                    <p id="upcomingPara">
-                      {data.desc ? <><b>{data.more}</b></> : null}
-                    </p>
-                    <p>
-                      <b>{data.theme}</b>
-                    </p>
-                    <p>
-                      <b>{data.date2}</b>
-                    </p>
-                    </div>
-                    <div className="page5Btn">
-                    <Link key={data.id} to={{pathname: `/full-event-detail`, state: {title: `${data.title}`, img: `${data.img}`,date: `${data.date}`, time: `${data.time}`, location: `${data.location}`, desc: `${data.desc}`}}}>
-                    <Button BtnText='See Event' />
-                    </Link>
-                    </div>
-                </div>
-                </div>
-                <hr className='Hr' id='upcomingHr' />
-                </>
-            ))}
-      </div>
+      {pastEventData.length === 0 ? " No Event yet" : 
+        <div className="page5">
+              {pastEventData.reverse().map((data)=> (
+                <>
+                  <div className="page5Bx" key={data.id}>
+                  <div className="page5BxImg">
+                      <img src={data.avatar} alt="" />
+                  </div>
+                  <div className="page5BxContent">
+                  <div className="page5Title">
+                      <H2>{data.name}</H2>
+                      </div>
+                      <div className="page5Title">
+                      <h5>{data.title}</h5>
+                      </div>
+                      <div className="page5Date">
+                      {data.date ? <><h5><b>Date</b></h5> : {data.date} </> : null}
+                      </div>
+                      <div className="page5Time">
+                      {data.time ? <><h5><b>Time</b></h5> : {data.time} </> : null}
+                      </div>
+                      <div className="page5Location" id='upcomingLocation'>
+                        {data.venue ? <><h5><b>Venue</b></h5> : {data.venue} </> : null}
+                      </div>
+                      <div className="page5Para">
+                      <p id="upcomingPara" style={{textTransform: "uppercase"}}>
+                        {data.desc ? <><b>{data.desc}</b></> : null}
+                      </p>
+                      <p id="upcomingPara">
+                        {data.desc ? <><b>{data.more}</b></> : null}
+                      </p>
+                      {/* <p>
+                        <b>{data.venue}</b>
+                      </p> */}
+                      <p>
+                        <b>{data.date2}</b>
+                      </p>
+                      </div>
+                      <div className="page5Btn">
+                      <Link to={`/past-event-full-detail/${data._id}`}>
+                      <Button BtnText='See Event' />
+                      </Link>
+                      {
+                        user?.user?.email ==="admin@pfnlagosstate.org" &&
+                        <div className='mt-3' onClick={()=> handleDelete(data._id)}>
+                        <button type="button" className="btn btn-danger">Remove this event</button>
+                        </div>
+                      }
+                      </div>
+                  </div>
+                  </div>
+                  <hr className='Hr' id='upcomingHr' />
+                  </>
+              ))}
+        </div>
+      }
       <Footer />
     </Container>
   )

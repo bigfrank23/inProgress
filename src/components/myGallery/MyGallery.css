@@ -102,6 +102,11 @@
     column-width: 100%;
     display: block;
 }
+.myGalleryContainer .pics {
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover;
+}
 }
 @media only screen and (min-width: 600px) {
     .myGalleryContainer{

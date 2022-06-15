@@ -82,11 +82,11 @@ const Page9 = () => {
   const [phone, setPhone] = useState('')
   const [province, setProvince] = useState('')
   const [message, setMessage] = useState('')
-  // const [company, setCompany] = useState('')
+  const [directorat, setDirectorat] = useState('')
   const[loading, setLoading] = useState(false)
 
   const handleRequest = async (e) => {
-    if(email && fullname && address && message && phone && province !== ""){
+    if(email && fullname && address && message && directorat && phone && province !== ""){
       if(message !== ""){
       e.preventDefault()
     setLoading(true)
@@ -98,10 +98,11 @@ const Page9 = () => {
       fullname,
       province,
       phone,
-      address
+      address,
+      directorat
     }
 
-   await axios.post('http://localhost:5000/directorate/', body, {
+   await axios.post('https://pfn-lagos.herokuapp.com/directorate/', body, {
       headers: {
         'Content-type': 'application/json'
       }
@@ -120,6 +121,7 @@ const Page9 = () => {
         setPhone("")
         setMessage("")
         setProvince("")
+        setDirectorat("")
       }
     }).catch((err) => {
       console.log(err)
@@ -225,6 +227,10 @@ const Page9 = () => {
                 <div style={{padding: "2rem"}}>
                     <form onSubmit = {handleRequest} method = "post">
                       <div className="form-group">
+                        <label htmlFor="name">Directorate</label>
+                        <input type="text" className="form-control" id="directorat" value= {directorat} onChange = {(e) => setDirectorat(e.target.value)}  />
+                      </div>
+                      <div className="form-group">
                         <label htmlFor="name">Full name</label>
                         <input type="text" className="form-control" id="name" value = {fullname} onChange = {(e) => setFullname(e.target.value)}  />
                       </div>
@@ -244,7 +250,7 @@ const Page9 = () => {
                         <div className="form-group col-md-6">
                           <label htmlFor="inputState">Select your province</label>
                           <select id="inputState" class="form-control" value = {province} onChange = {(e) => setProvince(e.target.value)}>
-                            <option selected>Select</option>
+                            <option value="Select">Select</option>
                               {allProvinces.map((data)=> (
                                 <option value={data.province}>
                                   {data.province}
@@ -262,9 +268,9 @@ const Page9 = () => {
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
-                  <button type="button" className="btn btn-success stretched-link" onClick={handleClose}>
+                  {/* <button type="button" className="btn btn-success stretched-link" onClick={handleClose}>
                     Close
-                  </button>
+                  </button> */}
                 </Modal.Footer>
               </Modal>
         </div>

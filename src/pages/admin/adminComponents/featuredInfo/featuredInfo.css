@@ -1,6 +1,8 @@
 .featured {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
   justify-content: space-between;
 }
 
@@ -13,6 +15,10 @@
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+.featuredItem a{
+    text-decoration: none;
+    color: initial;
 }
 
 .featuredTitle{

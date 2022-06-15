@@ -82,7 +82,7 @@ const Settings = () => {
     e.preventDefault()
 
     try {
-      const {data} = await axios.put("http://localhost:5000/api/auth/" + user.user._id, profilePic);
+      const {data} = await axios.put("https://pfn-lagos.herokuapp.com/api/auth/" + user.user._id, profilePic);
       setSuccess(true)
       setTimeout(() => {
         setSuccess(false)

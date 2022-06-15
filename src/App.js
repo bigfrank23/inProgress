@@ -61,6 +61,16 @@ import Directors from "./pages/admin/adminPages/userList/directors/Directors";
 import Chairmen from "./pages/admin/adminPages/userList/chairmen/Chairmen";
 import AdminHeroSection from './pages/admin/adminPages/adminHeroSection/AdminHeroSection';
 import AdminHome from './pages/admin/adminPages/home/AdminHome';
+import MyGallery2 from './components/myGallery/myGallery2/MyGallery2';
+import NewsFeedForm from './pages/admin/adminPages/form/newsFeed/NewsFeedForm';
+import UpcomingEventForm from './pages/admin/adminPages/form/upcomingEvent/UpcomingEventForm';
+import CurrentEventForm from './pages/admin/adminPages/form/currentEvent/CurrentEventForm';
+import PastEventForm from './pages/admin/adminPages/form/pastEvent/PastEventForm';
+import PastEventFullDetail from './pages/allEvents/fullDetail/pastEvent/PastEventFullDetail';
+import UpcomingEventFullDetail from './pages/allEvents/fullDetail/upcomingEvent/UpcomingEventFulDetail';
+import Messages from './pages/messages/Messages';
+import ChairmanMsgForm from './pages/admin/adminPages/form/chaimanMsg/ChairmanMsgForm';
+import ErrorPage from './pages/404Page/ErrorPage';
 
 const Container = styled.div`
   width: 100%;
@@ -68,7 +78,7 @@ const Container = styled.div`
 
 function App() {
 
-  // const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
+  const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
   return (
     <Container>
       <HashRouter>
@@ -121,11 +131,21 @@ function App() {
           <Route exact path='/upcoming-events' component={Upcoming} />
           <Route exact path='/current-events' component={Current} />
           <Route exact path='/past-events' component={Past} />
-          <Route exact path='/full-event-detail' component={FullEventDetail} />
-          <Route exact path='/admin' component={AdminHome} />
-          <Route exact path="pfnlagos-directors" component={Directors} />
-          <Route exact path="pfnlagos-cwc" component={UserList} />
-          <Route exact path="pfnlagos-chairmen" component={Chairmen} />
+          <Route exact path='/full-event-detail/:id' component={FullEventDetail} />
+          <Route exact path='/past-event-full-detail/:id' component={PastEventFullDetail} />
+          <Route exact path='/upcoming-event-full-detail/:id' component={UpcomingEventFullDetail} />
+          <Route exact path='/admin' component={user?.user?.email ==="admin@pfnlagosstate.org" ? AdminHome : Home} />
+          <Route exact path="/pfnlagos-directors" component={Directors} />
+          <Route exact path="/pfnlagos-cwc" component={UserList} />
+          <Route exact path="/pfnlagos-chairmen" component={Chairmen} />
+          <Route exact path="/gall" component={MyGallery2} />
+          <Route exact path="/news-feed-form" component={NewsFeedForm} />
+          <Route exact path="/upcoming-events-form" component={UpcomingEventForm} />
+          <Route exact path="/current-event-form" component={CurrentEventForm} />
+          <Route exact path="/past-event-form" component={PastEventForm} />
+          <Route exact path="/chairman-messages-form" component={ChairmanMsgForm} />
+          <Route exact path="/chairman-messages" component={Messages} />
+          <Route path="/*" component={ErrorPage} />
         </Switch>
       </HashRouter>
       <GoUp />

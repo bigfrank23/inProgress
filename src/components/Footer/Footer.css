@@ -253,4 +253,7 @@ td._51m- _2pir _51mw{
         bottom: 1rem;
         cursor: pointer;
     }
+    .eventTime{
+        display: none;
+    }
 }

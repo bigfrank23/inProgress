@@ -95,7 +95,7 @@ const ContactPage = () => {
       location
     }
 
-   await axios.post('http://localhost:5000/mail/', body, {
+   await axios.post('https://pfn-lagos.herokuapp.com/mail/', body, {
       headers: {
         'Content-type': 'application/json'
       }
