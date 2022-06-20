@@ -18,13 +18,13 @@ const MyGallery = () => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return cloudData.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage]);
+  }, [currentPage, cloudData]);
 
   const getCldImage = async () => {
     try {
         // const res = await axios.get("https://api.cloudinary.com/v1_1/pentecostal-fellowship-of-nigeria-lagos/resources/image", config)
-        const res = await axios.get("http://res.cloudinary.com/pentecostal-fellowship-of-nigeria-lagos/image/list/pfnGalleryImages.json")
-        console.log(res.data.resources);
+        const res = await axios.get(`${process.env.REACT_APP_CLOUDINARY_URL}`)
+        // console.log(res.data.resources);
         setCloudData(res.data.resources)
     } catch (error) {
         console.log(error);
@@ -39,8 +39,8 @@ useEffect(() => {
     <>
         <SRLWrapper>
           <CloudinaryContext cloudName="pentecostal-fellowship-of-nigeria-lagos" className="myGalleryContainer">
-          {currentData?.map((data) => (
-              <Image publicId={data.public_id} className="pics" style={{width: "200px", height: "200px"}}>
+          {currentData?.map((data, i) => (
+              <Image key={i} publicId={data.public_id} className="pics" style={{width: "300px", height: "200px", objectFit: "cover"}}>
                   <Transformation
                         crop="scale"
                         // width="200"

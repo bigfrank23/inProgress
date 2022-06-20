@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Grid from '@mui/material/Grid'
 import { chairmen, directors } from "../../teamMembers/team";
 import { Link } from "react-router-dom";
-import { mobile } from "../../responsive";
+import { landscapeTab, mobile, tab } from "../../responsive";
 // import FullExecDetail from "../fullExecDetail/FullExecDetail";
 
 const Container = styled.div`
@@ -40,6 +40,8 @@ const Container = styled.div`
     top: 0;
     height: 65vh;
     ${mobile({ height: "40vh", backgroundPosition: '0 25%', backgroundSize: "contain", clipPath: "unset"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 36%", backgroundPosition: "unset"})}
+    ${landscapeTab({ height: "65vh", backgroundSize: "cover", backgroundPosition: "0 -150px"})}
     .page1Header {
       color: #fff;
       text-align: center;
@@ -355,7 +357,7 @@ const PfnExecutives = () => {
           <Grid container spacing={2}>
             {chairmen.map((data) => (
               <Grid key={data.id} item xs={12} sm={6} md={6} lg={4}>
-                <Link to={{pathname: `/full_exec_detail`, state: {header: `${data.header}`, img: `${data.img}`, name: `${data.name}`, title: `${data.title}`, position: `${data.position}`, church: `${data.church}`, address: `${data.address}`, tel: `${data.tel}`, dOb: `${data.dOb}`, email: `${data.email}`, province: `${data.province}`, bio: `${data.bio}` }}}>
+                <Link to={{pathname: `/full_exec_detail/:${data.id}`, state: {header: `${data.header}`, img: `${data.img}`, name: `${data.name}`, title: `${data.title}`, position: `${data.position}`, church: `${data.church}`, address: `${data.address}`, tel: `${data.tel}`, dOb: `${data.dOb}`, email: `${data.email}`, province: `${data.province}`, bio: `${data.bio}` }}}>
                   <div className="flip-box">
                     <div className="flip-box-inner">
                       <div className="flip-box-front">

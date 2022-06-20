@@ -11,7 +11,7 @@ import Footer from '../../components/Footer/Footer'
 // import { makeStyles } from '@material-ui/core/styles';
 import { Modal, Button } from "react-bootstrap";
 import './Announcement.css'
-import { mobile } from '../../responsive'
+import { landscapeTab, mobile, tab } from '../../responsive'
 import axios from 'axios'
 import moment from 'moment'
 
@@ -42,6 +42,8 @@ const Container = styled.div`
     top: 0;
     height: 65vh;
     ${mobile({ height: "40vh", clipPath: "unset", backgroundPositionY: "25%"})}
+    ${tab({ height: "42vh"})}
+    ${landscapeTab({ height: "65vh"})}
     .page1Header {
       color: #fff;
       text-align: center;

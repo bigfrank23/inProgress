@@ -138,3 +138,23 @@
         font-size: 1rem;
     }
 }
+
+@media only screen and (min-width: 600px) {
+    #ReactBackgroundSlider > figure {
+        background-size: 115% 100% !important;
+        height: 65% !important;
+    }
+    #hero{
+        height: 65vh !important;
+    }
+  }
+
+@media only screen and (min-width: 992px) {
+    #ReactBackgroundSlider > figure {
+        background-size: cover !important;
+        height: 100% !important;
+    }
+    #hero{
+        height: 100vh !important;
+    }
+  }

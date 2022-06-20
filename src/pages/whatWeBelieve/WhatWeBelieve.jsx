@@ -12,7 +12,7 @@ import PText from './../../components/Text/PText';
 import H2 from './../../components/Text/H2';
 import H3 from '../../components/Text/H3';
 import Header2 from '../../components/Text/Header2';
-import { mobile } from '../../responsive'
+import { landscapeTab, mobile, tab } from '../../responsive'
 
 const Container = styled.div`
   user-select: none;
@@ -39,6 +39,8 @@ const Container = styled.div`
     top: 0;
     height: 80vh;
     ${mobile({height: "40vh", backgroundSize: "115%", backgroundPosition: "0 100%", backgroundAttachment: "unset"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 100%", backgroundPosition: "0px -215px"})}
+    ${landscapeTab({ height: "80vh", backgroundSize: "100%", backgroundPosition: "top"})}
     .page1Header {
       color: #fff;
       text-align: center;

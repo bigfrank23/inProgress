@@ -84,7 +84,7 @@ input[type="radio" i]{
     outline: 0;
     border: thin solid rgb(213, 213, 210);
     border-radius: 3px;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 
 /* Bottom */
@@ -152,6 +152,33 @@ input[type="radio" i]{
         height: 200px;
     }
   }
+
   @media only screen and (min-width: 600px) {
-    
+    #prayerTopBx {
+        display: block;
+    }
+    .page13TopContent {
+        padding: 2rem 0rem;
+    }
+    .prayerImg {
+        margin: auto;
+    }
+    .page13CenterContent {
+        padding: 0;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    #prayerTopBx {
+        display: flex;
+    }
+    .page13TopContent {
+        padding: 2rem 7rem;
+    }
+    .prayerImg {
+        margin: 0;
+    }
+    .page13CenterContent {
+        padding: 0 7rem;
+    }
   }

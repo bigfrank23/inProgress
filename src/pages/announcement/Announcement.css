@@ -22,3 +22,9 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+
+@media only screen and (max-width: 600px) {
+    .announcementCol{
+        display: block;
+    }
+}

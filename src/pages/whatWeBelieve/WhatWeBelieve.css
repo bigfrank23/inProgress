@@ -76,5 +76,17 @@
     }
   }
   @media only screen and (min-width: 600px) {
+    .sectTwo{
+        padding: 1rem 7rem;
+        background-size: cover;
+      }
+    }
     
+    @media only screen and (min-width: 992px) {
+      .sectTwo{
+        padding: 2rem 7rem;
+        background-size: 100%;
+    }
   }
+
+  

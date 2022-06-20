@@ -38,6 +38,7 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 30vh;
+    ${mobile({backgroundPosition: "10px 50px"})}
     .page1Header {
       color: #fff;
       text-align: center;

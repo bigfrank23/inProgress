@@ -190,6 +190,9 @@
     .nationalBottomContent {
         width: 50%;
     }
+    .svgBackground {
+        top: 27vh;
+    }
   }
 @media only screen and (min-width: 992px) {
       .nationalTop {
@@ -216,5 +219,8 @@
     }
     .nationalBottomContent {
         width: 32%;
+    }
+    .svgBackground {
+        top: 50vh;
     }
 }

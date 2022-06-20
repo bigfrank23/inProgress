@@ -44,6 +44,8 @@ const Container = styled.div`
     top: 0;
     height: 65vh;
     ${mobile({ height: "40vh", backgroundPosition: '0 25%'})}
+    ${tab({ height: "42vh"})}
+    ${landscapeTab({ height: "65vh"})}
     .page1Header {
       color: #fff;
       text-align: center;

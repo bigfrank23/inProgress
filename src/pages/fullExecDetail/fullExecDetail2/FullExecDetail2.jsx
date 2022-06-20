@@ -6,7 +6,7 @@ import "./FullExecDetail2.css";
 import Footer from "../../../components/Footer/Footer";
 import { faChurch, faAddressCard, faPhone, faCalendar, faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { mobile } from "../../../responsive";
+import { landscapeTab, mobile, tab } from "../../../responsive";
 // import { useLocation } from "react-router-dom";
 
 const Container = styled.div`
@@ -35,6 +35,8 @@ const Container = styled.div`
     top: 0;
     height: 65vh;
     ${mobile({height: "40vh", backgroundSize: "100%", backgroundPosition: "0 25%",  clipPath: "unset"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 36%", backgroundPosition: "unset"})}
+    ${landscapeTab({ height: "65vh", backgroundSize: "cover", backgroundPosition: "0 -150px"})}
     .page1Header {
       color: #fff;
       text-align: center;

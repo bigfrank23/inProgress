@@ -9,7 +9,7 @@ import PText from '../../components/Text/PText'
 import './Chapters.css'
 import { useLocation, useParams } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
-import { mobile } from '../../responsive'
+import { landscapeTab, mobile, tab } from '../../responsive'
 
 const Container = styled.div`
 user-select: none;
@@ -35,6 +35,8 @@ user-select: none;
     top: 0;
     height: 65vh;
     ${mobile({ height: "40vh", clipPath: "unset"})}
+    ${tab({ height: "42vh"})}
+    ${landscapeTab({ height: "65vh"})}
     .page1Header {
       color: #fff;
       text-align: center;

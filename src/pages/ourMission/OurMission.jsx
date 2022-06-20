@@ -4,7 +4,7 @@ import Img3 from "../../images/bg2.jpg";
 import styled from "styled-components";
 import "./OurMission.css";
 import Footer from "../../components/Footer/Footer";
-import { mobile } from "../../responsive";
+import { landscapeTab, mobile, tab } from "../../responsive";
 
 const Container = styled.div`
   user-select: none;
@@ -24,7 +24,7 @@ const Container = styled.div`
       url(${Img2});
     background-size: contain;
     background-attachment: fixed;
-    background-position: 0 15px;
+    background-position: 0 0px;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -34,6 +34,8 @@ const Container = styled.div`
     top: 0;
     height: 62vh;
     ${mobile({height: "40vh", backgroundSize: "130%", backgroundPosition: "0 100%", backgroundAttachment: "unset", clipPath: "unset"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 50%", backgroundPosition: "initial"})}
+    ${landscapeTab({ height: "62vh", backgroundSize: "contain", backgroundPosition: "0 0px"})}
     .page1Header {
       color: #fff;
       text-align: center;

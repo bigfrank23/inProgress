@@ -104,7 +104,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 };
 
 const MailchimpFormContainer = props => {
-  const postUrl = `https://pfnlagosstate.us14.list-manage.com/subscribe/post?u=c24c2b0ed5e6c969eb11482f9&amp;id=4a7a3baff4`;
+  const postUrl = `${process.env.REACT_APP_MAILCHIMP_URL}`;
     return (
         <div className="mc__form-container">
             <MailchimpSubscribe

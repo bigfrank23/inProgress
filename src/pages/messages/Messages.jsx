@@ -10,7 +10,7 @@ import '../allEvents/AllEvents.css'
 import H2 from '../../components/Text/H2';
 import Footer from '../../components/Footer/Footer';
 import Upcomin from '../../components/Upcoming/Upcomin';
-import { mobile } from '../../responsive';
+import { landscapeTab, mobile, tab } from '../../responsive';
 import { Grid } from '@mui/material';
 import './Messages.css'
 import axios from 'axios';
@@ -28,8 +28,8 @@ user-select: none;
     clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%); */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${Img});
-    background-size: cover;
-    background-position: bottom;
+    background-size: 100% 60%;
+    /* background-position: bottom; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
@@ -39,7 +39,9 @@ user-select: none;
     position: relative;
     top: 0;
     height: 62vh;
-    ${mobile({ height: "40vh", clipPath: "unset", backgroundPosition: "bottom"})}
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundSize: "100% 40%", backgroundPosition: "unset"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 40%", backgroundPosition: "unset" })}
+    ${landscapeTab({ height: "62vh", backgroundSize: "100% 60%"})}
     .page1Header {
       color: #fff;
       text-align: center;

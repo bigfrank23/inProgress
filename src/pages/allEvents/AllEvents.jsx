@@ -10,7 +10,7 @@ import './AllEvents.css'
 import H2 from '../../components/Text/H2';
 import Footer from '../../components/Footer/Footer';
 import Upcomin from '../../components/Upcoming/Upcomin';
-import { mobile } from '../../responsive';
+import { landscapeTab, mobile, tab } from '../../responsive';
 
 const Container = styled.div`
 user-select: none;
@@ -26,7 +26,7 @@ user-select: none;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${Img});
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
@@ -36,7 +36,9 @@ user-select: none;
     position: relative;
     top: 0;
     height: 62vh;
-    ${mobile({ height: "40vh", clipPath: "unset", backgroundPosition: "bottom"})}
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundSize: "100% 50%"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 50%", backgroundPosition: "unset", clipPath: "unset", })}
+    ${landscapeTab({ height: "62vh", backgroundSize: "100% 100%", clipPath: "polygon(0 0, 100% 0%, 100% 79%, 0% 100%)"})}
     .page1Header {
       color: #fff;
       text-align: center;

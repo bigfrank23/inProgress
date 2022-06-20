@@ -7,8 +7,9 @@ import Footer from '../../components/Footer/Footer';
 import BannerImg from '../../images/web3.jpg'
 import SendIcon from '@mui/icons-material/Send';
 import axios from 'axios'
-import { mobile } from '../../responsive'
+import { landscapeTab, mobile, tab } from '../../responsive'
 import './ContactPage.css'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const Container = styled.div`
   user-select: none;
@@ -40,6 +41,8 @@ const Container = styled.div`
     top: 0;
     height: 65vh;
     ${mobile({ height: "40vh", clipPath: "unset", backgroundSize: "100%", backgroundPosition: "0 25%"})}
+    ${tab({ height: "42vh", backgroundSize: "100%", backgroundPosition: "unset" })}
+    ${landscapeTab({ height: "65vh", backgroundSize: "100%", backgroundPosition: "center"})}
     .page1Header {
       color: #fff;
       text-align: center;
@@ -77,6 +80,7 @@ const ContactPage = () => {
   // const [subject, setSubject] = useState('')
   // const [company, setCompany] = useState('')
   const[loading, setLoading] = useState(false)
+  const[isVerified, setIsVerified] = useState(false)
 
   const handleRequest = async (e) => {
     if(email && location && name && message && phone !== ""){
@@ -127,6 +131,15 @@ const ContactPage = () => {
     }
   }
 
+  function onChange(value) {
+    // console.log('Captcha value:', value);
+    value && setIsVerified(true)
+
+    if(value === null){
+      return setIsVerified(false)
+    }
+  }
+
   return (
     <Container>
       <div className="page1Wrapper">
@@ -160,7 +173,7 @@ const ContactPage = () => {
                 <marquee>
                 <span>"Neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord." Romans 8:39</span>
                 </marquee>
-                <form onSubmit = {handleRequest} method = "post">
+                <form onSubmit = {handleRequest} method = "post" autoComplete='off'>
                 <div className = "form__title">
                   <h4>{loading ? 'Sending...' : ""}</h4>
                   {/* {
@@ -216,6 +229,13 @@ const ContactPage = () => {
                       </div>
                     </div>
                     <div className="col-lg-12">
+                      <ReCAPTCHA
+                          sitekey={process.env.REACT_APP_RECAPTCHA}
+                          onChange={onChange}
+                        />
+                      {/* <button type="submit" className="btn btn-dark mt-3 mb-3 text-white border-0 py-2 px-3" disabled = {loading} onClick = {handleRequest}><span> SUBMIT NOW <SendIcon /> </span></button> */}
+                    </div>
+                    <div className="col-lg-12" style={isVerified ? {display: "block"} : {display: "none"}}>
                       <button type="submit" className="btn btn-dark mt-3 mb-3 text-white border-0 py-2 px-3" disabled = {loading} onClick = {handleRequest}><span> SUBMIT NOW <SendIcon /> </span></button>
                     </div>
                   </div>
@@ -226,10 +246,10 @@ const ContactPage = () => {
             <iframe id='contactPageIframe' title='PFN Lagos contact' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253664.50294512132!2d3.2922873848851304!3d6.583612394604272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8de2d6dc2833%3A0x6b683e00c6393bd7!2sPentecostal%20Fellowship%20of%20Nigeria%2C%20Lagos%20State!5e0!3m2!1sen!2sng!4v1651050624529!5m2!1sen!2sng" width="100%" height="300" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               <div className="detail-box p-4">
                 <h5 className="text-white font-weight-light mb-3">ADDRESS</h5>
-                <p className="text-white op-7"> <i className="fa fa-address-book" aria-hidden="true" /> 5-9 Bode Thomas Rd, Onipanu 100252,
-                  <br /> Lagos</p>
+                <p className="text-white op-7"> <i className="fa fa-address-book" aria-hidden="true" /> 5-9 Bode Thomas Road, Onipanu 100252,
+                   Lagos State, Nigeria</p>
                 <h5 className="text-white font-weight-light mb-3 mt-4">CALL US</h5>
-                <p className="text-white op-7"><i className="fa fa-phone" aria-hidden="true" /> 09153848219 09153848220
+                <p className="text-white op-7"><i className="fa fa-phone" aria-hidden="true" /> 09153848219, 09153848220
                   {/* <br /> <i className="fa fa-phone" aria-hidden="true" /> 630 446 8851 */}
                   </p>
                 <div className="round-social light d-flex gap-3">

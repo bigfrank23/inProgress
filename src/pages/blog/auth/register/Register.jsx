@@ -62,6 +62,7 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(register(formData, history))
+        e.target.reset()
     }
 
     const handleShowPassword = () => setShowPassword((prevShowPassword)=> !prevShowPassword)
@@ -78,13 +79,14 @@ const Register = () => {
         <div className="row">
           <div className="col-lg-7 col-md-12 col-sm-12 p-4 bg-light shadow">
             <span className="register_title">Register</span>
-            <form className="register_form" onSubmit={handleSubmit}>
+            <form className="register_form" onSubmit={handleSubmit} autoComplete='off'>
               <label>Username</label>
               <input
                 type="text"
                 placeholder="Enter your username..."
                 name="username"
                 onChange={handleChange}
+                autoComplete='off'
               />
               <label>Email</label>
               <input
@@ -92,6 +94,7 @@ const Register = () => {
                 placeholder="Enter your email..."
                 name="email"
                 onChange={handleChange}
+                autoComplete='off'
               />
               <label>Password</label>
               <div className="wrap">
@@ -102,6 +105,7 @@ const Register = () => {
                   name="password"
                   onChange={handleChange}
                   className="field"
+                  autoComplete='off'
                 />
                 <i
                   className={

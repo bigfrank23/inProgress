@@ -22,7 +22,7 @@ import './PastPfn.css'
 import H3 from '../../components/Text/H3'
 import PText from '../../components/Text/PText'
 import { Grid } from '@mui/material'
-import { mobile } from '../../responsive'
+import { landscapeTab, mobile, tab } from '../../responsive'
 
 const Container = styled.div`
   user-select: none;
@@ -49,6 +49,8 @@ const Container = styled.div`
     top: 0;
     height: 65vh;
     ${mobile({ height: "40vh", backgroundPosition: '0 25%', backgroundSize: "contain"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 55%", backgroundPosition: "unset"})}
+    ${landscapeTab({ height: "65vh", backgroundSize: "cover", backgroundPositionY: "-145px"})}
     .page1Header {
       color: #fff;
       text-align: center;

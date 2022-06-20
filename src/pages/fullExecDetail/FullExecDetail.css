@@ -84,3 +84,31 @@
         max-width: 100% !important;
     }
 }
+
+@media only screen and (min-width: 600px) {
+    .fullExecDetailContainer {
+        display: block !important;
+    }
+    .fullExecDetailContainerRightBio {
+        max-width: 100% !important;
+    }
+    .fullExecDetailContainerLeft img {
+        width: 70% !important;
+        margin: auto !important;
+        margin-bottom: 1rem !important;
+    }
+  }
+
+@media only screen and (min-width: 992px) {
+    .fullExecDetailContainer {
+        display: flex !important;
+    }
+    .fullExecDetailContainerRightBio {
+        max-width: 80% !important;
+    }
+    .fullExecDetailContainerLeft img {
+        width: 100% !important;
+        margin: unset !important;
+        margin-bottom: unset !important;
+    }
+  }

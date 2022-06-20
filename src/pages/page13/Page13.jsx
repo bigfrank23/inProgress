@@ -11,7 +11,8 @@ import PrayerImg from '../../images/prayer.png'
 import PrayerImg2 from '../../images/prayer.jpeg'
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { mobile } from "../../responsive";
+import { landscapeTab, mobile, tab } from "../../responsive";
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const Container = styled.div`
   width: 100%;
@@ -37,6 +38,8 @@ const Container = styled.div`
     top: 0;
     height: 65vh;
     ${mobile({ height: "40vh", clipPath: "unset", backgroundAttachment: "unset", backgroundPosition: "100% 170px", backgroundSize: "500px 50%"})}
+    ${tab({ height: "42vh", backgroundPosition: "unset", backgroundSize: "100% 50%"})}
+    ${landscapeTab({ height: "65vh", backgroundSize: "cover", backgroundPosition: "right"})}
     .page1Header {
       color: #fff;
       text-align: center;
@@ -51,6 +54,7 @@ const Page13 = () => {
   const [address, setAddress] = useState("")
 
   const[loading, setLoading] = useState(false)
+  const[isVerified, setIsVerified] = useState(false)
 
   const handleRequest = async (e) => {
     if(email && name && request !== ""){
@@ -97,6 +101,15 @@ const Page13 = () => {
     }
   }
 
+  function onChange(value) {
+    // console.log('Captcha value:', value);
+    value && setIsVerified(true)
+
+    if(value === null){
+      return setIsVerified(false)
+    }
+  }
+
   return (
     <Container>
       <div className="page1Wrapper">
@@ -137,26 +150,19 @@ const Page13 = () => {
                     <label htmlFor="name"><PText>Address*</PText></label>
                     <input type="text" placeholder="Your Address" value={address} onChange={(e)=> setAddress(e.target.value)}/>
                   </div>
-                  {/* <div className="radioBx">
-                    <PText>Which Province do you belong?*</PText>
-                    <div className="radio">
-                        <label htmlFor=""><PText>Lorem, ipsium.</PText></label>
-                        <input type="radio" />
-                    </div>
-                    <div className="radio">
-                        <label htmlFor=""><PText>Lorem, ipsum.</PText></label>
-                        <input type="radio" />
-                    </div>
-                    <div className="radio">
-                        <label htmlFor=""><PText>Lorem, ipsum.</PText></label>
-                        <input type="radio" />
-                    </div>
-                  </div> */}
                   <div className="textArea">
                       <PText>Prayer Request*</PText>
                       <textarea name="" id="" value={request} onChange={(e)=> setRequest(e.target.value)}/>
                   </div>
+              <div className="col-lg-12 mb-1">
+                <ReCAPTCHA
+                    sitekey={process.env.REACT_APP_RECAPTCHA}
+                    onChange={onChange}
+                  />
+              </div>
+              <div  style={isVerified ? {display: "block"} : {display: "none"}}>
                   <Button BtnText="SUBMIT" disabled = {loading} onClick={handleRequest} />
+              </div>
               </form>
           </div>
               <div className="text-center mt-2">

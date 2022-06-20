@@ -11,7 +11,7 @@ import { Button } from '@mui/material';
 import H2 from '../../../components/Text/H2';
 import Pagination from '../pagination/Pagination'
 import axios from 'axios';
-import { mobile } from '../../../responsive';
+import { landscapeTab, mobile, tab } from '../../../responsive';
 
 // import './AllPost.css'
 
@@ -25,7 +25,7 @@ const Container = styled.div`
   align-content: center;
   justify-content: center; */
   .page1Wrapper {
-    -webkit-clip-path: polygon(
+    /* -webkit-clip-path: polygon(
       50% 0%,
       100% 0,
       100% 43%,
@@ -46,12 +46,12 @@ const Container = styled.div`
       6% 78%,
       0% 43%,
       0 0
-    );
+    ); */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url(${Img5});
-    background-size: cover;
+    background-size: 100% 100%;
     background-attachment: fixed;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -60,7 +60,9 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
-    ${mobile({height: "40vh", backgroundSize: "115%", backgroundPosition: "0 100%", backgroundAttachment: "unset"})}
+    ${mobile({height: "40vh", backgroundSize: "115%", backgroundPosition: "0 100%", backgroundAttachment: "unset", clipPath: "unset"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 50%", backgroundPosition: "unset"})}
+    ${landscapeTab({ height: "65vh", backgroundSize: "100% 100%", backgroundPosition: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;

@@ -7,7 +7,7 @@ import Button from '../../../components/Button/Button';
 import Footer from '../../../components/Footer/Footer';
 import { past } from './pastData';
 import { Link } from 'react-router-dom';
-import { mobile } from '../../../responsive';
+import { landscapeTab, mobile, tab } from '../../../responsive';
 import axios from 'axios';
 import Button2 from '../../../components/Button/Button2';
 
@@ -35,6 +35,8 @@ user-select: none;
     top: 0;
     height: 62vh;
     ${mobile({ height: "40vh", clipPath: "unset", backgroundPosition: "bottom"})}
+    ${tab({ height: "42vh"})}
+    ${landscapeTab({ height: "62vh"})}
     .page1Header {
       color: #fff;
       text-align: center;

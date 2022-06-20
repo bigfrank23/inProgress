@@ -151,5 +151,23 @@ background-size: cover;
     }
   }
   @media only screen and (min-width: 600px) {
-    
+    .historyTopContainer {
+        padding: 2rem 4rem;
+    }
+    .historyFlexContainer{
+        /* display: flex; */
+        padding: 0 !important;
+        /* background-color: #fff; */
+    }
+  }
+
+@media only screen and (min-width: 992px) {
+    .historyTopContainer {
+        padding: 0 7rem;
+    }
+    .historyFlexContainer{
+        /* display: flex; */
+        padding: 2rem 7rem !important;
+        /* background-color: #fff; */
+    }
   }

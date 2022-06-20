@@ -64,6 +64,7 @@ const Login = () => {
     e.preventDefault()
 
     dispatch(login(loginData, history));
+    e.target.reset()
   }
 
   const handleShowPassword = () => setShowPassword((prevShowPassword)=> !prevShowPassword)
@@ -81,13 +82,14 @@ const Login = () => {
       <div className="row">
         <div className="col-lg-7 col-md-12 col-sm-12 p-4 bg-light shadow">
           <span className="login_title">Login</span>
-          <form className="login_form" onSubmit={handleSubmit}>
+          <form className="login_form" onSubmit={handleSubmit} autocomplete='off'>
             <label>Email</label>
             <input
               type="text"
               placeholder="Enter your email..."
               name="email"
               onChange={handleChange}
+              autoComplete='off'
             />
             <label>Password</label>
             <div className="wrap">
@@ -98,6 +100,7 @@ const Login = () => {
                 name="password"
                 onChange={handleChange}
                 className="field"
+                autoComplete='off'
               />
               <i
                 className={

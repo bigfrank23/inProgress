@@ -319,7 +319,7 @@ const Navbar = () => {
                   </Link>
                   <Link to="/chairman-messages" className="links">
                     <li className="hoverItems">
-                      Chairman Messages
+                      Chairman's Messages
                     </li>
                   </Link>
                 </ul>
@@ -489,7 +489,7 @@ const Navbar = () => {
               </Link>
               <Link to="/chairman-messages" className="links" onClick={()=> setShowNav(false)}>
                 <li className="hoverItems">
-                  Chairman Messages
+                  Chairman's Messages
                 </li>
               </Link>
               </ul>
@@ -593,7 +593,7 @@ const Navbar = () => {
                 </Link>
             </div>
           </div>
-          <div className="openLinkBtn" onClick={() => setShowNav(!showNav)}>
+          <div className="openLinkBtn" onClick={() => {setShowNav(!showNav); setOrdList(false); setOrdList2(false); setOrdList3(false); setOrdList4(false); setOrdList5(false); setOrdList6(false); setExpanded(false)}}>
             {/* <div onClick={() => setShowNav(!showNav)}> */}
               {showNav ? <>&#10005;</> : <>&#8801;</>}
           </div>

@@ -6,8 +6,9 @@
     -moz-column-width: 33%;
     column-width: 33%; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+    row-gap: .5rem;
     padding: 0 12px;
 }
 .myGalleryContainer .pics{

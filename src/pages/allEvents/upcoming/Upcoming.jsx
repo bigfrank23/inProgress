@@ -12,7 +12,7 @@ import Button from '../../../components/Button/Button';
 import Footer from '../../../components/Footer/Footer';
 import { upcoming } from './upcomingData';
 import { Link } from 'react-router-dom';
-import { mobile } from '../../../responsive';
+import { landscapeTab, mobile, tab } from '../../../responsive';
 import axios from 'axios';
 
 const Container = styled.div`
@@ -38,6 +38,8 @@ const Container = styled.div`
     top: 0;
     height: 62vh;
     ${mobile({ height: "40vh", clipPath: "unset", backgroundPosition: "bottom"})}
+    ${tab({ height: "42vh"})}
+    ${landscapeTab({ height: "62vh"})}
     .page1Header {
       color: #fff;
       text-align: center;

@@ -56,3 +56,9 @@
     object-fit: contain;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+  .logo{
+    font-size: 12px;
+  }
+}

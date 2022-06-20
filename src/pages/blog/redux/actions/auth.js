@@ -1,11 +1,12 @@
 import * as api from '../api'
-import { AUTH, GET, DELETE_USER } from '../constants/actionTypes'
+import { AUTHREGISTER, AUTH, GET, DELETE_USER } from '../constants/actionTypes'
 
 export const register = (formData, history) => async(dispatch) => {
     try {
         const {data} = await api.register(formData)
-        dispatch({type: AUTH, payload: data})
-        history.push('/blogs')
+        dispatch({type: AUTHREGISTER, payload: data})
+        alert("Successful!")
+        history.push('/login')
         // console.log(data);
     } catch (error) {
         console.log(error);
@@ -16,8 +17,10 @@ export const register = (formData, history) => async(dispatch) => {
 export const login = (loginData, history) => async(dispatch) => {
     try {
         const {data} = await api.login(loginData)
-        dispatch({type: AUTH, payload: data}) && window.location.replace("/")
+        dispatch({type: AUTH, payload: data})
         // console.log(data);
+        alert("Successful!")
+        window.location.replace("/blogs")
     } catch (error) {
         console.log(error);
         alert(error.message)

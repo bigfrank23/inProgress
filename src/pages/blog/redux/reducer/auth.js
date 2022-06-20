@@ -1,4 +1,4 @@
-import { AUTH, GET, UPDATE, LOGOUT, DELETE_USER } from "../constants/actionTypes";
+import { AUTHREGISTER, AUTH, GET, UPDATE, LOGOUT, DELETE_USER } from "../constants/actionTypes";
 
 const initialState = {
     authData : JSON.parse(localStorage.getItem('mern_crud3_copy_user')) || null,
@@ -7,6 +7,9 @@ const initialState = {
 const authReducer = (state = initialState, action) => {
     switch(action.type){
         
+        case AUTHREGISTER:
+            // localStorage.setItem('mern_crud3_copy_user', JSON.stringify({...action.payload}))
+        return action.payload
         case AUTH:
             localStorage.setItem('mern_crud3_copy_user', JSON.stringify({...action.payload}))
         return {...state, authData: action.payload}

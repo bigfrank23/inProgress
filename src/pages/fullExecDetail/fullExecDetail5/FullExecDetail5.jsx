@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Footer from "../../../components/Footer/Footer";
 import { faChurch, faAddressCard, faPhone, faAt, faCalendar, faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { mobile } from "../../../responsive";
+import { landscapeTab, mobile, tab } from "../../../responsive";
 
 const Container = styled.div`
   user-select: none;
@@ -34,6 +34,8 @@ const Container = styled.div`
     top: 0;
     height: 65vh;
     ${mobile({height: "40vh", backgroundSize: "100%", backgroundPosition: "0 25%",  clipPath: "unset"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 36%", backgroundPosition: "unset"})}
+    ${landscapeTab({ height: "65vh", backgroundSize: "cover", backgroundPosition: "0 -150px"})}
     .page1Header {
       color: #fff;
       text-align: center;

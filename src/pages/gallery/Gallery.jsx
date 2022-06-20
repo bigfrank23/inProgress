@@ -7,7 +7,7 @@ import './Gallery.css'
 import PauseOnHover from "../../components/reactSlick/AutoScroll";
 import H2 from '../../components/Text/H2'
 import Footer from '../../components/Footer/Footer'
-import { mobile } from "../../responsive";
+import { landscapeTab, mobile, tab } from "../../responsive";
 
 const Container = styled.div`
   user-select: none;
@@ -30,9 +30,9 @@ const Container = styled.div`
       0% 80%,
       0 0
     );
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #d2d2d2
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #aeb3b7
       url(${Img5});
-    background-size: contain;
+    background-size: 100% 100%;
     background-attachment: fixed;
     /* background-position: center; */
     background-repeat: no-repeat;
@@ -44,6 +44,8 @@ const Container = styled.div`
     top: 0;
     height: 65vh;
     ${mobile({ height: "40vh", clipPath: "unset", backgroundSize: "700px 35%", backgroundPosition: "-25px 100px"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 50%", backgroundPosition: "unset"})}
+    ${landscapeTab({ height: "65vh", backgroundSize: "100% 100%", backgroundPosition: "unset"})}
     .page1Header {
       color: #fff;
       text-align: center;

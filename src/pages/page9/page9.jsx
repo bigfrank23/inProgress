@@ -15,7 +15,8 @@ import { provinces } from '../../teamMembers/provinces';
 import DirectorateImg from '../../images/directorate.png'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { mobile } from '../../responsive';
+import { landscapeTab, mobile, tab } from '../../responsive';
+import ReCAPTCHA from 'react-google-recaptcha'
 
 
 const Container = styled.div`
@@ -32,8 +33,8 @@ user-select: none;
     /* clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url(${DirectorateImg});
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 60%;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-clip: fixed;
     display: flex;
@@ -43,7 +44,9 @@ user-select: none;
     position: relative;
     top: 0;
     height: 53vh;
-    ${mobile({ height: "40vh", clipPath: "unset"})}
+    ${mobile({ height: "40vh", backgroundSize: "100% 100%", clipPath: "unset"})}
+    ${tab({ height: "42vh", backgroundSize: "100% 100%", backgroundPosition: "unset" })}
+    ${landscapeTab({ height: "53vh", backgroundSize: "100% 100%"})}
     .page1Header {
       color: #fff;
       text-align: center;
@@ -55,6 +58,7 @@ user-select: none;
 const Page9 = () => {
   const [show, setShow] = useState(false);
   const [modalData, setModalData] = useState("");
+  const[isVerified, setIsVerified] = useState(false)
 
   const handleShow = (data) => {
     setShow(true)
@@ -136,6 +140,14 @@ const Page9 = () => {
     }
   }
 
+  function onChange(value) {
+    // console.log('Captcha value:', value);
+    value && setIsVerified(true)
+
+    if(value === null){
+      return setIsVerified(false)
+    }
+  }
 
 
   return (
@@ -221,11 +233,13 @@ const Page9 = () => {
           ))}
           <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                  <Modal.Title className='text-danger text-center'>{modalData.directorate}</Modal.Title>
+                  <Modal.Title className='text-danger text-center'>
+                    {modalData.directorate}
+                  </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                 <div style={{padding: "2rem"}}>
-                    <form onSubmit = {handleRequest} method = "post">
+                    <form onSubmit = {handleRequest} method = "post" autoComplete='off'>
                       <div className="form-group">
                         <label htmlFor="name">Directorate</label>
                         <input type="text" className="form-control" id="directorat" value= {directorat} onChange = {(e) => setDirectorat(e.target.value)}  />
@@ -263,7 +277,15 @@ const Page9 = () => {
                         <label htmlFor="exampleFormControlTextarea1">Your Message</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value = {message} onChange = {(e) => setMessage(e.target.value)} />
                       </div>
+                      <div className="col-lg-12 mb-1">
+                        <ReCAPTCHA
+                            sitekey={process.env.REACT_APP_RECAPTCHA}
+                            onChange={onChange}
+                          />
+                      </div>
+                      <div  style={isVerified ? {display: "block"} : {display: "none"}}>
                         <button type="submit" className="btn btn-primary" disabled = {loading} onClick = {handleRequest}>Submit</button>
+                      </div>
                     </form>
                     </div>
                 </Modal.Body>

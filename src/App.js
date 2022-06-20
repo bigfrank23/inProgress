@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Home from "./pages/Home/Home";
 // import Page1 from "./pages/page1/Page1";
 import About from "./pages/about/About";
@@ -71,17 +71,24 @@ import UpcomingEventFullDetail from './pages/allEvents/fullDetail/upcomingEvent/
 import Messages from './pages/messages/Messages';
 import ChairmanMsgForm from './pages/admin/adminPages/form/chaimanMsg/ChairmanMsgForm';
 import ErrorPage from './pages/404Page/ErrorPage';
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 const Container = styled.div`
   width: 100%;
 `
 
 function App() {
-
   const user = JSON.parse(localStorage.getItem("mern_crud3_copy_user"));
+
+  const tawkMessengerRef = useRef();
+
+    const handleMinimize = () => {
+        tawkMessengerRef.current.minimize();
+    };
+
   return (
     <Container>
-      <HashRouter>
+      <Router>
         <Navbar />
         <ScrollToTop />
         <Switch>
@@ -110,15 +117,15 @@ function App() {
           {/* <Route exact path='/blogs' component={Post} /> */}
           <Route exact path='/blogs' component={AllPosts} />
           <Route exact path="/full_detail/:id" component={FullDetail} />
-          <Route exact path="/settings" component={Settings} />
+          {/* <Route exact path="/settings" component={Settings} /> */}
           <Route exact path='/provinces' component={ExtraPage} />
           <Route exact path='/contact' component={ContactPage} />
-          <Route exact path='/write' component={Write} />
-          <Route exact path='/register' component={Register} />
-          <Route exact path='/login' component={Login} />
+          <Route exact path='/write' component={user?.user?.email ==="admin@pfnlagosstate.org" ? Write : Home} />
+          <Route exact path='/register' component={user ? Home : Register} />
+          <Route exact path='/login' component={user ? Home : Login} />
           <Route exact path='/admin_login' component={Login2} />
           <Route exact path='/announcement' component={Announcement} />
-          <Route exact path='/give2' component={PaymentForm} />
+          {/* <Route exact path='/give2' component={PaymentForm} /> */}
           <Route exact path='/give' component={PaymentForm2} />
           <Route exact path='/full_exec_detail/:id' component={FullExecDetail} />
           <Route exact path='/full_exec_detail_cwc' component={FullExecDetail2} />
@@ -145,9 +152,12 @@ function App() {
           <Route exact path="/past-event-form" component={PastEventForm} />
           <Route exact path="/chairman-messages-form" component={ChairmanMsgForm} />
           <Route exact path="/chairman-messages" component={Messages} />
-          <Route path="/*" component={ErrorPage} />
+          <Route path="*" component={ErrorPage} />
         </Switch>
-      </HashRouter>
+      </Router>
+          <div className='tawkToContainer'>
+              <TawkMessengerReact propertyId={process.env.REACT_APP_PROPERTY} widgetId={process.env.REACT_APP_WIDGET}/>
+          </div>
       <GoUp />
     </Container>
   );

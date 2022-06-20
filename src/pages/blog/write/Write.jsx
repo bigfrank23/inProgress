@@ -12,6 +12,7 @@ import { createPost } from '../redux/actions/post';
 import './Write.css'
 import styled from 'styled-components';
 import Footer from '../../../components/Footer/Footer'
+import { landscapeTab, mobile, tab } from '../../../responsive'
 
 const Container = styled.div`
   user-select: none;
@@ -36,6 +37,9 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
+    ${mobile({height: "40vh"})}
+    ${tab({ height: "42vh"})}
+    ${landscapeTab({ height: "65vh"})}
     .page1Header {
       color: #fff;
       text-align: center;

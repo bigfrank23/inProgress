@@ -179,6 +179,15 @@ blockquote h2:before {
         padding: 0;
     }
   }
+
   @media only screen and (min-width: 600px) {
-    
+    .banner{
+        padding: 4rem 0;
+    }
+  }
+
+@media only screen and (min-width: 992px) {
+    .banner{
+        padding: 4rem 0;
+    }
   }

@@ -137,8 +137,15 @@
     gap: 1rem;
     padding: 2rem 2rem;
   }
+  .flip-box {
+    width: 355px;
   }
+  }
+  
   @media only screen and (min-width: 992px) {
+    .flip-box {
+      width: 500px;
+    }
   }
 @media only screen and (min-width: 1200px) {
 }

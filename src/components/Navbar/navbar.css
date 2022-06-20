@@ -17,12 +17,12 @@
     padding-bottom: 1.5rem;
     transition: 0.25s;
   }
-.top{
+/* .top{
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: 2rem;
-}
+} */
 .top .eventTime{
     text-align: center;
     color: #fff;
@@ -35,8 +35,10 @@
 .top .nav{
     display: flex;
     /* justify-content: space-around; */
-    padding: 0 5rem !important;
+    padding: 0 3rem !important;
     flex-wrap: nowrap !important;
+    width: 100%;
+    gap: 1rem;
 }
 .top .nav .logo{
     width: 200px;
@@ -65,10 +67,10 @@
 .navLinks .navList{
     list-style: none;
     margin: 0;
-    padding: 0 40px;
+    padding: 0 0px;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.3rem;
 }
 .navListItems{
     color: #fff;
@@ -81,6 +83,7 @@
     display: inline-flex;
     white-space: normal;
     gap: 5px;
+    font-size: .8rem;
 }
 .hoverAngleIcon{
     transition: transform .25s ease;
@@ -127,7 +130,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 92vh;
+    height: auto;
+    width: 100%;
     z-index: 1;
     opacity: 1;
     transition: transform .8s ease;
@@ -169,43 +173,55 @@
 }
 
 .mainListItemsCenterLeft{
-    flex: 1;
+    flex: .8;
 }
 .mainListItemsCenterLeftContainer h3{
-    text-align: left;
+    text-align: center;
     color: #fff;
+    font-size: 1.5rem;
 }
 .mainListItemsCenterLeftImg{
     width: 100%;
     /* height: 500px; */
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
 }
 .mainListItemsCenterLeftImg img{
-    width: 60%;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 .notActiveMainImg{
     width: 100%;
     /* height: 500px; */
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
 }
 .notActiveMainImg img{
     width: 100%;
 }
 .mainListItemsCenterLeftBottomTxt{
     display: flex;
-    gap: 5rem;
+    gap: 1rem;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
 .mainListItemsCenterLeftBottomTxt h4{
-    font-size: 1rem;
+    font-size: .75rem;
     color: #fff;
 }
 
 .mainListItemsCenterRight{
-    flex: 1;
+    flex: 2;
+}
+.mainListItemsCenterRight a{
+    font-size: 1.5rem;
 }
 .mainListItemsCenterRightTopTxt{
     display: flex;
     gap: 5rem;
+}
+.mainListItemsCenterRightTopTxt a h2{
+    font-size: 1.5rem;
 }
 .mainListItemsCenterRightTopTxt h2:hover{
     color: cyan;
@@ -220,7 +236,7 @@
 }
 .mainListItemsCenterRightNavContainer{
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
 }
 .mainListItemsCenterRightList{
     list-style: none;
@@ -228,7 +244,7 @@
     padding: 0;
 }
 .mainListItemsCenterRightListItems{
-    padding: 1rem 0;
+    padding: .5rem 0;
 }
 .mainListItemsCenterRightListItems:first-child{
     font-size: 12px;
@@ -255,7 +271,7 @@
 #links .mainListItemsCenterRightListItems{
     text-decoration: none;
     color: #fff;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 #topLinks{
     color: #fff;
@@ -320,7 +336,7 @@
     color: white;
     font-weight: 300;
     text-transform: capitalize;
-    font-size: 1rem;
+    font-size: .8rem;
     text-decoration: none;
     transition: all .5s ease;
     /* padding: 5px; */
@@ -415,7 +431,7 @@
     z-index: 2;
 }
 #provincesLink a{
-    font-size: 13px !important;
+    font-size: .7rem !important;
     display: flex;
     gap: 1rem;
 }
@@ -452,7 +468,7 @@
     text-decoration: none;
 }
 #footerHoverItems{
-    font-size: 12px;
+    font-size: .5rem;
     font-weight: 500;
 }
 .provinceNavCenterNone{
@@ -505,7 +521,7 @@
     display: flex;
     justify-content: space-between;
     /* gap: 1rem; */
-    padding: 0 1rem !important;
+    padding: 1.2rem 1rem !important;
     }
     .logoText h1{
         font-size: 2rem !important;
@@ -696,6 +712,187 @@
     .navListItems {
         padding: 1.5rem 0;
     }
+
+
+    /* Complete copy of Mobile nav view */
+    .top .nav .logo{
+    display: block;
+    }
+    .top .nav .logo img {
+        width: 150px;
+    }
+    .top .nav {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 1rem; */
+    padding: 1.5rem 1rem !important;
+    }
+    .logoText h1{
+        font-size: 2rem !important;
+    }
+    .navLinks{
+        display: none;
+    }
+    .navButtons{
+        display: none;
+    }
+    .mobileNav .navList .navListItems:hover .hover {
+        line-height: 4vh;
+        margin: 0;
+    }
+    .openLinkBtn {
+        text-align: center;
+        z-index: 1;
+        font-size: 30px;
+        position: absolute;
+        right: 0;
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* gap: 13rem; */
+    }
+    .mobileNavFlexBtn{
+        display: flex;
+        position: absolute;
+        bottom: 5px;
+        right: 10%;
+        justify-content: center;
+    }
+    .mobileNavFlexBtnLinks a button{
+        font-weight: 900;
+    }
+
+    .activeNavbar {
+        height: 15% !important;
+      }
+      .mobileNav {
+        z-index: 1;
+    }
+    .mobileNav .navList {
+        text-align: left;
+        margin-top: 5rem;
+    }
+    .navListItems{
+        display: block;
+        padding: 5px 0;
+        font-family: 'Montserrat';
+        border-bottom: thin solid #ccc;
+        margin-bottom: 1rem;
+    }
+    .navList a{
+        text-decoration: none;
+    }
+    .navListItems:first-child{
+        color: #990000;
+    }
+    .navListItems:hover #provincesLink {
+        display: block;
+        width: 50%;
+        opacity: 1;
+        height: auto;
+        /* justify-content: flex-start; */
+    }
+    #provincesLink a {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        font-size: 10px !important;
+    }
+    .mobileNavFlexBtnLinks button{
+        min-width: 65px;
+        padding: 5px 5px;
+    }
+    .hoverProvinces{
+        height: auto;
+        width: 50% !important;
+        display: block !important;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: unset !important;
+        z-index: 0 !important;
+    }
+    .mobProvinceList{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-self: center;
+    }
+    .mobProvinceListItem{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .mobProvinceListDropdown{
+        height: auto;
+        display: flex !important;
+        flex-direction: column;
+        gap: 7px;
+        position: absolute;
+        top: 35vh;
+        left: 100%;
+        /* background: linear-gradient(45deg, #232e32, transparent); */
+        background-color: #232e32;
+        padding: 1rem 4rem;
+        /* width: !important; */
+        border-radius: 5px;
+        transform: translate(-50%, -50%);
+        transition: left .5s linear;
+        z-index: 0 !important;
+        list-style: none;
+    }
+    .mobProvinceListDropdown a, .hideMobProvinceListItem a{
+        text-decoration: none !important;
+    }
+    .mobProvinceListDropdownItems{
+        font-size: 10px;
+        color: #fff;
+    }
+    .hideMobProvinceListItem{
+        height: auto;
+        display: flex !important;
+        flex-direction: column;
+        gap: 7px;
+        position: absolute;
+        top: 35vh;
+        left: -500%;
+        /* background: linear-gradient(45deg, #232e32, transparent); */
+        background-color: #232e32;
+        padding: 1rem 4rem;
+        /* width: !important; */
+        border-radius: 5px;
+        transform: translate(-50%, -50%);
+        transition: left .5s linear;
+        z-index: 0 !important;
+        list-style: none;
+    }
+    .mobTime{
+        display: block;
+    }
+    .mobOrdList{
+        background: linear-gradient(45deg, black, transparent);
+        max-height: 500px;
+        overflow: unset;
+        transition: max-height .5s linear;
+    }
+    .mobOrdList a{
+        list-style: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 3;
+    }
+    .hideMobList{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s linear;
+    }
+    .hideMobList a{
+        display: none;
+    }
+    #mobSocial{
+        margin-top: 2rem;
+    }
     
   }@media only screen and (min-width: 992px) {
     .openLinkBtn{
@@ -710,8 +907,68 @@
     .navButtons{
         display: flex;
     }
+
+    /* Complete copy of PC View */
+    .navListItems{
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 15px 0;
+        cursor: pointer;
+        /* display: flex; */
+        display: inline-flex;
+        white-space: normal;
+        gap: 5px;
+        font-size: .8rem;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    .mobileNavFlexBtn {
+        display: none;
+    }
+    .top .nav {
+        display: flex;
+        /* justify-content: space-around; */
+        padding: 1.2rem 3rem !important;
+        flex-wrap: nowrap !important;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    #provincesLink {
+        display: flex;
+        position: absolute;
+        gap: 1rem;
+        right: 7%;
+        width: 100%;
+        opacity: 1;
+        display: none;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        z-index: 2;
+    }
+    .navListItems:hover #provincesLink {
+        display: flex;
+        width: 80%;
+        opacity: 1;
+        justify-content: flex-start;
+    }
+    
   }
 @media only screen and (min-width: 1200px) {
+    /* .navListItems{
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 15px 0;
+        cursor: pointer;
+        display: inline-flex;
+        white-space: normal;
+        gap: 5px;
+        font-size: .8rem;
+    } */
 
 }
  
