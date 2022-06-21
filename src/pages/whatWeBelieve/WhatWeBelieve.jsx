@@ -13,6 +13,7 @@ import H2 from './../../components/Text/H2';
 import H3 from '../../components/Text/H3';
 import Header2 from '../../components/Text/Header2';
 import { landscapeTab, mobile, tab } from '../../responsive'
+import { Helmet } from 'react-helmet-async'
 
 const Container = styled.div`
   user-select: none;
@@ -69,6 +70,19 @@ const Container = styled.div`
 const WhatWeBelieve = () => {
   return (
     <Container>
+      <Helmet>
+            <title>What We Believe</title>
+            <meta name="description" content="We believe in water baptism by immersion in the name of the
+              Father, Son and Holy Spirit (Matthew 28:19-20). (B) we believe
+              in the Lord’s Supper which is the regular partaking of bread,
+              the fruit of the vine, symbolic of the body and the blood of
+              Jesus Christ (1Cor. 11:23) .
+              We believe that there is one true and living God, eternally
+                existing in three persons, Father, Son and Holy Spirit (Hebrew
+                9:34, 1 John 5:77, Deut. 6:4, John 17:3, 2Corinthinas 13:4)" />
+                
+            <link rel="canonical" href="/what-we-believe" />
+        </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">

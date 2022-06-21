@@ -14,6 +14,7 @@ import { upcoming } from './upcomingData';
 import { Link } from 'react-router-dom';
 import { landscapeTab, mobile, tab } from '../../../responsive';
 import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
 
 const Container = styled.div`
   width: 100%;
@@ -77,6 +78,11 @@ const Upcoming = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>Upcoming Events</title>
+        <meta name="description" content="PFN Lagos State Upcoming Events" />
+        <link rel="canonical" href="/upcoming-events" />
+      </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
@@ -89,7 +95,7 @@ const Upcoming = () => {
                 <>
                   <div className="page5Bx" key={data.id}>
                   <div className="page5BxImg">
-                      <img src={data.avatar} alt="" />
+                      <img src={data.avatar} alt={data.title} />
                   </div>
                   <div className="page5BxContent">
                       <div className="page5Title">

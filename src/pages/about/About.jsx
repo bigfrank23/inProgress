@@ -16,6 +16,7 @@ import { landscapeTab, mobile, tab } from '../../responsive';
 import PText from '../../components/Text/PText';
 import './About.css'
 import Header from '../../components/Text/Header';
+import { Helmet } from 'react-helmet-async';
 
 const Container = styled.div`
   user-select: none;
@@ -111,6 +112,11 @@ const Container = styled.div`
 const About = () => {
   return (
     <Container>
+        <Helmet>
+            <title>About Pentecostal Fellowship of Nigeria. PFN</title>
+            <meta name="description" content="The national body which binds all Christian churches, organizations and believers" />
+            <link rel="canonical" href="/about" />
+        </Helmet>
         <div className="page1Wrapper">
             <div className="page1Header">
                 <h1>ABOUT</h1>
@@ -152,7 +158,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="right">
-                    <img src={AboutImg1} alt="" />
+                    <img src={AboutImg1} alt="PFN images" />
                 </div>
             </div>
             <div className="pageContentTop center">
@@ -188,7 +194,7 @@ const About = () => {
                     </div> */}
                 </div>
                 <div className="right">
-                    <img src={AboutImg2} alt="" />
+                    <img src={AboutImg2} alt="PFN images" />
                 </div>
             </div>
             <div className="pageContentTop bottom">
@@ -217,7 +223,7 @@ const About = () => {
                     </div> */}
                 </div>
                 <div className="right">
-                    <img src={AboutImg3} alt="" />
+                    <img src={AboutImg3} alt="PFN images" />
                 </div>
             </div>
         </div>

@@ -9,6 +9,7 @@ import { current } from './currentData';
 import { Link } from 'react-router-dom';
 import { landscapeTab, mobile, tab } from '../../../responsive';
 import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
 
 const Container = styled.div`
 user-select: none;
@@ -72,6 +73,11 @@ const Current = () => {
   }
   return (
     <Container>
+      <Helmet>
+        <title>Current Events</title>
+        <meta name="description" content="PFN Lagos State Current Events" />
+        <link rel="canonical" href="/current-events" />
+      </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
@@ -84,7 +90,7 @@ const Current = () => {
                 <>
                   <div className="page5Bx" key={data.id}>
                   <div className="page5BxImg">
-                      <img src={data.avatar} alt="" />
+                      <img src={data.avatar} alt={data.title} />
                   </div>
                   <div className="page5BxContent">
                       <div className="page5Title">

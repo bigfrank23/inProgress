@@ -10,6 +10,7 @@ import './ExtraPage.css'
 import { provinces } from '../../teamMembers/provinces';
 // import { Grid } from '@material-ui/core';
 import { Grid } from '@mui/material'
+import { Helmet } from 'react-helmet-async'
 
 const Container = styled.div`
   user-select: none;

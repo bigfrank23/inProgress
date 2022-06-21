@@ -11,6 +11,7 @@ import "./TheNational.css";
 import H3 from "../../components/Text/H3";
 import Footer from "../../components/Footer/Footer";
 import { landscapeTab, mobile, tab } from "../../responsive";
+import { Helmet } from "react-helmet-async";
 
 const Container = styled.div`
   user-select: none;
@@ -53,6 +54,14 @@ const Container = styled.div`
 const TheNational = () => {
   return (
     <Container>
+        <Helmet>
+            <title>The National</title>
+            <meta name="description" content="Pentecostal Fellowship of Nigeria is the coming together of the holy
+          spirit filled Christian Churches and Organizations who believe and
+          practice the full GOSPEL MESSAGE (Acts 2), in an independence and
+          autonomous Christian Fellowship for the following objectives below." />
+            <link rel="canonical" href="/the-national" />
+        </Helmet>
         <div className="page1Wrapper">
             <div className="page1Header">
             <h1>THE National</h1>
@@ -73,7 +82,7 @@ const TheNational = () => {
             <div className="nationalTopContentBx">
                 <div className="nationalTopContent">
                     <div className="nationalTopContentImgBx">
-                        <img src={PresidentImg} alt="" />
+                        <img src={PresidentImg} alt="Bishop Francis Wale Oke" />
                     </div>
                     <div className="nationalTopContentTxt">
                         <H3>Bishop Francis Wale Oke</H3>
@@ -88,7 +97,7 @@ const TheNational = () => {
             <div className="nationalCenterContentBx">
                 <div className="nationalCenterContent">
                     <div className="nationalCenterContentImgBx">
-                        <img src={PresidentImg2} alt="" />
+                        <img src={PresidentImg2} alt="Archbishop John Praise Daniel" />
                     </div>
                     <div className="nationalCenterContentTxt">
                         <H3>Archbishop John Praise Daniel</H3>
@@ -99,7 +108,7 @@ const TheNational = () => {
                 </div>
                 <div className="nationalCenterContent" id="nationalCenterContent">
                     <div className="nationalCenterContentImgBx">
-                        <img src={PresidentImg5} alt="" />
+                        <img src={PresidentImg5} alt="Rev. Dr. Cosmas Ilechukwu" />
                     </div>
                     <div className="nationalCenterContentTxt">
                         <H3>Rev. Dr. Cosmas Ilechukwu</H3>
@@ -110,7 +119,7 @@ const TheNational = () => {
                 </div>
                 <div className="nationalCenterContent">
                     <div className="nationalCenterContentImgBx">
-                        <img src={PresidentImg3} alt="" />
+                        <img src={PresidentImg3} alt="Archbishop John A. Osa-Oni" />
                     </div>
                     <div className="nationalCenterContentTxt">
                         <H3>Archbishop John A. Osa-Oni</H3>
@@ -125,7 +134,7 @@ const TheNational = () => {
             <div className="nationalBottomContentBx">
                 <div className="nationalBottomContent">
                     <div className="nationalBottomContentImgBx">
-                        <img src={PresidentImg4} alt="" />
+                        <img src={PresidentImg4} alt="Apostle Enyinnaya E. Okwuonu" />
                     </div>
                     <div className="nationalBottomContentTxt">
                         <H3>Apostle Enyinnaya E. Okwuonu</H3>

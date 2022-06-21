@@ -13,6 +13,7 @@ import Footer from '../../components/Footer/Footer';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { landscapeTab, mobile, tab } from '../../responsive';
+import { Helmet } from 'react-helmet-async';
 
 const Container = styled.div`
   user-select: none;
@@ -75,6 +76,23 @@ const History2 = () => {
   });
   return (
     <Container id='historyBg'>
+      <Helmet>
+            <title>History of PFN</title>
+            <meta name="description" content="It started in early 1900s when an Anglican launched an indigenous prophetic
+                  movement that later became the Christ Army Church following an outbreak
+                   of influenza epidemic in 1918. Other groups soon emerged such as Eternal
+                    Sacred Order of the Cherubim and Seraphim society in 1925 and the Church of the Lord Aladura in 1930.
+                    But by far, the biggest sensation in the movement about this
+                  time was the Oke-Oye, Ilesha revival by Joseph Babalola of
+                  faith Tabernacle. A heated argument was on by concerned rulers
+                  over miracles when Babalola raised a dead lad. That miracle
+                  effectively ended the controversy and ushered in a revival
+                  meeting that lasted for years. In 1941, Babalola founded the Christ Apostolic Church (CAC).
+                  Other foreign Churches such as Welsh Apostolic Church (1939)
+                  and the Foursquare Gospel Church (1954) also came on board.
+                  The era was marked with fervent prayers." />
+            <link rel="canonical" href="/history2" />
+        </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
@@ -85,13 +103,13 @@ const History2 = () => {
         <div className="historyFlexContainer">
           <div className={scroll ? "animate1" : "historyGridContainer"}>
             <div className={scroll ? "animate2" : "firstImgBx"}>
-              <img src={HistoryImg1} alt="" />
+              <img src={HistoryImg1} alt="Joseph Babalola " />
             </div>
             <div className="secondImgBx">
-              <img src={HistoryImg2} alt="" />
+              <img src={HistoryImg2} alt="Pastor Ayo Oritshejafor" />
             </div>
             <div className="thirdImgBx">
-              <img src={HistoryImg3} alt="" />
+              <img src={HistoryImg3} alt="Onyedepo" />
             </div>
           </div>
           <div className="historyContainerRight">
@@ -103,7 +121,7 @@ const History2 = () => {
                 <p id='large'>
                 Yet, the Pentecostal movement in Nigeria is less than 100 years old.
                 <div className={scroll2 ? "animate3" : "historyFloatImgBx"}>
-                  <img src={HistoryImg5} width={200} alt="" /> 
+                  <img src={HistoryImg5} width={200} alt="PFN Lagos State building" /> 
                   </div>
                   &nbsp; It started in early 1900s when an Anglican launched an indigenous prophetic
                   movement that later became the Christ Army Church following an outbreak

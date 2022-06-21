@@ -5,6 +5,7 @@ import styled from "styled-components";
 import "./OurMission.css";
 import Footer from "../../components/Footer/Footer";
 import { landscapeTab, mobile, tab } from "../../responsive";
+import { Helmet } from "react-helmet-async";
 
 const Container = styled.div`
   user-select: none;
@@ -49,6 +50,15 @@ const Container = styled.div`
 const OurMission = () => {
   return (
     <Container>
+      <Helmet>
+            <title>Our Mission</title>
+            <meta name="description" content="To maintain close relationship among member Churches, Organizations, and other approved Christian or Religious Organizations, both in and outside Nigeria, for the purpose of undertaking joint programs for the furtherance of the Gospel.
+            To co-operate with other Christian Organizations established for the purpose of Christianity.
+            To encourage unhindered propagation of the doctrine of Christ throughout Nigeria and uphold Christian Ethics.
+            To protect and uphold Christian Ethics and integrity, and see to its healthy development, free from Political, Religious, Racial and Ethnic interference.
+            To educate its members and aggregate public opinion on matters of National Importance, thereby assisting in creating and developing a Nation where probity, equity, good character, peace and good governance are guaranteed." />
+            <link rel="canonical" href="/our-mission" />
+        </Helmet>
       <div className="page1Wrapper">
         <div className="page1Header">
           <h1>Our Mission</h1>

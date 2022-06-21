@@ -12,6 +12,7 @@ import H2 from '../../../components/Text/H2';
 import Pagination from '../pagination/Pagination'
 import axios from 'axios';
 import { landscapeTab, mobile, tab } from '../../../responsive';
+import { Helmet } from 'react-helmet-async';
 
 // import './AllPost.css'
 
@@ -110,6 +111,11 @@ const Allposts = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>Blogs</title>
+        <meta name="description" content="PFN Lagos State Blogs" />
+        <link rel="canonical" href="/blogs" />
+      </Helmet>
       <div className="page1Wrapper">
         <div className="page1Header">
           <h1>Blog</h1>

@@ -10,6 +10,7 @@ import axios from 'axios'
 import { landscapeTab, mobile, tab } from '../../responsive'
 import './ContactPage.css'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { Helmet } from 'react-helmet-async'
 
 const Container = styled.div`
   user-select: none;
@@ -142,6 +143,11 @@ const ContactPage = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>Contact us</title>
+        <meta name="description" content="Get in touch with us today. We’d love to hear from you. Send us a message and we’ll respond as soon as possible" />
+        <link rel="canonical" href="/contact" />
+      </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">

@@ -41,10 +41,10 @@
     gap: 1rem;
 }
 .top .nav .logo{
-    width: 200px;
+    width: 150px;
 }
 .top .nav .logo img{
-    width: 200px;
+    width: 150px;
 }
 /* .top .nav .logo .logoText{
     margin-left: 3px;
@@ -93,18 +93,7 @@
     align-self: flex-start;
     transform: rotate(180deg);
 }
-.navListItems:nth-child(4){
-    /* width: 100%; */
-}
-.navListItems:nth-child(5){
-    /* width: 100%; */
-}
-/* .navListItems:last-child{
-    width: 100%;
-} */
-.navLinks .navList .navListItems:not(:last-child){
-    /* margin-right: 10px; */
-}
+
 /* MainMenu nav */
 .notActiveMain{
     position: absolute;
@@ -113,7 +102,7 @@
     /* height: 0; */
     /* opacity: 0; */
     transition: transform 1s ease;
-    transform: translateY(-1000px);
+    transform: translateY(-10000px);
     background: #0e1216;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     position: absolute;
@@ -237,6 +226,8 @@
 .mainListItemsCenterRightNavContainer{
     display: flex;
     gap: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .mainListItemsCenterRightList{
     list-style: none;
@@ -336,7 +327,7 @@
     color: white;
     font-weight: 300;
     text-transform: capitalize;
-    font-size: .8rem;
+    font-size: .9vw;
     text-decoration: none;
     transition: all .5s ease;
     /* padding: 5px; */
@@ -431,7 +422,7 @@
     z-index: 2;
 }
 #provincesLink a{
-    font-size: .7rem !important;
+    font-size: .9vw !important;
     display: flex;
     gap: 1rem;
 }
@@ -723,7 +714,7 @@
     }
     .top .nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* gap: 1rem; */
     padding: 1.5rem 1rem !important;
     }
@@ -795,7 +786,7 @@
         display: flex;
         gap: 1rem;
         justify-content: center;
-        font-size: 10px !important;
+        font-size: .8vw !important;
     }
     .mobileNavFlexBtnLinks button{
         min-width: 65px;
@@ -920,7 +911,8 @@
         display: inline-flex;
         white-space: normal;
         gap: 5px;
-        font-size: .8rem;
+        font-size: .9vw; 
+        /* font-size: .8rem;  */
         border-bottom: none;
         margin-bottom: 0;
     }
@@ -933,7 +925,8 @@
         padding: 1.2rem 3rem !important;
         flex-wrap: nowrap !important;
         width: 100%;
-        gap: 1rem;
+        gap: 2rem;
+        justify-content: center;
     }
 
     #provincesLink {
@@ -956,19 +949,10 @@
     }
     
   }
-@media only screen and (min-width: 1200px) {
-    /* .navListItems{
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
-        text-transform: uppercase;
-        padding: 15px 0;
-        cursor: pointer;
-        display: inline-flex;
-        white-space: normal;
-        gap: 5px;
-        font-size: .8rem;
-    } */
+/* @media only screen and (max-width: 1200px) {
+    .navListItems{
+        font-size: 1rem;
+    }
 
-}
+} */
  

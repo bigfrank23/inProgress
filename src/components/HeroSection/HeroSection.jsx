@@ -12,6 +12,7 @@ import './heroSection.css'
 import { mobile } from '../../responsive'
 import TextLoop from "react-text-loop";
 import Button2 from '../Button/Button2'
+import { Helmet } from 'react-helmet-async'
 
 // const image3 = Img3
 const image1 = Img3
@@ -48,23 +49,13 @@ const HeroButtonContainer = styled.div`
     align-self: center;
     display: none;
 `
-// const HeroButton = styled.button`
-//     border: 2px solid;
-//     border-radius: 30px;
-//     box-sizing: border-box;
-//     color: #fff;
-//     display: inline-block;
-//     font-weight: 900;
-//     min-width: 125px;
-//     padding: 10px 25px;
-//     text-align: center;
-//     text-decoration: none;
-//     text-transform: uppercase;
-//     background-color: green;
-//     cursor: pointer;
-// `
 
 const HeroSection = () => {
+  <Helmet>
+      <title>Pentecostal Fellowship of Nigeria</title>
+      <meta name="description" content="We ought also to love one another. Helping you find your Brethren" />
+      <link rel="canonical" href="/" />
+    </Helmet>
   return (
     <Container id="hero">
       <BackgroundSlider

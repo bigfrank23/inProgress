@@ -14,6 +14,7 @@ import './Announcement.css'
 import { landscapeTab, mobile, tab } from '../../responsive'
 import axios from 'axios'
 import moment from 'moment'
+import { Helmet } from 'react-helmet-async'
 
 const Container = styled.div`
   user-select: none;
@@ -97,6 +98,11 @@ const Announcement = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>News Feed</title>
+        <meta name="description" content="PFN Lagos State News Feed" />
+        <link rel="canonical" href="/announcement" />
+      </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
@@ -135,7 +141,7 @@ const Announcement = () => {
                 {
                   modalData.avatar ? 
                   <div className="modalImgBx d-flex justify-content-center">
-                    <img src={modalData.avatar} alt="" style={{width: "80%", height: "500px"}} />
+                    <img src={modalData.avatar} alt={modalData.title} style={{width: "80%", height: "500px"}} />
                   </div> : ""
                 }
                 {

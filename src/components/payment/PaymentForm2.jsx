@@ -16,6 +16,7 @@ import { HiSwitchHorizontal } from 'react-icons/hi';
 import 'react-dropdown/style.css';
 import PaystackPop from '@paystack/inline-js'
 import { usePaystackPayment } from 'react-paystack';
+import { Helmet } from 'react-helmet-async'
 
 const Container = styled.div`
   user-select: none;
@@ -111,6 +112,11 @@ const PaymentForm2 = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>Give</title>
+        <meta name="description" content="Give Generously. The Gift Of Giving" />
+        <link rel="canonical" href="/give" />
+      </Helmet>
     <div className="page1Wrapper">
         <div className="page1Header">
             <h1>Give Generously</h1>
@@ -124,7 +130,7 @@ const PaymentForm2 = () => {
       </div>
     </div> */}
     <>
-    <iframe loading="lazy" src="https://my.churchplus.co/iframe/bd70cedf-e3c1-4192-ee40-08da4224da26" style={{border: "0px #F4F4F4 dashed", width: "100%", height: "960px"}} name="online-giving" scrolling="no" frameBorder="1" marginHeight="0px" marginWidth="0px" allowFullScreen></iframe>
+    <iframe loading="lazy" src={process.env.REACT_APP_PAYSTACK} style={{border: "0px #F4F4F4 dashed", width: "100%", height: "960px"}} name="online-giving" scrolling="no" frameBorder="1" marginHeight="0px" marginWidth="0px" allowFullScreen></iframe>
     </>
     <Footer />
     </Container>

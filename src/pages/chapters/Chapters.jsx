@@ -10,6 +10,7 @@ import './Chapters.css'
 import { useLocation, useParams } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
 import { landscapeTab, mobile, tab } from '../../responsive'
+import { Helmet } from 'react-helmet-async'
 
 const Container = styled.div`
 user-select: none;
@@ -88,6 +89,11 @@ const Chapters = () => {
 
   return (
     <Container>
+      <Helmet>
+          <title>Provinces</title>
+          <meta name="description" content="PFN Lagos State Provinces" />
+          <link rel="canonical" href="/province/:id" />
+        </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">

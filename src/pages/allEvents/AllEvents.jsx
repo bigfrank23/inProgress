@@ -11,6 +11,7 @@ import H2 from '../../components/Text/H2';
 import Footer from '../../components/Footer/Footer';
 import Upcomin from '../../components/Upcoming/Upcomin';
 import { landscapeTab, mobile, tab } from '../../responsive';
+import { Helmet } from 'react-helmet-async';
 
 const Container = styled.div`
 user-select: none;
@@ -50,6 +51,11 @@ user-select: none;
 const AllEvents = () => {
   return (
     <Container>
+      <Helmet>
+        <title>All Events</title>
+        <meta name="description" content="All PFN Lagos State Events" />
+        <link rel="canonical" href="/all-events" />
+      </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">

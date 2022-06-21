@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
 import SimpleReactLightbox from 'simple-react-lightbox'
+import { HelmetProvider } from 'react-helmet-async'
 import App from './App';
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -16,4 +17,4 @@ window.__REDUX_DEVTOOLS_EXTENSION_&& window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Provider store={store}> <SimpleReactLightbox><App /></SimpleReactLightbox> </Provider>);
+root.render(<Provider store={store}> <SimpleReactLightbox><HelmetProvider><App /></HelmetProvider></SimpleReactLightbox> </Provider>);

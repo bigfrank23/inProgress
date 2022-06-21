@@ -8,6 +8,7 @@ import PauseOnHover from "../../components/reactSlick/AutoScroll";
 import H2 from '../../components/Text/H2'
 import Footer from '../../components/Footer/Footer'
 import { landscapeTab, mobile, tab } from "../../responsive";
+import { Helmet } from "react-helmet-async";
 
 const Container = styled.div`
   user-select: none;
@@ -60,6 +61,11 @@ const Container = styled.div`
 const Gallery = () => {
   return (
     <Container>
+      <Helmet>
+        <title>Gallery</title>
+        <meta name="description" content="PFN Lagos State galleries" />
+        <link rel="canonical" href="/gallery" />
+      </Helmet>
       <div className="page1Wrapper">
           <div className="page1Header">
             <h1>Gallery</h1>

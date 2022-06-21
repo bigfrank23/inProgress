@@ -23,6 +23,7 @@ import H3 from '../../components/Text/H3'
 import PText from '../../components/Text/PText'
 import { Grid } from '@mui/material'
 import { landscapeTab, mobile, tab } from '../../responsive'
+import { Helmet } from 'react-helmet-async'
 
 const Container = styled.div`
   user-select: none;
@@ -142,6 +143,11 @@ const pastPfnMembers = [{
 const PastPfn = () => {
   return (
     <Container>
+        <Helmet>
+            <title>Past PFN Lagos Chairmen From Inception Till Date</title>
+            <meta name="description" content="Past PFN Lagos Chairmen From Inception Till Date" />
+            <link rel="canonical" href="/past-pfn-chairmen" />
+        </Helmet>
         <div className="page1Wrapper">
             <div className="page1Header">
             <h1>Past PFN Lagos Chairmen From Inception Till Date</h1>
@@ -166,10 +172,10 @@ const PastPfn = () => {
                             <div className="pastPfnGridContentBx">
                                 <div className="pastPfnGridContentImg">
                                     {/* <div className="lll"> */}
-                                        <img src={data.img} alt="" />
+                                        <img src={data.img} alt={data.name} />
                                     {/* </div> */}
                                     <div className="mmm">
-                                        <img src={logoImg} alt="" />
+                                        <img src={logoImg} alt="PFN logo" />
                                     </div>
                                 </div>
                                 <hr />

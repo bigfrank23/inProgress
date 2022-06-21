@@ -12,6 +12,7 @@ import Button2 from "../../components/Button/Button2";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import { landscapeTab, mobile, tab } from "../../responsive";
+import { Helmet } from "react-helmet-async";
 
 const Container = styled.div`
   user-select: none;
@@ -53,6 +54,13 @@ const Container = styled.div`
 const LSES = () => {
   return (
       <Container>
+        <Helmet>
+          <title>THE LAGOS STATE EXECUTIVE STRUCTURE</title>
+          <meta name="description" content="builds pathways within the Advisory Leadership System by improving the lives of it's members and growing our state through it.
+            The Advisory Council model allows the Chairman to access the wisdom and support of servants of God of influence and integrity in the State.
+            The State Advisory Council comprises of twelve leaders from within the State" />
+          <link rel="canonical" href="/lses" />
+        </Helmet>
         <div className="page1Wrapper">
             <div className="page1Header">
             <h1>THE LAGOS STATE EXECUTIVE STRUCTURE</h1>
@@ -63,24 +71,6 @@ const LSES = () => {
         </div>
         <div className="page12Top">
             <div className="page12TopContent">
-                {/* <div className="page12TopHeader">
-                    <Header color>Lorem ipsum dolor sit.</Header>
-                </div>
-                <div className="page12TopTitle">
-                    <H2>Lorem, ipsum dolor.</H2>
-                </div>
-                <div className="page12TopPara">
-                    <PText>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore soluta expedita, provident iure suscipit cupiditate et aperiam necessitatibus atque fugit nesciunt, mollitia minima velit repudiandae eos? Cupiditate error in excepturi quasi inventore odio ut, rerum, voluptatem ex vel culpa? Voluptatum obcaecati officiis optio ratione, recusandae maxime asperiores mollitia dicta voluptatibus.
-                    </PText>
-                </div>
-                <div className="page12TopBtn">
-                    <Button />
-                    <div style={{padding: "1rem 0"}}>
-                    <Button />
-                    </div>
-                    <Button />
-                </div> */}
                 <div className="page12TopContentBox">
                     <div className="page12TopContentBoxLeft" >
                         <img src={Img} alt="" />

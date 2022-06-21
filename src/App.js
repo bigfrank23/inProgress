@@ -101,7 +101,7 @@ function App() {
           {/* <Route exact path='/page4' component={Page4} />
           <Route exact path='/page5' component={Page5} />
           <Route exact path='/page6' component={Page6} /> */}
-          <Route exact path='/history' component={History} />
+          {/* <Route exact path='/history' component={History} /> */}
           <Route exact path='/history2' component={History2} />
           {/* <Route exact path='/page8' component={Page8} /> */}
           <Route exact path='/directorate' component={Page9} />
@@ -118,7 +118,7 @@ function App() {
           <Route exact path='/blogs' component={AllPosts} />
           <Route exact path="/full_detail/:id" component={FullDetail} />
           {/* <Route exact path="/settings" component={Settings} /> */}
-          <Route exact path='/provinces' component={ExtraPage} />
+          {/* <Route exact path='/provinces' component={ExtraPage} /> */}
           <Route exact path='/contact' component={ContactPage} />
           <Route exact path='/write' component={user?.user?.email ==="admin@pfnlagosstate.org" ? Write : Home} />
           <Route exact path='/register' component={user ? Home : Register} />

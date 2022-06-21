@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { landscapeTab, mobile, tab } from '../../../responsive';
 import axios from 'axios';
 import Button2 from '../../../components/Button/Button2';
+import { Helmet } from 'react-helmet-async';
 
 const Container = styled.div`
 user-select: none;
@@ -73,6 +74,11 @@ const Past = () => {
   }
   return (
     <Container>
+      <Helmet>
+        <title>Past Events</title>
+        <meta name="description" content="PFN Lagos State Past Events" />
+        <link rel="canonical" href="/past-events" />
+      </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
@@ -85,7 +91,7 @@ const Past = () => {
                 <>
                   <div className="page5Bx" key={data.id}>
                   <div className="page5BxImg">
-                      <img src={data.avatar} alt="" />
+                      <img src={data.avatar} alt={data.title} />
                   </div>
                   <div className="page5BxContent">
                   <div className="page5Title">

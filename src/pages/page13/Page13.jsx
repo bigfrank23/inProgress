@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { landscapeTab, mobile, tab } from "../../responsive";
 import ReCAPTCHA from 'react-google-recaptcha'
+import { Helmet } from "react-helmet-async";
 
 const Container = styled.div`
   width: 100%;
@@ -37,7 +38,7 @@ const Container = styled.div`
     position: relative;
     top: 0;
     height: 65vh;
-    ${mobile({ height: "40vh", clipPath: "unset", backgroundAttachment: "unset", backgroundPosition: "100% 170px", backgroundSize: "500px 50%"})}
+    ${mobile({ height: "40vh", clipPath: "unset", backgroundAttachment: "unset", backgroundPosition: "100% 100%", backgroundSize: "500px 70%"})}
     ${tab({ height: "42vh", backgroundPosition: "unset", backgroundSize: "100% 50%"})}
     ${landscapeTab({ height: "65vh", backgroundSize: "cover", backgroundPosition: "right"})}
     .page1Header {
@@ -112,6 +113,11 @@ const Page13 = () => {
 
   return (
     <Container>
+       <Helmet>
+        <title>Prayer</title>
+        <meta name="description" content="PFN Lagos State Prayer. God is listening. Pentecostal Fellowship of Nigeria, Lagos State provides tools, teams, and times to help individuals – and the church family as a whole – pray. Prayer is vitally important to your relationship with God. We would love to pray for you, a friend, or a family member." />
+        <link rel="canonical" href="/announcement" />
+      </Helmet>
       <div className="page1Wrapper">
         <div className="page1Header">
           <h1>Prayer</h1>
@@ -129,7 +135,7 @@ const Page13 = () => {
             </div>
           </div>
           <div className="prayerImg">
-            <img src={PrayerImg2} alt="" />
+            <img src={PrayerImg2} alt="PFN Prayer Image" />
           </div>
       </div>
       <div className="page13Center">

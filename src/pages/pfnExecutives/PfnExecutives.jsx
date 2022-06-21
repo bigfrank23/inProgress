@@ -12,6 +12,7 @@ import Grid from '@mui/material/Grid'
 import { chairmen, directors } from "../../teamMembers/team";
 import { Link } from "react-router-dom";
 import { landscapeTab, mobile, tab } from "../../responsive";
+import { Helmet } from "react-helmet-async";
 // import FullExecDetail from "../fullExecDetail/FullExecDetail";
 
 const Container = styled.div`
@@ -59,6 +60,11 @@ const PfnExecutives = () => {
   const handleClose = () => setOpen(false);
   return (
     <Container>
+      <Helmet>
+          <title>The PFN Lagos State Executives</title>
+          <meta name="description" content="The PFN Lagos State Executives" />
+          <link rel="canonical" href="/pfn-executives" />
+      </Helmet>
       <div className="page1Wrapper" loading="lazy">
         <div className="page1Header">
           <h1>The PFN Lagos State Executives</h1>

@@ -17,6 +17,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { landscapeTab, mobile, tab } from '../../responsive';
 import ReCAPTCHA from 'react-google-recaptcha'
+import { Helmet } from 'react-helmet-async';
 
 
 const Container = styled.div`
@@ -152,6 +153,12 @@ const Page9 = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>PFN Lagos State Directorates</title>
+        <meta name="description" content="Directorate. At PFN Lagos, we’re not just looking for volunteers. We’re looking to help people discover their purpose.
+           If getting involved in a fellowship is your next step contact info@pfnlagosstate.org or check with one of the many provinces or chapters." />
+        <link rel="canonical" href="/directorate" />
+      </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">

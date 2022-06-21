@@ -14,6 +14,7 @@ import { landscapeTab, mobile, tab } from '../../responsive';
 import { Grid } from '@mui/material';
 import './Messages.css'
 import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
 
 const Container = styled.div`
 user-select: none;
@@ -78,6 +79,11 @@ const Messages = () => {
   }
   return (
     <Container>
+      <Helmet>
+        <title>Chairman Messages</title>
+        <meta name="description" content="Chairman's Messages" />
+        <link rel="canonical" href="/chairman-messages" />
+      </Helmet>
       <div className="page1Wrapper">
         {/* <Navbar /> */}
         <div className="page1Header">
